@@ -1,0 +1,128 @@
+**REGION 設定
+SET Url TO $'''https://rate.bot.com.tw/xrt?Lang=zh-tw'''
+SET OutputFolderName TO $'''台銀匯率'''
+SET FilePrefix TO $'''台銀匯率'''
+SET DateFormat TO $'''yyyyMMdd'''
+SET TimeFormat TO $'''HHmm'''
+SET LogTimeFormat TO $'''yyyy-MM-dd HH:mm:ss'''
+SET TimeoutSeconds TO 60
+SET ShowResultMessage TO True
+**ENDREGION
+**REGION 環境與日期變數
+SET BrowserOpened TO False
+SET ExcelOpened TO False
+SET CurrentStep TO $'''初始化'''
+System.GetEnvironmentVariable.GetEnvironmentVariable Name: $'''COMPUTERNAME''' Value=> ComputerName
+System.GetEnvironmentVariable.GetEnvironmentVariable Name: $'''USERNAME''' Value=> UserName
+Folder.GetSpecialFolder SpecialFolder: Folder.SpecialFolder.DesktopDirectory SpecialFolderPath=> DesktopPath
+DateTime.GetCurrentDateTime.Local DateTimeFormat: DateTime.DateTimeFormat.DateAndTime CurrentDateTime=> RunDateTime
+Text.ConvertDateTimeToText.FromCustomDateTime DateTime: RunDateTime CustomFormat: DateFormat Result=> RunDate
+Text.ConvertDateTimeToText.FromCustomDateTime DateTime: RunDateTime CustomFormat: TimeFormat Result=> RunTime
+Text.ConvertDateTimeToText.FromCustomDateTime DateTime: RunDateTime CustomFormat: LogTimeFormat Result=> RunStamp
+SET OutputFolder TO $'''%DesktopPath%\\%OutputFolderName%'''
+SET OutputFile TO $'''%OutputFolder%\\%FilePrefix%_%RunDate%_%RunTime%.xlsx'''
+SET LogFile TO $'''%OutputFolder%\執行記錄.txt'''
+**ENDREGION
+**REGION 建立輸出資料夾
+SET CurrentStep TO $'''建立輸出資料夾'''
+BLOCK CreateOutputFolder
+ON BLOCK ERROR
+    NEXT ACTION
+END
+    Folder.Create FolderPath: DesktopPath FolderName: OutputFolderName Folder=> CreatedFolder
+END
+**ENDREGION
+**REGION 開啟網頁並擷取匯率
+SET CurrentStep TO $'''開啟 Chrome'''
+WebAutomation.LaunchChrome.LaunchChrome Url: Url WindowState: WebAutomation.BrowserWindowState.Normal ClearCache: False ClearCookies: False WaitForPageToLoadTimeout: TimeoutSeconds Timeout: TimeoutSeconds PiPUserDataFolderMode: WebAutomation.PiPUserDataFolderModeEnum.AutomaticProfile TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> Browser
+ON ERROR REPEAT 2 TIMES WAIT 5
+    GOTO ErrorHandler
+END
+SET BrowserOpened TO True
+SET CurrentStep TO $'''擷取匯率表'''
+WebAutomation.ExtractData.ExtractTable BrowserInstance: Browser Control: $'''table[title="牌告匯率"] > tbody > tr''' ExtractionParameters: {[$'''td:eq(0) > div > div.print_show''', $'''Own Text''', $'''''', $'''幣別'''], [$'''td:eq(1)''', $'''Own Text''', $'''''', $'''現金買入'''], [$'''td:eq(2)''', $'''Own Text''', $'''''', $'''現金賣出'''], [$'''td:eq(3)''', $'''Own Text''', $'''''', $'''即期買入'''], [$'''td:eq(4)''', $'''Own Text''', $'''''', $'''即期賣出'''] } PostProcessData: False TimeoutInSeconds: TimeoutSeconds ExtractedData=> RateTable
+ON ERROR REPEAT 2 TIMES WAIT 5
+    GOTO ErrorHandler
+END
+IF RateTable.RowsCount = 0 THEN
+    SET CurrentStep TO $'''擷取匯率表（沒有抓到任何資料，網頁結構可能已變更）'''
+    GOTO ErrorHandler
+END
+SET CurrentStep TO $'''擷取掛牌時間'''
+BLOCK GetRateTime
+ON BLOCK ERROR
+    SET RateTime TO $'''（未取得）'''
+    NEXT ACTION
+END
+    WebAutomation.ExtractData.ExtractSingleValue BrowserInstance: Browser ExtractionParameters: {[$'''span.time''', $'''Own Text''', $''''''] } TimeoutInSeconds: TimeoutSeconds ExtractedData=> RateTime
+END
+BLOCK CloseBrowser
+ON BLOCK ERROR
+    NEXT ACTION
+END
+    WebAutomation.CloseWebBrowser BrowserInstance: Browser
+END
+SET BrowserOpened TO False
+**ENDREGION
+**REGION 寫入 Excel
+SET CurrentStep TO $'''寫入 Excel'''
+Variables.CreateNewDatatable InputTable: { ^['A', 'B', 'C', 'D', 'E', 'F', 'G'], [$'''幣別''', $'''現金買入''', $'''現金賣出''', $'''即期買入''', $'''即期賣出''', $'''''', $'''牌價最新掛牌時間'''] } DataTable=> HeaderTable
+BLOCK WriteExcel
+ON BLOCK ERROR
+    GOTO ErrorHandler
+END
+    Excel.LaunchExcel.Launch Visible: False UseMachineLocale: False LoadAddInsAndMacros: False Instance=> ExcelInstance
+    SET ExcelOpened TO True
+    Excel.WriteToExcel.WriteCell Instance: ExcelInstance Value: HeaderTable Column: $'''A''' Row: 1
+    Excel.WriteToExcel.WriteCell Instance: ExcelInstance Value: RateTable Column: $'''A''' Row: 2
+    Excel.WriteToExcel.WriteCell Instance: ExcelInstance Value: RateTime Column: $'''G''' Row: 2
+    Excel.ResizeColumnsOrRows.AutofitAllColumns Instance: ExcelInstance
+    SET CurrentStep TO $'''儲存 Excel'''
+    Excel.CloseExcel.CloseAndSaveAs Instance: ExcelInstance DocumentFormat: Excel.ExcelFormat.OpenXmlWorkbook DocumentPath: OutputFile
+    SET ExcelOpened TO False
+END
+**ENDREGION
+**REGION 成功結束
+BLOCK WriteSuccessLog
+ON BLOCK ERROR
+    NEXT ACTION
+END
+    File.WriteText File: LogFile TextToWrite: $'''%RunStamp%	成功	%RateTable.RowsCount% 筆	%OutputFile%	%UserName%@%ComputerName%''' AppendNewLine: True IfFileExists: File.IfFileExists.Append Encoding: File.FileEncoding.UTF8
+END
+IF ShowResultMessage = True THEN
+    Display.ShowMessageDialog.ShowMessageWithTimeout Title: $'''台銀匯率''' Message: $'''完成，共 %RateTable.RowsCount% 筆匯率。
+檔案：%OutputFile%''' Icon: Display.Icon.Information Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: True Timeout: 10 ButtonPressed=> ButtonPressed
+END
+EXIT Code: 0
+**ENDREGION
+**REGION 錯誤處理
+LABEL ErrorHandler
+ERROR => LastError
+IF BrowserOpened = True THEN
+    BLOCK CleanupBrowser
+    ON BLOCK ERROR
+        NEXT ACTION
+    END
+        WebAutomation.CloseWebBrowser BrowserInstance: Browser
+    END
+END
+IF ExcelOpened = True THEN
+    BLOCK CleanupExcel
+    ON BLOCK ERROR
+        NEXT ACTION
+    END
+        Excel.CloseExcel.Close Instance: ExcelInstance
+    END
+END
+SET ErrorText TO $'''失敗於「%CurrentStep%」：%LastError.Message%'''
+BLOCK WriteErrorLog
+ON BLOCK ERROR
+    NEXT ACTION
+END
+    File.WriteText File: LogFile TextToWrite: $'''%RunStamp%	失敗	%CurrentStep%	%LastError.Message%	%UserName%@%ComputerName%''' AppendNewLine: True IfFileExists: File.IfFileExists.Append Encoding: File.FileEncoding.UTF8
+END
+IF ShowResultMessage = True THEN
+    Display.ShowMessageDialog.ShowMessageWithTimeout Title: $'''台銀匯率：執行失敗''' Message: ErrorText Icon: Display.Icon.ErrorIcon Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: True Timeout: 30 ButtonPressed=> ButtonPressed
+END
+EXIT Code: 1 ErrorMessage: ErrorText
+**ENDREGION
