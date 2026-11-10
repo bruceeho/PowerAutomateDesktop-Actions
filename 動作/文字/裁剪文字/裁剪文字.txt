@@ -1,0 +1,28 @@
+# 【模式 CropTextBeforeFlag】在指定文字繫結前擷取該文字的次文字
+Text.CropText.CropTextBeforeFlag Text: `` ToFlag: `` IgnoreCase: False IsFlagFound=> IsFlagFound CroppedText=> CroppedText
+
+# 【模式 CropTextAfterFlag】擷取指定文字繫結後之文字的子文字
+Text.CropText.CropTextAfterFlag Text: `` FromFlag: `` IgnoreCase: False IsFlagFound=> IsFlagFound CroppedText=> CroppedText
+
+# 【模式 CropTextBetweenFlags】擷取指定文字繫結間之文字的子文字
+Text.CropText.CropTextBetweenFlags Text: `` FromFlag: `` ToFlag: `` IgnoreCase: False IsFlagFound=> IsFlagFound CroppedText=> CroppedText
+
+# ==================== 說明 ====================
+# 動作：裁剪文字  (Text.CropText)
+# 英文名稱：Crop text
+# 用途：擷取出現在給定文字中的指定文字標幟之前、之後或之間的文字值
+# 位置：文字
+# 輸入參數：
+#   Text [文字] 原始文字 — 要從中擷取一段文字的文字
+#   Mode [選項，預設 GetTextBeforeFlag] 模式 — 指定要擷取標幟之前、之後還是之間的文字
+#       可用值：Text.CropTextMode.GetTextBeforeFlag（擷取指定標幟之前的文字）、Text.CropTextMode.GetTextAfterFlag（擷取指定標幟之後的文字）、Text.CropTextMode.GetTextBetweenFlags（擷取指定標幟之間的文字）
+#   FromFlag [文字] 起始標幟 — 擷取的文字會在此標幟之後。標幟可以是任何字元或文字
+#   ToFlag [文字] 結尾標幟 — 擷取的文字會在此標幟之前。標幟可以是任何字元或文字
+#   IgnoreCase [布林，預設 False] 忽略大小寫 — 指定要使用區分大小寫還是不區分大小寫的比對方式來尋找標幟
+# 產生的變數：
+#   IsFlagFound [布林] 找到 — 指示是否找到標幟
+#   CroppedText [文字] 擷取的文字 — 新的裁剪文字
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

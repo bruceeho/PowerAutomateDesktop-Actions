@@ -1,0 +1,17 @@
+WebAutomation.ClickDownloadLink BrowserInstance: `` Control: `` DestinationFolder: `` DownloadedFile=> DownloadedFile
+
+# ==================== 說明 ====================
+# 動作：按一下網頁上的下載連結  (WebAutomation.ClickDownloadLink)
+# 英文名稱：Click download link on web page
+# 用途：按一下網頁中導致下載檔案的連結
+# 位置：瀏覽器自動化
+# 輸入參數：
+#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
+#   Control [WebControl] UI 元素 — 選取網頁上要按一下的 UI 元素
+#   DestinationFolder [FolderObject] 目的地資料夾 — 輸入或選擇要儲存下載檔案的目的地資料夾的完整路徑，或包含資料夾的變數
+# 產生的變數：
+#   DownloadedFile [FileObject] 下載的檔案 — 磁碟上儲存下載的檔案。這是檔案路徑，由上方所指定的下載資料夾以及 Web 伺服器提供的檔案名稱所組成。
+# 可能的錯誤：DownloadFileError、ElementNotFoundError、ClickElementError、SaveFileError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

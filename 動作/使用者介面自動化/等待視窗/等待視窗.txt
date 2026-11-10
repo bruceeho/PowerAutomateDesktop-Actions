@@ -1,0 +1,56 @@
+# 【模式 ToOpen】使用視窗 UI 元素檢查是否有特定視窗開啟
+UIAutomation.WaitForWindowAction.ToOpen FocusWindow: False
+
+# 【模式 ToOpenByInstanceOrHandle】使用視窗執行個體或控點檢查是否有特定視窗開啟
+UIAutomation.WaitForWindowAction.ToOpenByInstanceOrHandle WindowInstance: `` FocusWindow: False
+
+# 【模式 ToOpenByTitleClass】使用視窗標題/類別檢查是否有特定視窗開啟
+UIAutomation.WaitForWindowAction.ToOpenByTitleClass FocusWindow: False
+
+# 【模式 ToClose】使用視窗 UI 元素檢查特定視窗是否已關閉
+UIAutomation.WaitForWindowAction.ToClose
+
+# 【模式 ToCloseByInstanceOrHandle】使用視窗執行個體或控點檢查特定視窗是否已關閉
+UIAutomation.WaitForWindowAction.ToCloseByInstanceOrHandle WindowInstance: ``
+
+# 【模式 ToCloseByTitleClass】使用視窗標題/類別檢查特定視窗是否已關閉
+UIAutomation.WaitForWindowAction.ToCloseByTitleClass
+
+# 【模式 ToBecomeFocused】使用視窗 UI 元素檢查特定視窗是否已擁有焦點
+UIAutomation.WaitForWindowAction.ToBecomeFocused
+
+# 【模式 ToBecomeFocusedByInstanceOrHandle】使用視窗執行個體或控點檢查特定視窗是否已擁有焦點
+UIAutomation.WaitForWindowAction.ToBecomeFocusedByInstanceOrHandle WindowInstance: ``
+
+# 【模式 ToBecomeFocusedByTitleClass】使用視窗標題/類別檢查特定視窗是否已擁有焦點
+UIAutomation.WaitForWindowAction.ToBecomeFocusedByTitleClass
+
+# 【模式 ToLoseFocus】使用視窗 UI 元素檢查特定視窗是否已失去焦點
+UIAutomation.WaitForWindowAction.ToLoseFocus
+
+# 【模式 ToLoseFocusByInstanceOrHandle】使用視窗執行個體或控點檢查特定視窗是否已失去焦點
+UIAutomation.WaitForWindowAction.ToLoseFocusByInstanceOrHandle WindowInstance: ``
+
+# 【模式 ToLoseFocusByTitleClass】使用視窗標題/類別檢查特定視窗是否已失去焦點
+UIAutomation.WaitForWindowAction.ToLoseFocusByTitleClass
+
+# ==================== 說明 ====================
+# 動作：等待視窗  (UIAutomation.WaitForWindowAction)
+# 英文名稱：Wait for window
+# 用途：暫停執行或處理序，直到特定視窗開啟、關閉、獲得或失去焦點
+# 位置：使用者介面自動化
+# 輸入參數：
+#   FindWindowMode [選項，預設 Control]
+#       可用值：UIAutomation.FindWindowBy.Control（透過視窗 UI 元素）、UIAutomation.FindWindowBy.InstanceOrHandle（透過視窗執行個體/控點）、UIAutomation.FindWindowBy.TitleAndClass（透過標題和/或類別）
+#   WindowInstance [整數]
+#   Title [文字，選填]
+#   Control [UIControl]
+#   Class [文字，選填]
+#   WindowMode [選項，預設 Open]
+#       可用值：UIAutomation.WaitForWindow.Open（開啟）、UIAutomation.WaitForWindow.Close（關閉）、UIAutomation.WaitForWindow.BecomeFocused（成為焦點）、UIAutomation.WaitForWindow.LoseFocus（失去焦點）
+#   FocusWindow [布林，預設 False]
+# 可能的錯誤：FocusWindowError、WaitForWindowError、WindowOperationInNonInteractiveModeError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,14 @@
+XML.RemoveElement Document: `` XPathQuery: ``
+
+# ==================== 說明 ====================
+# 動作：移除 XML 元素  (XML.RemoveElement)
+# 英文名稱：Remove XML element
+# 用途：從 XML 文件中移除一個或多個 XML 元素
+# 位置：XML
+# 輸入參數：
+#   Document [XmlNodeObject] XML 文件 — 包含要移除的 XML 元素的 XML 文件
+#   XPathQuery [文字] XPath 查詢 — 要在其中尋找要移除之元素的 XPath 運算式
+# 可能的錯誤：InvalidXPathError、RemoveElementError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

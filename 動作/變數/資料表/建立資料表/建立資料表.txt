@@ -1,0 +1,9 @@
+Variables.CreateNewDatatable InputTable: { ^['欄位1', '欄位2'], [$'''a''', $'''b'''] } DataTable=> DataTable
+
+# ==================== 說明 ====================
+# 動作：建立新資料表  (Variables.CreateNewDatatable)
+# 輸入參數：
+#   InputTable [資料表] — 第一組 ^[...] 是欄位名稱，後面每組 [...] 是一列資料
+#       只要欄位、沒有資料時寫：{ ^['欄位1', '欄位2'] }
+# 產生的變數：
+#   DataTable [資料表] — 建立好的資料表，可改成自己的變數名稱（例如 DataTable=> MyTable）

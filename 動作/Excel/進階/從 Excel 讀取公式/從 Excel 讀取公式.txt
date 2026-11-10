@@ -1,0 +1,25 @@
+# 【模式 ReadFormulaFromCellCoordinates】讀取 Excel 中指定座標儲存格內的公式。
+Excel.ReadCellFormula.ReadFormulaFromCellCoordinates Instance: `` Column: `` Row: `` CellFormula=> CellFormula
+
+# 【模式 ReadFormulaFromNamedCell】讀取 Excel 中具名儲存格內的公式。
+Excel.ReadCellFormula.ReadFormulaFromNamedCell Instance: `` CellName: `` CellFormula=> CellFormula
+
+# ==================== 說明 ====================
+# 動作：從 Excel 讀取公式  (Excel.ReadCellFormula)
+# 英文名稱：Read formula from Excel
+# 用途：讀取 Excel 中儲存格內的公式。
+# 位置：Excel > 進階
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
+#   Mode [選項，預設 CellCoordinates] 擷取 — 指定要從指定的儲存格還是具名儲存格中擷取公式
+#       可用值：Excel.ReadCellFormulaMode.CellCoordinates（單一儲存格的公式）、Excel.ReadCellFormulaMode.NamedCell（具名儲存格的公式）
+#   Column [文字] 起始欄 — 以數值或字母表示的儲存格欄 (單一儲存格的值) 或第一欄
+#   Row [整數] 起始列 — 儲存格列 (單一儲存格的值) 或第一列的編號
+#   CellName [文字] 名稱 — 儲存格的名稱
+# 產生的變數：
+#   CellFormula [文字] 儲存格公式 — 單一儲存格的公式
+# 可能的錯誤：ReadCellFormulaError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

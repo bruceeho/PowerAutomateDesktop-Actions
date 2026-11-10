@@ -1,0 +1,17 @@
+MouseAndKeyboard.GetMousePosition RelativeTo: MouseAndKeyboard.MousePositionRelativeTo.Screen Y=> Y X=> X
+
+# ==================== 說明 ====================
+# 動作：取得滑鼠位置  (MouseAndKeyboard.GetMousePosition)
+# 英文名稱：Get mouse position
+# 用途：擷取畫面上目前滑鼠游標的位置 (單位像素座標)
+# 位置：滑鼠和鍵盤
+# 輸入參數：
+#   RelativeTo [選項，預設 Screen] 相對於 — 指定要以畫面座標擷取滑鼠位置，或是相對於使用中視窗左上角的位置
+#       可用值：MouseAndKeyboard.MousePositionRelativeTo.Screen（畫面）、MouseAndKeyboard.MousePositionRelativeTo.ForegroundWindow（前景視窗）
+# 產生的變數：
+#   Y [整數] 位置 Y — 滑鼠位置的垂直 (Y) 值
+#   X [整數] 位置 X — 滑鼠位置的水平 (X) 值
+# 可能的錯誤：RetrieveMousePositionInNonInteractiveModeError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,21 @@
+Display.InputDialog InputType: Display.InputType.SingleLine IsTopMost: False UserInput=> UserInput ButtonPressed=> ButtonPressed
+
+# ==================== 說明 ====================
+# 動作：顯示輸入對話方塊  (Display.InputDialog)
+# 英文名稱：Display input dialog
+# 用途：顯示提示使用者輸入文字的對話方塊
+# 位置：訊息方塊
+# 輸入參數：
+#   Title [文字，選填] 輸入對話方塊標題 — 對話方塊標題
+#   Message [文字，選填] 輸入對話方塊訊息 — 對話方塊訊息
+#   DefaultValue [文字，選填] 預設值 — 指定預設顯示的文字。如果使用者想要變更此文字，可以直接輸入來覆蓋文字。否則將會使用預設文字
+#   InputType [選項，預設 SingleLine] 輸入類型 — 輸入文字的格式。選擇 [單行 - 密碼] 可隱藏文字，或是選擇 [多行]，讓加大的顯示方塊顯示更多行文字
+#       可用值：Display.InputType.SingleLine（單行）、Display.InputType.Password（密碼）、Display.InputType.Multiline（多行）
+#   IsTopMost [布林，預設 False] 輸入對話方塊一律保持在最上方 — 指定輸入對話方塊是否應一律保持在所有其他視窗之上
+# 產生的變數：
+#   UserInput [文字] 使用者輸入 — 使用者輸入的文字，或預設文字
+#   ButtonPressed [文字] 將按下的按鈕還原為 — 已按下按鈕的文字。系統會自動為使用者提供 [確定] 或 [取消] 選項
+# 可能的錯誤：DisplayInputDialogError、DisplayInputDialogInNonInteractiveModeError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

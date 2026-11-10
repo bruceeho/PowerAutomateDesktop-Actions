@@ -1,0 +1,21 @@
+# 【模式 ProcessWorkQueueItem】指示協調器，電腦已準備好處理一或多個工作佇列項目 (若有)
+WorkQueues.ProcessWorkQueueItemAction.ProcessWorkQueueItem WorkQueue: `` FilterRows: `` WorkQueueItem=> WorkQueueItem
+
+# 【模式 ProcessWorkQueueItemOverrideRetry】指示協調器，電腦已準備好處理一或多個工作佇列項目 (若有)
+WorkQueues.ProcessWorkQueueItemAction.ProcessWorkQueueItemOverrideRetry WorkQueue: `` FilterRows: `` MaxRetryCount: 0 WorkQueueItem=> WorkQueueItem
+
+# ==================== 說明 ====================
+# 動作：ProcessWorkQueueItemAction  (WorkQueues.ProcessWorkQueueItemAction)
+# 位置：工作佇列
+# 輸入參數：
+#   WorkQueue [WorkQueue]
+#   FilterRows [文字]
+#   IsOverridingAutoRetry [布林，預設 False]
+#   MaxRetryCount [整數，預設 0]
+# 產生的變數：
+#   WorkQueueItem [WorkQueueItem]
+# 可能的錯誤：WorkQueueNotFoundError、WorkQueuePausedOrStoppedError、InvalidFetchXMLError、FailedToDequeueWorkQueueError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

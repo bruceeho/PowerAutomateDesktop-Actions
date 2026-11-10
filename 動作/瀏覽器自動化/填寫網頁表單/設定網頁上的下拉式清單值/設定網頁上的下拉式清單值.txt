@@ -1,0 +1,59 @@
+# 【模式 SetDropDownListValueByName】依名稱設定網頁表單中下拉式清單的選取選項
+WebAutomation.SetDropDownListValue.SetDropDownListValueByName BrowserInstance: `` Control: `` OptionNames: `` UseRegularExpression: False WaitForPageToLoadTimeout: 60
+
+# 【模式 SetDropDownListValueByIndex】依索引設定網頁表單中下拉式清單的選取選項
+WebAutomation.SetDropDownListValue.SetDropDownListValueByIndex BrowserInstance: `` Control: `` OptionsIndeces: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 ClearDropDownListValue】清除網頁表單中下拉式清單的選取選項
+WebAutomation.SetDropDownListValue.ClearDropDownListValue BrowserInstance: `` Control: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 SetDropDownListValueByNameCloseDialog】依名稱設定網頁表單中下拉式清單的選取選項。如果快顯對話方塊出現，請將它關閉。
+WebAutomation.SetDropDownListValue.SetDropDownListValueByNameCloseDialog BrowserInstance: `` Control: `` OptionNames: `` UseRegularExpression: False WaitForPageToLoadTimeout: 60
+
+# 【模式 SetDropDownListValueByIndexCloseDialog】依索引設定網頁表單中下拉式清單的選取選項。如果快顯對話方塊出現，請將它關閉。
+WebAutomation.SetDropDownListValue.SetDropDownListValueByIndexCloseDialog BrowserInstance: `` Control: `` OptionsIndeces: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 ClearDropDownListValueCloseDialog】清除網頁表單中下拉式清單的選取選項。如果快顯對話方塊出現，請將它關閉。
+WebAutomation.SetDropDownListValue.ClearDropDownListValueCloseDialog BrowserInstance: `` Control: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 SetDropDownListValueByNamePressDialogButton】依名稱設定網頁表單中下拉式清單的選取選項，如果快顯對話方塊出現，則按下指定的按鈕
+WebAutomation.SetDropDownListValue.SetDropDownListValueByNamePressDialogButton BrowserInstance: `` Control: `` OptionNames: `` UseRegularExpression: False WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
+
+# 【模式 SetDropDownListValueByIndexPressDialogButton】依索引設定網頁表單中下拉式清單的選取選項，如果快顯對話方塊出現，則按下指定的按鈕
+WebAutomation.SetDropDownListValue.SetDropDownListValueByIndexPressDialogButton BrowserInstance: `` Control: `` OptionsIndeces: `` WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
+
+# 【模式 ClearDropDownListValuePressDialogButton】清除網頁表單中下拉式清單的選取選項，如果快顯對話方塊出現，則按下指定的按鈕
+WebAutomation.SetDropDownListValue.ClearDropDownListValuePressDialogButton BrowserInstance: `` Control: `` WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
+
+# 【模式 SetDropDownListValueByNameNoWait】依名稱設定網頁表單中下拉式清單的選取選項，但不要等待頁面載入
+WebAutomation.SetDropDownListValue.SetDropDownListValueByNameNoWait BrowserInstance: `` Control: `` OptionNames: `` UseRegularExpression: False
+
+# 【模式 SetDropDownListValueByIndexNoWait】依索引設定網頁表單中下拉式清單的選取選項，但不要等待頁面載入
+WebAutomation.SetDropDownListValue.SetDropDownListValueByIndexNoWait BrowserInstance: `` Control: `` OptionsIndeces: ``
+
+# 【模式 ClearDropDownListValueNoWait】清除網頁表單中下拉式清單的選取選項，但不要等待頁面載入
+WebAutomation.SetDropDownListValue.ClearDropDownListValueNoWait BrowserInstance: `` Control: ``
+
+# ==================== 說明 ====================
+# 動作：設定網頁上的下拉式清單值  (WebAutomation.SetDropDownListValue)
+# 英文名稱：Set drop-down list value on web page
+# 用途：設定或清除 Web 表單中下拉式清單的選取選項
+# 位置：瀏覽器自動化 > 填寫網頁表單
+# 輸入參數：
+#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
+#   Control [WebControl] UI 元素 — 選取要設定其值的下拉式清單
+#   Operation [選項，預設 ClearAllOptions] 作業 — 選取要選取值或清除下拉式清單中選取的值
+#       可用值：WebAutomation.WebPageDropDownListOperation.ClearAllOptions（清除所有選項）、WebAutomation.WebPageDropDownListOperation.SelectOptionsByName（依名稱選取選項）、WebAutomation.WebPageDropDownListOperation.SelectOptionsByIndex（依索引選取選項）
+#   OptionsIndeces [List<Int32>] 選項索引 — 輸入以空格分隔、從 1 開始的索引清單 (例如 1 3 4)
+#   OptionNames [List<String>] 選項名稱 — 輸入要在下拉式清單中供選取的一個或多個選項 (若超過一個，則每行一個)。只有在使用複選清單時，多個選項才有意義。如果清單是單選，則只會使用指定的第一個選項。
+#   UseRegularExpression [布林，預設 False] 使用規則運算式 — 指定是否要將選項名稱值解譯為規則運算式
+#   WaitForPageToLoad [布林，預設 True] 等待頁面載入 — 指定設定下拉式清單值後，是否要等待新網頁完整載入
+#   WaitForPageToLoadTimeout [整數，預設 60] 網頁載入逾時 — 設定動作擲回錯誤之前的頁面載入時間，以秒為單位
+#   HandleDialogAction [選項，預設 DoNothing] 如果快顯對話方塊出現 — 指定設定下拉式清單值之後出現快顯對話方塊時要執行的操作
+#       可用值：WebAutomation.HandleDialogAction.CloseIt（關閉它）、WebAutomation.HandleDialogAction.PressButton（按下按鈕）、WebAutomation.HandleDialogAction.DoNothing（不執行任何動作）
+#   DialogButton [文字，預設 OK] 要按下的對話方塊按鈕 — 輸入快顯對話方塊出現時要按下的對話方塊按鈕
+# 可能的錯誤：ElementNotFoundError、SetDropDownListValueError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

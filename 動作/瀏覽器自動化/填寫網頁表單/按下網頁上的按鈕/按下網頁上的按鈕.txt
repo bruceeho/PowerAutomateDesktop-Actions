@@ -1,0 +1,30 @@
+# 【模式 PressButton】按下網頁按鈕
+WebAutomation.PressButton.PressButton BrowserInstance: `` Control: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 PressButtonCloseDialog】按下網頁按鈕。如果快顯對話方塊出現，請將它關閉。
+WebAutomation.PressButton.PressButtonCloseDialog BrowserInstance: `` Control: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 PressButtonPressDialogButton】按下網頁按鈕，並於快顯對話方塊出現時按下指定的按鈕
+WebAutomation.PressButton.PressButtonPressDialogButton BrowserInstance: `` Control: `` WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
+
+# 【模式 PressButtonNoWait】按下網頁按鈕且不等待頁面載入
+WebAutomation.PressButton.PressButtonNoWait BrowserInstance: `` Control: ``
+
+# ==================== 說明 ====================
+# 動作：按下網頁上的按鈕  (WebAutomation.PressButton)
+# 英文名稱：Press button on web page
+# 用途：按下網頁按鈕
+# 位置：瀏覽器自動化 > 填寫網頁表單
+# 輸入參數：
+#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
+#   Control [WebControl] UI 元素 — 選取要按下的按鈕
+#   WaitForPageToLoad [布林，預設 True] 等待頁面載入 — 指定是否要等待新網頁完整載入再繼續進行
+#   WaitForPageToLoadTimeout [整數，預設 60] 網頁載入逾時 — 設定動作擲回錯誤之前的頁面載入時間，以秒為單位
+#   HandleDialogAction [選項，預設 DoNothing] 如果快顯對話方塊出現 — 指定按下按鈕之後出現快顯對話方塊時要執行的操作
+#       可用值：WebAutomation.HandleDialogAction.CloseIt（關閉它）、WebAutomation.HandleDialogAction.PressButton（按下按鈕）、WebAutomation.HandleDialogAction.DoNothing（不執行任何動作）
+#   DialogButton [文字，預設 OK] 要按下的對話方塊按鈕 — 輸入快顯對話方塊出現時要按下的對話方塊按鈕
+# 可能的錯誤：ElementNotFoundError、PressButtonError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

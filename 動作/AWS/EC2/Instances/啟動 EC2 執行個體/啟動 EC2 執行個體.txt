@@ -1,0 +1,16 @@
+AWS.StartEC2Instance Ec2Client: `` InstanceIds: `` StartingEc2Instances=> StartingEc2Instances
+
+# ==================== 說明 ====================
+# 動作：啟動 EC2 執行個體  (AWS.StartEC2Instance)
+# 英文名稱：Start EC2 instance
+# 用途：啟動 EC2 執行個體
+# 位置：AWS > EC2 > Instances
+# 輸入參數：
+#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
+#   InstanceIds [List<String>] 執行個體識別碼 — 要啟動的執行個體識別碼
+# 產生的變數：
+#   StartingEc2Instances [List<InstanceStateChange>] 正在啟動執行個體 — 已啟動執行個體的傳回資訊
+# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、InvalidInstanceIdError、InsufficientCapacityError、RequestFailedError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

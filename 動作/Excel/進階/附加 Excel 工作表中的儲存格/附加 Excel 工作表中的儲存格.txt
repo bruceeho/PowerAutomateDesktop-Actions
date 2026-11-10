@@ -1,0 +1,30 @@
+# 【模式 AppendCellsActiveSheetHeader】將儲存格範圍附加至 Excel 執行個體的使用中工作表
+Excel.AppendCells.AppendCellsActiveSheetHeader Instance: `` HeaderName: ``
+
+# 【模式 AppendCellsActiveSheetColumn】將儲存格範圍附加至 Excel 執行個體的使用中工作表
+Excel.AppendCells.AppendCellsActiveSheetColumn Instance: `` ColumnName: ``
+
+# 【模式 AppendCellsNamedCellHeader】將儲存格範圍附加至 Excel 執行個體的使用中工作表
+Excel.AppendCells.AppendCellsNamedCellHeader Instance: `` CellName: `` HeaderName: ``
+
+# 【模式 AppendCellsNamedCellColumn】將儲存格範圍附加至 Excel 執行個體的使用中工作表
+Excel.AppendCells.AppendCellsNamedCellColumn Instance: `` CellName: `` ColumnName: ``
+
+# ==================== 說明 ====================
+# 動作：附加 Excel 工作表中的儲存格  (Excel.AppendCells)
+# 英文名稱：Append cells in Excel worksheet
+# 用途：將儲存格範圍附加至 Excel 執行個體的使用中工作表
+# 位置：Excel > 進階
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
+#   Mode [選項，預設 ActiveSheet] 附加模式 — 指定要附加至工作表還是具名儲存格範圍
+#       可用值：Excel.AppendMode.ActiveSheet（至使用中工作表）、Excel.AppendMode.NamedCell（至具名單元格）
+#   CellName [文字] 名稱 — 儲存格範圍的名稱
+#   HasHeaders [布林，預設 False] 第一列有標題 — 指示目的地的第一列包含欄標題
+#   ColumnName [文字] 起始欄 — 起始欄編號或字母，資料會從目的地的第一個空白列開始附加。如果欄位為空白，將改用指定目的地的第一欄。
+#   HeaderName [文字] 起始欄標題 — 起始欄的標題，資料會從目的地的第一個空白列開始附加。如果欄位為空白，將改用指定目的地的第一欄。
+# 可能的錯誤：AppendCellsError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

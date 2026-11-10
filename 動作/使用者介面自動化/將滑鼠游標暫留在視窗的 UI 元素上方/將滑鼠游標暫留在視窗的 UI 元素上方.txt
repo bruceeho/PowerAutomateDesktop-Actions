@@ -1,0 +1,13 @@
+UIAutomation.HoverOnElement Control: ``
+
+# ==================== 說明 ====================
+# 動作：將滑鼠游標暫留在視窗的 UI 元素上方  (UIAutomation.HoverOnElement)
+# 英文名稱：Hover mouse over UI element in window
+# 用途：將滑鼠游標暫留在視窗的任何 UI 元素上方
+# 位置：使用者介面自動化
+# 輸入參數：
+#   Control [UIControl]
+# 可能的錯誤：HoverOverFailedError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

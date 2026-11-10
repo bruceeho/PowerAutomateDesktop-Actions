@@ -1,0 +1,55 @@
+# 【模式 InsertImageDocumentStartFromFile】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageDocumentStartFromFile Instance: `` Path: ``
+
+# 【模式 InsertImageDocumentStartFromClipboard】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageDocumentStartFromClipboard Instance: ``
+
+# 【模式 InsertImageDocumentEndFromFile】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageDocumentEndFromFile Instance: `` Path: ``
+
+# 【模式 InsertImageDocumentEndFromClipboard】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageDocumentEndFromClipboard Instance: ``
+
+# 【模式 InsertImageBookmarkStartFromFile】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageBookmarkStartFromFile Instance: `` Bookmark: `` Path: ``
+
+# 【模式 InsertImageBookmarkStartFromClipboard】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageBookmarkStartFromClipboard Instance: `` Bookmark: ``
+
+# 【模式 InsertImageBookmarkEndFromFile】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageBookmarkEndFromFile Instance: `` Bookmark: `` Path: ``
+
+# 【模式 InsertImageBookmarkEndFromClipboard】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageBookmarkEndFromClipboard Instance: `` Bookmark: ``
+
+# 【模式 InsertImageStartOfTextFromFile】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageStartOfTextFromFile Instance: `` TextToFind: `` Path: ``
+
+# 【模式 InsertImageStartOfTextFromClipBoard】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageStartOfTextFromClipBoard Instance: `` TextToFind: ``
+
+# 【模式 InsertImageEndOfTextFromFile】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageEndOfTextFromFile Instance: `` TextToFind: `` Path: ``
+
+# 【模式 InsertImageEndOfTextFromClipBoard】將影像插入至 Word 檔案
+Word.InsertImageToWord.InsertImageEndOfTextFromClipBoard Instance: `` TextToFind: ``
+
+# ==================== 說明 ====================
+# 動作：在 Word 文件中插入影像  (Word.InsertImageToWord)
+# 英文名稱：Insert image in Word document
+# 用途：將影像插入至 Word 檔案。
+# 位置：Word
+# 輸入參數：
+#   Instance [WordInstanceHandle] Word 執行個體 — 要處理的 Word 執行個體例。此變數先前必須已使用「啟動 Word」或「附加至執行中的 Word」動作完成指定。
+#   InsertImageMode [選項，預設 StartOfDocument] 將影像插入至 — 指定 Word 文件中將附加影像的位置。
+#       可用值：Word.InsertImageMode.StartOfDocument（Word 檔案開頭）、Word.InsertImageMode.EndOfDocument（Word 檔案結尾）、Word.InsertImageMode.StartOfBookmark（在書籤之前）、Word.InsertImageMode.EndOfBookmark（在書籤之後）、Word.InsertImageMode.StartOfText（在特定文字之前）、Word.InsertImageMode.EndOfText（在特定文字之後）
+#   Bookmark [文字] 書籤 — Word 文件中將附加影像的目標書籤。
+#   TextToFind [文字] 要尋找的文字 — 要在 Word 文件中尋找的要插入影像的文字。影像將附加至指定文字出現位置的之前或之後
+#   Source [選項，預設 File] 插入影像來源 — 指定的 Word 文件中要插入影像的位置
+#       可用值：Word.ImageSource.File（檔案）、Word.ImageSource.Clipboard（剪貼簿）
+#   Path [FileObject] 影像路徑 — 要插入的影像的完整路徑。
+# 可能的錯誤：WordInstanceNotInitializedError、WordOperationOnReadOnlyDocumentError、InsertImageWordError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

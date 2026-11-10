@@ -1,0 +1,13 @@
+UIAutomation.SelectTab Control: ``
+
+# ==================== 說明 ====================
+# 動作：選取視窗中的索引標籤  (UIAutomation.SelectTab)
+# 英文名稱：Select tab in window
+# 用途：從索引標籤群組中選取索引標籤
+# 位置：使用者介面自動化
+# 輸入參數：
+#   Control [UIControl]
+# 可能的錯誤：SelectTabError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,19 @@
+AWS.DescribeEC2Instance Ec2Client: `` InstanceState: AWS.InstanceState.All Ec2Instances=> Ec2Instances
+
+# ==================== 說明 ====================
+# 動作：描述執行個體  (AWS.DescribeEC2Instance)
+# 英文名稱：Describe instances
+# 用途：傳回指定 EC2 執行個體的所有資訊
+# 位置：AWS > EC2 > Instances
+# 輸入參數：
+#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
+#   InstanceIds [List<String>，選填] 執行個體識別碼 — 要描述的執行個體識別碼
+#   AvailabilityZone [文字，選填] 可用性區域 — 指定可用性區域 (地區碼後面加上字母識別碼)
+#   InstanceState [選項，預設 All] 執行個體狀態 — 執行個體的目前狀態
+#       可用值：AWS.InstanceState.Pending（暫止）、AWS.InstanceState.All（所有）、AWS.InstanceState.Unknown（未知）、AWS.InstanceState.Running（正在執行）、AWS.InstanceState.ShuttingDown（正在關閉）、AWS.InstanceState.Terminated（已終止）、AWS.InstanceState.Stopping（正在停止）、AWS.InstanceState.Stopped（已停止）
+# 產生的變數：
+#   Ec2Instances [List<Instance>] 擷取的執行個體 — 包含所有相關資訊的已擷取執行個體
+# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、InvalidInstanceIdError、RequestFailedError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,20 @@
+FTP.OpenConnection Host: `` Port: 21 ActiveMode: False Username: `` Timeout: 10 Connection=> Connection
+
+# ==================== 說明 ====================
+# 動作：開啟 FTP 連線  (FTP.OpenConnection)
+# 英文名稱：Open FTP connection
+# 用途：這個動作會建立遠端 FTP 伺服器的特定連線，並將該連線儲存為可供日後使用的變數。
+# 位置：FTP
+# 輸入參數：
+#   Host [文字] 主機 — 在此輸入 FTP 伺服器位址。
+#   Port [整數，預設 21] 連接埠 — 在此輸入 FTP 伺服器連接埠。
+#   ActiveMode [布林，預設 False] 使用中模式 — 指定連線的模式
+#   Username [文字] 使用者名稱 — 指定要使用的 FTP 帳戶使用者名稱
+#   Password [文字(可加密)，選填] 密碼 — 指定要使用的 FTP 帳戶密碼
+#   Timeout [整數，預設 10] 逾時 — 設定您想要等候伺服器建立的時間 (秒鐘)，在此時間過後，此動作即失敗
+# 產生的變數：
+#   Connection [FtpConnectionBase] 連接 — FTP 連線
+# 可能的錯誤：LoginFailureError、ConnectionError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

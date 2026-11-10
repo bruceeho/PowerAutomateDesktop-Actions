@@ -1,0 +1,24 @@
+# 【模式 FromDateTime】使用已知格式將日期時間值轉換為文字
+Text.ConvertDateTimeToText.FromDateTime DateTime: `` StandardFormat: Text.WellKnownDateTimeFormat.ShortDate Result=> Result
+
+# 【模式 FromCustomDateTime】使用指定的自訂格式將日期時間值轉換為文字
+Text.ConvertDateTimeToText.FromCustomDateTime DateTime: `` CustomFormat: `` Result=> Result
+
+# ==================== 說明 ====================
+# 動作：將日期時間轉換為文字  (Text.ConvertDateTimeToText)
+# 英文名稱：Convert datetime to text
+# 用途：使用指定的自訂格式將日期時間值轉換為文字
+# 位置：文字
+# 輸入參數：
+#   DateTime [日期時間] 要轉換的日期時間 — 要轉換為文字的日期時間值
+#   Format [選項，預設 Standard] 要使用的格式 — 指定要使用標準日期時間格式，或是建立自訂格式
+#       可用值：Text.DateTimeConversionFormat.Standard（標準）、Text.DateTimeConversionFormat.Custom（自訂）
+#   StandardFormat [選項，預設 ShortDate] 標準格式 — 動作用來顯示日期時間值的標準日期時間格式
+#       可用值：Text.WellKnownDateTimeFormat.ShortDate（簡短日期）、Text.WellKnownDateTimeFormat.LongDate（完整日期）、Text.WellKnownDateTimeFormat.ShortTime（簡短時間）、Text.WellKnownDateTimeFormat.LongTime（完整時間）、Text.WellKnownDateTimeFormat.FullDateTimeShortTime（完整日期時間 (簡短時間)）、Text.WellKnownDateTimeFormat.FullDateTimeLongTime（完整日期時間 (完整時間)）、Text.WellKnownDateTimeFormat.GeneralDateTimeShortTime（一般日期時間 (簡短時間)）、Text.WellKnownDateTimeFormat.GeneralDateTimeLongTime（一般日期時間 (完整時間)）、Text.WellKnownDateTimeFormat.SortableDateTime（可排序的日期時間）
+#   CustomFormat [文字] 自訂格式 — 用來顯示日期時間值的自訂格式。日期時間可以表示如下: MM/dd/yyyy 表示日期，hh:mm:sstt 表示時間
+# 產生的變數：
+#   Result [文字] 結果 — 已格式化為文字值的日期時間
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

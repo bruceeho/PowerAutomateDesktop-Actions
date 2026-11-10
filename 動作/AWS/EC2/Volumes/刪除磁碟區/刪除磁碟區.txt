@@ -1,0 +1,14 @@
+AWS.DeleteVolume Ec2Client: `` VolumeId: ``
+
+# ==================== 說明 ====================
+# 動作：刪除磁碟區  (AWS.DeleteVolume)
+# 英文名稱：Delete volume
+# 用途：刪除指定的 EBS 磁碟區
+# 位置：AWS > EC2 > Volumes
+# 輸入參數：
+#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
+#   VolumeId [文字] 磁碟區識別碼 — 要刪除之 EBS 磁碟區的識別碼
+# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、InvalidParameterError、InvalidVolumeError、IncorrectStateError、ResourceIsInUseError、RequestFailedError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

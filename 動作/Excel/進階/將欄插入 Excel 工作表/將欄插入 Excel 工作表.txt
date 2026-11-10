@@ -1,0 +1,14 @@
+Excel.InsertColumn Instance: `` Column: ``
+
+# ==================== 說明 ====================
+# 動作：將欄插入 Excel 工作表  (Excel.InsertColumn)
+# 英文名稱：Insert column to Excel worksheet
+# 用途：將欄插入 Excel 執行個體所選取欄的左側
+# 位置：Excel > 進階
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
+#   Column [文字] 資料行 — 欄的索引編號或字母。所指示欄的左側會顯示新欄
+# 可能的錯誤：ColumnNotFoundError、InsertColumnError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

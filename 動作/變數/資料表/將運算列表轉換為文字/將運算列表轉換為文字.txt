@@ -1,0 +1,25 @@
+# 【模式 DataTableToCSVCommonSeparator】使用預先定義的分隔符號將運算列表轉換成 CSV 文字
+Variables.ConvertDataTableToCSV.DataTableToCSVCommonSeparator DataTable: `` IncludeColumnNames: False ColumnsSeparator: Variables.CSVColumnsSeparator.SystemDefault CSVText=> CSVText
+
+# 【模式 DataTableToCSVCustomSeparator】使用自訂分隔符號將運算列表轉換為 CSV 文字
+Variables.ConvertDataTableToCSV.DataTableToCSVCustomSeparator DataTable: `` IncludeColumnNames: False CustomColumnsSeparator: `` CSVText=> CSVText
+
+# ==================== 說明 ====================
+# 動作：將運算列表轉換為文字  (Variables.ConvertDataTableToCSV)
+# 英文名稱：Convert data table to text
+# 用途：將運算列表轉換為 CSV 文字
+# 位置：變數 > 資料表
+# 輸入參數：
+#   DataTable [資料表] 運算列表 — 要使用的運算列表變數。此變數必須先前已由產生運算列表變數的動作指定
+#   IncludeColumnNames [布林，預設 False] 包含欄名稱 — 指定是否應將指定變數的欄名稱設為 CSV 文字的第一列
+#   UseCustomSeparator [布林，預設 False] 使用自訂欄分隔符號 — 指定要使用自訂欄分隔符號，或預先定義的分隔符號
+#   ColumnsSeparator [選項，預設 SystemDefault] 分隔符號 — 要在所指定 CSV 文字中使用的欄分隔符號
+#       可用值：Variables.CSVColumnsSeparator.SystemDefault（系統預設）、Variables.CSVColumnsSeparator.Comma（逗號）、Variables.CSVColumnsSeparator.Semicolon（分號）、Variables.CSVColumnsSeparator.Tab（定位字元）
+#   CustomColumnsSeparator [文字] 自訂欄分隔符號 — 要在指定的 CSV 文字中使用的自訂欄分隔符號
+# 產生的變數：
+#   CSVText [文字] CSV 文字 — 要在其中儲存 CSV 結果的變數
+# 可能的錯誤：ConvertToCSVError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

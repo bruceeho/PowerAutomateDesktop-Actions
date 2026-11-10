@@ -1,0 +1,19 @@
+Text.Random UseUpperCaseLetters: True UseLowerCaseLetters: True UseDigits: True UseSymbols: True MinimumLength: 6 MaximumLength: 10 RandomText=> RandomText
+
+# ==================== 說明 ====================
+# 動作：建立隨機文字  (Text.Random)
+# 英文名稱：Create random text
+# 用途：產生由隨機字元數組成的指定長度文字。這在產生密碼時非常實用
+# 位置：文字
+# 輸入參數：
+#   UseUpperCaseLetters [布林，預設 True] 使用大寫字母 (A-Z) — 指定產生的文字中是否要包含大寫字元
+#   UseLowerCaseLetters [布林，預設 True] 使用小寫字母 (a-z) — 指定產生的文字中是否要包含小寫字元
+#   UseDigits [布林，預設 True] 使用數字 (0-9) — 指定產生的文字中是否要包含數字
+#   UseSymbols [布林，預設 True] 使用符號 ( , . < > ? ! + - _ # $ ^ ) — 指定產生的文字中是否要包含符號
+#   MinimumLength [整數，預設 6] 長度下限 — 隨機文字的長度下限。針對特定長度的文字，將最小值和最大值設為該數字
+#   MaximumLength [整數，預設 10] 長度上限 — 隨機文字的長度上限。針對特定長度的文字，將最小值和最大值設為該數字
+# 產生的變數：
+#   RandomText [文字] 隨機文字 — 產生的隨機文字
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

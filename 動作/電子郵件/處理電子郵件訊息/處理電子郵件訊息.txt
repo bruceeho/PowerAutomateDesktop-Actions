@@ -1,0 +1,33 @@
+# 【模式 Delete】刪除從「擷取電子郵件訊息」動作取得的電子郵件訊息 (或電子郵件訊息清單)
+Email.ProcessEmails.Delete Port: 993 EnableSSL: True Username: `` Password: `` EmailsToProcess: `` AcceptUntrustedCertificates: False
+
+# 【模式 MarkAsUnread】將「擷取電子郵件訊息」動作取得的電子郵件訊息 (或電子郵件訊息清單) 標示為未讀取
+Email.ProcessEmails.MarkAsUnread Port: 993 EnableSSL: True Username: `` Password: `` EmailsToProcess: `` AcceptUntrustedCertificates: False
+
+# 【模式 Move】移動從「擷取電子郵件訊息」動作取得的電子郵件訊息 (或電子郵件訊息清單)
+Email.ProcessEmails.Move Port: 993 EnableSSL: True Username: `` Password: `` EmailsToProcess: `` AcceptUntrustedCertificates: False MailFolder: ``
+
+# 【模式 MarkAsUnreadAndMove】將「擷取電子郵件訊息」動作取得的電子郵件訊息 (或電子郵件訊息清單) 標示為未讀取並移動
+Email.ProcessEmails.MarkAsUnreadAndMove Port: 993 EnableSSL: True Username: `` Password: `` EmailsToProcess: `` AcceptUntrustedCertificates: False MailFolder: ``
+
+# ==================== 說明 ====================
+# 動作：處理電子郵件訊息  (Email.ProcessEmails)
+# 英文名稱：Process email messages
+# 用途：移動、刪除或將「擷取電子郵件訊息」動作取得的電子郵件訊息 (或電子郵件訊息清單) 標示為未讀取
+# 位置：電子郵件
+# 輸入參數：
+#   Server [文字]
+#   Port [整數，預設 993] 連接埠 — 要用於 IMAP 伺服器的連接埠。通常是連接埠 993
+#   EnableSSL [布林，預設 True] 啟用 SSL — 指定是否使用安全連線與 IMAP 伺服器通訊
+#   Username [文字] 使用者名稱 — 要存取的電子郵件帳戶使用者名稱
+#   Password [文字(可加密)] 密碼 — 要存取的電子郵件帳戶密碼
+#   EmailsToProcess [List<MailMessageObject>] 要處理的電子郵件訊息 — 要處理的電子郵件訊息或電子郵件訊息清單。這應該是由「擷取電子郵件訊息」動作填入的變數
+#   AcceptUntrustedCertificates [布林，預設 False] 接受不受信任的憑證 — 指定是否接受不受信任的憑證
+#   Operation [選項，預設 Move] 作業 — 您要在指定的電子郵件訊息上執行的作業
+#       可用值：Email.ProcessEmailsOperation.Delete（從伺服器刪除電子郵件訊息）、Email.ProcessEmailsOperation.MarkAsUnread（將電子郵件訊息標示為未讀取）、Email.ProcessEmailsOperation.Move（將電子郵件訊息移至郵件資料夾）、Email.ProcessEmailsOperation.MarkAsUnreadAndMove（將電子郵件訊息標示為未讀取，並移動至郵件資料夾）
+#   MailFolder [文字] 郵件資料夾 — 要將電子郵件訊息移至其中的郵件資料夾名稱
+# 可能的錯誤：ConnectToImapServerError、InvalidMailFolderError、ProcessEmailsError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

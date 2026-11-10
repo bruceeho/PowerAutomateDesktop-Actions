@@ -1,0 +1,22 @@
+Azure.CreateSnapshot AzureClient: `` SnapshotName: `` ResourceGroupCreateOption: Azure.ResourceGroupCreateOption.UseExisting ResourceGroup: `` Location: `` DiskName: `` DiskResourceGroup: `` Snapshot=> Snapshot
+
+# ==================== 說明 ====================
+# 動作：建立快照集  (Azure.CreateSnapshot)
+# 英文名稱：Create snapshot
+# 用途：從指定的磁碟建立快照集
+# 位置：Azure > 虛擬機器 > Snapshots
+# 輸入參數：
+#   AzureClient [AzureClient] Azure 用戶端 — 用來連線 Azure 的用戶端
+#   SnapshotName [文字] 快照集名稱 — 要建立之快照集的名稱
+#   ResourceGroupCreateOption [選項，預設 UseExisting] 資源群組選項 — 指定將建立新的資源群組，或是使用現有的資源群組
+#       可用值：Azure.ResourceGroupCreateOption.UseExisting（使用現有的）、Azure.ResourceGroupCreateOption.CreateNew（新建）
+#   ResourceGroup [文字] 資源群組 — 建立快照集所在的資源群組
+#   Location [文字] 位置 — 將建立新磁碟的位置
+#   DiskName [文字] 來源磁碟 — 做為來源資料使用的受控磁碟名稱
+#   DiskResourceGroup [文字] 來源磁碟的資源群組 — 做為來源資料使用的受控磁碟資源群組
+# 產生的變數：
+#   Snapshot [AzureSnapshot] 建立的 Azure 快照集 — 建立的快照集
+# 可能的錯誤：ResourceGroupAlreadyExistsError、ResourceGroupNotFoundError、ResourceAlreadyExists、DiskNotFoundError、FailedToCreateSnapshotError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

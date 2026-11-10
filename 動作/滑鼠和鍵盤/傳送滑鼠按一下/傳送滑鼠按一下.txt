@@ -1,0 +1,27 @@
+# 【模式 Click】在目前滑鼠位置傳送滑鼠按一下事件
+MouseAndKeyboard.SendMouseClick.Click ClickType: MouseAndKeyboard.MouseClickType.LeftClick MillisecondsDelay: 0
+
+# 【模式 ClickAt】在指定位置傳送滑鼠按一下事件
+MouseAndKeyboard.SendMouseClick.ClickAt ClickType: MouseAndKeyboard.MouseClickType.LeftClick MillisecondsDelay: 0 X: `` Y: `` RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+
+# ==================== 說明 ====================
+# 動作：傳送滑鼠按一下  (MouseAndKeyboard.SendMouseClick)
+# 英文名稱：Send mouse click
+# 用途：傳送滑鼠按一下事件
+# 位置：滑鼠和鍵盤
+# 輸入參數：
+#   ClickType [選項，預設 LeftClick] 要傳送的滑鼠事件 — 指定要傳送何種形式的滑鼠事件
+#       可用值：MouseAndKeyboard.MouseClickType.LeftClick（按滑鼠左鍵）、MouseAndKeyboard.MouseClickType.RightClick（按滑鼠右鍵）、MouseAndKeyboard.MouseClickType.DoubleClick（按兩下）、MouseAndKeyboard.MouseClickType.LeftButtonDown（左鍵按下）、MouseAndKeyboard.MouseClickType.LeftButtonUp（左鍵放開）、MouseAndKeyboard.MouseClickType.RightButtonDown（右鍵按下）、MouseAndKeyboard.MouseClickType.RightButtonUp（右鍵放開）、MouseAndKeyboard.MouseClickType.MiddleClick（按滑鼠中間鍵）
+#   MillisecondsDelay [整數，預設 0] 等候 — 傳送滑鼠事件之前的延遲時間 (單位 1/1000 秒)
+#   MoveMouse [布林，預設 False] 移動滑鼠 — 移動滑鼠
+#   X [整數] X — 以像素座標表示的滑鼠水平 (X) 位置
+#   Y [整數] Y — 以像素座標表示的滑鼠垂直 (Y) 位置
+#   RelativeTo [選項，預設 Screen] 相對於 — 指定新的滑鼠位置將會相對於畫面左上角、最前面的視窗，或是目前的滑鼠位置
+#       可用值：MouseAndKeyboard.PositionRelativeTo.Screen（畫面）、MouseAndKeyboard.PositionRelativeTo.ActiveWindow（使用中視窗）、MouseAndKeyboard.PositionRelativeTo.CurrentMousePosition（目前滑鼠位置）
+#   MovementStyle [選項，預設 Instant] 滑鼠移動樣式 — 移動樣式，滑鼠將依此樣式從上一個位置移至所記錄路由的開頭 (或其最終位置)
+#       可用值：MouseAndKeyboard.MovementStyle.Instant（立即）、MouseAndKeyboard.MovementStyle.AnimateSlow（採用動畫 (低速)）、MouseAndKeyboard.MovementStyle.AnimateNormal（採用動畫 (常速)）、MouseAndKeyboard.MovementStyle.AnimateFast（採用動畫 (高速)）
+# 可能的錯誤：SendClickInNonInteractiveModeError、ClickOutOfScreenBoundsError、SendClickError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

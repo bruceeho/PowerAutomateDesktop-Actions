@@ -1,0 +1,62 @@
+# 【模式 AutofitAllColumns】自動調整使用中工作表內所有可用的資料行
+Excel.ResizeColumnsOrRows.AutofitAllColumns Instance: ``
+
+# 【模式 AutofitRangeOfColumns】自動調整使用中工作表內選取的資料行範圍
+Excel.ResizeColumnsOrRows.AutofitRangeOfColumns Instance: `` StartColumn: `` EndColumn: ``
+
+# 【模式 AutofitSingleColumn】自動調整使用中工作表內選取的資料行
+Excel.ResizeColumnsOrRows.AutofitSingleColumn Instance: `` Column: ``
+
+# 【模式 ResizeAllColumns】設定使用中工作表內所有資料行的自訂寬度
+Excel.ResizeColumnsOrRows.ResizeAllColumns Instance: `` Width: ``
+
+# 【模式 ResizeRangeOfColumns】設定使用中工作表內所選資料行範圍的自訂寬度
+Excel.ResizeColumnsOrRows.ResizeRangeOfColumns Instance: `` StartColumn: `` EndColumn: `` Width: ``
+
+# 【模式 ResizeSingleColumn】設定使用中工作表內所選資料行的自訂寬度
+Excel.ResizeColumnsOrRows.ResizeSingleColumn Instance: `` Column: `` Width: ``
+
+# 【模式 AutofitAllRows】自動調整使用中工作表內所有可用的資料列
+Excel.ResizeColumnsOrRows.AutofitAllRows Instance: ``
+
+# 【模式 AutofitRangeOfRows】自動調整使用中工作表內選取的資料列範圍
+Excel.ResizeColumnsOrRows.AutofitRangeOfRows Instance: `` StartRow: `` EndRow: ``
+
+# 【模式 AutofitSingleRow】自動調整使用中工作表內選取的資料列
+Excel.ResizeColumnsOrRows.AutofitSingleRow Instance: `` Row: ``
+
+# 【模式 ResizeAllRows】設定使用中工作表內所有資料列的自訂高度
+Excel.ResizeColumnsOrRows.ResizeAllRows Instance: `` Height: ``
+
+# 【模式 ResizeRangeOfRows】設定使用中工作表內所選資料列範圍的自訂高度
+Excel.ResizeColumnsOrRows.ResizeRangeOfRows Instance: `` StartRow: `` EndRow: `` Height: ``
+
+# 【模式 ResizeSingleRow】設定使用中工作表內所選資料列的自訂高度
+Excel.ResizeColumnsOrRows.ResizeSingleRow Instance: `` Row: `` Height: ``
+
+# ==================== 說明 ====================
+# 動作：調整 Excel 工作表中資料行/資料列的大小  (Excel.ResizeColumnsOrRows)
+# 英文名稱：Resize columns/rows in Excel worksheet
+# 用途：調整 Excel 執行個體內使用中工作表的所選資料行或資料列的大小
+# 位置：Excel > 進階
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 指定 Excel 執行個體。這個變數先前必須已使用「啟動 Excel」動作完成指定
+#   ResizeTarget [選項，預設 Column] 調整大小目標 — 指定是否要調整資料行或資料列的大小
+#       可用值：Excel.ResizeTarget.Column（資料行）、Excel.ResizeTarget.Row（資料列）
+#   SelectionRange [選項，預設 Single] 選取範圍 — 指定要選取使用中工作表內的單一資料行/資料列、資料行/資料列範圍，還是所有可用的資料行/資料列
+#       可用值：Excel.SelectionRange.Single（單一）、Excel.SelectionRange.Range（範圍）、Excel.SelectionRange.AllAvailable（所有可用項目）
+#   Column [文字] 資料行 — 資料行的索引號碼或字母。資料行編號從索引 1 開始
+#   Row [整數] 資料列 — 資料列的索引號碼。編號從 1 開始
+#   StartColumn [文字] 起始資料行 — 第一個資料行的索引或字母。資料行編號從索引 1 開始
+#   EndColumn [文字] 結尾資料行 — 最後一個資料行的索引或字母。資料行編號從索引 1 開始
+#   StartRow [整數] 起始資料列 — 第一個資料列的索引。編號從 1 開始
+#   EndRow [整數] 結尾資料列 — 最後一個資料列的索引。編號從 1 開始
+#   ResizeType [選項，預設 Autofit] 調整大小類型 — 指定要自動調整選取的資料行/資料列還是要設定自訂大小
+#       可用值：Excel.ResizeType.Autofit（自動調整）、Excel.ResizeType.CustomSize（自訂大小）
+#   Width [整數] 寬度 — 所選資料行的寬度
+#   Height [整數] 高度 — 所選資料列的高度
+# 可能的錯誤：ResizeColumnsOrRowsError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

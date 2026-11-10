@@ -1,0 +1,14 @@
+Text.EscapeForRegularExpression Text: `` EscapedText=> EscapedText
+
+# ==================== 說明 ====================
+# 動作：規則運算式的逸出文字  (Text.EscapeForRegularExpression)
+# 英文名稱：Escape text for regular expression
+# 用途：逸出最低限度的字元集 (\、*、+、?、|、{、[、(,)、^、$、.、# 和空白字元)，方法是將其取代為逸出程式碼
+# 位置：文字
+# 輸入參數：
+#   Text [文字] 要逸出的文字 — 要逸出的文字
+# 產生的變數：
+#   EscapedText [文字] 逸出的文字 — 逸出的文字
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,16 @@
+Text.FromNumber Number: `` DecimalPlaces: 2 UseThousandsSeparator: True FormattedNumber=> FormattedNumber
+
+# ==================== 說明 ====================
+# 動作：將數字轉換為文字  (Text.FromNumber)
+# 英文名稱：Convert number to text
+# 用途：使用指定的格式將數字轉換為文字
+# 位置：文字
+# 輸入參數：
+#   Number [數值] 將轉換的數字 — 要轉換為文字的數值
+#   DecimalPlaces [整數，預設 2] 小數位數 — 截斷之前要包含的小數位數。也可以透過結尾加上零這種方式填補文字
+#   UseThousandsSeparator [布林，預設 True] 使用千分位分隔符號 — 指定是否要使用標點符號做為千分位分隔符號
+# 產生的變數：
+#   FormattedNumber [文字] 結果 — 格式化為文字的數字
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,30 @@
+# 【模式 SendEmail】透過 Outlook 建立並傳送新的電子郵件訊息
+Outlook.SendEmailThroughOutlook.SendEmail Instance: `` Account: `` SendTo: `` IsBodyHtml: False IsDraft: False
+
+# 【模式 SendEmailFromMailbox】透過 Outlook 從另一個信箱建立並傳送新的電子郵件訊息
+Outlook.SendEmailThroughOutlook.SendEmailFromMailbox Instance: `` Account: `` SendFrom: `` SendTo: `` IsBodyHtml: False IsDraft: False
+
+# ==================== 說明 ====================
+# 動作：透過 Outlook 傳送電子郵件訊息  (Outlook.SendEmailThroughOutlook)
+# 英文名稱：Send email message through Outlook
+# 用途：透過 Outlook 建立並傳送新的電子郵件訊息
+# 位置：Outlook
+# 輸入參數：
+#   Instance [OutlookInstanceHandle] Outlook 執行個體 — 要使用的 Outlook 執行個體。在「啟動 Outlook」動作中指定此變數
+#   Account [文字] 帳戶 — 使用 Outlook 帳戶名稱 (資料檔案名稱)
+#   SendEmailFrom [選項，預設 Account] 電子郵件訊息的傳送來源 — 指定是否使用指定的帳戶或其他帳戶 (例如，共用的信箱) 傳送電子郵件訊息
+#       可用值：Outlook.SendEmailFrom.Account（帳戶）、Outlook.SendEmailFrom.OtherMailbox（其他信箱）
+#   SendFrom [文字] 寄件者 — 用於傳送電子郵件的 Outlook 帳戶名稱；例如，共用信箱。
+#   SendTo [文字] 收件者 — 收件者的電子郵件地址。如果要輸入的電子郵件地址不止一個，請使用空格或分號來分隔地址清單
+#   CC [文字，選填] 副本 — 副本收件者的電子郵件地址。如果要輸入的電子郵件地址不止一個，請使用空格或分號來分隔地址清單
+#   BCC [文字，選填] 密件副本 — 密件副本 (隱藏) 收件者的電子郵件地址。如果要輸入的電子郵件地址不止一個，請使用空格或分號來分隔地址清單
+#   Subject [文字，選填] 主旨 — 電子郵件訊息的主旨
+#   Body [文字，選填] 本文 — 本文的文字
+#   IsBodyHtml [布林，預設 False] 本文是 HTML — 指定是否將電子郵件本文解譯為 HTML 編碼
+#   IsDraft [布林，預設 False] 另存為草稿 — 不傳送電子郵件，而是將其儲存在草稿資料夾中
+#   Attachments [List<FileObject>，選填] 附件 — 任何附件的完整路徑。將多個檔案放在雙引號 (") 裡面，並用空白字元隔開
+# 可能的錯誤：OutlookAccountNotFoundError、SendEmailMessageError、AttachmentNotFoundError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

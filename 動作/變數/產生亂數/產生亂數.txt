@@ -1,0 +1,25 @@
+# 【模式 RandomNumber】產生介於最小值與最大值之間的亂數
+Variables.GenerateRandomNumber.RandomNumber MinimumValue: 0 MaximumValue: 100 RandomNumber=> RandomNumber
+
+# 【模式 ListOfRandomNumbers】產生介於最小值與最大值之間的亂數清單
+Variables.GenerateRandomNumber.ListOfRandomNumbers MinimumValue: 0 MaximumValue: 100 NumbersCount: 10 AllowDuplicates: False RandomNumbers=> RandomNumbers
+
+# ==================== 說明 ====================
+# 動作：產生亂數  (Variables.GenerateRandomNumber)
+# 英文名稱：Generate random number
+# 用途：產生介於最小值與最大值之間的亂數或亂數清單
+# 位置：變數
+# 輸入參數：
+#   MinimumValue [整數，預設 0] 最小值 — 要產生的亂數下限
+#   MaximumValue [整數，預設 100] 最大值 — 要產生的亂數上限
+#   GenerateMultipleNumbers [布林，預設 False] 產生多個數字 — 指定要產生單一亂數或亂數清單
+#   NumbersCount [整數，預設 10] 多少個數字 — 指定要產生多少個亂數
+#   AllowDuplicates [布林，預設 False] 允許重複資料 — 指定要允許或避免相同數字在亂數清單中出現超過一次
+# 產生的變數：
+#   RandomNumbers [List<Decimal>] 將亂數儲存至 — 新產生的亂數清單
+#   RandomNumber [數值] 將亂數儲存至 — 新產生的亂數
+# 可能的錯誤：GenerateRandomNumberError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

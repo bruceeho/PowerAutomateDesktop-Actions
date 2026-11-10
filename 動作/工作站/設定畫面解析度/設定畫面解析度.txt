@@ -1,0 +1,17 @@
+Workstation.SetScreenResolution MonitorWidth: `` MonitorHeight: `` MonitorBitCount: `` MonitorFrequency: `` MonitorNumber: ``
+
+# ==================== 說明 ====================
+# 動作：設定畫面解析度  (Workstation.SetScreenResolution)
+# 英文名稱：Set screen resolution
+# 用途：設定所選取螢幕的寬度、高度、位元數和頻率
+# 位置：工作站
+# 輸入參數：
+#   MonitorWidth [整數] 螢幕寬度 — 要設定為螢幕寬度的值
+#   MonitorHeight [整數] 螢幕高度 — 要設定為螢幕高度的值
+#   MonitorBitCount [整數] 螢幕位元數 — 要設定為螢幕位元數的值
+#   MonitorFrequency [整數] 螢幕頻率 — 要設定為螢幕頻率的值
+#   MonitorNumber [整數] 螢幕數目 — 要設定其解析度的螢幕數目
+# 可能的錯誤：SetScreenResolutionError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

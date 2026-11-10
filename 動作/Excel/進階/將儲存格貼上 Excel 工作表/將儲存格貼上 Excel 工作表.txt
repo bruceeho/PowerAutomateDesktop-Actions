@@ -1,0 +1,26 @@
+# 【模式 Paste】將儲存格範圍貼上 Excel 執行個體使用中工作表的目前使用中儲存格
+Excel.PasteCellsToExcel.Paste Instance: ``
+
+# 【模式 PasteAt】將儲存格範圍貼上 Excel 執行個體使用中工作表的指定位置
+Excel.PasteCellsToExcel.PasteAt Instance: `` Column: `` Row: ``
+
+# 【模式 PasteAtNamedCell】將一組儲存格貼到 Excel 執行個體使用中工作表的指定儲存格
+Excel.PasteCellsToExcel.PasteAtNamedCell Instance: `` CellName: ``
+
+# ==================== 說明 ====================
+# 動作：將儲存格貼上 Excel 工作表  (Excel.PasteCellsToExcel)
+# 英文名稱：Paste cells to Excel worksheet
+# 用途：將儲存格範圍貼上 Excel 執行個體的使用中工作表
+# 位置：Excel > 進階
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 指定 Excel 執行個體。這個變數先前必須已使用「啟動 Excel」動作完成指定
+#   PasteMode [選項，預設 SpecifiedCell] 貼上模式 — 指定要貼上指定的儲存格或目前使用中儲存格
+#       可用值：Excel.WriteExcelMode.SpecifiedCell（於指定的儲存格）、Excel.WriteExcelMode.ActiveCell（於目前使用中儲存格）、Excel.WriteExcelMode.NamedCells（在具名儲存格上）
+#   Column [文字] 資料行 — 儲存格欄的索引或字母
+#   Row [整數] 資料列 — 列號
+#   CellName [文字] 名稱 — 儲存格的名稱
+# 可能的錯誤：PasteCellsError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

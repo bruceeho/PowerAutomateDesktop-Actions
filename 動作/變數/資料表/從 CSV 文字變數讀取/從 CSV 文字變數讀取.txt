@@ -1,0 +1,32 @@
+# 【模式 ReadPredefinedSeparator】使用預先定義的分隔符號，從 CSV 文字變數產生運算列表
+Variables.GenerateDataTableFromCSV.ReadPredefinedSeparator CSVText: `` TrimFields: True FirstLineContainsColumnNames: False ReadFieldsAsText: False ColumnsSeparator: Variables.CSVColumnsSeparator.SystemDefault CSVTable=> CSVTable
+
+# 【模式 ReadCustomSeparator】使用自訂分隔符號，從 CSV 文字變數產生運算列表
+Variables.GenerateDataTableFromCSV.ReadCustomSeparator CSVText: `` TrimFields: True FirstLineContainsColumnNames: False ReadFieldsAsText: False CustomColumnsSeparator: `` CSVTable=> CSVTable
+
+# 【模式 ReadFixedColumnWidths】使用固定欄寬，從 CSV 文字變數產生運算列表
+Variables.GenerateDataTableFromCSV.ReadFixedColumnWidths CSVText: `` TrimFields: True FirstLineContainsColumnNames: False ReadFieldsAsText: False FixedColumnWidths: `` CSVTable=> CSVTable
+
+# ==================== 說明 ====================
+# 動作：從 CSV 文字變數讀取  (Variables.GenerateDataTableFromCSV)
+# 英文名稱：Read from CSV text variable
+# 用途：從 CSV 文字產生運算列表
+# 位置：變數 > 資料表
+# 輸入參數：
+#   CSVText [文字] CSV 文字 — 要讀取的 CSV 文字變數
+#   TrimFields [布林，預設 True] 修剪欄位 — 指定是否自動修剪所擷取儲存格的前置空格與結尾空白
+#   FirstLineContainsColumnNames [布林，預設 False] 第一行包含欄名稱 — 指定是否要使用 CSV 文字的第一列來設定結果運算列表的欄名稱。啟用此選項，可避免將名稱做為資料讀取送入表格。後續動作可以使用欄名稱 (而不是欄號) 來存取運算列表所保存的資料
+#   ReadFieldsAsText [布林，預設 False] 將 CSV 欄位擷取為文字 — 指定要以純文字或最符合的類型 (如表示日期的日期時間、或表示數字的數值及更多) 來擷取 CSV 文字欄位的內容
+#   ColumnsSeparatorType [選項，預設 Predefined] 欄分隔符號 — 指定要使用預先定義的欄分隔符號、自訂欄寬或固定欄寬
+#       可用值：Variables.CSVColumnsSeparatorType.Predefined（預先定義）、Variables.CSVColumnsSeparatorType.Custom（自訂）、Variables.CSVColumnsSeparatorType.FixedColumnWidths（固定欄寬）
+#   FixedColumnWidths [文字] 固定欄寬 — 用於剖析 CSV 文字的固定欄寬。使用逗號、空格、定位字元或分行符號來分隔寬度
+#   CustomColumnsSeparator [文字] 自訂分隔符號 — 用於剖析 CSV 文字的自訂欄分隔符號
+#   ColumnsSeparator [選項，預設 SystemDefault] 分隔符號 — 要剖析 CSV 文字的欄分隔符號
+#       可用值：Variables.CSVColumnsSeparator.SystemDefault（系統預設）、Variables.CSVColumnsSeparator.Comma（逗號）、Variables.CSVColumnsSeparator.Semicolon（分號）、Variables.CSVColumnsSeparator.Tab（定位字元）
+# 產生的變數：
+#   CSVTable [資料表] CSV 資料表 — 做為運算列表的 CSV 文字內容
+# 可能的錯誤：ReadFromCSVError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

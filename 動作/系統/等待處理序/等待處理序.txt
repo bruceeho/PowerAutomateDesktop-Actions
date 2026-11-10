@@ -1,0 +1,28 @@
+# 【模式 ProcessToStart】檢查處理序是否已啟動
+System.WaitProcessAction.ProcessToStart ProcessName: ``
+
+# 【模式 ProcessToStop】檢查處理序是否已停止
+System.WaitProcessAction.ProcessToStop ProcessName: ``
+
+# 【模式 ProcessWithNameToStart】檢查指定使用者名稱下的程序是否已啟動
+System.WaitProcessAction.ProcessWithNameToStart ProcessUser: `` ProcessName: ``
+
+# 【模式 ProcessWithNameToStop】檢查指定使用者名稱下的程序是否已停止
+System.WaitProcessAction.ProcessWithNameToStop ProcessUser: `` ProcessName: ``
+
+# ==================== 說明 ====================
+# 動作：等待處理序  (System.WaitProcessAction)
+# 英文名稱：Wait for process
+# 用途：暫停執行，直到處理序啟動或停止
+# 位置：系統
+# 輸入參數：
+#   ProcessUser [文字]
+#   UseProcessUser [布林，預設 False]
+#   WaitFor [選項，預設 Start]
+#       可用值：System.WaitForProcess.Start（啟動）、System.WaitForProcess.Stop（停止）
+#   ProcessName [文字]
+# 可能的錯誤：RetrieveProcessesError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

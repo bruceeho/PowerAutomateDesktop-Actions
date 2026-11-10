@@ -1,0 +1,73 @@
+# 【模式 Rename】變更一或多個檔案的名稱
+File.RenameFiles.Rename Files: `` NewName: `` KeepExtension: True IfFileExists: File.IfExists.DoNothing RenamedFiles=> RenamedFiles
+
+# 【模式 RenameAddText】透過加入某些文字，變更一或多個檔案的名稱
+File.RenameFiles.RenameAddText Files: `` TextToAdd: `` TextPosition: File.AddTextPosition.AfterName IfFileExists: File.IfExists.DoNothing RenamedFiles=> RenamedFiles
+
+# 【模式 RenameRemoveText】透過移除某些文字，變更一或多個檔案的名稱
+File.RenameFiles.RenameRemoveText Files: `` TextToRemove: `` IfFileExists: File.IfExists.DoNothing RenamedFiles=> RenamedFiles
+
+# 【模式 RenameReplaceText】透過取代某些文字，變更一或多個檔案的名稱
+File.RenameFiles.RenameReplaceText Files: `` TextToReplace: `` ReplaceWith: `` IfFileExists: File.IfExists.DoNothing RenamedFiles=> RenamedFiles
+
+# 【模式 RenameChangeExtension】透過變更副檔名，變更一或多個檔案的名稱
+File.RenameFiles.RenameChangeExtension Files: `` NewExtension: `` IfFileExists: File.IfExists.DoNothing RenamedFiles=> RenamedFiles
+
+# 【模式 RenameAddDateOrTime】透過加入日期時間，變更一或多個檔案的名稱
+File.RenameFiles.RenameAddDateOrTime Files: `` DateTimeToAdd: File.DateTimeToAdd.Current DateTimePosition: File.AddTextPosition.AfterName DateTimeSeparator: File.Separator.Space DateTimeFormat: $'''yyyyMMdd''' IfFileExists: File.IfExists.DoNothing RenamedFiles=> RenamedFiles
+
+# 【模式 RenameAddCustomDateTime】透過加入自訂日期時間，變更一或多個檔案的名稱
+File.RenameFiles.RenameAddCustomDateTime Files: `` CustomDateTime: `` DateTimePosition: File.AddTextPosition.AfterName DateTimeSeparator: File.Separator.Space DateTimeFormat: $'''yyyyMMdd''' IfFileExists: File.IfExists.DoNothing RenamedFiles=> RenamedFiles
+
+# 【模式 RenameAddSequentialSuffix】透過加入循序尾碼，變更一或多個檔案的名稱
+File.RenameFiles.RenameAddSequentialSuffix Files: `` SequencePosition: File.AddTextPosition.AfterName StartNumberingAt: `` IncrementBy: `` SequenceSeparator: File.Separator.Space UsePadding: False Padding: 3 IfFileExists: File.IfExists.DoNothing RenamedFiles=> RenamedFiles
+
+# 【模式 OverwriteWithSequentialSuffix】變更一或多個檔案的名稱，並加入循序尾碼
+File.RenameFiles.OverwriteWithSequentialSuffix Files: `` SequenceNewName: `` SequencePosition: File.AddTextPosition.AfterName StartNumberingAt: `` IncrementBy: `` SequenceSeparator: File.Separator.Space UsePadding: False Padding: 3 IfFileExists: File.IfExists.DoNothing RenamedFiles=> RenamedFiles
+
+# ==================== 說明 ====================
+# 動作：重新命名檔案  (File.RenameFiles)
+# 英文名稱：Rename file(s)
+# 用途：變更一或多個檔案的名稱
+# 位置：檔案
+# 輸入參數：
+#   SequenceUseExistingName [布林，預設 True] 加入數字成 — 指定是否將數字加入現有檔名或新檔名
+#   Files [List<FileObject>] 要重新命名的檔案 — 要重新命名的檔案。這裡可以是檔案路徑，或是包含檔案、檔案清單、文字路徑的變數，或文字路徑的清單。使用「取得資料夾中檔案」動作，用檔案清單填入變數
+#   RenameScheme [選項，預設 SetNewName] 重新命名配置 — 指定如何重新命名檔案
+#       可用值：File.RenameScheme.SetNewName（設定新名稱）、File.RenameScheme.AddText（加入文字）、File.RenameScheme.RemoveText（移除文字）、File.RenameScheme.ReplaceText（取代文字）、File.RenameScheme.ChangeExtension（變更副檔名）、File.RenameScheme.AddDateTime（加入日期時間）、File.RenameScheme.MakeSequential（建立循序）
+#   SequenceNewName [文字] 新檔名 — 檔案的新名稱
+#   TextToAdd [文字] 要加入的文字 — 要加入至原始檔名的文字
+#   NewName [文字] 新檔名 — 檔案的新名稱
+#   TextToRemove [文字] 要移除的文字 — 要從原始檔名移除的文字。這個重新命名配置會搜尋每個檔名，並在名稱中出現所輸入文字的任何位置中將其移除
+#   TextToReplace [文字] 要取代的文字 — 要在原始檔名中取代的文字。這個重新命名配置會搜尋每個檔名，並在名稱中出現所輸入文字的任何位置中進行取代
+#   UseCustomDateTime [布林，預設 False] 使用自訂日期時間 — 指定是否使用自訂日期時間
+#   SequencePosition [選項，預設 AfterName] 加入數字成 — 指定數字要加在原始名稱或新基底檔案之前或之後
+#       可用值：File.AddTextPosition.AfterName（名稱之後）、File.AddTextPosition.BeforeName（名稱之前）
+#   NewExtension [文字] 新副檔名 — 要加入成為檔案之新副檔名的文字
+#   ReplaceWith [文字] 取代為 — 要用來取代原始文字的文字
+#   TextPosition [選項，預設 AfterName] 加入文字 — 指定文字要加在原始名稱之前或之後
+#       可用值：File.AddTextPosition.AfterName（名稱之後）、File.AddTextPosition.BeforeName（名稱之前）
+#   DateTimeToAdd [選項，預設 Current] 要加入的日期時間 — 指定要在檔名中加入哪個日期時間值
+#       可用值：File.DateTimeToAdd.Current（目前日期時間）、File.DateTimeToAdd.CreationTime（建立時間）、File.DateTimeToAdd.LastAccessed（上次存取）、File.DateTimeToAdd.LastModified（上次修改於）
+#   KeepExtension [布林，預設 True] 保留副檔名 — 指定是否要在檔名中包含舊的副檔名。停用這個選項時，可手動加入檔案副檔名
+#   StartNumberingAt [整數] 開始編號於 — 起始編號值
+#   CustomDateTime [日期時間] 自訂日期時間 — 要加入至檔名的日期時間
+#   IncrementBy [整數] 遞增量 — 從起始值起依次遞增的數字
+#   SequenceSeparator [選項，預設 Space] 分隔符號 — 指定要用來分隔原始檔名與所加入數字的方法，包括不使用分隔符號的選項
+#       可用值：File.Separator.Nothing（沒有任何動作）、File.Separator.Space（空格鍵）、File.Separator.Dash（破折號）、File.Separator.Period（期間）、File.Separator.Underscore（底線）
+#   DateTimePosition [選項，預設 AfterName] 加入日期時間 — 指定日期時間要加在原始名稱之前或之後
+#       可用值：File.AddTextPosition.AfterName（名稱之後）、File.AddTextPosition.BeforeName（名稱之前）
+#   DateTimeSeparator [選項，預設 Space] 分隔符號 — 指定要用來分隔原始檔名與所加入日期時間值的方法，包括不使用分隔符號的選項
+#       可用值：File.Separator.Nothing（沒有任何動作）、File.Separator.Space（空格鍵）、File.Separator.Dash（破折號）、File.Separator.Period（期間）、File.Separator.Underscore（底線）
+#   UsePadding [布林，預設 False] 使用填補 — 指定是否要使用填補
+#   Padding [整數，預設 3] 每個數字應至少 — 每個加入數字的最小長度
+#   DateTimeFormat [文字，預設 yyyyMMdd] 日期時間格式 — 要加入至檔名的日期時間值格式，例如代表日期的 MM/dd/yyyy ，以及代表時間的 hh:mm:sstt
+#   IfFileExists [選項，預設 DoNothing] 如果檔案已存在 — 指定當資料夾中已存在相同名稱的檔案時應採取的行動
+#       可用值：File.IfExists.DoNothing（不執行任何動作）、File.IfExists.Overwrite（覆寫）
+# 產生的變數：
+#   RenamedFiles [List<FileObject>] 重新命名的檔案 — 以檔案清單重新命名的檔案
+# 可能的錯誤：DirectoryNotFoundError、FileNotFoundError、RenameFileError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

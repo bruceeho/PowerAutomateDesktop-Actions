@@ -1,0 +1,33 @@
+# 【模式 GetElementAttribute】以文字形式取得 XML 元素的屬性值
+XML.GetXmlElementAttribute.GetElementAttribute Document: `` AttributeName: `` TextValue=> TextValue
+
+# 【模式 GetElementAttributeAsNumeric】以數值形式取得 XML 元素的屬性值
+XML.GetXmlElementAttribute.GetElementAttributeAsNumeric Document: `` AttributeName: `` NumericValue=> NumericValue
+
+# 【模式 GetElementAttributeAsBoolean】以布林值形式取得 XML 元素的屬性值
+XML.GetXmlElementAttribute.GetElementAttributeAsBoolean Document: `` AttributeName: `` BooleanValue=> BooleanValue
+
+# 【模式 GetElementAttributeAsDateTime】以日期時間形式取得 XML 元素的屬性值
+XML.GetXmlElementAttribute.GetElementAttributeAsDateTime Document: `` AttributeName: `` DateTimeValue=> DateTimeValue
+
+# ==================== 說明 ====================
+# 動作：取得 XML 元素屬性  (XML.GetXmlElementAttribute)
+# 英文名稱：Get XML element attribute
+# 用途：取得 XML 元素的屬性值
+# 位置：XML
+# 輸入參數：
+#   Document [XmlNodeObject] XML 文件 — 要擷取其屬性的 XML 文件或 XML 元素
+#   XPathQuery [文字，選填] XPath 查詢 — 要尋找子元素並擷取其屬性的 XPath 運算式
+#   AttributeName [文字] 屬性名稱 — 要擷取其值的屬性名稱
+#   ValueType [選項，預設 Text] 取得以下形式的值 — 指定屬性值的資料類型
+#       可用值：XML.ValueType.Text（文字值）、XML.ValueType.Numeric（數值）、XML.ValueType.DateTime（日期時間值）、XML.ValueType.Boolean（布林值）
+# 產生的變數：
+#   DateTimeValue [日期時間] XML 屬性值 — 擷取的 XML 屬性值
+#   TextValue [文字] XML 屬性值 — 擷取的 XML 屬性值
+#   BooleanValue [布林] XML 屬性值 — 擷取的 XML 屬性值
+#   NumericValue [數值] XML 屬性值 — 擷取的 XML 屬性值
+# 可能的錯誤：InvalidXPathError、XPathNoElementError、AttributeNotFoundError、ConvertAttributeError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

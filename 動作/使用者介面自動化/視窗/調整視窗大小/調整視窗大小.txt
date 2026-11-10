@@ -1,0 +1,28 @@
+# 【模式 Resize】透過 UI 元素調整特定視窗大小
+UIAutomation.ResizeWindow.Resize Width: `` Height: ``
+
+# 【模式 ResizeByInstanceOrHandle】透過視窗執行個體或控點調整特定視窗大小
+UIAutomation.ResizeWindow.ResizeByInstanceOrHandle WindowInstance: `` Width: `` Height: ``
+
+# 【模式 ResizeByTitleClass】透過視窗標題和/或類別調整特定視窗大小
+UIAutomation.ResizeWindow.ResizeByTitleClass Width: `` Height: ``
+
+# ==================== 說明 ====================
+# 動作：調整視窗大小  (UIAutomation.ResizeWindow)
+# 英文名稱：Resize window
+# 用途：設定特定視窗的大小
+# 位置：使用者介面自動化 > 視窗
+# 輸入參數：
+#   FindWindowMode [選項，預設 Control] 尋找視窗模式 — 指定要使用 UI 元素或視窗標題/類別組合尋找視窗
+#       可用值：UIAutomation.FindWindowBy.Control（透過視窗 UI 元素）、UIAutomation.FindWindowBy.InstanceOrHandle（透過視窗執行個體/控點）、UIAutomation.FindWindowBy.TitleAndClass（透過標題和/或類別）
+#   Control [UIControl]
+#   Title [文字，選填] 視窗標題 — 視窗標題。可使用萬用字元，如 '?' 或 '*'。
+#   WindowInstance [整數] 視窗執行個體 — 要調整大小之視窗的執行個體或控點
+#   Class [文字，選填] 視窗類別 — 如果有兩個標題相同的視窗，則視窗類別有助於區分兩者。在這種情況下，請輸入要使用的視窗類別。
+#   Width [整數] 寬度 — 新寬度 (像素)
+#   Height [整數] 高度 — 新高度 (像素)
+# 可能的錯誤：WindowNotFoundError、ResizeWindowError、WindowOperationInNonInteractiveModeError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

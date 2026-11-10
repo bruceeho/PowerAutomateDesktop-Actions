@@ -1,0 +1,17 @@
+Azure.CreateResourceGroup AzureClient: `` GroupName: `` Location: `` ResourceGroup=> ResourceGroup
+
+# ==================== 說明 ====================
+# 動作：建立資源群組  (Azure.CreateResourceGroup)
+# 英文名稱：Create resource group
+# 用途：建立新的資源群組
+# 位置：Azure > 資源群組
+# 輸入參數：
+#   AzureClient [AzureClient] Azure 用戶端 — 用來連線 Azure 的用戶端
+#   GroupName [文字] 資源群組名稱 — 資源群組的名稱
+#   Location [文字] 位置 — 將建立新資源群組的位置
+# 產生的變數：
+#   ResourceGroup [AzureResourceGroup] 建立的資源群組 — 建立的資源群組
+# 可能的錯誤：ResourceGroupAlreadyExistsError、FailedToCreateResourceGroupError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,37 @@
+# 【模式 Connect】使用自動探索服務開啟新的 Exchange Server 連線
+Exchange.ConnectToExchangeServer.Connect ServerVersion: Exchange.ServerVersion.Exchange2013_SP1 EmailAddress: `` Timeout: 30 Connection=> Connection
+
+# 【模式 ConnectToServer】透過位址開啟新的 Exchange Server 連線
+Exchange.ConnectToExchangeServer.ConnectToServer ServerVersion: Exchange.ServerVersion.Exchange2013_SP1 ServerAddress: `` Timeout: 30 Connection=> Connection
+
+# 【模式 ConnectWithCredentials】使用自動探索服務開啟新的 Exchange Server 連線
+Exchange.ConnectToExchangeServer.ConnectWithCredentials ServerVersion: Exchange.ServerVersion.Exchange2013_SP1 EmailAddress: `` Username: `` Password: `` Timeout: 30 Connection=> Connection
+
+# 【模式 ConnectToServerWithCredentials】透過位址開啟新的 Exchange Server 連線
+Exchange.ConnectToExchangeServer.ConnectToServerWithCredentials ServerVersion: Exchange.ServerVersion.Exchange2013_SP1 ServerAddress: `` Username: `` Password: `` Timeout: 30 Connection=> Connection
+
+# ==================== 說明 ====================
+# 動作：連線至 Exchange Server  (Exchange.ConnectToExchangeServer)
+# 英文名稱：Connect to Exchange server
+# 用途：開啟新的 Exchange Server 連線
+# 位置：Exchange Server
+# 輸入參數：
+#   ServerVersion [選項，預設 Exchange2013_SP1] Exchange Server 版本 — Exchange Server 的版本
+#       可用值：Exchange.ServerVersion.Exchange2010（Exchange 2010）、Exchange.ServerVersion.Exchange2010_SP1（Exchange 2010 SP1）、Exchange.ServerVersion.Exchange2010_SP2（Exchange 2010 SP2）、Exchange.ServerVersion.Exchange2013（Exchange 2013）、Exchange.ServerVersion.Exchange2013_SP1（Exchange 2013 SP1）
+#   ConnectionType [選項，預設 AutoDiscover] 連線類型 — 指定如何連線至 Exchange Server
+#       可用值：Exchange.ConnectionType.AutoDiscover（自動探索）、Exchange.ConnectionType.ExchangeServerAddress（Exchange Server 位址）
+#   ServerAddress [文字] 伺服器位址 — Exchange Server 位址
+#   EmailAddress [文字] 電子郵件地址 — Exchange 帳戶電子郵件地址
+#   CredentialsMode [選項，預設 ExchangeDefault] 認證 — 指定提供使用者的 Exchange 認證的方式
+#       可用值：Exchange.CredentialsMode.ExchangeDefault（Exchange 預設）、Exchange.CredentialsMode.UserDefined（使用者定義）
+#   Domain [文字，選填] 網域 — Exchange 帳戶網域。若要從使用者名稱中擷取帳戶網域，請將此欄位保留空白
+#   Username [文字] 使用者名稱 — Exchange 帳戶使用者名稱
+#   Password [文字(可加密)] 密碼 — Exchange 帳戶密碼
+#   Timeout [整數，預設 30] 逾時 — 在動作失敗前，等待連線建立的秒數
+# 產生的變數：
+#   Connection [ExchangeConnectionHandle] Exchange 連線 — 搭配後續 Exchange 動作使用的特定 Exchange 連線
+# 可能的錯誤：ConnectToExchangeServerError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

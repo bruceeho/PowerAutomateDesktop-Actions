@@ -1,0 +1,33 @@
+# 【模式 Send】建立並傳送新的電子郵件訊息
+Email.SendEmail.Send Port: 25 EnableSSL: False AcceptUntrustedCertificates: False SendFrom: `` SendTo: `` IsBodyHtml: False
+
+# 【模式 AuthenticateAndSend】建立並傳送新的電子郵件訊息
+Email.SendEmail.AuthenticateAndSend Port: 25 EnableSSL: False Username: `` Password: `` AcceptUntrustedCertificates: False SendFrom: `` SendTo: `` IsBodyHtml: False
+
+# ==================== 說明 ====================
+# 動作：傳送電子郵件  (Email.SendEmail)
+# 英文名稱：Send email
+# 用途：建立並傳送新的電子郵件訊息
+# 位置：電子郵件
+# 輸入參數：
+#   Server [文字]
+#   Port [整數，預設 25] 伺服器連接埠 — 要用於伺服器的連接埠。通常是連接埠 25
+#   EnableSSL [布林，預設 False] 啟用 SSL — 指定是否要透過安全連線來與伺服器通訊
+#   NeedsAuthentication [布林，預設 False] SMTP 伺服器需要驗證 — 指定伺服器是否需要驗證
+#   Username [文字] 使用者名稱 — 要存取的電子郵件帳戶使用者名稱
+#   Password [文字(可加密)] 密碼 — 要存取的電子郵件帳戶密碼
+#   AcceptUntrustedCertificates [布林，預設 False] 接受不受信任的憑證 — 指定是否接受不受信任的憑證
+#   SendFrom [文字] 開始日期 — 寄件者的電子郵件地址
+#   SenderDisplayName [文字，選填] 寄件者顯示名稱 — 寄件者的顯示名稱
+#   SendTo [文字] 結束日期 — 副本收件者的電子郵件地址。如果輸入的電子郵件地址不止一個，則地址清單應該以分號隔開
+#   CC [文字，選填] 副本 — 副本收件者的電子郵件。如果輸入的電子郵件地址不止一個，則地址清單應該以分號隔開
+#   BCC [文字，選填] 密件副本 — BCC (隱藏) 收件者的電子郵件。如果輸入的電子郵件不止一個，則地址清單應該以分號隔開
+#   Subject [文字，選填] 主旨 — 電子郵件訊息的主旨
+#   Body [文字，選填] 內容 — 電子郵件訊息的本文
+#   IsBodyHtml [布林，預設 False] 本文是 HTML — 指定電子郵件訊息本文是否將解譯為 HTML 編碼
+#   Attachments [List<FileObject>，選填] 附件 — 任何附件、檔案或檔案清單的完整路徑。如有多個檔案，應以雙引號 (") 括住，並用空白字元隔開
+# 可能的錯誤：InvalidEmailAddressError、SendEmailError、AttachmentNotFoundError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

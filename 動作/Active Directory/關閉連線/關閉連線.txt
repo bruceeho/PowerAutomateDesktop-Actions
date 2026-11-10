@@ -1,0 +1,12 @@
+ActiveDirectory.CloseConnection ParentDirectoryEntry: ``
+
+# ==================== 說明 ====================
+# 動作：關閉連線  (ActiveDirectory.CloseConnection)
+# 英文名稱：Close connection
+# 用途：關閉與 Active Directory 伺服器的連線
+# 位置：Active Directory
+# 輸入參數：
+#   ParentDirectoryEntry [ActiveDirectoryEntry] 上層目錄項目 — Active Directory 伺服器的上層項目
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

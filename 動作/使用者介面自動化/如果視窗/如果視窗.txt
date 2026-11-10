@@ -1,0 +1,54 @@
+# 【模式 IsOpen】使用視窗 UI 元素檢查是否有特定視窗開啟
+UIAutomation.IfWindowAction.IsOpen
+
+# 【模式 IsOpenByInstanceOrHandle】使用視窗執行個體或控點檢查是否有特定視窗開啟
+UIAutomation.IfWindowAction.IsOpenByInstanceOrHandle WindowInstance: ``
+
+# 【模式 IsOpenByTitleClass】使用視窗標題/類別檢查是否有特定視窗開啟
+UIAutomation.IfWindowAction.IsOpenByTitleClass
+
+# 【模式 IsNotOpen】使用視窗 UI 元素檢查是否有特定視窗未開啟
+UIAutomation.IfWindowAction.IsNotOpen
+
+# 【模式 IsNotOpenByInstanceOrHandle】使用視窗執行個體或控點檢查是否有特定視窗未開啟
+UIAutomation.IfWindowAction.IsNotOpenByInstanceOrHandle WindowInstance: ``
+
+# 【模式 IsNotOpenByTitleClass】使用視窗標題/類別檢查是否有特定視窗未開啟
+UIAutomation.IfWindowAction.IsNotOpenByTitleClass
+
+# 【模式 IsFocused】使用視窗 UI 元素檢查是否有特定視窗擁有焦點
+UIAutomation.IfWindowAction.IsFocused
+
+# 【模式 IsFocusedByInstanceOrHandle】使用視窗執行個體或控點檢查是否有特定視窗擁有焦點
+UIAutomation.IfWindowAction.IsFocusedByInstanceOrHandle WindowInstance: ``
+
+# 【模式 IsFocusedByTitleClass】使用視窗標題/類別檢查是否有特定視窗擁有焦點
+UIAutomation.IfWindowAction.IsFocusedByTitleClass
+
+# 【模式 IsNotFocused】使用視窗 UI 元素檢查是否有特定視窗失去焦點
+UIAutomation.IfWindowAction.IsNotFocused
+
+# 【模式 IsNotFocusedByInstanceOrHandle】使用視窗執行個體或控點檢查是否有特定視窗失去焦點
+UIAutomation.IfWindowAction.IsNotFocusedByInstanceOrHandle WindowInstance: ``
+
+# 【模式 IsNotFocusedByTitleClass】使用視窗標題/類別檢查是否有特定視窗失去焦點
+UIAutomation.IfWindowAction.IsNotFocusedByTitleClass
+
+# ==================== 說明 ====================
+# 動作：如果視窗  (UIAutomation.IfWindowAction)
+# 英文名稱：If window
+# 用途：此動作標記根據視窗是否已開啟以及視窗是否為焦點所在 (前景) 視窗之條件式動作區塊的開頭
+# 位置：使用者介面自動化
+# 輸入參數：
+#   FindWindowMode [選項，預設 Control]
+#       可用值：UIAutomation.FindWindowBy.Control（透過視窗 UI 元素）、UIAutomation.FindWindowBy.InstanceOrHandle（透過視窗執行個體/控點）、UIAutomation.FindWindowBy.TitleAndClass（透過標題和/或類別）
+#   Title [文字，選填]
+#   WindowInstance [整數]
+#   Control [UIControl]
+#   Class [文字，選填]
+#   WindowMode [選項，預設 IsOpen]
+#       可用值：UIAutomation.IfWindow.IsOpen（開啟）、UIAutomation.IfWindow.IsNotOpen（未開啟）、UIAutomation.IfWindow.IsFocused（擁有焦點）、UIAutomation.IfWindow.IsNotFocused（沒有焦點）
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

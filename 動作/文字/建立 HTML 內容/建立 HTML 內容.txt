@@ -1,0 +1,14 @@
+Text.CreateHTMLContent HtmlEditor: `` HtmlContent=> HtmlContent
+
+# ==================== 說明 ====================
+# 動作：建立 HTML 內容  (Text.CreateHTMLContent)
+# 英文名稱：Create HTML content
+# 用途：產生豐富的 HTML 內容並將之儲存在變數中
+# 位置：文字
+# 輸入參數：
+#   HtmlEditor [文字] Html 編輯器 — html 編輯器
+# 產生的變數：
+#   HtmlContent [文字] Html 內容 — html 程式碼
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

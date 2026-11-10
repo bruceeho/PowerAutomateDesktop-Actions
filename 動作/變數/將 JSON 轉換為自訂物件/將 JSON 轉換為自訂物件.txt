@@ -1,0 +1,15 @@
+Variables.ConvertJsonToCustomObject Json: `` CustomObject=> CustomObject
+
+# ==================== 說明 ====================
+# 動作：將 JSON 轉換為自訂物件  (Variables.ConvertJsonToCustomObject)
+# 英文名稱：Convert JSON to custom object
+# 用途：將 JSON 字串轉換為自訂物件
+# 位置：變數
+# 輸入參數：
+#   Json [文字] JSON — JSON 文字，或先前所建立包含一項的變數，要將其轉換為自訂物件
+# 產生的變數：
+#   CustomObject [一般值] 至自訂物件 — 從提供的 JSON 轉換而來的自訂物件
+# 可能的錯誤：ParseJsonError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

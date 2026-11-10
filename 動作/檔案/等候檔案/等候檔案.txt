@@ -1,0 +1,19 @@
+# 【模式 Created】檢查指定的檔案是否已建立
+File.WaitForFileAction.Created File: ``
+
+# 【模式 Deleted】檢查指定的檔案是否已刪除
+File.WaitForFileAction.Deleted File: ``
+
+# ==================== 說明 ====================
+# 動作：等候檔案  (File.WaitForFileAction)
+# 英文名稱：Wait for file
+# 用途：暫停執行流程，直到檔案建立或刪除為止
+# 位置：檔案
+# 輸入參數：
+#   File [FileObject]
+#   WaitFor [選項，預設 ToBeCreated]
+#       可用值：File.WaitForFile.ToBeCreated（建立日期）、File.WaitForFile.ToBeDeleted（已刪除）
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

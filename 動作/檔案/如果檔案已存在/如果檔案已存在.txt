@@ -1,0 +1,19 @@
+# 【模式 Exists】檢查指定的檔案是否存在
+File.IfFileAction.Exists File: ``
+
+# 【模式 DoesNotExist】檢查指定的檔案是否不存在
+File.IfFileAction.DoesNotExist File: ``
+
+# ==================== 說明 ====================
+# 動作：如果檔案已存在  (File.IfFileAction)
+# 英文名稱：If file exists
+# 用途：根據檔案是否存在，標記條件式動作區塊的開頭
+# 位置：檔案
+# 輸入參數：
+#   File [FileObject]
+#   CheckMode [選項，預設 Exists]
+#       可用值：File.IfFile.Exists（存在）、File.IfFile.DoesNotExist（不存在）
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

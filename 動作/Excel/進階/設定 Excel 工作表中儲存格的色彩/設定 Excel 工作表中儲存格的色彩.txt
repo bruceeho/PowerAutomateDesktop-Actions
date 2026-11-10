@@ -1,0 +1,41 @@
+# 【模式 SetColorSingleCellPredefined】在 Excel 執行個體使用中工作表中，以指定的色彩填滿所選儲存格的背景
+Excel.SetColor.SetColorSingleCellPredefined Instance: `` StartColumn: `` StartRow: `` ColorName: ``
+
+# 【模式 SetColorSingleCellHex】在 Excel 執行個體使用中工作表中，以指定的色彩填滿所選儲存格的背景
+Excel.SetColor.SetColorSingleCellHex Instance: `` StartColumn: `` StartRow: `` ColorHexValue: ``
+
+# 【模式 SetColorRangePredefined】在 Excel 執行個體使用中工作表中，以指定的色彩填滿所選儲存格的背景
+Excel.SetColor.SetColorRangePredefined Instance: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` ColorName: ``
+
+# 【模式 SetColorRangeHex】在 Excel 執行個體使用中工作表中，以指定的色彩填滿所選儲存格的背景
+Excel.SetColor.SetColorRangeHex Instance: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` ColorHexValue: ``
+
+# 【模式 SetColorNamedCellPredefined】在 Excel 執行個體使用中工作表中，以指定的色彩填滿所選儲存格的背景
+Excel.SetColor.SetColorNamedCellPredefined Instance: `` CellName: `` ColorName: ``
+
+# 【模式 SetColorNamedCellHex】在 Excel 執行個體使用中工作表中，以指定的色彩填滿所選儲存格的背景
+Excel.SetColor.SetColorNamedCellHex Instance: `` CellName: `` ColorHexValue: ``
+
+# ==================== 說明 ====================
+# 動作：設定 Excel 工作表中儲存格的色彩  (Excel.SetColor)
+# 英文名稱：Set color of cells in Excel worksheet
+# 用途：在 Excel 執行個體使用中工作表中，以指定的色彩填滿所選儲存格的背景
+# 位置：Excel > 進階
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
+#   Mode [選項，預設 SingleCell] 設定其色彩 — 指定是否要設定單一儲存格、儲存格範圍或具名儲存格的背景色彩
+#       可用值：Excel.SetColorMode.SingleCell（單一儲存格）、Excel.SetColorMode.CellCoordinates（儲存格範圍）、Excel.SetColorMode.NamedCell（具名儲存格）
+#   StartColumn [文字] 起始欄 — 儲存格欄或範圍第一欄的索引或字母
+#   StartRow [整數] 起始列 — 儲存格列或範圍的第一列編號。編號從 1 開始
+#   EndColumn [文字] 結尾欄 — 儲存格列或範圍的第一列編號。編號從 1 開始
+#   EndRow [整數] 結尾列 — 該範圍的最後一列編號。編號從 1 開始
+#   CellName [文字] 儲存格名稱 — 表示將以指定顏色填滿之範圍的名稱
+#   ColorMode [選項，預設 Name] 色彩格式 — 選取是要依照色彩名稱還是依照十六進位值來指定色彩
+#       可用值：Excel.ColorMode.Name（名稱）、Excel.ColorMode.HexValue（十六進位值）
+#   ColorHexValue [文字] 色彩十六進位值 — 指定色彩的十六進位 (RGB) 值
+#   ColorName [文字] 色彩名稱 — 選取其中一個系統定義的色彩
+# 可能的錯誤：SetColorError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

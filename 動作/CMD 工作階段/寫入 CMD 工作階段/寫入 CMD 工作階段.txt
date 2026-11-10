@@ -1,0 +1,15 @@
+Cmd.Write Command: `` SendEnter: True Session: ``
+
+# ==================== 說明 ====================
+# 動作：寫入 CMD 工作階段  (Cmd.Write)
+# 英文名稱：Write to CMD session
+# 用途：在開啟的 CMD 工作階段中執行命令
+# 位置：CMD 工作階段
+# 輸入參數：
+#   Command [文字] 命令 — 要執行之命令的名稱
+#   SendEnter [布林，預設 True] 在命令之後傳送 <Enter> — 指定是否要在命令之後傳送 <Enter>
+#   Session [CmdSessionHandle] CMD 工作階段 — 先前開啟的 CMD 工作階段變數
+# 可能的錯誤：WriteCmdError、SessionClosedError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

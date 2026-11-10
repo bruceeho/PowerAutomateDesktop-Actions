@@ -1,0 +1,42 @@
+GenerativeAI.RunCUAPrompt Prompt: `` Model: GenerativeAI.CUAModels.Model1 Timeout: 300 FailOnTimeout: False SystemPrompt: $'''<SYSTEM_CAPABILITY>
+* You are utilising a windows machine with internet access.
+* To launch applications on the desktop, double click on the icon. Note, firefox-esr is what is installed on your system.
+* When using your computer function calls, they take a while to run and send back to you.  Do not try to chain multiple of these calls all into one function calls request, only include on tool request per response.
+ </SYSTEM_CAPABILITY>
+
+<IMPORTANT>
+* When using Firefox, if a startup wizard appears, IGNORE IT.  Do not even click "skip this step".  Instead, click on the address bar where it says "Search or enter address", and enter the appropriate search term or URL there.
+* If the item you are looking at is a pdf, if after taking a single screenshot of the pdf it seems that you want to read the entire document instead of trying to continue to read the pdf from your screenshots + navigation, determine the URL
+. Explain what steps you will take 
+. Never ask for confirmation to perform actions.
+ </IMPORTANT>''' Response=> Response
+
+# ==================== 說明 ====================
+# 動作：執行 CUA 提示  (GenerativeAI.RunCUAPrompt)
+# 英文名稱：Run CUA prompt
+# 用途：以隱形模式執行 CUA 提示。
+# 位置：生成式 AI
+# 輸入參數：
+#   Prompt [文字] 提示 — CUA 目標提示
+#   Model [選項，預設 Model1] 型號 — 適用於 CUA 的模型
+#       可用值：GenerativeAI.CUAModels.Model1（模型 C* BYOK）、GenerativeAI.CUAModels.Model2（OpenAI）、GenerativeAI.CUAModels.Model3（UFO）
+#   Timeout [整數，預設 300] 逾時 — 執行此動作的最長時間
+#   FailOnTimeout [布林，預設 False] 逾時期間失敗 — 模型是否允許無限期執行。
+#   SystemPrompt [文字，預設 <SYSTEM_CAPABILITY>
+* You are utilising a windows machine with internet access.
+* To launch applications on the desktop, double click on the icon. Note, firefox-esr is what is installed on your system.
+* When using your computer function calls, they take a while to run and send back to you.  Do not try to chain multiple of these calls all into one function calls request, only include on tool request per response.
+ </SYSTEM_CAPABILITY>
+
+<IMPORTANT>
+* When using Firefox, if a startup wizard appears, IGNORE IT.  Do not even click "skip this step".  Instead, click on the address bar where it says "Search or enter address", and enter the appropriate search term or URL there.
+* If the item you are looking at is a pdf, if after taking a single screenshot of the pdf it seems that you want to read the entire document instead of trying to continue to read the pdf from your screenshots + navigation, determine the URL
+. Explain what steps you will take 
+. Never ask for confirmation to perform actions.
+ </IMPORTANT>] 系統提示 — CUA 的系統提示指示
+# 產生的變數：
+#   Response [文字] 回覆 — 來自 CUA 的純文字回覆
+# 可能的錯誤：ExecuteComputerUseAgentAppError、CUATimeoutError、GeneralError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

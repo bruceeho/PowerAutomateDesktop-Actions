@@ -1,0 +1,37 @@
+# 【模式 Click】按一下網頁的連結或任何其他元素
+WebAutomation.Click.Click BrowserInstance: `` Control: `` ClickType: WebAutomation.ClickType.LeftClick MouseClick: True WaitForPageToLoadTimeout: 60 MousePositionRelativeToElement: WebAutomation.RectangleEdgePoint.MiddleCenter OffsetX: 0 OffsetY: 0
+
+# 【模式 ClickCloseDialog】按一下網頁的連結或任何其他元素。如果快顯對話方塊出現，請將它關閉。
+WebAutomation.Click.ClickCloseDialog BrowserInstance: `` Control: `` ClickType: WebAutomation.ClickType.LeftClick MouseClick: True WaitForPageToLoadTimeout: 60 MousePositionRelativeToElement: WebAutomation.RectangleEdgePoint.MiddleCenter OffsetX: 0 OffsetY: 0
+
+# 【模式 ClickPressDialogButton】按一下網頁的連結或任何其他元素，並於快顯對話方塊出現時，按下指定的按鈕
+WebAutomation.Click.ClickPressDialogButton BrowserInstance: `` Control: `` ClickType: WebAutomation.ClickType.LeftClick MouseClick: True WaitForPageToLoadTimeout: 60 DialogButton: $'''OK''' MousePositionRelativeToElement: WebAutomation.RectangleEdgePoint.MiddleCenter OffsetX: 0 OffsetY: 0
+
+# 【模式 ClickNoWait】按一下網頁的連結或任何其他元素，但不要等待網頁載入
+WebAutomation.Click.ClickNoWait BrowserInstance: `` Control: `` ClickType: WebAutomation.ClickType.LeftClick MouseClick: True MousePositionRelativeToElement: WebAutomation.RectangleEdgePoint.MiddleCenter OffsetX: 0 OffsetY: 0
+
+# ==================== 說明 ====================
+# 動作：按一下網頁上的連結  (WebAutomation.Click)
+# 英文名稱：Click link on web page
+# 用途：按一下網頁的連結或任何其他元素
+# 位置：瀏覽器自動化
+# 輸入參數：
+#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
+#   Control [WebControl] UI 元素 — 選取網頁上要按一下的 UI 元素
+#   ClickType [選項，預設 LeftClick] 點擊類型 — 要執行的點擊類型
+#       可用值：WebAutomation.ClickType.LeftClick（按滑鼠左鍵）、WebAutomation.ClickType.RightClick（按滑鼠右鍵）、WebAutomation.ClickType.DoubleClick（按兩下）、WebAutomation.ClickType.LeftButtonDown（左鍵按下）、WebAutomation.ClickType.LeftButtonUp（左鍵放開）、WebAutomation.ClickType.RightButtonDown（右鍵按下）、WebAutomation.ClickType.RightButtonUp（右鍵放開）、WebAutomation.ClickType.MiddleClick（按滑鼠中間鍵）
+#   MouseClick [布林，預設 True] 傳送實體點擊 — 指定是否要在點擊之前將滑鼠游標實體移動到元素上。模擬點擊無法執行元素有意進行的動作時，便必須實體點擊。由於此選項要求聚焦於瀏覽器視窗，因此會自動將之切換到前景。
+#   WaitForPageToLoad [布林，預設 True] 等待頁面載入 — 指定按一下連結後，是否要等待新網頁完整載入
+#   WaitForPageToLoadTimeout [整數，預設 60] 網頁載入逾時 — 設定動作擲回錯誤之前的頁面載入時間，以秒為單位
+#   HandleDialogAction [選項，預設 DoNothing] 如果快顯對話方塊出現 — 指定按一下連結之後出現快顯對話方塊時要執行的操作
+#       可用值：WebAutomation.HandleDialogAction.CloseIt（關閉它）、WebAutomation.HandleDialogAction.PressButton（按下按鈕）、WebAutomation.HandleDialogAction.DoNothing（不執行任何動作）
+#   DialogButton [文字，預設 OK] 要按下的對話方塊按鈕 — 輸入快顯對話方塊出現時要按下的對話方塊按鈕
+#   MousePositionRelativeToElement [選項，預設 MiddleCenter] 相對於元素的滑鼠位置
+#       可用值：WebAutomation.RectangleEdgePoint.TopLeft（左上）、WebAutomation.RectangleEdgePoint.TopCenter（中上）、WebAutomation.RectangleEdgePoint.TopRight（右上）、WebAutomation.RectangleEdgePoint.MiddleLeft（左中）、WebAutomation.RectangleEdgePoint.MiddleCenter（正中）、WebAutomation.RectangleEdgePoint.MiddleRight（右中）、WebAutomation.RectangleEdgePoint.BottomLeft（左下）、WebAutomation.RectangleEdgePoint.BottomCenter（中下）、WebAutomation.RectangleEdgePoint.BottomRight（右下）
+#   OffsetX [整數，預設 0] 位移 X
+#   OffsetY [整數，預設 0] 位移 Y
+# 可能的錯誤：ElementNotFoundError、ClickElementError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

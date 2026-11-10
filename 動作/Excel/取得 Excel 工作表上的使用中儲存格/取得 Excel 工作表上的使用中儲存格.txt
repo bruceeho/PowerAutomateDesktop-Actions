@@ -1,0 +1,16 @@
+Excel.GetActiveCell Instance: `` ActiveCellColumnIndex=> ActiveCellColumnIndex ActiveCellRowIndex=> ActiveCellRowIndex
+
+# ==================== 說明 ====================
+# 動作：取得 Excel 工作表上的使用中儲存格  (Excel.GetActiveCell)
+# 英文名稱：Get active cell on Excel worksheet
+# 用途：取得 Excel 文件之使用中工作表中的使用中儲存格
+# 位置：Excel
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
+# 產生的變數：
+#   ActiveCellColumnIndex [整數] 使用中儲存格的資料行 — 使用中儲存格資料行的數值
+#   ActiveCellRowIndex [整數] 使用中儲存格的資料列 — 使用中儲存格資料列的數值
+# 可能的錯誤：GetActiveCellError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

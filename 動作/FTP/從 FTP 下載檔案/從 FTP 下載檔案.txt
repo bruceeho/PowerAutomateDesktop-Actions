@@ -1,0 +1,19 @@
+FTP.DownloadFiles Connection: `` DownloadInto: `` RemoteFilePaths: `` TransferType: FTP.FtpTransferType.Auto IfFileExists: FTP.IfFtpFileExists.Overwrite
+
+# ==================== 說明 ====================
+# 動作：從 FTP 下載檔案  (FTP.DownloadFiles)
+# 英文名稱：Download file(s) from FTP
+# 用途：從 FTP 伺服器下載一或多個檔案
+# 位置：FTP
+# 輸入參數：
+#   Connection [FtpConnectionBase] FTP 連線 — 要使用的 FTP 連線。這個變數先前必須已使用「開啟 FTP」連線動作完成指定
+#   DownloadInto [FolderObject] 下載至資料夾 — 將下載之檔案的目的地資料夾
+#   RemoteFilePaths [List<FtpFileObject>] 要下載的檔案 — 要下載的檔案
+#   TransferType [選項，預設 Auto] 傳輸類型 — 輸入 ASCII 或二進位來指定下載單一檔案的方法。如果無法確定檔案類型，或要下載多個檔案，請選擇「自動」並按照選項中所指定的傳輸規則
+#       可用值：FTP.FtpTransferType.Auto（自動）、FTP.FtpTransferType.Binary（二進位）、FTP.FtpTransferType.Ascii（ASCII）
+#   IfFileExists [選項，預設 Overwrite] 如果檔案已存在 — 指定當檔案已經存在時應採取的行動。覆寫原始檔案或使用唯一名稱進行下載，並在結尾處新增底線和序列編號。
+#       可用值：FTP.IfFtpFileExists.Overwrite（覆寫）、FTP.IfFtpFileExists.Skip（不要下載）、FTP.IfFtpFileExists.TransferWithUniqueName（使用唯一名稱下載）
+# 可能的錯誤：NotConnectedError、RemoteFileDoesNotExistError、DirectoryDoesNotExistError、FTPConnectionAbortedError、CannotDownloadFileError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,16 @@
+Folder.Rename Folder: `` NewName: `` RenamedFolder=> RenamedFolder
+
+# ==================== 說明 ====================
+# 動作：重新命名資料夾  (Folder.Rename)
+# 英文名稱：Rename folder
+# 用途：變更資料夾的名稱
+# 位置：資料夾
+# 輸入參數：
+#   Folder [FolderObject] 要重新命名的資料夾 — 輸入或選擇要變更其名稱之資料夾的完整路徑，或包含該資料夾的變數
+#   NewName [文字] 新資料夾名稱 — 輸入要成為新資料夾名稱的文字或文字變數
+# 產生的變數：
+#   RenamedFolder [FolderObject] 將重新命名的資料夾儲存至 — 重新命名的資料夾物件 (這是一種表示，並可存取資料夾及其所有資訊)
+# 可能的錯誤：FolderNotFoundError、RenameFolderError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

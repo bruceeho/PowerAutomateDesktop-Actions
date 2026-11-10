@@ -1,0 +1,28 @@
+# 【模式 Move】透過 UI 元素移動特定視窗
+UIAutomation.MoveWindow.Move X: `` Y: ``
+
+# 【模式 MoveByInstanceOrHandle】透過視窗執行個體或控點移動特定視窗
+UIAutomation.MoveWindow.MoveByInstanceOrHandle WindowInstance: `` X: `` Y: ``
+
+# 【模式 MoveByTitleClass】透過視窗標題和/或類別移動特定視窗
+UIAutomation.MoveWindow.MoveByTitleClass X: `` Y: ``
+
+# ==================== 說明 ====================
+# 動作：移動視窗  (UIAutomation.MoveWindow)
+# 英文名稱：Move window
+# 用途：設定特定視窗的位置
+# 位置：使用者介面自動化 > 視窗
+# 輸入參數：
+#   FindWindowMode [選項，預設 Control] 尋找視窗模式 — 指定要使用 UI 元素或視窗標題/類別組合尋找視窗
+#       可用值：UIAutomation.FindWindowBy.Control（透過視窗 UI 元素）、UIAutomation.FindWindowBy.InstanceOrHandle（透過視窗執行個體/控點）、UIAutomation.FindWindowBy.TitleAndClass（透過標題和/或類別）
+#   Control [UIControl]
+#   WindowInstance [整數] 視窗執行個體 — 要移動之視窗的執行個體或控點
+#   Title [文字，選填] 視窗標題 — 視窗標題。可使用萬用字元，如 '?' 或 '*'。
+#   Class [文字，選填] 視窗類別 — 如果您有兩個標題相同的視窗，則視窗類別有助於區分兩者。在這種情況下，請輸入要使用的視窗類別。
+#   X [整數] 位置 X — 視窗的 X 位置
+#   Y [整數] 位置 Y — 視窗的 Y 位置
+# 可能的錯誤：WindowNotFoundError、MoveWindowError、WindowOperationInNonInteractiveModeError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

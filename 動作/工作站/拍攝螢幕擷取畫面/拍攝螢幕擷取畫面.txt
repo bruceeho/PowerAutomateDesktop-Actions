@@ -1,0 +1,43 @@
+# 【模式 TakeScreenshot】拍攝所有畫面的螢幕擷取畫面，並將其儲存至剪貼簿
+Workstation.TakeScreenshot.TakeScreenshot
+
+# 【模式 TakeScreenshotAndSaveToFile】拍攝整個畫面的螢幕擷取畫面，並將其儲存至檔案
+Workstation.TakeScreenshot.TakeScreenshotAndSaveToFile File: `` ImageFormat: Workstation.ImageFormat.Bmp
+
+# 【模式 TakeScreenshotOfPrimaryScreen】拍攝主畫面的螢幕擷取畫面，並將其儲存至剪貼簿
+Workstation.TakeScreenshot.TakeScreenshotOfPrimaryScreen
+
+# 【模式 TakeScreenshotOfPrimaryScreenAndSaveToFile】拍攝主畫面的螢幕擷取畫面，並將其儲存至檔案
+Workstation.TakeScreenshot.TakeScreenshotOfPrimaryScreenAndSaveToFile File: `` ImageFormat: Workstation.ImageFormat.Bmp
+
+# 【模式 TakeScreenshotOfScreen】拍攝指定畫面的螢幕擷取畫面，並將其儲存至剪貼簿
+Workstation.TakeScreenshot.TakeScreenshotOfScreen ScreenToCapture: ``
+
+# 【模式 TakeScreenshotOfScreenAndSaveToFile】拍攝指定畫面的螢幕擷取畫面，並將其儲存至檔案
+Workstation.TakeScreenshot.TakeScreenshotOfScreenAndSaveToFile ScreenToCapture: `` File: `` ImageFormat: Workstation.ImageFormat.Bmp
+
+# 【模式 TakeScreenshotOfForegroundWindow】拍攝前景視窗的螢幕擷取畫面，並將其儲存至剪貼簿
+Workstation.TakeScreenshot.TakeScreenshotOfForegroundWindow
+
+# 【模式 TakeScreenshotOfForegroundWindowAndSaveToFile】拍攝前景視窗的螢幕擷取畫面，並將其儲存至檔案
+Workstation.TakeScreenshot.TakeScreenshotOfForegroundWindowAndSaveToFile File: `` ImageFormat: Workstation.ImageFormat.Bmp
+
+# ==================== 說明 ====================
+# 動作：拍攝螢幕擷取畫面  (Workstation.TakeScreenshot)
+# 英文名稱：Take screenshot
+# 用途：拍攝前景視窗或指定畫面的螢幕擷取畫面，並將影像儲存在檔案或剪貼簿中
+# 位置：工作站
+# 輸入參數：
+#   CaptureOption [選項，預設 AllScreens] 擷取 — 要擷取的區域
+#       可用值：Workstation.ScreenCaptureOption.AllScreens（所有畫面）、Workstation.ScreenCaptureOption.PrimaryScreen（主畫面）、Workstation.ScreenCaptureOption.SelectScreen（選取畫面）、Workstation.ScreenCaptureOption.ForegroundWindow（前景視窗）
+#   ScreenToCapture [整數] 要擷取的畫面 — 指定要擷取的畫面
+#   StoreScreenshotInto [選項，預設 Clipboard] 將螢幕擷取畫面儲存至 — 要儲存螢幕擷取畫面的位置
+#       可用值：Workstation.StoreScreenshotInto.Clipboard（剪貼簿）、Workstation.StoreScreenshotInto.File（檔案）
+#   File [FileObject] 影像檔 — 要儲存所擷取影像的檔案名稱的完整路徑
+#   ImageFormat [選項，預設 Bmp] 影像格式 — 要儲存影像檔的格式
+#       可用值：Workstation.ImageFormat.Bmp（BMP）、Workstation.ImageFormat.Gif（GIF）、Workstation.ImageFormat.Jpg（JPG）、Workstation.ImageFormat.Png（PNG）、Workstation.ImageFormat.Tiff（TIFF）
+# 可能的錯誤：TakeScreenshotError、SaveScreenshotToFileError、SaveScreenshotToClipboardError、GetScreenError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

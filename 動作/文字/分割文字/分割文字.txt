@@ -1,0 +1,31 @@
+# 【模式 Split】建立包含由分隔符號分隔之文字子字串的清單
+Text.SplitText.Split Text: `` StandardDelimiter: Text.StandardDelimiter.Space DelimiterTimes: 1 Result=> Result
+
+# 【模式 SplitWithDelimiter】建立包含由指定分隔符號或規則運算式分隔之文字子字串的清單
+Text.SplitText.SplitWithDelimiter Text: `` CustomDelimiter: `` IsRegEx: False Result=> Result
+
+# 【模式 SplitAtNumberOfCharacters】建立包含以指定字元數分隔之文字子字串的清單
+Text.SplitText.SplitAtNumberOfCharacters Text: `` SplitInterval: `` Result=> Result
+
+# ==================== 說明 ====================
+# 動作：分割文字  (Text.SplitText)
+# 英文名稱：Split text
+# 用途：建立包含由指定分隔符號或規則運算式分隔之文字子字串的清單
+# 位置：文字
+# 輸入參數：
+#   Text [文字] 要分割的文字 — 要分割的文字
+#   DelimiterType [選項，預設 Standard] 分隔符號類型 — 指定使用的分隔符號為標準或自訂格式
+#       可用值：Text.SplitTextDelimiter.Standard（標準）、Text.SplitTextDelimiter.Custom（自訂）、Text.SplitTextDelimiter.NumberOfCharacters（字元數）
+#   SplitInterval [整數] 分割寬度 — 文字分割後的字元數
+#   StandardDelimiter [選項，預設 Space] 標準分隔符號 — 使用的分隔符號
+#       可用值：Text.StandardDelimiter.Space（空格）、Text.StandardDelimiter.Tab（Tab）、Text.StandardDelimiter.NewLine（新行）
+#   CustomDelimiter [文字] 自訂分隔符號 — 做為分隔符號使用的字元
+#   DelimiterTimes [整數，預設 1] 次數 — 指定分隔符號使用的次數
+#   IsRegEx [布林，預設 False] 是規則運算式 — 指定分隔符號是否為規則運算式。規則運算式會建立各種可能的分隔符號範圍。例如，'\d' 表示分隔符號可以是任何數字
+# 產生的變數：
+#   Result [List<String>] 結果 — 新清單
+# 可能的錯誤：InvalidRegexError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

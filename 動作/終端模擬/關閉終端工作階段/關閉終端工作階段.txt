@@ -1,0 +1,13 @@
+TerminalEmulation.CloseSession Session: ``
+
+# ==================== 說明 ====================
+# 動作：關閉終端工作階段  (TerminalEmulation.CloseSession)
+# 英文名稱：Close terminal session
+# 用途：關閉已開啟的終端工作階段
+# 位置：終端模擬
+# 輸入參數：
+#   Session [TerminalSessionHandle] 要關閉的終端工作階段 — 先前開啟的終端工作階段
+# 可能的錯誤：EmulatorCommunicationError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

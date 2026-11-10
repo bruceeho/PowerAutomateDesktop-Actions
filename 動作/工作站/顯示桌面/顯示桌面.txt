@@ -1,0 +1,13 @@
+Workstation.ShowDesktop DesktopOperation: Workstation.DesktopOperation.Show
+
+# ==================== 說明 ====================
+# 動作：顯示桌面  (Workstation.ShowDesktop)
+# 英文名稱：Show desktop
+# 用途：顯示桌面
+# 位置：工作站
+# 輸入參數：
+#   DesktopOperation [選項，預設 Show] 作業 — 指定是否要最小化所有視窗以顯示桌面，或將所有視窗還原至各自的原始狀態
+#       可用值：Workstation.DesktopOperation.Show（最小化所有視窗 (顯示桌面)）、Workstation.DesktopOperation.Hide（還原所有視窗 (復原顯示桌面)）
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

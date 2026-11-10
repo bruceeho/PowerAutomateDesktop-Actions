@@ -1,0 +1,16 @@
+XML.SetElementAttribute Document: `` AttributeName: `` AttributeValue: ``
+
+# ==================== 說明 ====================
+# 動作：設定 XML 元素屬性  (XML.SetElementAttribute)
+# 英文名稱：Set XML element attribute
+# 用途：設定 XML 元素的屬性值
+# 位置：XML
+# 輸入參數：
+#   Document [XmlNodeObject] XML 文件 — 要設定其屬性的 XML 文件或 XML 元素
+#   XPathQuery [文字，選填] XPath 查詢 — 要尋找子元素並設定其屬性的 XPath 運算式
+#   AttributeName [文字] 屬性名稱 — 要設定其值的屬性名稱
+#   AttributeValue [文字] 屬性值 — 屬性的新值
+# 可能的錯誤：InvalidXPathError、XPathNoElementError、SetAttributeError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

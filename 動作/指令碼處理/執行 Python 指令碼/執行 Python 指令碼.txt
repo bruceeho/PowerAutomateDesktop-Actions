@@ -1,0 +1,19 @@
+Scripting.RunPythonScript PythonCode: `` PythonVersion: Scripting.PythonVersion.Python2 ScriptError=> ScriptError ScriptOutput=> ScriptOutput
+
+# ==================== 說明 ====================
+# 動作：執行 Python 指令碼  (Scripting.RunPythonScript)
+# 英文名稱：Run Python script
+# 用途：執行 Python 指令碼並擷取其輸出
+# 位置：指令碼處理
+# 輸入參數：
+#   PythonCode [文字] 要執行的 Python 指令碼 — 要執行的 Python 指令碼
+#   PythonVersion [選項，預設 Python2] Python 版本 — 指定執行指令碼時要用哪個版本的 Python
+#       可用值：Scripting.PythonVersion.Python2（Python 2.7）、Scripting.PythonVersion.Python3（Python 3.4）
+#   ModuleFolderPaths [List<FolderObject>，選填] 模組資料夾路徑 — 外部 Python 模組所在資料夾的路徑
+# 產生的變數：
+#   ScriptError [文字] 錯誤輸出 — 執行 Python 指令碼期間可能發生的錯誤
+#   ScriptOutput [文字] 輸出 — 指令碼的輸出
+# 可能的錯誤：RunPythonScriptError、DirectoryNotFoundError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

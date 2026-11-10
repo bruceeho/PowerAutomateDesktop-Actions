@@ -1,0 +1,25 @@
+# 【模式 GetIntegerPart】傳回數值的整數位數
+Variables.TruncateNumber.GetIntegerPart Number: `` Result=> Result
+
+# 【模式 GetDecimalPart】傳回數值的小數位數
+Variables.TruncateNumber.GetDecimalPart Number: `` Result=> Result
+
+# 【模式 RoundNumber】將數值進位至指定的小數位數
+Variables.TruncateNumber.RoundNumber Number: `` DecimalPlaces: 3 Result=> Result
+
+# ==================== 說明 ====================
+# 動作：截斷數字  (Variables.TruncateNumber)
+# 英文名稱：Truncate number
+# 用途：取得數值的整數或小數位數，或將值進位至指定的小數位數
+# 位置：變數
+# 輸入參數：
+#   Number [數值] 要截斷的數字 — 包含要截斷/進位之數值的數字或變數
+#   Operation [選項，預設 GetIntegerPart] 作業 — 指定要對所指數字執行的作業
+#       可用值：Variables.TruncateOperation.GetIntegerPart（取得整數部分）、Variables.TruncateOperation.GetDecimalPart（取得小數部分）、Variables.TruncateOperation.RoundAtNthDecimalDigits（進位數字）
+#   DecimalPlaces [整數，預設 3] 小數位數 — 所指數字要進位的小數位數。輸入 0 會傳回整數結果
+# 產生的變數：
+#   Result [數值] 將截斷的值儲存至 — 截斷或進位的數字
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

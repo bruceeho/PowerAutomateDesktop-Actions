@@ -1,0 +1,136 @@
+# 【模式 InvokeWebService】叫用 Web 服務並儲存回應文字
+Web.InvokeWebService.InvokeWebService Url: `` Method: Web.Method.Get Accept: $'''application/xml''' ContentType: $'''application/xml''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceSaveToFile】叫用 Web 服務並將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceSaveToFile Url: `` Method: Web.Method.Get Accept: $'''application/xml''' ContentType: $'''application/xml''' FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceSaveToFolder】叫用 Web 服務，並使用原始檔案名稱將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceSaveToFolder Url: `` Method: Web.Method.Get Accept: $'''application/xml''' ContentType: $'''application/xml''' DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuth】使用驗證叫用 Web 服務並儲存回應文字
+Web.InvokeWebService.InvokeWebServiceUseAuth Url: `` Method: Web.Method.Get Accept: $'''application/xml''' ContentType: $'''application/xml''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthSaveToFile】使用驗證叫用 Web 服務並將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceUseAuthSaveToFile Url: `` Method: Web.Method.Get Accept: $'''application/xml''' ContentType: $'''application/xml''' FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthSaveToFolder】使用驗證叫用 Web 服務，並使用原始檔案名稱將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceUseAuthSaveToFolder Url: `` Method: Web.Method.Get Accept: $'''application/xml''' ContentType: $'''application/xml''' DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServicePost】叫用 Web 服務並儲存回應文字
+Web.InvokeWebService.InvokeWebServicePost Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceSaveToFilePost】叫用 Web 服務並將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceSaveToFilePost Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceSaveToFolderPost】叫用 Web 服務，並使用原始檔案名稱將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceSaveToFolderPost Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthPost】使用驗證叫用 Web 服務並儲存回應文字
+Web.InvokeWebService.InvokeWebServiceUseAuthPost Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthSaveToFilePost】使用驗證叫用 Web 服務並將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceUseAuthSaveToFilePost Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthSaveToFolderPost】使用驗證叫用 Web 服務，並使用原始檔案名稱將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceUseAuthSaveToFolderPost Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServicePostUpload】叫用 Web 服務並儲存回應文字
+Web.InvokeWebService.InvokeWebServicePostUpload Url: `` Accept: $'''application/xml''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceSaveToFilePostUpload】叫用 Web 服務並將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceSaveToFilePostUpload Url: `` Accept: $'''application/xml''' FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceSaveToFolderPostUpload】叫用 Web 服務，並使用原始檔案名稱將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceSaveToFolderPostUpload Url: `` Accept: $'''application/xml''' DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthPostUpload】使用驗證叫用 Web 服務並儲存回應文字
+Web.InvokeWebService.InvokeWebServiceUseAuthPostUpload Url: `` Accept: $'''application/xml''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthSaveToFilePostUpload】使用驗證叫用 Web 服務並將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceUseAuthSaveToFilePostUpload Url: `` Accept: $'''application/xml''' FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthSaveToFolderPostUpload】使用驗證叫用 Web 服務，並使用原始檔案名稱將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceUseAuthSaveToFolderPostUpload Url: `` Accept: $'''application/xml''' DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServicePut】叫用 Web 服務並儲存回應文字
+Web.InvokeWebService.InvokeWebServicePut Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceSaveToFilePut】叫用 Web 服務並將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceSaveToFilePut Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceSaveToFolderPut】叫用 Web 服務，並使用原始檔案名稱將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceSaveToFolderPut Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthPut】使用驗證叫用 Web 服務並儲存回應文字
+Web.InvokeWebService.InvokeWebServiceUseAuthPut Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthSaveToFilePut】使用驗證叫用 Web 服務並將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceUseAuthSaveToFilePut Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthSaveToFolderPut】使用驗證叫用 Web 服務，並使用原始檔案名稱將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceUseAuthSaveToFolderPut Url: `` Accept: $'''application/xml''' ContentType: $'''application/xml''' DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServicePutUpload】叫用 Web 服務並儲存回應文字
+Web.InvokeWebService.InvokeWebServicePutUpload Url: `` Accept: $'''application/xml''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceSaveToFilePutUpload】叫用 Web 服務並將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceSaveToFilePutUpload Url: `` Accept: $'''application/xml''' FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceSaveToFolderPutUpload】叫用 Web 服務，並使用原始檔案名稱將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceSaveToFolderPutUpload Url: `` Accept: $'''application/xml''' DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthPutUpload】使用驗證叫用 Web 服務並儲存回應文字
+Web.InvokeWebService.InvokeWebServiceUseAuthPutUpload Url: `` Accept: $'''application/xml''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthSaveToFilePutUpload】使用驗證叫用 Web 服務並將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceUseAuthSaveToFilePutUpload Url: `` Accept: $'''application/xml''' FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# 【模式 InvokeWebServiceUseAuthSaveToFolderPutUpload】使用驗證叫用 Web 服務，並使用原始檔案名稱將回應儲存在檔案中
+Web.InvokeWebService.InvokeWebServiceUseAuthSaveToFolderPutUpload Url: `` Accept: $'''application/xml''' DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect Attachments: `` UploadType: Web.UploadType.FilePath AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders DownloadedFile=> DownloadedFile StatusCode=> StatusCode
+
+# ==================== 說明 ====================
+# 動作：叫用 Web 服務  (Web.InvokeWebService)
+# 英文名稱：Invoke web service
+# 用途：透過傳送資料叫用 Web 服務並從 Web 服務擷取回應
+# 位置：HTTP
+# 輸入參數：
+#   Url [文字] URL — Web 服務的 URL
+#   Method [選項，預設 Get] 方法 — 用於叫用 Web 服務的 HTTP 方法
+#       可用值：Web.Method.Get（GET）、Web.Method.Post（POST）、Web.Method.Connect（CONNECT）、Web.Method.Head（HEAD）、Web.Method.Put（PUT）、Web.Method.Delete（DELETE）、Web.Method.Options（OPTIONS）、Web.Method.Trace（TRACE）、Web.Method.Patch（PATCH）
+#   Accept [文字，預設 application/xml] 接受 — Web 服務回應可接受的內容類型
+#   ContentType [文字，預設 application/xml] 內容類型 — 將傳送至 Web 服務的要求的內容類型
+#   CustomHeaders [文字，選填]
+#   RequestBody [文字，選填]
+#   SaveResponse [選項，預設 ToVariable] 儲存回應 — 指定傳回資料的儲存方式
+#       可用值：Web.SaveResponse.ToVariable（將文字擷取到變數中 (適用於網頁)）、Web.SaveResponse.ToFile（儲存至磁碟 (適用於檔案)）
+#   FileName [選項，預設 KeepOriginal] 檔案名稱 — 指定是否保留已下載檔案的原始檔案名稱，或指定新名稱
+#       可用值：Web.FileName.KeepOriginal（保留原始檔案名稱 (僅指定目的地資料夾)）、Web.FileName.SpecifyFullPath（指定完整路徑 (目的地資料夾 + 自訂檔案名稱)）
+#   DestinationFolder [FolderObject] 目的地資料夾 — 將儲存由 Web 服務所傳回檔案的資料夾
+#   FilePath [FileObject] 目的地檔案路徑 — 將儲存由 Web 服務所傳回檔案的完整路徑 (資料夾加上檔案名稱)
+#   ConnectionTimeout [整數，預設 30]
+#   FollowRedirection [布林，預設 True]
+#   ClearCookies [布林，預設 False]
+#   FailOnErrorStatus [布林，預設 False]
+#   EncodeRequestBody [布林，預設 True] 對要求本文編碼 — 指定是否應在叫用前對要求本文進行 URL 編碼
+#   UserAgent [文字，預設 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6]
+#   UploadAttachments [布林，預設 False] 上傳附件 — 指定 Web 服務是否包括要上傳的檔案
+#   Encoding [選項，預設 AutoDetect]
+#       可用值：Web.Encoding.AutoDetect（自動偵測）、Web.Encoding.IBM037、Web.Encoding.IBM437、Web.Encoding.IBM500、Web.Encoding.ASMO_708、Web.Encoding.DOS_720、Web.Encoding.ibm737、Web.Encoding.ibm775、Web.Encoding.ibm850、Web.Encoding.ibm852、Web.Encoding.IBM855、Web.Encoding.ibm857、Web.Encoding.IBM00858、Web.Encoding.IBM860、Web.Encoding.ibm861、Web.Encoding.DOS_862、Web.Encoding.IBM863、Web.Encoding.IBM864、Web.Encoding.IBM865、Web.Encoding.cp866、Web.Encoding.ibm869、Web.Encoding.IBM870、Web.Encoding.windows_874、Web.Encoding.cp875、Web.Encoding.shift_jis、Web.Encoding.gb2312、Web.Encoding.ks_c_5601_1987、Web.Encoding.big5、Web.Encoding.IBM1026、Web.Encoding.IBM01047、Web.Encoding.IBM01140、Web.Encoding.IBM01141、Web.Encoding.IBM01142、Web.Encoding.IBM01143、Web.Encoding.IBM01144、Web.Encoding.IBM01145、Web.Encoding.IBM01146、Web.Encoding.IBM01147、Web.Encoding.IBM01148、Web.Encoding.IBM01149、Web.Encoding.utf_16、Web.Encoding.utf_16BE、Web.Encoding.windows_1250、Web.Encoding.windows_1251、Web.Encoding.Windows_1252、Web.Encoding.windows_1253、Web.Encoding.windows_1254、Web.Encoding.windows_1255、Web.Encoding.windows_1256、Web.Encoding.windows_1257、Web.Encoding.windows_1258、Web.Encoding.Johab、Web.Encoding.macintosh、Web.Encoding.x_mac_japanese、Web.Encoding.x_mac_chinesetrad、Web.Encoding.x_mac_korean、Web.Encoding.x_mac_arabic、Web.Encoding.x_mac_hebrew、Web.Encoding.x_mac_greek、Web.Encoding.x_mac_cyrillic、Web.Encoding.x_mac_chinesesimp、Web.Encoding.x_mac_romanian、Web.Encoding.x_mac_ukrainian、Web.Encoding.x_mac_thai、Web.Encoding.x_mac_ce、Web.Encoding.x_mac_icelandic、Web.Encoding.x_mac_turkish、Web.Encoding.x_mac_croatian、Web.Encoding.utf_32、Web.Encoding.utf_32BE、Web.Encoding.x_Chinese_CNS、Web.Encoding.x_cp20001、Web.Encoding.x_Chinese_Eten、Web.Encoding.x_cp20003、Web.Encoding.x_cp20004、Web.Encoding.x_cp20005、Web.Encoding.x_IA5、Web.Encoding.x_IA5_German、Web.Encoding.x_IA5_Swedish、Web.Encoding.x_IA5_Norwegian、Web.Encoding.us_ascii、Web.Encoding.x_cp20261、Web.Encoding.x_cp20269、Web.Encoding.IBM273、Web.Encoding.IBM277、Web.Encoding.IBM278、Web.Encoding.IBM280、Web.Encoding.IBM284、Web.Encoding.IBM285、Web.Encoding.IBM290、Web.Encoding.IBM297、Web.Encoding.IBM420、Web.Encoding.IBM423、Web.Encoding.IBM424、Web.Encoding.x_EBCDIC_KoreanExtended、Web.Encoding.IBM_Thai、Web.Encoding.koi8_r、Web.Encoding.IBM871、Web.Encoding.IBM880、Web.Encoding.IBM905、Web.Encoding.IBM00924、Web.Encoding.EUC_JP_20932、Web.Encoding.x_cp20936、Web.Encoding.x_cp20949、Web.Encoding.cp1025、Web.Encoding.koi8_u、Web.Encoding.iso_8859_1、Web.Encoding.iso_8859_2、Web.Encoding.iso_8859_3、Web.Encoding.iso_8859_4、Web.Encoding.iso_8859_5、Web.Encoding.iso_8859_6、Web.Encoding.iso_8859_7、Web.Encoding.iso_8859_8、Web.Encoding.iso_8859_9、Web.Encoding.iso_8859_13、Web.Encoding.iso_8859_15、Web.Encoding.x_Europa、Web.Encoding.iso_8859_8_i、Web.Encoding.iso_2022_jp_50220、Web.Encoding.csISO2022JP、Web.Encoding.iso_2022_jp_50222、Web.Encoding.iso_2022_kr、Web.Encoding.x_cp50227、Web.Encoding.euc_jp_51932、Web.Encoding.EUC_CN、Web.Encoding.euc_kr、Web.Encoding.hz_gb_2312、Web.Encoding.GB18030、Web.Encoding.x_iscii_de、Web.Encoding.x_iscii_be、Web.Encoding.x_iscii_ta、Web.Encoding.x_iscii_te、Web.Encoding.x_iscii_as、Web.Encoding.x_iscii_or、Web.Encoding.x_iscii_ka、Web.Encoding.x_iscii_ma、Web.Encoding.x_iscii_gu、Web.Encoding.x_iscii_pa、Web.Encoding.utf_7、Web.Encoding.utf_8
+#   Attachments [資料表] 附件 — 將透過 Web 服務以 DataTable 格式傳送的附件
+#   UploadType [選項，預設 FilePath] 上傳類型 — 將透過 Web 服務傳送的附件類型
+#       可用值：Web.UploadType.FilePath（檔案）、Web.UploadType.Binary（二進位）
+#   AcceptUntrustedCertificates [布林，預設 False]
+#   UseAuthentication [布林，預設 False]
+#   Username [文字]
+#   Password [文字(可加密)]
+#   TrimRequestBody [布林，預設 True]
+# 產生的變數：
+#   ResponseHeaders [List<String>]
+#   DownloadedFile [FileObject] 下載的檔案 — 下載的檔案
+#   Response [文字]
+#   StatusCode [整數]
+# 可能的錯誤：InvokeWebServiceError、DirectoryDoesNotExistError、InvalidCustomHeaderError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

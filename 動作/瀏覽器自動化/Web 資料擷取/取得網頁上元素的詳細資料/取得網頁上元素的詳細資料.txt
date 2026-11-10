@@ -1,0 +1,17 @@
+WebAutomation.GetDetailsOfElement BrowserInstance: `` Control: `` AttributeName: $'''Own Text''' AttributeValue=> AttributeValue
+
+# ==================== 說明 ====================
+# 動作：取得網頁上元素的詳細資料  (WebAutomation.GetDetailsOfElement)
+# 英文名稱：Get details of element on web page
+# 用途：取得網頁上元素的屬性值
+# 位置：瀏覽器自動化 > Web 資料擷取
+# 輸入參數：
+#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
+#   Control [WebControl] UI 元素 — 選取網頁上要從中擷取詳細資料的 UI 元素
+#   AttributeName [文字，預設 Own Text] 屬性名稱 — 輸入或選取要擷取其值的屬性
+# 產生的變數：
+#   AttributeValue [文字] 元素屬性值 — Web 元素屬性的值
+# 可能的錯誤：RetrieveAttributeError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

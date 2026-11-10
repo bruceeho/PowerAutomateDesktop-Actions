@@ -1,0 +1,25 @@
+# 【模式 RunAccessMacro】執行儲存的 Access 巨集
+Access.RunAccessMacro.RunAccessMacro Instance: `` MacroName: ``
+
+# 【模式 RunAccessVBAMacro】執行 Access VBA 巨集。
+Access.RunAccessMacro.RunAccessVBAMacro Instance: `` MacroName: ``
+
+# 【模式 RunAccessVBAMacroWithParameters】執行使用參數的 Access VBA 巨集。
+Access.RunAccessMacro.RunAccessVBAMacroWithParameters Instance: `` MacroName: `` MacroParameters: ``
+
+# ==================== 說明 ====================
+# 動作：執行 Access 巨集  (Access.RunAccessMacro)
+# 英文名稱：Run Access macro
+# 用途：執行儲存的 Access 巨集
+# 位置：Access
+# 輸入參數：
+#   Instance [AccessInstanceHandle] Access 執行個體 — 要處理的 Access 執行個體。此變數先前必須已在 [啟動 Access] 動作中指定
+#   MacroName [文字] 巨集名稱 — 儲存的 Access 巨集名稱。請注意，您必須輸入巨集的確切名稱，因為它會儲存在特定的 Access 資料庫中。
+#   IsVBMacro [布林，預設 False] 為 VBA 巨集 — 指定巨集是否為 VBA 巨集
+#   HasParameters [布林，預設 False] 包含參數 — 指定執行巨集所需的參數。確定參數的設定順序完全依特定巨集中所指出的順序。
+#   MacroParameters [資料表] 巨集參數 — 指定執行巨集所需的參數。確定參數的設定順序完全依特定巨集中所指出的順序。
+# 可能的錯誤：RunAccessMacroError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,17 @@
+FTP.ListDirectory Connection: `` Directories=> Directories Files=> Files
+
+# ==================== 說明 ====================
+# 動作：列出 FTP 目錄  (FTP.ListDirectory)
+# 英文名稱：List FTP directory
+# 用途：這個動作會傳回目前 FTP 連線目錄中所包含的子目錄與檔案
+# 位置：FTP
+# 輸入參數：
+#   Connection [FtpConnectionBase] 連接 — FTP 連線
+#   Path [文字，選填] 路徑 — 您想要列出的路徑。
+# 產生的變數：
+#   Directories [List<FtpFolderObject>] 目錄 — 列出的目錄
+#   Files [List<FtpFileObject>] 檔案 — 列出的檔案
+# 可能的錯誤：ListingError、NotConnectedError、DirectoryDoesNotExistError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

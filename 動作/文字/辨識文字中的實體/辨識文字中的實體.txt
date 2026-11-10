@@ -1,0 +1,18 @@
+Text.RecognizeEntitiesInText Text: `` Mode: Text.RecognizerMode.DateTime Language: Text.RecognizerLanguage.English RecognizedEntities=> RecognizedEntities
+
+# ==================== 說明 ====================
+# 動作：辨識文字中的實體  (Text.RecognizeEntitiesInText)
+# 英文名稱：Recognize entities in text
+# 用途：辨識文字中的實體，例如以多種語言中自然語言表示的數字、單位、日期/時間和其他實體
+# 位置：文字
+# 輸入參數：
+#   Text [文字] 要識別的文字 — 要辨識實體的文字
+#   Mode [選項，預設 DateTime] 實體類型 — 要辨識的實體類型 (例如，日期時間、電子郵件、URL 等)
+#       可用值：Text.RecognizerMode.DateTime（日期時間）、Text.RecognizerMode.Dimension（維度）、Text.RecognizerMode.Temperature（溫度）、Text.RecognizerMode.Currency（貨幣）、Text.RecognizerMode.NumberRange（數字範圍）、Text.RecognizerMode.Number（數字）、Text.RecognizerMode.Ordinal（序數）、Text.RecognizerMode.Percentage（百分比）、Text.RecognizerMode.PhoneNumber（電話號碼）、Text.RecognizerMode.Email（電子郵件）、Text.RecognizerMode.IpAddress（IP 位址）、Text.RecognizerMode.Mention（提及）、Text.RecognizerMode.Hashtag（主題標籤）、Text.RecognizerMode.Url（URL）、Text.RecognizerMode.Guid（GUID）、Text.RecognizerMode.QuotedText（加引號的文字）
+#   Language [選項，預設 English] 語言 — 指定文字的語言
+#       可用值：Text.RecognizerLanguage.English（英文）、Text.RecognizerLanguage.Chinese（中文 (簡體)）、Text.RecognizerLanguage.Spanish（西班牙文）、Text.RecognizerLanguage.SpanishMexican（西班牙文 (墨西哥)）、Text.RecognizerLanguage.Portuguese（葡萄牙文）、Text.RecognizerLanguage.French（法文）、Text.RecognizerLanguage.German（德文）、Text.RecognizerLanguage.Italian（義大利文）、Text.RecognizerLanguage.Japanese（日文）、Text.RecognizerLanguage.Dutch（荷蘭文）、Text.RecognizerLanguage.Korean（韓文）、Text.RecognizerLanguage.Swedish（瑞典文）、Text.RecognizerLanguage.Turkish（土耳其文）、Text.RecognizerLanguage.Hindi（印度文）
+# 產生的變數：
+#   RecognizedEntities [資料表] 已辨識的實體 — 已辨識的實體
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,30 @@
+# 【模式 ShowMessage】顯示訊息方塊
+Display.ShowMessageDialog.ShowMessage Icon: Display.Icon.None Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: False ButtonPressed=> ButtonPressed
+
+# 【模式 ShowMessageWithTimeout】顯示將在指定的時間長度後關閉的訊息方塊
+Display.ShowMessageDialog.ShowMessageWithTimeout Icon: Display.Icon.None Buttons: Display.Buttons.OK DefaultButton: Display.DefaultButton.Button1 IsTopMost: False Timeout: 3 ButtonPressed=> ButtonPressed
+
+# ==================== 說明 ====================
+# 動作：顯示訊息  (Display.ShowMessageDialog)
+# 英文名稱：Display message
+# 用途：顯示訊息方塊
+# 位置：訊息方塊
+# 輸入參數：
+#   Title [文字，選填] 訊息方塊標題 — 要做為訊息方塊標題使用的文字
+#   Message [文字，選填] 要顯示的訊息 — 指定要顯示為訊息的文字
+#   Icon [選項，預設 None] 訊息方塊圖示 — 隨訊息方塊顯示的圖示
+#       可用值：Display.Icon.None（無）、Display.Icon.Information（資訊）、Display.Icon.Question（問題）、Display.Icon.Warning（警告）、Display.Icon.ErrorIcon（錯誤）
+#   Buttons [選項，預設 OK] 訊息方塊按鈕 — 要在訊息方塊上顯示的按鈕
+#       可用值：Display.Buttons.OK（確定）、Display.Buttons.OKCancel（確定 - 取消）、Display.Buttons.YesNo（是 - 否）、Display.Buttons.YesNoCancel（是 - 否 - 取消）、Display.Buttons.AbortRetryIgnore（中止 - 重試 - 忽略）、Display.Buttons.RetryCancel（重試 - 取消）
+#   DefaultButton [選項，預設 Button1] 預設按鈕 — 預設要反白顯示的按鈕。如果使用者按下 <Enter>，此按鈕就會呈現按下狀態
+#       可用值：Display.DefaultButton.Button1（第一個按鈕）、Display.DefaultButton.Button2（第二個按鈕）、Display.DefaultButton.Button3（第三個按鈕）
+#   IsTopMost [布林，預設 False] 訊息方塊一律保持在最上方 — 指定訊息方塊是否應一律保持在所有其他視窗之上
+#   CloseAutomatically [布林，預設 False] 自動關閉訊息方塊 — 指定訊息方塊是否在預設的時間過後自動關閉，如同按下預設按鈕一樣。否則，流程將等到使用者按下按鈕為止
+#   Timeout [整數，預設 3] 逾時 — 指定在自動繼續之前，要等待輸入而暫停流程的秒數
+# 產生的變數：
+#   ButtonPressed [文字] 按下的按鈕 — 所按下按鈕的文字
+# 可能的錯誤：ShowMessageDialogError、ShowMessageDialogInNonInteractiveModeError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

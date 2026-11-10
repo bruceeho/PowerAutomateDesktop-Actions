@@ -1,0 +1,27 @@
+# 【模式 SelectFile】顯示選取檔案對話方塊並提示使用者選取檔案
+Display.SelectFileDialog.SelectFile IsTopMost: False CheckIfFileExists: False ButtonPressed=> ButtonPressed SelectedFile=> SelectedFile
+
+# 【模式 SelectFiles】顯示選取檔案對話方塊並提示使用者選取檔案
+Display.SelectFileDialog.SelectFiles IsTopMost: False CheckIfFileExists: False ButtonPressed=> ButtonPressed SelectedFiles=> SelectedFiles
+
+# ==================== 說明 ====================
+# 動作：顯示選取檔案對話方塊  (Display.SelectFileDialog)
+# 英文名稱：Display select file dialog
+# 用途：顯示選取檔案對話方塊並提示使用者選取一個或多個檔案
+# 位置：訊息方塊
+# 輸入參數：
+#   Title [文字，選填] 對話方塊標題 — 對話方塊標題
+#   InitialDirectory [FolderObject，選填] 初始資料夾 — 瀏覽檔案時要開啟的初始資料夾。這是選取檔案對話方塊動作讓使用者開始尋找檔案的位置
+#   FileFilter [文字，選填] 檔案篩選器 — 限制所擷取檔案的篩選器。可使用萬用字元，例如「*.txt」或「document?.doc」(不含引號)。若要允許使用者選擇多個檔案篩選器，請以分號分隔選項，例如「*.txt;*.exe」
+#   IsTopMost [布林，預設 False] 檔案選取對話方塊一律保持在最上方 — 指定檔案選取對話方塊是否應一律保持在所有其他視窗之上
+#   AllowMultiple [布林，預設 False] 允許多重選取 — 指定使用者是否能選取一個以上的檔案
+#   CheckIfFileExists [布林，預設 False] 檢查檔案是否存在 — 指定是否只接受已存在的檔案
+# 產生的變數：
+#   ButtonPressed [文字] 按下的按鈕 — 已按下按鈕的文字。系統會自動為使用者提供 [開啟] 或 [取消] 選項
+#   SelectedFile [FileObject] 選取的檔案 — 將透過對話方塊選取的檔案
+#   SelectedFiles [List<FileObject>] 選取的檔案 — 選取的檔案
+# 可能的錯誤：SelectFileDialogError、SelectFileDialogInNonInteractiveModeError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

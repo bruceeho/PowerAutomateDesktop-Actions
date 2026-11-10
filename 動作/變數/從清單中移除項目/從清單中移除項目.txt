@@ -1,0 +1,23 @@
+# 【模式 RemoveItemFromListByIndex】從清單中移除指定索引處的項目
+Variables.RemoveItemFromList.RemoveItemFromListByIndex ItemIndex: `` List: ``
+
+# 【模式 RemoveItemFromListByValue】從清單中移除一個或多個項目
+Variables.RemoveItemFromList.RemoveItemFromListByValue Item: `` ItemMatchAllOccurrences: False List: ``
+
+# ==================== 說明 ====================
+# 動作：從清單中移除項目  (Variables.RemoveItemFromList)
+# 英文名稱：Remove item from list
+# 用途：從清單中移除一個或多個項目
+# 位置：變數
+# 輸入參數：
+#   ItemIndex [整數] 索引處 — 要移除的項目索引編號
+#   Item [一般值] 包含值 — 要移除的項目
+#   ItemMatchAllOccurrences [布林，預設 False] 移除所有項目出現位置 — 移除符合所指定項目的所有出現位置
+#   List [List<Object>] 從清單 — 包含要移除之項目的清單
+#   Mode [選項，預設 ByIndex] 移除項目依據 — 指定要移除位於指定索引處的項目，或移除包含特定值的項目
+#       可用值：Variables.RemoveItemFromListMode.ByIndex（索引）、Variables.RemoveItemFromListMode.ByValue（值）
+# 可能的錯誤：IndexOutOfRangeError、ItemNotFoundError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

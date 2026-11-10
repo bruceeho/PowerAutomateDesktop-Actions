@@ -1,0 +1,15 @@
+TerminalEmulation.MoveCursor Session: `` Row: `` Column: ``
+
+# ==================== 說明 ====================
+# 動作：在終端工作階段上移動游標  (TerminalEmulation.MoveCursor)
+# 英文名稱：Move cursor on terminal session
+# 用途：將終端的游標移至指定位置
+# 位置：終端模擬
+# 輸入參數：
+#   Session [TerminalSessionHandle] 終端工作階段 — 要處理的終端工作階段
+#   Row [整數] 列 — 畫面上游標的垂直位置
+#   Column [整數] 欄 — 畫面上游標的水平位置
+# 可能的錯誤：ScreenPositionOutOfBoundsError、PositionCommandsNotSupportedByEmulatorError、OperationUnavailableForSessionTypeError、EmulatorCommunicationError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

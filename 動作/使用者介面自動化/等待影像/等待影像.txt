@@ -1,0 +1,53 @@
+# 【模式 ToAppearOnScreen】檢查影像是否出現在整個畫面上
+UIAutomation.WaitForImageAction.ToAppearOnScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+
+# 【模式 ToAppearOnSubregionOfScreen】檢查影像是否出現在畫面的子區域中
+UIAutomation.WaitForImageAction.ToAppearOnSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+
+# 【模式 ToAppearOnForegroundWindow】檢查影像是否出現在前景視窗中
+UIAutomation.WaitForImageAction.ToAppearOnForegroundWindow Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+
+# 【模式 ToAppearOnSubregionOfForegroundWindow】檢查影像是否出現在前景視窗的子區域中
+UIAutomation.WaitForImageAction.ToAppearOnSubregionOfForegroundWindow Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+
+# 【模式 ToDisappearFromScreen】檢查影像是否已從整個畫面消失
+UIAutomation.WaitForImageAction.ToDisappearFromScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+
+# 【模式 ToDisappearFromSubregionOfScreen】檢查影像是否已從畫面的子區域消失
+UIAutomation.WaitForImageAction.ToDisappearFromSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+
+# 【模式 ToDisappearFromForegroundWindow】檢查影像是否已從前景視窗消失
+UIAutomation.WaitForImageAction.ToDisappearFromForegroundWindow Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+
+# 【模式 ToDisappearFromSubregionOfForegroundWindow】檢查影像是否已從前景視窗的子區域消失
+UIAutomation.WaitForImageAction.ToDisappearFromSubregionOfForegroundWindow Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+
+# ==================== 說明 ====================
+# 動作：等待影像  (UIAutomation.WaitForImageAction)
+# 英文名稱：Wait for image
+# 用途：這個動作會一直等待，直到特定影像出現在畫面上或前景視窗中
+# 位置：使用者介面自動化
+# 輸入參數：
+#   CheckMode [選項，預設 Appear]
+#       可用值：UIAutomation.WaitForImage.Appear（出現）、UIAutomation.WaitForImage.Disappear（消失）
+#   Images [List<PngEncodedImage>]
+#   SearchForImageOn [選項，預設 EntireScreen]
+#       可用值：UIAutomation.SearchTarget.EntireScreen（整個畫面）、UIAutomation.SearchTarget.ForegroundWindow（僅前景視窗）
+#   SearchMode [選項，預設 Whole]
+#       可用值：UIAutomation.SearchMode.Whole（搜尋整個畫面或前景視窗）、UIAutomation.SearchMode.Subregion（在指定的畫面或前景視窗子區域搜尋）
+#   FindAllImages [布林，預設 False]
+#   X1 [Nullable<Int32>]
+#   X2 [Nullable<Int32>]
+#   Y1 [Nullable<Int32>]
+#   Y2 [Nullable<Int32>]
+#   Tolerance [整數，預設 10]
+#   SearchAlgorithm [選項，預設 Legacy]
+#       可用值：UIAutomation.ImageFinderAlgorithm.Legacy（基本）、UIAutomation.ImageFinderAlgorithm.Template（進階）
+# 產生的變數：
+#   X [整數]
+#   Y [整數]
+# 可能的錯誤：WaitForImageError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,15 @@
+ActiveDirectory.MoveObject DistinguishedName: `` MoveToLocation: `` ParentDirectoryEntry: ``
+
+# ==================== 說明 ====================
+# 動作：移動物件  (ActiveDirectory.MoveObject)
+# 英文名稱：Move object
+# 用途：移動 Active Directory 中的物件
+# 位置：Active Directory > 物件
+# 輸入參數：
+#   DistinguishedName [文字] 辨別名稱 — Active Directory 項目的辨別名稱
+#   MoveToLocation [文字] 移到位置 — 要將物件移動到的位置
+#   ParentDirectoryEntry [ActiveDirectoryEntry] 上層目錄項目 — Active Directory 伺服器的上層項目
+# 可能的錯誤：AuthenticationError、InvalidOperationError、ServerNotOperationalError、UnauthorizedAccessError、ActiveDirectoryEntryNotFound、ObjectDoesNotExistOnServerError、ActiveDirectoryError、LocationCannotBeEmpty
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

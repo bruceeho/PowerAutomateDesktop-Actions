@@ -1,0 +1,14 @@
+FTP.DeleteFiles Connection: `` Files: ``
+
+# ==================== 說明 ====================
+# 動作：刪除 FTP 檔案  (FTP.DeleteFiles)
+# 英文名稱：Delete FTP file
+# 用途：從 FTP 伺服器上刪除一或多個檔案
+# 位置：FTP
+# 輸入參數：
+#   Connection [FtpConnectionBase] FTP 連線 — 要使用的 FTP 連線。這個變數先前必須已使用「開啟 FTP」連線動作完成指定
+#   Files [List<FtpFileObject>] 要刪除的檔案 — 要刪除的檔案
+# 可能的錯誤：NotConnectedError、FileNotFoundError、CannotDeleteFileError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,14 @@
+ActiveDirectory.UnlockUser DistinguishedName: `` ParentDirectoryEntry: ``
+
+# ==================== 說明 ====================
+# 動作：解除鎖定使用者  (ActiveDirectory.UnlockUser)
+# 英文名稱：Unlock user
+# 用途：解除鎖定 Active Directory 使用者
+# 位置：Active Directory > 使用者
+# 輸入參數：
+#   DistinguishedName [文字] 辨別名稱 — Active Directory 項目的辨別名稱
+#   ParentDirectoryEntry [ActiveDirectoryEntry] 上層目錄項目 — Active Directory 伺服器的上層項目
+# 可能的錯誤：AuthenticationError、InvalidOperationError、ServerNotOperationalError、UnauthorizedAccessError、ActiveDirectoryEntryNotFound、ObjectDoesNotExistOnServerError、ActiveDirectoryError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

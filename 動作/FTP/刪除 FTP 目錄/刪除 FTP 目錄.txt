@@ -1,0 +1,14 @@
+FTP.DeleteDirectory Connection: `` Directory: ``
+
+# ==================== 說明 ====================
+# 動作：刪除 FTP 目錄  (FTP.DeleteDirectory)
+# 英文名稱：Delete FTP directory
+# 用途：從 FTP 伺服器刪除目錄
+# 位置：FTP
+# 輸入參數：
+#   Connection [FtpConnectionBase] FTP 連線 — 要使用的 FTP 連線。這個變數先前必須已使用「開啟 FTP」連線動作完成指定
+#   Directory [FtpFolderObject] 要刪除的目錄 — 要刪除的資料夾。資料夾中的所有內容將同時刪除
+# 可能的錯誤：DeleteDirectoryError、RemoteDirectoryDoesNotExistError、WorkingDirectoryChangeError、NotConnectedError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

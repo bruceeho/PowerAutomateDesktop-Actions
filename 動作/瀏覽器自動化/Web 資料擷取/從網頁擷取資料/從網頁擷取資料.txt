@@ -1,0 +1,136 @@
+# 【模式 ExtractData】從網頁的特定部分擷取單一值、清單、資料列或資料表形式的資料
+WebAutomation.ExtractData.ExtractData BrowserInstance: `` ExtractionParameters: `` Control: `` TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractDataUsingPagingFromNumberOfPages】未指定要擷取的資料
+WebAutomation.ExtractData.ExtractDataUsingPagingFromNumberOfPages BrowserInstance: `` ExtractionParameters: `` Control: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractDataUsingPagingFromAllPages】未指定要擷取的資料
+WebAutomation.ExtractData.ExtractDataUsingPagingFromAllPages BrowserInstance: `` ExtractionParameters: `` Control: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractDataInExcel】從網頁擷取資料並儲存於 Excel 中
+WebAutomation.ExtractData.ExtractDataInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractDataUsingPagingFromNumberOfPagesInExcel】未指定要擷取的資料
+WebAutomation.ExtractData.ExtractDataUsingPagingFromNumberOfPagesInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractDataUsingPagingFromAllPagesInExcel】未指定要擷取的資料
+WebAutomation.ExtractData.ExtractDataUsingPagingFromAllPagesInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractHtmlTable】從 HTML 表格擷取所有資料
+WebAutomation.ExtractData.ExtractHtmlTable BrowserInstance: `` ExtractionParameters: `` Control: `` PostProcessData: False TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractHtmlTableUsingPagingFromNumberOfPages】使用分頁從多個網頁的 HTML 表格中擷取所有資料，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractHtmlTableUsingPagingFromNumberOfPages BrowserInstance: `` ExtractionParameters: `` Control: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractHtmlTableUsingPagingFromAllPages】使用分頁從所有可用網頁的 HTML 表格中擷取所有資料，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractHtmlTableUsingPagingFromAllPages BrowserInstance: `` ExtractionParameters: `` Control: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractHtmlTableInExcel】從 Excel 執行個體中的 HTML 表格擷取所有資料
+WebAutomation.ExtractData.ExtractHtmlTableInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` PostProcessData: False TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractHtmlTableUsingPagingFromNumberOfPagesInExcel】使用分頁從多個網頁的 HTML 表格中擷取所有資料，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractHtmlTableUsingPagingFromNumberOfPagesInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractHtmlTableUsingPagingFromAllPagesInExcel】使用分頁從所有可用網頁的 HTML 表格中擷取所有資料，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractHtmlTableUsingPagingFromAllPagesInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractTable】從網頁中的特定欄位擷取資料，建立虛擬表格，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractTable BrowserInstance: `` ExtractionParameters: `` Control: `` PostProcessData: False TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractTableUsingPagingFromNumberOfPages】使用分頁從多個網頁的特定欄位中擷取資料，建立虛擬表格，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractTableUsingPagingFromNumberOfPages BrowserInstance: `` ExtractionParameters: `` Control: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractTableUsingPagingFromAllPages】使用分頁從所有可用網頁的特定欄位中擷取資料，建立虛擬表格，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractTableUsingPagingFromAllPages BrowserInstance: `` ExtractionParameters: `` Control: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractTableInExcel】從網頁中的特定欄位擷取資料，建立虛擬表格，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractTableInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` PostProcessData: False TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractTableUsingPagingFromNumberOfPagesInExcel】使用分頁從多個網頁的特定欄位中擷取資料，建立虛擬表格，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractTableUsingPagingFromNumberOfPagesInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractTableUsingPagingFromAllPagesInExcel】使用分頁從所有可用網頁的特定欄位中擷取資料，建立虛擬表格，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractTableUsingPagingFromAllPagesInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractHandPickedValues】從網頁中的特定欄位擷取資料並儲存於變數中
+WebAutomation.ExtractData.ExtractHandPickedValues BrowserInstance: `` ExtractionParameters: `` TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractHandPickedValuesUsingPagingFromNumberOfPages】使用分頁從多個網頁的特定欄位中擷取資料，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractHandPickedValuesUsingPagingFromNumberOfPages BrowserInstance: `` ExtractionParameters: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractHandPickedValuesUsingPagingFromAllPages】使用分頁從所有可用網頁的特定欄位中擷取資料，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractHandPickedValuesUsingPagingFromAllPages BrowserInstance: `` ExtractionParameters: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractHandPickedValuesInExcel】從網頁中的特定欄位擷取資料並儲存於 Excel 中
+WebAutomation.ExtractData.ExtractHandPickedValuesInExcel BrowserInstance: `` ExtractionParameters: `` TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractHandPickedValuesUsingPagingFromNumberOfPagesInExcel】使用分頁從多個網頁的特定欄位中擷取資料，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractHandPickedValuesUsingPagingFromNumberOfPagesInExcel BrowserInstance: `` ExtractionParameters: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractHandPickedValuesUsingPagingFromAllPagesInExcel】使用分頁從所有可用網頁的特定欄位中擷取資料，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractHandPickedValuesUsingPagingFromAllPagesInExcel BrowserInstance: `` ExtractionParameters: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractList】從網頁擷取清單並儲存於變數中
+WebAutomation.ExtractData.ExtractList BrowserInstance: `` ExtractionParameters: `` Control: `` PostProcessData: False TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractListUsingPagingFromNumberOfPages】使用分頁從多個網頁擷取清單，建立虛擬表格，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractListUsingPagingFromNumberOfPages BrowserInstance: `` ExtractionParameters: `` Control: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractListUsingPagingFromAllPages】使用分頁從所有可用網頁中擷取清單，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractListUsingPagingFromAllPages BrowserInstance: `` ExtractionParameters: `` Control: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractListInExcel】從網頁擷取清單並儲存於 Excel 中
+WebAutomation.ExtractData.ExtractListInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` PostProcessData: False TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractListUsingPagingFromNumberOfPagesInExcel】使用分頁從多個網頁擷取清單，建立虛擬表格，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractListUsingPagingFromNumberOfPagesInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractListUsingPagingFromAllPagesInExcel】使用分頁從所有可用網頁中擷取清單，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractListUsingPagingFromAllPagesInExcel BrowserInstance: `` ExtractionParameters: `` Control: `` UsePhysicalClick: False PagerCssSelector: `` PostProcessData: False TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractSingleValue】從網頁擷取單一值並儲存於變數中
+WebAutomation.ExtractData.ExtractSingleValue BrowserInstance: `` ExtractionParameters: `` TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractSingleValueUsingPagingFromNumberOfPages】使用分頁從多個網頁中擷取單一值，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractSingleValueUsingPagingFromNumberOfPages BrowserInstance: `` ExtractionParameters: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractSingleValueUsingPagingFromAllPages】使用分頁從所有可用網頁中擷取單一值，並將其儲存於變數中
+WebAutomation.ExtractData.ExtractSingleValueUsingPagingFromAllPages BrowserInstance: `` ExtractionParameters: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExtractedData=> ExtractedData
+
+# 【模式 ExtractSingleValueInExcel】從網頁擷取單一值並儲存於 Excel 中
+WebAutomation.ExtractData.ExtractSingleValueInExcel BrowserInstance: `` ExtractionParameters: `` TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractSingleValueUsingPagingFromNumberOfPagesInExcel】使用分頁從多個網頁中擷取單一值，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractSingleValueUsingPagingFromNumberOfPagesInExcel BrowserInstance: `` ExtractionParameters: `` MaxWebPagesToProcess: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# 【模式 ExtractSingleValueUsingPagingFromAllPagesInExcel】使用分頁從所有可用網頁中擷取單一值，並將其儲存於 Excel 中
+WebAutomation.ExtractData.ExtractSingleValueUsingPagingFromAllPagesInExcel BrowserInstance: `` ExtractionParameters: `` UsePhysicalClick: False PagerCssSelector: `` TimeoutInSeconds: 60 ExcelInstance=> ExcelInstance
+
+# ==================== 說明 ====================
+# 動作：從網頁擷取資料  (WebAutomation.ExtractData)
+# 英文名稱：Extract data from web page
+# 用途：從網頁的特定部分擷取單一值、清單、資料列或資料表形式的資料
+# 位置：瀏覽器自動化 > Web 資料擷取
+# 輸入參數：
+#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
+#   ExtractionParameters [資料表] 擷取參數 — 擷取資料時要使用的參數。根據擷取模式而定，可接受不同的資料。
+#   Control [文字] UI 元素 — 選取網頁上要從中擷取資料的 UI 元素
+#   MaxWebPagesToProcess [整數] 要處理的網頁數目上限 — 要處理的網頁數目上限
+#   UsePhysicalClick [布林，預設 False]
+#   PagerCssSelector [文字] 頁面巡覽區 CSS 選取器 — 頁面巡覽區 CSS 選取器
+#   ExtractionMode [選項，預設 SingleValue] 擷取模式 — 指定要從網頁擷取的內容
+#       可用值：WebAutomation.ExtractionMode.Undefined（未定義）、WebAutomation.ExtractionMode.SingleValue（單一值）、WebAutomation.ExtractionMode.HandpickedValues（自選值）、WebAutomation.ExtractionMode.List（清單）、WebAutomation.ExtractionMode.Table（資料表）、WebAutomation.ExtractionMode.EntireHtmlTable（完整 HTML 表格）
+#   UsePaging [布林，預設 False] 使用分頁 — 指定是否要使用分頁
+#   GetAllWebPages [布林，預設 False] 取得所有網頁 — 指定是否取得所有網頁
+#   StoreDataMode [選項，預設 Variable] 儲存資料模式 — 指定要將擷取的資料儲存於變數或 Excel 試算表中
+#       可用值：WebAutomation.StoreDataMode.Variable（變數）、WebAutomation.StoreDataMode.ExcelSpreadsheet（Excel 試算表）
+#   PostProcessData [布林，預設 False]
+#   TimeoutInSeconds [整數，預設 60]
+# 產生的變數：
+#   ExcelInstance [ExcelInstanceHandle] Excel 執行個體 — 包含所擷取資料的 Excel 執行個體。使用這個執行個體可透過 Excel 專屬動作操控試算表 (或儲存後將它關閉)。
+#   ExtractedData [資料表] 擷取的資料 — 以單一值、清單、資料列或資料表形式擷取的資料
+# 可能的錯誤：ExtractDataError、LaunchExcelError、WriteToExcelError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

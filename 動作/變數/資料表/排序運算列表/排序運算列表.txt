@@ -1,0 +1,24 @@
+# 【模式 SortWithColumnName】依欄名稱排序
+Variables.SortDataTable.SortWithColumnName DataTable: `` ColumnName: `` Order: Variables.SortDirection.Ascending
+
+# 【模式 SortWithColumnIndex】依欄索引排序
+Variables.SortDataTable.SortWithColumnIndex DataTable: `` ColumnIndex: `` Order: Variables.SortDirection.Ascending
+
+# ==================== 說明 ====================
+# 動作：排序運算列表  (Variables.SortDataTable)
+# 英文名稱：Sort data table
+# 用途：依指定欄對運算列表列進行遞增或遞減排序，前提為所有值的資料類型都相同
+# 位置：變數 > 資料表
+# 輸入參數：
+#   DataTable [資料表] 運算列表 — 要使用的運算列表變數。此變數必須先前已由產生運算列表變數的動作指定
+#   ColumnSpecifier [選項，預設 Name] 指定包含以下內容的資料行: — 指定要依名稱還是索引來尋找資料行
+#       可用值：Variables.ColumnSpecifier.Name（名稱）、Variables.ColumnSpecifier.Index（索引）
+#   ColumnIndex [整數] 資料行索引 — 應刪除的資料行的索引。資料行索引從 0 開始
+#   ColumnName [文字] 資料行名稱 — 應刪除的資料行的名稱
+#   Order [選項，預設 Ascending] 順序 — 運算列表的排序順序
+#       可用值：Variables.SortDirection.Ascending（遞增）、Variables.SortDirection.Descending（遞減）
+# 可能的錯誤：ColumnNameNotFoundError、ColumnIndexOutOfRangeError、ColumnTypeMismatchError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

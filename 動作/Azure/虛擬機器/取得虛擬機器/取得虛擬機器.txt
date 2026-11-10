@@ -1,0 +1,18 @@
+Azure.GetVirtualMachines AzureClient: `` Status: Azure.VMStatus.Any VirtualMachinesInfo=> VirtualMachinesInfo
+
+# ==================== 說明 ====================
+# 動作：取得虛擬機器  (Azure.GetVirtualMachines)
+# 英文名稱：Get virtual machines
+# 用途：取得虛擬機器的基本資訊
+# 位置：Azure > 虛擬機器
+# 輸入參數：
+#   AzureClient [AzureClient] Azure 用戶端 — 用來連線 Azure 的用戶端
+#   ResourceGroup [文字，選填] 資源群組 — 虛擬機器的資源群組
+#   Status [選項，預設 Any] 狀態 — 虛擬機器的狀態
+#       可用值：Azure.VMStatus.Running（正在執行）、Azure.VMStatus.Deallocating（正在解除配置）、Azure.VMStatus.Deallocated（已解除配置）、Azure.VMStatus.Starting（正在啟動）、Azure.VMStatus.Stopped（已停止）、Azure.VMStatus.Stopping（正在停止）、Azure.VMStatus.Unknown（未知）、Azure.VMStatus.Any（任何）
+# 產生的變數：
+#   VirtualMachinesInfo [List<AzureVirtualMachineInfo>] 虛擬機器 — 所擷取包含基本資訊的虛擬機器
+# 可能的錯誤：ResourceGroupNotFoundError、FailedToGetVirtualMachinesError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

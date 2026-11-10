@@ -1,0 +1,29 @@
+# 【模式 WriteStartOfDocument】在 Word 文件中寫入內容
+Word.WriteToWord.WriteStartOfDocument Instance: `` Text: `` AppendNewLine: False
+
+# 【模式 WriteEndOfDocument】在 Word 文件中寫入內容
+Word.WriteToWord.WriteEndOfDocument Instance: `` Text: `` AppendNewLine: False
+
+# 【模式 WriteStartOfBookmark】在 Word 文件的書籤文字之前寫入內容
+Word.WriteToWord.WriteStartOfBookmark Instance: `` Text: `` AppendNewLine: False Bookmark: ``
+
+# 【模式 WriteEndOfBookmark】在 Word 文件的書籤文字之後寫入內容
+Word.WriteToWord.WriteEndOfBookmark Instance: `` Text: `` AppendNewLine: False Bookmark: ``
+
+# ==================== 說明 ====================
+# 動作：寫入 Word 文件  (Word.WriteToWord)
+# 英文名稱：Write to Word document
+# 用途：寫入或附加文字至 Word 檔案。
+# 位置：Word
+# 輸入參數：
+#   Instance [WordInstanceHandle] Word 執行個體 — 要處理的 Word 執行個體。此變數先前必須已使用「啟動 Word」或「附加至執行中的程序」動作完成指定
+#   Text [文字] 要寫入的文字 — 要寫入指定 Word 文件的文字
+#   AppendNewLine [布林，預設 False] 附加新行 — 指定是否在整體文字開頭附加新行，以便寫入文件
+#   WriteMode [選項，預設 StartOfDocument] 寫入文字至 — 指定 Word 文件中將附加文字的位置。
+#       可用值：Word.WriteWordMode.StartOfDocument（Word 檔案開頭）、Word.WriteWordMode.EndOfDocument（Word 檔案結尾）、Word.WriteWordMode.StartOfBookmark（在書籤之前）、Word.WriteWordMode.EndOfBookmark（在書籤之後）
+#   Bookmark [文字] 書籤 — Word 文件中將附加文字的目標書籤。此動作會在 Word 文件中的指定書籤之前或之後附加文字
+# 可能的錯誤：WordInstanceNotInitializedError、WordOperationOnReadOnlyDocumentError、WriteWordError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

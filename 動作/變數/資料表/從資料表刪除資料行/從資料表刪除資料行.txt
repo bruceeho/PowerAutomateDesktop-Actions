@@ -1,0 +1,22 @@
+# 【模式 DeleteColumnWithName】使用資料行名稱來刪除資料行
+Variables.DeleteColumnFromDataTable.DeleteColumnWithName DataTable: `` ColumnName: ``
+
+# 【模式 DeleteColumnWithIndex】使用資料行索引來刪除資料行
+Variables.DeleteColumnFromDataTable.DeleteColumnWithIndex DataTable: `` ColumnIndex: ``
+
+# ==================== 說明 ====================
+# 動作：從資料表刪除資料行  (Variables.DeleteColumnFromDataTable)
+# 英文名稱：Delete column from data table
+# 用途：刪除指定資料行索引或資料行名稱的資料表資料行
+# 位置：變數 > 資料表
+# 輸入參數：
+#   DataTable [資料表] 運算列表 — 要使用的運算列表變數。此變數必須先前已由產生運算列表變數的動作指定
+#   ColumnSpecifier [選項，預設 Name] 指定包含以下內容的資料行: — 指定要依名稱還是索引來尋找資料行
+#       可用值：Variables.ColumnSpecifier.Name（名稱）、Variables.ColumnSpecifier.Index（索引）
+#   ColumnIndex [整數] 資料行索引 — 應刪除的資料行的索引。資料行索引從 0 開始
+#   ColumnName [文字] 資料行名稱 — 應刪除的資料行的名稱
+# 可能的錯誤：ColumnNameNotFoundError、ColumnIndexOutOfRangeError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

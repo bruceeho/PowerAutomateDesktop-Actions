@@ -1,0 +1,25 @@
+# 【模式 Click】按一下視窗的任何 UI 元素
+UIAutomation.Click.Click ClickType: UIAutomation.ClickType.LeftClick MousePositionRelativeToElement: UIAutomation.RectangleEdgePoint.MiddleCenter OffsetX: 0 OffsetY: 0
+
+# 【模式 SimulateClick】按一下視窗的任何 UI 元素
+UIAutomation.Click.SimulateClick
+
+# ==================== 說明 ====================
+# 動作：按一下視窗中的 UI 元素  (UIAutomation.Click)
+# 英文名稱：Click UI element in window
+# 用途：按一下視窗的任何 UI 元素
+# 位置：使用者介面自動化
+# 輸入參數：
+#   ClickType [選項，預設 LeftClick] 按一下類型 — 要執行的點擊類型
+#       可用值：UIAutomation.ClickType.LeftClick（按滑鼠左鍵）、UIAutomation.ClickType.RightClick（按滑鼠右鍵）、UIAutomation.ClickType.DoubleClick（按兩下）、UIAutomation.ClickType.LeftButtonDown（左鍵按下）、UIAutomation.ClickType.LeftButtonUp（左鍵放開）、UIAutomation.ClickType.RightButtonDown（右鍵按下）、UIAutomation.ClickType.RightButtonUp（右鍵放開）、UIAutomation.ClickType.MiddleClick（按滑鼠中間鍵）
+#   MousePositionRelativeToElement [選項，預設 MiddleCenter] 相對於 UI 元素的滑鼠位置 — 指定要在按一下之前先將滑鼠移至哪一個 UI 元素區段
+#       可用值：UIAutomation.RectangleEdgePoint.TopLeft（左上）、UIAutomation.RectangleEdgePoint.TopCenter（中上）、UIAutomation.RectangleEdgePoint.TopRight（右上）、UIAutomation.RectangleEdgePoint.MiddleLeft（左中）、UIAutomation.RectangleEdgePoint.MiddleCenter（正中）、UIAutomation.RectangleEdgePoint.MiddleRight（右中）、UIAutomation.RectangleEdgePoint.BottomLeft（左下）、UIAutomation.RectangleEdgePoint.BottomCenter（中下）、UIAutomation.RectangleEdgePoint.BottomRight（右下）
+#   OffsetX [整數，預設 0] 位移 X — 依此像素數將滑鼠從位置向右位移
+#   OffsetY [整數，預設 0] 位移 Y — 依此像素數將滑鼠從位置向下位移
+#   Simulate [布林，預設 False] 模擬動作 — 指定在點擊前是否模擬滑鼠游標在元素上的移動。此選項不需要聚焦於 UI 元素的畫面，它不會自動將其帶入前景。請注意，此選項僅適用於左鍵點擊動作，而且可能不適用於所有 UI 元素。
+#   Control [UIControl]
+# 可能的錯誤：ClickFailedError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,23 @@
+# 【模式 GetEnvironmentVariable】擷取環境變數的值
+System.GetEnvironmentVariable.GetEnvironmentVariable Name: `` Value=> Value
+
+# 【模式 GetEnvironmentVariableFromScope】從指定的範圍擷取環境變數的值
+System.GetEnvironmentVariable.GetEnvironmentVariableFromScope Scope: System.EnvironmentVariableType.User Name: `` Value=> Value
+
+# ==================== 說明 ====================
+# 動作：取得 Windows 環境變數  (System.GetEnvironmentVariable)
+# 英文名稱：Get Windows environment variable
+# 用途：擷取環境變數的值
+# 位置：系統
+# 輸入參數：
+#   SearchOnlyInScope [布林，預設 False] 只在範圍中搜尋變數 — 指定是否只在特定範圍中搜尋變數
+#   Scope [選項，預設 User] 範圍 — 要從中擷取環境變數的範圍
+#       可用值：System.EnvironmentVariableType.User（使用者）、System.EnvironmentVariableType.System（系統）
+#   Name [文字] 環境變數名稱 — 要擷取其值的環境變數名稱
+# 產生的變數：
+#   Value [文字] 環境變數值 — 環境變數的值
+# 可能的錯誤：EnvironmentVariableNotFoundError、InsufficientPermissionsError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,33 @@
+# 【模式 ReadCSV】讀取 CSV 檔案至資料表
+File.ReadFromCSVFile.ReadCSV CSVFile: `` Encoding: File.CSVEncoding.UTF8 TrimFields: True FirstLineContainsColumnNames: False ColumnsSeparator: File.CSVColumnsSeparator.SystemDefault CSVTable=> CSVTable
+
+# 【模式 ReadCSVWithCustomSeparator】將包含自訂分隔符號的 CSV 檔案讀取至資料表
+File.ReadFromCSVFile.ReadCSVWithCustomSeparator CSVFile: `` Encoding: File.CSVEncoding.UTF8 TrimFields: True FirstLineContainsColumnNames: False CustomColumnsSeparator: `` CSVTable=> CSVTable
+
+# 【模式 ReadCSVWithFixedColumnWidths】將包含固定欄寬的 CSV 檔案讀取至資料表
+File.ReadFromCSVFile.ReadCSVWithFixedColumnWidths CSVFile: `` Encoding: File.CSVEncoding.UTF8 TrimFields: True FirstLineContainsColumnNames: False FixedColumnWidths: `` CSVTable=> CSVTable
+
+# ==================== 說明 ====================
+# 動作：從 CSV 檔案讀取  (File.ReadFromCSVFile)
+# 英文名稱：Read from CSV file
+# 用途：讀取 CSV 檔案至資料表
+# 位置：檔案
+# 輸入參數：
+#   CSVFile [FileObject] 檔案路徑 — 要讀取的 CSV 檔案。這可以是檔案路徑，或是包含檔案或文字路徑的變數
+#   Encoding [選項，預設 UTF8] 編碼 — 讀取所指定 CSV 檔案時使用的編碼
+#       可用值：File.CSVEncoding.SystemDefault（系統預設）、File.CSVEncoding.UTF8（UTF-8）、File.CSVEncoding.Unicode（Unicode）、File.CSVEncoding.BigEndianUnicode（Unicode (位元組由大到小)）、File.CSVEncoding.UTF8NoBOM（UTF-8 (沒有位元組順序標記)）、File.CSVEncoding.UnicodeNoBOM（Unicode (沒有位元組順序標記)）、File.CSVEncoding.ASCII（ASCII）
+#   TrimFields [布林，預設 True] 修剪欄位 — 指定是否自動修剪所擷取儲存格的前置空格與結尾空白
+#   FirstLineContainsColumnNames [布林，預設 False] 第一行包含欄名稱 — 指定是否要使用 CSV 資源的第一列來設定結果資料表的欄名稱。啟用此選項，可避免將名稱做為資料讀取送入資料表。後續動作可以使用欄名稱 (而不是欄號) 來存取資料表所保存的資料
+#   ColumnsSeparatorType [選項，預設 Predefined] 欄分隔符號 — 指定是否使用預先定義的欄分隔符號、自訂的欄寬或固定欄寬
+#       可用值：File.CSVColumnsSeparatorType.Predefined（預先定義）、File.CSVColumnsSeparatorType.Custom（自訂）、File.CSVColumnsSeparatorType.FixedColumnWidths（固定的欄寬）
+#   ColumnsSeparator [選項，預設 SystemDefault] 分隔符號 — 要剖析 CSV 檔案的欄分隔符號
+#       可用值：File.CSVColumnsSeparator.SystemDefault（系統預設）、File.CSVColumnsSeparator.Comma（逗號）、File.CSVColumnsSeparator.Semicolon（分號）、File.CSVColumnsSeparator.Tab（定位字元）
+#   FixedColumnWidths [文字] 固定的欄寬 — 用於剖析所指定 CSV 資源的固定欄寬。使用逗號、空格、定位字元或分行符號來分隔寬度
+#   CustomColumnsSeparator [文字] 自訂分隔符號 — 用來剖析所指定 CSV 資源的自訂欄分隔符號
+# 產生的變數：
+#   CSVTable [資料表] CSV 資料表 — 做為資料表的 CSV 檔案內容
+# 可能的錯誤：ReadFromCsvError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,18 @@
+MouseAndKeyboard.MoveMouse RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant Y: `` X: ``
+
+# ==================== 說明 ====================
+# 動作：移動滑鼠  (MouseAndKeyboard.MoveMouse)
+# 英文名稱：Move mouse
+# 用途：將滑鼠移至特定位置
+# 位置：滑鼠和鍵盤
+# 輸入參數：
+#   RelativeTo [選項，預設 Screen] 相對於 — 指定新的滑鼠位置將會相對於畫面左上角、最前面的視窗，或是目前的滑鼠位置
+#       可用值：MouseAndKeyboard.PositionRelativeTo.Screen（畫面）、MouseAndKeyboard.PositionRelativeTo.ActiveWindow（使用中視窗）、MouseAndKeyboard.PositionRelativeTo.CurrentMousePosition（目前滑鼠位置）
+#   MovementStyle [選項，預設 Instant] 從上一個位置移動滑鼠 — 指定如何移動滑鼠
+#       可用值：MouseAndKeyboard.MovementStyle.Instant（立即）、MouseAndKeyboard.MovementStyle.AnimateSlow（採用動畫 (低速)）、MouseAndKeyboard.MovementStyle.AnimateNormal（採用動畫 (常速)）、MouseAndKeyboard.MovementStyle.AnimateFast（採用動畫 (高速)）
+#   Y [整數] 位置 Y — 要移動滑鼠的目標位置的垂直 (Y) 值
+#   X [整數] 位置 X — 要移動滑鼠的目標位置的水平 (X) 值
+# 可能的錯誤：MoveMouseInNonInteractiveModeError、MoveMouseError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

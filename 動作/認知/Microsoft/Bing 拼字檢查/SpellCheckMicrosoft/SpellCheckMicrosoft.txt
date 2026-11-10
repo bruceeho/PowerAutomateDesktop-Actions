@@ -1,0 +1,18 @@
+MicrosoftCognitive.SpellCheckMicrosoft SubscriptionKey: `` Text: `` Timeout: 30 Response=> Response StatusCode=> StatusCode
+
+# ==================== 說明 ====================
+# 動作：SpellCheckMicrosoft  (MicrosoftCognitive.SpellCheckMicrosoft)
+# 位置：認知 > Microsoft > Bing 拼字檢查
+# 輸入參數：
+#   SubscriptionKey [文字]
+#   Text [List<String>]
+#   Mode [文字，選填]
+#   Mkt [文字，選填]
+#   Timeout [整數，預設 30]
+# 產生的變數：
+#   Response [自訂物件]
+#   StatusCode [整數]
+# 可能的錯誤：RequestTimeoutExpiredError、InvokeCognitiveServiceError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

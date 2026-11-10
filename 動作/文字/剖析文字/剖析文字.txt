@@ -1,0 +1,34 @@
+# 【模式 Parse】剖析文字以找出指定的子文字所有出現的位置
+Text.ParseText.Parse Text: `` TextToFind: `` StartingPosition: 0 IgnoreCase: False OccurrencePositions=> OccurrencePositions
+
+# 【模式 ParseForFirstOccurrence】剖析文字以找出指定的子文字第一次出現的位置
+Text.ParseText.ParseForFirstOccurrence Text: `` TextToFind: `` StartingPosition: 0 IgnoreCase: False OccurrencePosition=> OccurrencePosition
+
+# 【模式 RegexParse】剖析文字以找出規則運算式模式所有出現的位置
+Text.ParseText.RegexParse Text: `` TextToFind: `` StartingPosition: 0 IgnoreCase: False Matches=> Matches OccurrencePositions=> OccurrencePositions
+
+# 【模式 RegexParseForFirstOccurrence】剖析文字以找出規則運算式模式第一次出現的位置
+Text.ParseText.RegexParseForFirstOccurrence Text: `` TextToFind: `` StartingPosition: 0 IgnoreCase: False Match=> Match OccurrencePosition=> OccurrencePosition
+
+# ==================== 說明 ====================
+# 動作：剖析文字  (Text.ParseText)
+# 英文名稱：Parse text
+# 用途：剖析文字以找出指定的子文字或規則運算式模式第一次或所有出現的位置。
+# 位置：文字
+# 輸入參數：
+#   Text [文字] 要剖析的文字 — 要剖析的文字
+#   TextToFind [文字] 要尋找的文字 — 要搜尋的子文字或規則運算式
+#   IsRegEx [布林，預設 False] 是規則運算式 — 指定子文字是否為規則運算式。例如 \d 表示子文字可以是任何數字
+#   StartingPosition [整數，預設 0] 於此位置開始剖析 — 開始尋找「要尋找的文字」的位置。第一個位置是零，請使用 0 從頭開始尋找
+#   FirstOccurrenceOnly [布林，預設 True] 僅第一次出現的位置 — 指定只要尋找第一次出現的位置，或是找出「要尋找的文字」每一次出現的位置
+#   IgnoreCase [布林，預設 False] 忽略大小寫 — 指定要使用區分大小寫或不區分大小寫的比對方式來尋找指定的文字
+# 產生的變數：
+#   Match [文字] 相符項目 — 符合所指規則運算式的結果
+#   Matches [List<String>] 相符 — 符合所指規則運算式的結果
+#   OccurrencePositions [List<Int32>] 找到文字的位置 — 『要尋找的文字』在『要解析的文字』中的位置。計數從 0 開始，意即第一個位置是 0，如果未找到文字，則預期值為 -1
+#   OccurrencePosition [整數] 找到文字的位置 — 『要尋找的文字』在『要解析的文字』中的位置。計數從 0 開始，意即第一個位置是 0，如果未找到文字，則預期值為 -1。
+# 可能的錯誤：InvalidRegexError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

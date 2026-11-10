@@ -1,0 +1,23 @@
+# 【模式 WriteToFile】將 XML 節點變數的內容寫入檔案中
+XML.WriteXmlToFile.WriteToFile File: `` Xml: `` Encoding: XML.FileEncoding.DefaultEncoding
+
+# 【模式 WriteToFileFormatted】在設定格式後，將 XML 節點變數的內容寫入檔案中
+XML.WriteXmlToFile.WriteToFileFormatted File: `` Xml: `` Encoding: XML.FileEncoding.DefaultEncoding Indentation: 2
+
+# ==================== 說明 ====================
+# 動作：將 XML 寫入檔案中  (XML.WriteXmlToFile)
+# 英文名稱：Write XML to file
+# 用途：將 XML 節點變數的內容寫入檔案中
+# 位置：XML
+# 輸入參數：
+#   File [FileObject] 檔案路徑 — 要在其中寫入 XML 文件的檔案
+#   Xml [文字] 要寫入的 XML — 要寫入檔案中的 XML 節點或文件
+#   Encoding [選項，預設 DefaultEncoding] 編碼 — 指定的檔案所使用的編碼
+#       可用值：XML.FileEncoding.DefaultEncoding（系統預設）、XML.FileEncoding.ASCII（ASCII）、XML.FileEncoding.Unicode（Unicode）、XML.FileEncoding.BigEndianUnicode（Unicode (位元組由大到小)）、XML.FileEncoding.UTF8（UTF-8）
+#   FormatXml [布林，預設 True] 格式化 XML — 指定是否要格式化 XML
+#   Indentation [整數，預設 2] 每個層級的縮排 — 指定每一個 XML 層級要縮排的空間
+# 可能的錯誤：InvalidDirectoryError、WriteFileError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

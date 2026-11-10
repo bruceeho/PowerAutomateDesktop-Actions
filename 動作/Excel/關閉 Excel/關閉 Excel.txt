@@ -1,0 +1,27 @@
+# 【模式 Close】關閉 Excel 執行個體
+Excel.CloseExcel.Close Instance: ``
+
+# 【模式 CloseAndSave】關閉並儲存 Excel 執行個體
+Excel.CloseExcel.CloseAndSave Instance: ``
+
+# 【模式 CloseAndSaveAs】關閉 Excel 執行個體並以指定格式儲存
+Excel.CloseExcel.CloseAndSaveAs Instance: `` DocumentFormat: Excel.ExcelFormat.FromExtension DocumentPath: ``
+
+# ==================== 說明 ====================
+# 動作：關閉 Excel  (Excel.CloseExcel)
+# 英文名稱：Close Excel
+# 用途：關閉 Excel 執行個體
+# 位置：Excel
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要關閉的 Excel 執行個體。這個變數先前必須已使用「啟動 Excel」動作完成指定
+#   CloseMode [選項，預設 DoNotSave] 在關閉 Excel 之前 — 指定是否在關閉執行個體之前儲存此執行個體的文件及如何執行
+#       可用值：Excel.CloseExcelMode.DoNotSave（不要儲存文件）、Excel.CloseExcelMode.Save（儲存文件）、Excel.CloseExcelMode.SaveAs（另存文件為）
+#   DocumentFormat [選項，預設 FromExtension] 文件格式 — 文件的格式
+#       可用值：Excel.ExcelFormat.FromExtension（預設 (根據副檔名)）、Excel.ExcelFormat.OpenXmlWorkbook（Excel 活頁簿 (.xlsx)）、Excel.ExcelFormat.OpenXmlWorkbookMacroEnabled（已啟用巨集的 Excel 活頁簿 (.xlsm)）、Excel.ExcelFormat.Excel8（Excel 97-2003 活頁簿 (.xls)）、Excel.ExcelFormat.WebPage（網頁 (.htm、.html)）、Excel.ExcelFormat.Template（Excel 範本 (.xltx)）、Excel.ExcelFormat.TemplateMacroEnabled（已啟用巨集的 Excel 範本 (.xltm)）、Excel.ExcelFormat.Template8（Excel 97-2003 Template (.xlt)）、Excel.ExcelFormat.Text（文字 (.txt)）、Excel.ExcelFormat.UnicodeText（Unicode 文字 (.txt)）、Excel.ExcelFormat.TextMacintosh（文字 Macintosh (.txt)）、Excel.ExcelFormat.TextDOS（文字 DOS (.txt)）、Excel.ExcelFormat.XMLSpreadsheet（XML 試算表 (.xml)）、Excel.ExcelFormat.Excel595（Excel 95 (.xls)）、Excel.ExcelFormat.CSV（CSV (.csv)）、Excel.ExcelFormat.DIF（DIF (.dif)）、Excel.ExcelFormat.SYLK（SYLK (.slk)）、Excel.ExcelFormat.ExcelAddIn（Excel 增益集 (.xlam)）、Excel.ExcelFormat.Excel972003AddIn（Excel 97-2003 增益集 (.xla)）、Excel.ExcelFormat.StrictOpenXmlWorkbook（Strict Open XML 活頁簿 (.xlsx)）、Excel.ExcelFormat.OpenDocumentSpreadsheet（OpenDocument 試算表 (.ods)）、Excel.ExcelFormat.XmlData（XML 資料 (.xml)）、Excel.ExcelFormat.ExcelBinaryWorkbook（Excel 二進位活頁簿 (.xlsb)）
+#   XmlMapName [文字，選填] XML 對應 — 用於匯出之 XML 對應的名稱
+#   DocumentPath [FileObject] 文件路徑 — 文件的完整路徑
+# 可能的錯誤：SaveExcelError、CloseExcelError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

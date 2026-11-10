@@ -1,0 +1,19 @@
+Variables.JoinDataTable FirstDataTable: `` SecondDataTable: `` JoinOperation: Variables.JoinOperationType.Inner JoinParameters: `` JoinedDataTable=> JoinedDataTable
+
+# ==================== 說明 ====================
+# 動作：聯結運算列表  (Variables.JoinDataTable)
+# 英文名稱：Join data tables
+# 用途：根據指定的聯結規則來聯結兩個運算列表
+# 位置：變數 > 資料表
+# 輸入參數：
+#   FirstDataTable [資料表] 第一個運算列表 — 要使用的第一個運算列表變數。此變數必須先前已由產生運算列表變數的動作指定
+#   SecondDataTable [資料表] 第二個運算列表 — 要使用的第二個運算列表變數。此變數必須先前已由產生運算列表變數的動作指定
+#   JoinOperation [選項，預設 Inner] 聯結作業 — 將用於聯結兩個資料表的聯結作業
+#       可用值：Variables.JoinOperationType.Inner（Inner）、Variables.JoinOperationType.Left（Left）、Variables.JoinOperationType.Full（Full）
+#   JoinParameters [資料表] 聯結規則 — 將用於決定如何聯結兩個資料表的規則
+# 產生的變數：
+#   JoinedDataTable [資料表] 聯結的運算列表 — 執行聯結作業後產生的運算列表
+# 可能的錯誤：ColumnNameNotFoundError、ColumnIndexOutOfRangeError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,17 @@
+UIAutomation.ExpandCollapseTreeNode Control: `` FoldersPath: `` UseRegex: False Operation: UIAutomation.TreeNodeOperation.Expand
+
+# ==================== 說明 ====================
+# 動作：展開/摺疊視窗中的樹狀節點  (UIAutomation.ExpandCollapseTreeNode)
+# 英文名稱：Expand/collapse tree node in window
+# 用途：展開或摺疊位於視窗中的樹狀檢視節點
+# 位置：使用者介面自動化
+# 輸入參數：
+#   Control [UIControl] UI 元素 — 要展開/摺疊的樹狀節點
+#   FoldersPath [文字] 資料夾路徑 — 由資料夾名稱組成的正斜線分隔路徑，會引導至要展開或摺疊的樹狀節點
+#   UseRegex [布林，預設 False] 使用規則運算式 — 指定是否要將路徑中的每個資料夾名稱解譯為規則運算式
+#   Operation [選項，預設 Expand] 作業 — 指定要展開或摺疊樹狀節點
+#       可用值：UIAutomation.TreeNodeOperation.Expand（展開）、UIAutomation.TreeNodeOperation.Collapse（摺疊）
+# 可能的錯誤：SetTreeNodeStateError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

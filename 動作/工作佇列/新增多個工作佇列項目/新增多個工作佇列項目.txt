@@ -1,0 +1,18 @@
+WorkQueues.BatchEnqueueWorkQueueItems WorkQueue: `` WorkQueueItemData: `` FailedWorkQueueItems=> FailedWorkQueueItems HasFailedItems=> HasFailedItems SuccessfulWorkQueueItems=> SuccessfulWorkQueueItems
+
+# ==================== 說明 ====================
+# 動作：新增多個工作佇列項目  (WorkQueues.BatchEnqueueWorkQueueItems)
+# 英文名稱：Add multiple work queue items
+# 用途：根據工作佇列項目資料表中提供的資料，將一個或多個工作佇列項目加到工作佇列中
+# 位置：工作佇列
+# 輸入參數：
+#   WorkQueue [WorkQueue] 工作佇列 — 要新增項目的工作佇列
+#   WorkQueueItemData [資料表] 工作佇列項目資料 — 包含將新增的所有工作佇列項目的資料表
+# 產生的變數：
+#   FailedWorkQueueItems [List<BatchEnqueueFailuresResponse>] 失敗的工作佇列項目 — 未成功加入工作佇列的工作佇列項目清單，以及其各自的錯誤
+#   HasFailedItems [布林] 有失敗的項目 — 表示某些項目未能加入工作佇列
+#   SuccessfulWorkQueueItems [List<BatchEnqueueSuccessfulResponse>] 成功的工作佇列項目 — 成功加入工作佇列的工作佇列項目清單
+# 可能的錯誤：WorkQueueNotFoundError、WorkQueuePausedOrStoppedError、FailedToBatchEnqueueWorkQueueItemsError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

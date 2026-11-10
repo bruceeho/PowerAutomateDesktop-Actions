@@ -1,0 +1,30 @@
+# 【模式 GetAllDisks】取得所有磁碟
+Azure.GetDisks.GetAllDisks AzureClient: `` Disks=> Disks
+
+# 【模式 GetDisksByResourceGroup】取得所指定資源群組的磁碟
+Azure.GetDisks.GetDisksByResourceGroup AzureClient: `` ResourceGroup: `` Disks=> Disks
+
+# 【模式 GetDisksByName】取得具有指定名稱的磁碟
+Azure.GetDisks.GetDisksByName AzureClient: `` DiskName: `` Disks=> Disks
+
+# 【模式 GetDisksByNameAndResourceGroup】取得具有指定名稱和資源群組的磁碟
+Azure.GetDisks.GetDisksByNameAndResourceGroup AzureClient: `` ResourceGroup: `` DiskName: `` Disks=> Disks
+
+# ==================== 說明 ====================
+# 動作：取得磁碟  (Azure.GetDisks)
+# 英文名稱：Get disks
+# 用途：根據指定的準則取得磁碟
+# 位置：Azure > 虛擬機器 > Disks
+# 輸入參數：
+#   AzureClient [AzureClient] Azure 用戶端 — 用來連線 Azure 的用戶端
+#   RetrieveDisksMode [選項，預設 All] 擷取磁碟 — 指定要擷取的磁碟
+#       可用值：Azure.RetrieveAzureResourceMode.All（所有）、Azure.RetrieveAzureResourceMode.ByResourceGroup（具有指定的資源群組）、Azure.RetrieveAzureResourceMode.ByName（在所有資源群組中具有指定的名稱）、Azure.RetrieveAzureResourceMode.ByResourceGroupAndName（在指定的資源群組中具有特定名稱）
+#   ResourceGroup [文字] 資源群組 — 磁碟所在的資源群組
+#   DiskName [文字] 磁碟名稱 — 磁碟的名稱
+# 產生的變數：
+#   Disks [List<AzureManagedDisk>] 磁碟 — 所擷取包含所有相關資訊的磁碟
+# 可能的錯誤：DiskNotFoundError、ResourceGroupNotFoundError、FailedToGetDisksError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

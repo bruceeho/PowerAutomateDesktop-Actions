@@ -1,0 +1,22 @@
+# 【模式 AppendColumnToDataTable】在資料表結尾插入資料行
+Variables.AddColumnToDataTable.AppendColumnToDataTable DataTable: `` ColumnName: ``
+
+# 【模式 InsertColumnToDataTable】在資料表的特定索引之前插入資料行
+Variables.AddColumnToDataTable.InsertColumnToDataTable DataTable: `` ColumnName: `` ColumnIndex: ``
+
+# ==================== 說明 ====================
+# 動作：將資料行插入資料表  (Variables.AddColumnToDataTable)
+# 英文名稱：Insert column into data table
+# 用途：在特定索引值結尾或之前插入資料行
+# 位置：變數 > 資料表
+# 輸入參數：
+#   DataTable [資料表] 運算列表 — 要使用的運算列表變數。此變數必須先前已由產生運算列表變數的動作指定
+#   PositionToAddColumn [選項，預設 LastColumn] 插入位置 — 指定要將新資料行插入至資料表結尾還是指定的資料行索引之前
+#       可用值：Variables.AddColumnMode.LastColumn（資料表結尾）、Variables.AddColumnMode.BeforeColumnIndex（資料行索引之前）
+#   ColumnName [文字] 資料行名稱 — 指定新資料行的標題
+#   ColumnIndex [整數] 資料行索引 — 插入將資料行索引之前指定為進入位置參數時要使用的資料行索引值
+# 可能的錯誤：ColumnIndexOutOfRangeError、DuplicateColumnNameError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

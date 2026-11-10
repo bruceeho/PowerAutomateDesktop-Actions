@@ -1,0 +1,32 @@
+# 【模式 RunAccessSelectQuery】執行 Access 選取查詢。
+Access.RunAccessQuery.RunAccessSelectQuery Instance: `` QueryName: `` QueryResult=> QueryResult
+
+# 【模式 RunAccessActionQuery】執行 Access 動作查詢。
+Access.RunAccessQuery.RunAccessActionQuery Instance: `` QueryName: `` AffectedRows=> AffectedRows
+
+# 【模式 RunAccessSelectQueryWithParameters】執行使用參數的 Access 選取查詢。
+Access.RunAccessQuery.RunAccessSelectQueryWithParameters Instance: `` QueryName: `` QueryParameters: `` QueryResult=> QueryResult
+
+# 【模式 RunAccessActionQueryWithParameters】執行 Access 動作查詢並搭配參數。
+Access.RunAccessQuery.RunAccessActionQueryWithParameters Instance: `` QueryName: `` QueryParameters: `` AffectedRows=> AffectedRows
+
+# ==================== 說明 ====================
+# 動作：執行 Access 查詢  (Access.RunAccessQuery)
+# 英文名稱：Run Access query
+# 用途：執行儲存的 Access 查詢
+# 位置：Access
+# 輸入參數：
+#   Instance [AccessInstanceHandle] Access 執行個體 — 要處理的 Access 執行個體。此變數先前必須已在 [啟動 Access] 動作中指定。
+#   QueryName [文字] 查詢名稱 — 儲存的 Access 查詢名稱。請注意，您必須輸入查詢動作在特定 Access 資料庫中的確切儲存名稱。
+#   QueryType [選項，預設 SelectQuery] 查詢類型 — 指定這是選取或動作查詢。
+#       可用值：Access.AccessQueryType.SelectQuery（選取查詢）、Access.AccessQueryType.ActionQuery（動作查詢）
+#   HasParameters [布林，預設 False] 包含參數 — 指定執行查詢所需的參數。確定參數名稱和資料類型符合查詢中指定的參數名稱和資料類型。
+#   QueryParameters [資料表] 查詢參數 — 指定執行查詢所需的參數。確定參數名稱和資料類型符合查詢中指定的參數名稱和資料類型。
+# 產生的變數：
+#   AffectedRows [整數] 受影響的資料列 — 執行動作查詢後受影響的資料列數目。
+#   QueryResult [資料表] 查詢結果 — 選取查詢執行的結果，即傳回資料表格式的查詢輸出。
+# 可能的錯誤：RunAccessQueryError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

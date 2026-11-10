@@ -1,0 +1,15 @@
+Azure.DeleteSnapshot AzureClient: `` SnapshotName: `` ResourceGroup: ``
+
+# ==================== 說明 ====================
+# 動作：刪除快照集  (Azure.DeleteSnapshot)
+# 英文名稱：Delete snapshot
+# 用途：刪除具有指定名稱和資源群組的快照集
+# 位置：Azure > 虛擬機器 > Snapshots
+# 輸入參數：
+#   AzureClient [AzureClient] Azure 用戶端 — 用來連線 Azure 的用戶端
+#   SnapshotName [文字] 快照集名稱 — 要刪除之快照集的名稱
+#   ResourceGroup [文字] 資源群組 — 快照集的資源群組
+# 可能的錯誤：SnapshotNotFoundError、ResourceGroupNotFoundError、FailedToDeleteSnapshotError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,12 @@
+AWS.EndEC2Session Ec2Client: ``
+
+# ==================== 說明 ====================
+# 動作：結束 EC2 工作階段  (AWS.EndEC2Session)
+# 英文名稱：End EC2 session
+# 用途：處置開啟的 EC2 用戶端
+# 位置：AWS > EC2
+# 輸入參數：
+#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

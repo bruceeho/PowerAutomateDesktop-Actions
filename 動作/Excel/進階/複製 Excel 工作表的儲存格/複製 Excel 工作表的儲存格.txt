@@ -1,0 +1,34 @@
+# 【模式 Copy】複製目前所選取的使用中工作表儲存格
+Excel.CopyCellsFromExcel.Copy Instance: ``
+
+# 【模式 CopyCell】複製使用中工作表的單一儲存格
+Excel.CopyCellsFromExcel.CopyCell Instance: `` StartColumn: `` StartRow: ``
+
+# 【模式 CopyCells】複製使用中工作表的儲存格範圍
+Excel.CopyCellsFromExcel.CopyCells Instance: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: ``
+
+# 【模式 CopyAllCells】複製使用中工作表的所有可用儲存格
+Excel.CopyCellsFromExcel.CopyAllCells Instance: ``
+
+# 【模式 CopyNamedCell】複製 Excel 執行個體之指定具名儲存格的值
+Excel.CopyCellsFromExcel.CopyNamedCell Instance: `` CellName: ``
+
+# ==================== 說明 ====================
+# 動作：複製 Excel 工作表的儲存格  (Excel.CopyCellsFromExcel)
+# 英文名稱：Copy cells from Excel worksheet
+# 用途：複製 Excel 執行個體之使用中工作表的儲存格範圍
+# 位置：Excel > 進階
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
+#   CopyMode [選項，預設 SingleCell] 複製模式 — 指定是複製單一儲存格、儲存格範圍、目前選擇的儲存格還是整個工作表
+#       可用值：Excel.ReadExcelCellsMode.SingleCell（單一儲存格的值）、Excel.ReadExcelCellsMode.RangeOfCells（儲存格範圍中的值）、Excel.ReadExcelCellsMode.Selection（選取範圍的值）、Excel.ReadExcelCellsMode.AllCells（工作表中所有可用的值）、Excel.ReadExcelCellsMode.NamedCells（具名儲存格的值）
+#   StartColumn [文字] 開始欄 — 第一欄的索引或字母
+#   StartRow [整數] 開始列 — 第一列的索引
+#   EndColumn [文字] 結尾欄 — 最後一欄的索引或字母
+#   EndRow [整數] 結尾列 — 最後一列的索引
+#   CellName [文字] 名稱 — 儲存格的名稱
+# 可能的錯誤：CopyCellsError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

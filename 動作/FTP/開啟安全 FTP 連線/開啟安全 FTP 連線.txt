@@ -1,0 +1,41 @@
+# 【模式 ConnectWithSftpUsernameAndPassword】使用 SFTP 建立遠端 FTP 伺服器的特定安全連線，並使用使用者名稱與密碼進行驗證
+FTP.OpenSecureConnection.ConnectWithSftpUsernameAndPassword Port: 22 Username: `` Timeout: 10 Host: `` SftpConnection=> SftpConnection
+
+# 【模式 ConnectWithSftpPrivateKey】使用 SFTP 建立遠端 FTP 伺服器的特定安全連線，並使用私密金鑰進行驗證
+FTP.OpenSecureConnection.ConnectWithSftpPrivateKey Port: 22 Username: `` PathToPrivateKey: `` Timeout: 10 Host: `` SftpConnection=> SftpConnection
+
+# 【模式 ConnectWithSftpPrivateKeyAndPassPhrase】使用 SFTP 建立遠端 FTP 伺服器的特定安全連線，並使用私密金鑰與複雜密碼進行驗證
+FTP.OpenSecureConnection.ConnectWithSftpPrivateKeyAndPassPhrase Port: 22 Username: `` PathToPrivateKey: `` Timeout: 10 Host: `` SftpConnection=> SftpConnection
+
+# 【模式 ConnectWithFtpsExplicit】使用 FTPS explicit 參數，建立遠端 FTP 伺服器的特定安全連線
+FTP.OpenSecureConnection.ConnectWithFtpsExplicit Port: 22 ActiveMode: True Username: `` AcceptUntrustedCertificates: False Timeout: 10 Host: `` SftpConnection=> SftpConnection
+
+# 【模式 ConnectWithFtpsImplicit】使用 FTPS implicit，建立遠端 FTP 伺服器的特定安全連線
+FTP.OpenSecureConnection.ConnectWithFtpsImplicit Port: 22 ActiveMode: True Username: `` AcceptUntrustedCertificates: False Timeout: 10 Host: `` SftpConnection=> SftpConnection
+
+# ==================== 說明 ====================
+# 動作：開啟安全 FTP 連線  (FTP.OpenSecureConnection)
+# 英文名稱：Open secure FTP connection
+# 用途：這個動作會建立遠端 FTP 伺服器的特定安全連線，並將該連線儲存為可供日後使用的變數
+# 位置：FTP
+# 輸入參數：
+#   Port [整數，預設 22] 連接埠 — 在此輸入 FTP 伺服器連接埠。
+#   ActiveMode [布林，預設 True] 使用中模式 — 指定連線的模式
+#   SecureFtpProtocol [選項，預設 SFTP] 安全 FTP 通訊協定 — 選擇您想要用來加密連線的 FTP 通訊協定
+#       可用值：FTP.SecureFtpProtocol.SFTP（SFTP）、FTP.SecureFtpProtocol.FTPSExplicit（FTPS explicit）、FTP.SecureFtpProtocol.FTPSImplicit（FTPS implicit）
+#   AuthenticationMethod [選項，預設 UsernameAndPassword] 驗證方法 — 選擇您要用來在 FTP 伺服器上驗證您自己的方法
+#       可用值：FTP.FtpAuthenticationMode.UsernameAndPassword（使用者名稱與密碼）、FTP.FtpAuthenticationMode.PrivateKey（私密金鑰）、FTP.FtpAuthenticationMode.PrivateKeyAndPassphrase（私密金鑰與複雜密碼）
+#   Username [文字] 使用者名稱 — 指定要使用的 FTP 帳戶使用者名稱
+#   PathToPrivateKey [文字] 私密金鑰的路徑 — 輸入要用於驗證之私密金鑰的檔案路徑
+#   Password [文字(可加密)，選填] 密碼 — 指定您想要使用的 FTP 帳戶密碼
+#   PrivateKeyPassPhrase [文字(可加密)，選填] 私密金鑰複雜密碼 — 在此處輸入包含私密金鑰複雜密碼的變數
+#   AcceptUntrustedCertificates [布林，預設 False] 接受不受信任的憑證 — 指定是否接受不受信任的憑證
+#   Timeout [整數，預設 10] 逾時 — 設定在動作失敗前等待連線建立的秒數
+#   Host [文字] 主機 — 在此輸入 FTP 伺服器位址。
+# 產生的變數：
+#   SftpConnection [FtpConnectionBase] SFTP 連線 — SFTP 連線
+# 可能的錯誤：LoginFailureError、ConnectionError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

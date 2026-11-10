@@ -1,0 +1,18 @@
+Excel.GetSelectedCellRange Instance: `` FirstColumnIndex=> FirstColumnIndex FirstRowIndex=> FirstRowIndex LastColumnIndex=> LastColumnIndex LastRowIndex=> LastRowIndex
+
+# ==================== 說明 ====================
+# 動作：取得 Excel 工作表的選取儲存格範圍  (Excel.GetSelectedCellRange)
+# 英文名稱：Get selected cell range from Excel worksheet
+# 用途：擷取所選取儲存格範圍，其中結構包含第一欄、第一列、最後一欄和最後一列
+# 位置：Excel > 進階
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
+# 產生的變數：
+#   FirstColumnIndex [整數] 第一欄索引 — 範圍內第一欄的數值
+#   FirstRowIndex [整數] 第一列索引 — 範圍內第一列的數值
+#   LastColumnIndex [整數] 最後一欄索引 — 範圍內最後一列的數值
+#   LastRowIndex [整數] 最後一列索引 — 範圍內最後一列的數值
+# 可能的錯誤：RetrieveSelectedCellsRangeError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

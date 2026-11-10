@@ -1,0 +1,13 @@
+Outlook.Launch Instance=> Instance
+
+# ==================== 說明 ====================
+# 動作：啟動 Outlook  (Outlook.Launch)
+# 英文名稱：Launch Outlook
+# 用途：啟動 Outlook 並建立新的 Outlook 執行個體
+# 位置：Outlook
+# 產生的變數：
+#   Instance [OutlookInstanceHandle] Outlook 執行個體 — 搭配較新版本 Outlook 動作時使用的特定 Outlook 執行個體
+# 可能的錯誤：LaunchOutlookError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

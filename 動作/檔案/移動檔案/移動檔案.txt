@@ -1,0 +1,18 @@
+File.Move Files: `` Destination: `` IfFileExists: File.IfExists.DoNothing MovedFiles=> MovedFiles
+
+# ==================== 說明 ====================
+# 動作：移動檔案  (File.Move)
+# 英文名稱：Move file(s)
+# 用途：將一或多個檔案移動至目的地資料夾
+# 位置：檔案
+# 輸入參數：
+#   Files [List<FileObject>] 要移動的檔案 — 要移動的檔案。這裡可以是檔案路徑，或是包含檔案、檔案清單、文字路徑的變數，或文字路徑的清單。使用「取得資料夾中檔案」動作，用檔案清單填入變數
+#   Destination [FolderObject] 目的地資料夾 — 已移動檔案的目的地資料夾
+#   IfFileExists [選項，預設 DoNothing] 如果檔案已存在 — 指定當目的地資料夾中已存在相同名稱的檔案時應採取的行動
+#       可用值：File.IfExists.DoNothing（不執行任何動作）、File.IfExists.Overwrite（覆寫）
+# 產生的變數：
+#   MovedFiles [List<FileObject>] 移動的檔案 — 以檔案清單移動的檔案
+# 可能的錯誤：InvalidSourceFolderError、InvalidDestinationFolderError、FileNotFoundError、MoveFileError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

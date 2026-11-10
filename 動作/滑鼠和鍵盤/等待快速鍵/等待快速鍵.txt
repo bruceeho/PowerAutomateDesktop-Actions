@@ -1,0 +1,22 @@
+# 【模式 WaitForShortcutKeyAndProceedOnTimeout】等待快速鍵，並在逾時後繼續執行
+MouseAndKeyboard.WaitForShortcutKey.WaitForShortcutKeyAndProceedOnTimeout InputKeys: `` ContinueAfter: 10 IndexOfShortcutKeyPressed=> IndexOfShortcutKeyPressed
+
+# 【模式 WaitForShortcutKey】暫停流程執行，直到按下特定快速鍵。快速鍵必須至少包含一個鍵，或一個鍵與 (ctrl、alt、shift) 其中之一的組合
+MouseAndKeyboard.WaitForShortcutKey.WaitForShortcutKey InputKeys: `` IndexOfShortcutKeyPressed=> IndexOfShortcutKeyPressed
+
+# ==================== 說明 ====================
+# 動作：等待快速鍵  (MouseAndKeyboard.WaitForShortcutKey)
+# 英文名稱：Wait for shortcut key
+# 用途：暫停流程執行，直到按下特定的快速鍵。快速鍵必須只包含一個鍵，或一個鍵和 (Ctrl、Alt、Shift) 組合。可定義多個快速鍵。
+# 位置：滑鼠和鍵盤
+# 輸入參數：
+#   InputKeys [List<String>，預設 Ctrl + A] 快速鍵 — 指定要等待的快速鍵。快速鍵必須包含剛好一個鍵，或一個鍵與 (ctrl、alt、shift) 其中之一的組合。若要等待多個快速鍵之一，這些快速鍵必須都位於清單中。
+#   ProceedOnTimeout [布林，預設 False] 逾時後繼續流程執行 — 指定在設定的快速鍵等待期間經過後，是否仍要繼續流程執行
+#   ContinueAfter [整數，預設 10] 在此時間後繼續 — 繼續執行流程前等待的時間 (秒)
+# 產生的變數：
+#   IndexOfShortcutKeyPressed [整數] 快速鍵的索引 — 快速鍵的索引 (如果快速鍵為清單格式)。
+# 可能的錯誤：FailedToRegisterShortcutkeyError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

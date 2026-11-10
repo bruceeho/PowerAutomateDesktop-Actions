@@ -1,0 +1,13 @@
+Workstation.ControlScreenSaver ScreenSaverAction: Workstation.ScreenSaverAction.Enable
+
+# ==================== 說明 ====================
+# 動作：控制螢幕保護程式  (Workstation.ControlScreenSaver)
+# 英文名稱：Control screen saver
+# 用途：啟用、停用、啟動或停止螢幕保護程式
+# 位置：工作站
+# 輸入參數：
+#   ScreenSaverAction [選項，預設 Enable] 螢幕保護程式動作 — 螢幕保護程式的功能
+#       可用值：Workstation.ScreenSaverAction.Enable（啟用）、Workstation.ScreenSaverAction.Disabled（停用）、Workstation.ScreenSaverAction.Start（啟動）、Workstation.ScreenSaverAction.Stop（停止）
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

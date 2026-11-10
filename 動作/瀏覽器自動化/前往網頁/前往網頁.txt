@@ -1,0 +1,68 @@
+# 【模式 GoToWebPage】瀏覽網頁瀏覽器至新頁面
+WebAutomation.GoToWebPage.GoToWebPage BrowserInstance: `` Url: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 GoToWebPageCloseDialog】瀏覽網頁瀏覽器至新頁面。如果快顯對話方塊出現，請將它關閉。
+WebAutomation.GoToWebPage.GoToWebPageCloseDialog BrowserInstance: `` Url: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 GoToWebPagePressDialogButton】瀏覽網頁瀏覽器至新頁面，並於快顯對話方塊出現時按下指定的按鈕
+WebAutomation.GoToWebPage.GoToWebPagePressDialogButton BrowserInstance: `` Url: `` WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
+
+# 【模式 GoToWebPageNoWait】瀏覽網頁瀏覽器至新頁面，但不要等待網頁載入
+WebAutomation.GoToWebPage.GoToWebPageNoWait BrowserInstance: `` Url: ``
+
+# 【模式 NavigateBack】向後瀏覽網頁瀏覽器
+WebAutomation.GoToWebPage.NavigateBack BrowserInstance: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 NavigateBackCloseDialog】向後瀏覽網頁瀏覽器。如果快顯對話方塊出現，請將它關閉。
+WebAutomation.GoToWebPage.NavigateBackCloseDialog BrowserInstance: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 NavigateBackPressDialogButton】向後瀏覽網頁瀏覽器，並於快顯對話方塊出現時按下指定的按鈕
+WebAutomation.GoToWebPage.NavigateBackPressDialogButton BrowserInstance: `` WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
+
+# 【模式 NavigateBackNoWait】向後瀏覽網頁瀏覽器，但不要等待網頁載入
+WebAutomation.GoToWebPage.NavigateBackNoWait BrowserInstance: ``
+
+# 【模式 NavigateForward】向前瀏覽網頁瀏覽器
+WebAutomation.GoToWebPage.NavigateForward BrowserInstance: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 NavigateForwardCloseDialog】向前瀏覽網頁瀏覽器。如果快顯對話方塊出現，請將它關閉。
+WebAutomation.GoToWebPage.NavigateForwardCloseDialog BrowserInstance: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 NavigateForwardPressDialogButton】向前瀏覽網頁瀏覽器，並於快顯對話方塊出現時按下指定的按鈕
+WebAutomation.GoToWebPage.NavigateForwardPressDialogButton BrowserInstance: `` WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
+
+# 【模式 NavigateForwardNoWait】向前瀏覽網頁瀏覽器，但不要等待網頁載入
+WebAutomation.GoToWebPage.NavigateForwardNoWait BrowserInstance: ``
+
+# 【模式 ReloadWebPage】瀏覽網頁瀏覽器至新頁面
+WebAutomation.GoToWebPage.ReloadWebPage BrowserInstance: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 ReloadWebPageCloseDialog】瀏覽網頁瀏覽器至新頁面。如果快顯對話方塊出現，請將它關閉。
+WebAutomation.GoToWebPage.ReloadWebPageCloseDialog BrowserInstance: `` WaitForPageToLoadTimeout: 60
+
+# 【模式 ReloadWebPagePressDialogButton】瀏覽網頁瀏覽器至新頁面，並於快顯對話方塊出現時按下指定的按鈕
+WebAutomation.GoToWebPage.ReloadWebPagePressDialogButton BrowserInstance: `` WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
+
+# 【模式 ReloadWebPageNoWait】重新載入網頁且不等待網頁載入
+WebAutomation.GoToWebPage.ReloadWebPageNoWait BrowserInstance: ``
+
+# ==================== 說明 ====================
+# 動作：前往網頁  (WebAutomation.GoToWebPage)
+# 英文名稱：Go to web page
+# 用途：瀏覽網頁瀏覽器至新頁面
+# 位置：瀏覽器自動化
+# 輸入參數：
+#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
+#   NavigationType [選項，預設 NavigateToUrl] 瀏覽 — 指定要瀏覽的目標位置
+#       可用值：WebAutomation.NavigationType.NavigateToUrl（至 URL）、WebAutomation.NavigationType.NavigateBack（向後）、WebAutomation.NavigationType.NavigateForward（向前）、WebAutomation.NavigationType.ReloadWebPage（重新載入網頁）
+#   Url [文字] URL — 輸入要瀏覽的目標 URL
+#   WaitForPageToLoad [布林，預設 True] 等待頁面載入 — 指定是否要等待網頁完整載入再繼續進行
+#   WaitForPageToLoadTimeout [整數，預設 60] 網頁載入逾時 — 設定動作擲回錯誤之前的頁面載入時間，以秒為單位
+#   HandleDialogAction [選項，預設 DoNothing] 如果快顯對話方塊出現 — 指定若載入網頁時出現快顯對話方塊，要執行的操作
+#       可用值：WebAutomation.HandleDialogAction.CloseIt（關閉它）、WebAutomation.HandleDialogAction.PressButton（按下按鈕）、WebAutomation.HandleDialogAction.DoNothing（不執行任何動作）
+#   DialogButton [文字，預設 OK] 要按下的對話方塊按鈕 — 輸入快顯對話方塊出現時要按下的對話方塊按鈕
+# 可能的錯誤：NavigateToWebPageError、InvalidUrlError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

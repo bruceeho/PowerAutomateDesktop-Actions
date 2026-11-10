@@ -1,0 +1,22 @@
+Exchange.SendMessage Connection: `` SendFrom: `` SendTo: `` IsBodyHtml: False
+
+# ==================== 說明 ====================
+# 動作：傳送 Exchange 電子郵件訊息  (Exchange.SendMessage)
+# 英文名稱：Send Exchange email message
+# 用途：建立並傳送新的電子郵件訊息
+# 位置：Exchange Server
+# 輸入參數：
+#   Connection [ExchangeConnectionHandle] Exchange 連線 — Exchange 連線。使用「連線至 Exchange Server」動作建立 Exchange 連線
+#   SendFrom [文字] 寄件者 — 寄件者的電子郵件地址
+#   SenderDisplayName [文字，選填] 寄件者顯示名稱 — 寄件者的顯示名稱
+#   SendTo [文字] 收件者 — 收件者的電子郵件。若要輸入多個電子郵件，則以分號分隔地址清單
+#   CC [文字，選填] 副本 — 副本收件者的電子郵件。若要輸入多個電子郵件，則以分號分隔地址清單
+#   BCC [文字，選填] 密件副本 — 密件副本 (隱藏) 收件者的電子郵件。若要輸入多個電子郵件，則以分號分隔地址清單
+#   Subject [文字，選填] 主旨 — 電子郵件的主旨
+#   Body [文字，選填] 本文 — 本文的文字
+#   IsBodyHtml [布林，預設 False] 本文是 HTML — 指定是否將電子郵件本文解譯為 HTML 編碼
+#   Attachments [List<FileObject>，選填] 附件 — 任何附件的完整路徑。將多個檔案放在雙引號 (") 裡面，並用空白字元隔開
+# 可能的錯誤：AttachmentNotFoundError、SendEmailMessageError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

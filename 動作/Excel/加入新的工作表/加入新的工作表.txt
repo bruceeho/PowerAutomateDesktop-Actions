@@ -1,0 +1,16 @@
+Excel.AddWorksheet Instance: `` Name: `` WorksheetPosition: Excel.WorksheetPosition.First
+
+# ==================== 說明 ====================
+# 動作：加入新的工作表  (Excel.AddWorksheet)
+# 英文名稱：Add new worksheet
+# 用途：將新的工作表加入 Excel 執行個體的文件
+# 位置：Excel
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 指定 Excel 執行個體。這個變數先前必須已使用「啟動 Excel」動作完成指定
+#   Name [文字] 新的工作表名稱 — 指定新工作表的名稱
+#   WorksheetPosition [選項，預設 First] 加入工作表做為 — 指定要在現有工作表之前或之後加入新的 Excel 工作表
+#       可用值：Excel.WorksheetPosition.First（第一個工作表）、Excel.WorksheetPosition.Last（最後一個工作表）
+# 可能的錯誤：WorksheetAlreadyExistsError、AddWorksheetError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

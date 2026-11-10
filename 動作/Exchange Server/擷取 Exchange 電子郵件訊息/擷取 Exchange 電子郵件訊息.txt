@@ -1,0 +1,55 @@
+# 【模式 RetrieveEmailsFromFolder】從指定的 Exchange Server 資料夾擷取電子郵件訊息
+Exchange.RetrieveExchangeMessages.RetrieveEmailsFromFolder Connection: `` MailFolder: $'''Inbox''' RetrieveMode: Exchange.RetrieveMessagesMode.Unread MarkAsRead: True EmailMessages=> EmailMessages
+
+# 【模式 RetrieveEmailsFromFolderAndSaveAttachments】從指定的 Exchange Server 擷取電子郵件訊息並儲存附件
+Exchange.RetrieveExchangeMessages.RetrieveEmailsFromFolderAndSaveAttachments Connection: `` MailFolder: $'''Inbox''' RetrieveMode: Exchange.RetrieveMessagesMode.Unread MarkAsRead: True SaveAttachmentsInto: `` EmailMessages=> EmailMessages
+
+# 【模式 RetrieveEmailsFromAccountAndFolder】從指定的 Exchange Server 帳戶和資料夾擷取電子郵件訊息
+Exchange.RetrieveExchangeMessages.RetrieveEmailsFromAccountAndFolder Connection: `` SharedMailboxAddress: `` MailFolder: $'''Inbox''' RetrieveMode: Exchange.RetrieveMessagesMode.Unread MarkAsRead: True EmailMessages=> EmailMessages
+
+# 【模式 RetrieveEmailsFromAccountAndFolderAndSaveAttachments】從指定的 Exchange Server 帳戶和資料夾擷取電子郵件訊息並儲存附件
+Exchange.RetrieveExchangeMessages.RetrieveEmailsFromAccountAndFolderAndSaveAttachments Connection: `` SharedMailboxAddress: `` MailFolder: $'''Inbox''' RetrieveMode: Exchange.RetrieveMessagesMode.Unread MarkAsRead: True SaveAttachmentsInto: `` EmailMessages=> EmailMessages
+
+# 【模式 RetrieveEmails】從指定的 Exchange Server 擷取電子郵件訊息
+Exchange.RetrieveExchangeMessages.RetrieveEmails Connection: `` ExchangeFolder: Exchange.Folder.Inbox RetrieveMode: Exchange.RetrieveMessagesMode.Unread MarkAsRead: True EmailMessages=> EmailMessages
+
+# 【模式 RetrieveEmailsAndSaveAttachments】從指定的 Exchange Server 擷取電子郵件訊息並儲存附件
+Exchange.RetrieveExchangeMessages.RetrieveEmailsAndSaveAttachments Connection: `` ExchangeFolder: Exchange.Folder.Inbox RetrieveMode: Exchange.RetrieveMessagesMode.Unread MarkAsRead: True SaveAttachmentsInto: `` EmailMessages=> EmailMessages
+
+# 【模式 RetrieveEmailsFromAccount】從指定的 Exchange Server 帳戶擷取電子郵件訊息
+Exchange.RetrieveExchangeMessages.RetrieveEmailsFromAccount Connection: `` SharedMailboxAddress: `` ExchangeFolder: Exchange.Folder.Inbox RetrieveMode: Exchange.RetrieveMessagesMode.Unread MarkAsRead: True EmailMessages=> EmailMessages
+
+# 【模式 RetrieveEmailsFromAccountAndSaveAttachments】從指定的 Exchange Server 帳戶擷取電子郵件訊息並儲存附件
+Exchange.RetrieveExchangeMessages.RetrieveEmailsFromAccountAndSaveAttachments Connection: `` SharedMailboxAddress: `` ExchangeFolder: Exchange.Folder.Inbox RetrieveMode: Exchange.RetrieveMessagesMode.Unread MarkAsRead: True SaveAttachmentsInto: `` EmailMessages=> EmailMessages
+
+# ==================== 說明 ====================
+# 動作：擷取 Exchange 電子郵件訊息  (Exchange.RetrieveExchangeMessages)
+# 英文名稱：Retrieve Exchange email messages
+# 用途：從指定的 Exchange Server 擷取電子郵件訊息
+# 位置：Exchange Server
+# 輸入參數：
+#   Connection [ExchangeConnectionHandle] Exchange 連線 — Exchange 連線。使用「連線至 Exchange Server」動作建立 Exchange 連線
+#   MailboxType [選項，預設 Personal] 信箱類型 — 要從中擷取電子郵件訊息的信箱類型
+#       可用值：Exchange.MailboxType.Personal（個人）、Exchange.MailboxType.Shared（共用）
+#   SharedMailboxAddress [文字] 共用信箱地址 — 要從中擷取電子郵件訊息的共用信箱地址
+#   FromCustomFolder [布林，預設 False] 從自訂資料夾擷取電子郵件訊息 — 指定要從自訂資料夾或預先定義的 Exchange 資料夾擷取電子郵件訊息
+#   MailFolder [文字，預設 Inbox] 郵件資料夾 — 要擷取其中電子郵件訊息的郵件資料夾名稱或路徑 (例如 folder1\folder2)
+#   ExchangeFolder [選項，預設 Inbox] Exchange 資料夾 — 要從中擷取電子郵件訊息的預先定義 Exchange 資料夾
+#       可用值：Exchange.Folder.Inbox（收件匣）、Exchange.Folder.DeletedItems（刪除的項目）、Exchange.Folder.Drafts（草稿）、Exchange.Folder.Outbox（寄件匣）、Exchange.Folder.SentItems（寄件備份）、Exchange.Folder.JunkEmail（垃圾電子郵件）
+#   RetrieveMode [選項，預設 Unread] 擷取 — 指定要擷取資料夾中的所有電子郵件訊息，或只擷取未讀取的電子郵件訊息
+#       可用值：Exchange.RetrieveMessagesMode.All（所有電子郵件訊息）、Exchange.RetrieveMessagesMode.Unread（僅限未讀電子郵件訊息）、Exchange.RetrieveMessagesMode.Read（僅限已讀電子郵件訊息）
+#   MarkAsRead [布林，預設 True] 標記為已讀取 — 指定要將擷取的電子郵件訊息標示為已讀取，或保留原狀
+#   FromContains [文字，選填] 寄件者包含 — 要擷取其訊息的寄件者的完整電子郵件地址。保留此屬性空白時，可擷取所有訊息而不管寄件者是誰
+#   ToContains [文字，選填] 收件者包含 — 要擷取的電子郵件訊息收件者的完整電子郵件地址 (有多個地址時以空格分隔)。保留此屬性空白時，將擷取所有電子郵件訊息，而不管收件者為何
+#   SubjectContains [文字，選填] 主旨包含 — 要在電子郵件主旨中尋找的關鍵片語。保留此屬性空白時，可擷取所有電子郵件訊息而不管其主旨為何
+#   BodyContains [文字，選填] 本文包含 — 要在電子郵件本文中尋找的關鍵片語。保留此屬性空白時，可擷取所有電子郵件訊息而不管其內容為何
+#   AttachmentsOptions [選項，預設 DoNotSave] 附件 — 指定是否要儲存已擷取之電子郵件訊息的附件
+#       可用值：Exchange.AttachmentsOptions.Save（儲存附件）、Exchange.AttachmentsOptions.DoNotSave（不要儲存附件）
+#   SaveAttachmentsInto [FolderObject] 將附件儲存至 — 要在其中儲存附件的資料夾
+# 產生的變數：
+#   EmailMessages [List<ExchangeMailMessage>] 電子郵件訊息 — 擷取的電子郵件訊息，可做為 Exchange 郵件訊息物件供日後處理
+# 可能的錯誤：SaveAttachmentsError、InvalidMailFolderError、RetrieveEmailMessagesError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

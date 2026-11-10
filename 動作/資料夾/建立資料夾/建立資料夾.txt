@@ -1,0 +1,16 @@
+Folder.Create FolderPath: `` FolderName: `` Folder=> Folder
+
+# ==================== 說明 ====================
+# 動作：建立資料夾  (Folder.Create)
+# 英文名稱：Create folder
+# 用途：建立新資料夾
+# 位置：資料夾
+# 輸入參數：
+#   FolderPath [FolderObject] 建立新資料夾於 — 輸入或選擇其中將要建立新資料夾的資料夾完整路徑，或包含資料夾的變數
+#   FolderName [文字] 新資料夾名稱 — 輸入要成為新資料夾名稱的文字或文字變數
+# 產生的變數：
+#   Folder [FolderObject] 新建的資料夾 — 建立的資料夾物件 (這是一種表示，並可存取資料夾及其所有資訊)
+# 可能的錯誤：FolderNotFoundError、CreateFolderError、EmptyNewFolderPathAndNameError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

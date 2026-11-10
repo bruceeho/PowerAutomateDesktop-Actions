@@ -1,0 +1,27 @@
+Folder.GetFiles Folder: `` FileFilter: $'''*''' IncludeSubfolders: False FailOnAccessDenied: True SortBy1: Folder.SortBy.NoSort SortDescending1: False SortBy2: Folder.SortBy.NoSort SortDescending2: False SortBy3: Folder.SortBy.NoSort SortDescending3: False Files=> Files
+
+# ==================== 說明 ====================
+# 動作：取得資料夾中的檔案  (Folder.GetFiles)
+# 英文名稱：Get files in folder
+# 用途：擷取資料夾中的檔案清單
+# 位置：資料夾
+# 輸入參數：
+#   Folder [FolderObject] 資料夾 — 輸入或選擇要從其中擷取檔案清單之資料夾的資料夾完整路徑，或包含資料夾的變數
+#   FileFilter [文字，預設 *] 檔案篩選 — 選擇篩選來限制所擷取的檔案。這時可使用萬用字元，例如「*.txt」或「document?.doc」。若要允許多個檔案篩選，請以分號分隔選項，例如「*.txt;*.exe」。
+#   IncludeSubfolders [布林，預設 False] 包含子資料夾 — 指定是否也要查看子資料夾
+#   FailOnAccessDenied [布林，預設 True] 當任何子資料夾存取遭拒時失敗 — 指定當嘗試取得無存取權的資料夾檔案時，是否擲出錯誤，或略過這些資料夾
+#   SortBy1 [選項，預設 NoSort] 排序方式 — 指定是否要將結果排序及所依據的準則
+#       可用值：Folder.SortBy.NoSort（未排序）、Folder.SortBy.FullName（完整名稱）、Folder.SortBy.RootPath（根路徑）、Folder.SortBy.Directory（目錄）、Folder.SortBy.Name（名字）、Folder.SortBy.NameWithoutExtension（名稱，不含副檔名）、Folder.SortBy.Extension（擴充功能）、Folder.SortBy.Size（大小）、Folder.SortBy.CreationTime（建立時間）、Folder.SortBy.LastAccessed（上次存取）、Folder.SortBy.LastModified（上次修改於）、Folder.SortBy.IsHidden（已隱藏）、Folder.SortBy.IsSystem（是系統）、Folder.SortBy.IsReadOnly（是唯讀）、Folder.SortBy.IsArchive（已封存）、Folder.SortBy.Exists（存在）
+#   SortDescending1 [布林，預設 False] 遞減 — 指定項目要以降冪或升冪順序進行排序
+#   SortBy2 [選項，預設 NoSort] 次要排序 — 指定是否要將結果排序及所依據的第二個準則
+#       可用值：Folder.SortBy.NoSort（未排序）、Folder.SortBy.FullName（完整名稱）、Folder.SortBy.RootPath（根路徑）、Folder.SortBy.Directory（目錄）、Folder.SortBy.Name（名字）、Folder.SortBy.NameWithoutExtension（名稱，不含副檔名）、Folder.SortBy.Extension（擴充功能）、Folder.SortBy.Size（大小）、Folder.SortBy.CreationTime（建立時間）、Folder.SortBy.LastAccessed（上次存取）、Folder.SortBy.LastModified（上次修改於）、Folder.SortBy.IsHidden（已隱藏）、Folder.SortBy.IsSystem（是系統）、Folder.SortBy.IsReadOnly（是唯讀）、Folder.SortBy.IsArchive（已封存）、Folder.SortBy.Exists（存在）
+#   SortDescending2 [布林，預設 False] 遞減 — 指定項目要以降冪或升冪順序進行排序
+#   SortBy3 [選項，預設 NoSort] 次要排序 — 指定是否要將結果排序及所依據的第三個準則
+#       可用值：Folder.SortBy.NoSort（未排序）、Folder.SortBy.FullName（完整名稱）、Folder.SortBy.RootPath（根路徑）、Folder.SortBy.Directory（目錄）、Folder.SortBy.Name（名字）、Folder.SortBy.NameWithoutExtension（名稱，不含副檔名）、Folder.SortBy.Extension（擴充功能）、Folder.SortBy.Size（大小）、Folder.SortBy.CreationTime（建立時間）、Folder.SortBy.LastAccessed（上次存取）、Folder.SortBy.LastModified（上次修改於）、Folder.SortBy.IsHidden（已隱藏）、Folder.SortBy.IsSystem（是系統）、Folder.SortBy.IsReadOnly（是唯讀）、Folder.SortBy.IsArchive（已封存）、Folder.SortBy.Exists（存在）
+#   SortDescending3 [布林，預設 False] 遞減 — 指定項目要以降冪或升冪順序進行排序
+# 產生的變數：
+#   Files [List<FileObject>] 擷取的檔案 — 以檔案物件清單擷取的檔案
+# 可能的錯誤：FolderNotFoundError、RetrieveFilesError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

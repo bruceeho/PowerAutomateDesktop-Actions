@@ -1,0 +1,17 @@
+Cmd.WaitForText Text: `` IsRegEx: False IgnoreCase: True Timeout: 0 Session: ``
+
+# ==================== 說明 ====================
+# 動作：等待 CMD 工作階段上的文字  (Cmd.WaitForText)
+# 英文名稱：Wait for text on CMD session
+# 用途：等待先前所開啟 CMD 工作階段上的特定文字
+# 位置：CMD 工作階段
+# 輸入參數：
+#   Text [文字] 要等待的文字 — 要等待出現在標準輸出或標準誤差上的文字或規則運算式
+#   IsRegEx [布林，預設 False] 是規則運算式 — 指定是否要等待規則運算式而不等待純文字
+#   IgnoreCase [布林，預設 True] 忽略大小寫 — 指定要等待的文字應與標準輸出相符還是與標準誤差相符 (不考慮文字的大小寫)
+#   Timeout [整數，預設 0] 逾時 — 指定當文字未在設定的時段內顯示時，要無限期等待文字出現還是要產生失敗。
+#   Session [CmdSessionHandle] CMD 工作階段 — 開啟的 CMD 工作階段變數
+# 可能的錯誤：SessionClosedError、TimeoutExpiredError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

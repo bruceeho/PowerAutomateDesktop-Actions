@@ -1,0 +1,36 @@
+# 【模式 Retrieve】從 IMAP 伺服器擷取電子郵件訊息
+Email.RetrieveEmails.Retrieve Port: 993 EnableSSL: True Username: `` Password: `` MailFolder: `` AcceptUntrustedCertificates: False MailsToRetrieve: Email.RetrieveMessagesMode.All MarkAsRead: True RetrievedEmails=> RetrievedEmails
+
+# 【模式 RetrieveAndSaveAttachments】從 IMAP 伺服器擷取電子郵件訊息，並保存其附件
+Email.RetrieveEmails.RetrieveAndSaveAttachments Port: 993 EnableSSL: True Username: `` Password: `` MailFolder: `` AcceptUntrustedCertificates: False MailsToRetrieve: Email.RetrieveMessagesMode.All MarkAsRead: True SaveAttachmentsInto: `` RetrievedEmails=> RetrievedEmails
+
+# ==================== 說明 ====================
+# 動作：擷取電子郵件訊息  (Email.RetrieveEmails)
+# 英文名稱：Retrieve email messages
+# 用途：從 IMAP 伺服器擷取電子郵件訊息
+# 位置：電子郵件
+# 輸入參數：
+#   Server [文字]
+#   Port [整數，預設 993] 連接埠 — 要用於 IMAP 伺服器的連接埠。通常是連接埠 993
+#   EnableSSL [布林，預設 True] 啟用 SSL — 指定是否使用安全連線與 IMAP 伺服器通訊
+#   Username [文字] 使用者名稱 — 要存取的電子郵件帳戶使用者名稱
+#   Password [文字(可加密)] 密碼 — 要存取的電子郵件帳戶密碼
+#   MailFolder [文字] 郵件資料夾 — 要從其中擷取訊息的 IMAP 郵件資料夾名稱 (也稱為「信箱」)
+#   AcceptUntrustedCertificates [布林，預設 False] 接受不受信任的憑證 — 指定是否接受不受信任的憑證
+#   MailsToRetrieve [選項，預設 All] 擷取 — 指定是否擷取資料夾中的所有訊息，或只擷取未讀的訊息
+#       可用值：Email.RetrieveMessagesMode.All（所有電子郵件訊息）、Email.RetrieveMessagesMode.Unread（僅限未讀電子郵件訊息）、Email.RetrieveMessagesMode.Read（僅限已讀電子郵件訊息）
+#   MarkAsRead [布林，預設 True] 標示為已讀取 — 指定是否將擷取的訊息標示為已讀，或保留原狀
+#   FromContains [文字，選填] 「寄件者」欄位包含 — 將擷取其訊息的寄件者完整電子郵件地址。保留此屬性空白時，可擷取所有訊息而不管寄件者是誰
+#   ToContains [文字，選填] 「收件者」欄位包含 — 將要擷取之訊息的收件者完整電子郵件地址 (多個地址時將以空格分隔)。保留此屬性空白時，將擷取所有訊息，而不管收件者為何
+#   SubjectContains [文字，選填] 「主旨」包含 — 要在電子郵件主旨中尋找的關鍵片語。保留此屬性空白時，可擷取所有電子郵件訊息而不管其主旨為何
+#   BodyContains [文字，選填] 「本文」包含 — 要在電子郵件本文中尋找的關鍵片語。保留此屬性空白時，可擷取所有電子郵件訊息而不管其內容為何
+#   SaveAttachments [選項，預設 DoNotSave] 檔案附件 — 指定是否要儲存已擷取之電子郵件訊息的附件
+#       可用值：Email.AttachmentsOptions.Save（檔案附件）、Email.AttachmentsOptions.DoNotSave（不要儲存附件）
+#   SaveAttachmentsInto [FolderObject] 將附件儲存至 — 要在其中儲存附件的資料夾
+# 產生的變數：
+#   RetrievedEmails [List<MailMessageObject>] 擷取的電子郵件訊息 — 可供日後處理為電子郵件訊息物件清單的已擷取電子郵件訊息
+# 可能的錯誤：ConnectToImapServerError、ImapServerAuthenticationError、InvalidMailFolderError、SaveAttachmentsError、RetrieveEmailsError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

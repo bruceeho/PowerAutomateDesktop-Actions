@@ -1,0 +1,39 @@
+# 【模式 ClearCells】清除 Excel 執行個體之使用中工作表中的儲存格範圍
+Excel.ClearCellsFromExcel.ClearCells Instance: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: ``
+
+# 【模式 ClearCellsRelativeTo】清除 Excel 執行個體之使用中工作表中的儲存格範圍
+Excel.ClearCellsFromExcel.ClearCellsRelativeTo Instance: `` HorizontalDirection: Excel.HorizontalDirection.Left OffsetX: `` VerticalDirection: Excel.VerticalDirection.Above OffsetY: ``
+
+# 【模式 ClearNamedCell】清除 Excel 執行個體之使用中工作表中的具名儲存格
+Excel.ClearCellsFromExcel.ClearNamedCell Instance: `` CellName: ``
+
+# 【模式 ClearSingleCell】清除 Excel 執行個體之使用中工作表中的單一儲存格
+Excel.ClearCellsFromExcel.ClearSingleCell Instance: `` SingleCellColumn: `` SingleCellRow: ``
+
+# ==================== 說明 ====================
+# 動作：清除 Excel 工作表中的儲存格  (Excel.ClearCellsFromExcel)
+# 英文名稱：Clear cells in Excel worksheet
+# 用途：清除 Excel 執行個體之使用中工作表中的儲存格範圍或具名儲存格
+# 位置：Excel
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
+#   SpecifyCellsMode [選項，預設 Absolute] 清除 — 指定要清除明確指定的儲存格範圍、相對於目前使用中儲存格的儲存格範圍、具名範圍或單一儲存格
+#       可用值：Excel.SpecifyCellsClearMode.Absolute（儲存格範圍）、Excel.SpecifyCellsClearMode.Relative（相對於使用中儲存格的儲存格範圍）、Excel.SpecifyCellsClearMode.NamedCells（具名儲存格）、Excel.SpecifyCellsClearMode.SingleCell（單一儲存格）
+#   StartColumn [文字] 起始資料行 — 第一個資料行的索引或字母
+#   HorizontalDirection [選項，預設 Left] X 軸方向 — X 軸位移方向。根據目前使用中儲存格的位置，要沿著水平軸查看的位置
+#       可用值：Excel.HorizontalDirection.Left（向左翻轉）、Excel.HorizontalDirection.Right（向右翻轉）
+#   StartRow [整數] 起始資料列 — 第一個資料列編號。編號從 1 開始
+#   OffsetX [整數] X 位移 — X 軸位移
+#   EndColumn [文字] 結尾欄 — 最後一個資料行的索引或字母
+#   VerticalDirection [選項，預設 Above] Y 軸方向 — Y 軸位移方向。根據目前使用中儲存格的位置，要沿著垂直軸查看的位置
+#       可用值：Excel.VerticalDirection.Above（上方）、Excel.VerticalDirection.Below（下方）
+#   EndRow [整數] 結尾列 — 最後一個資料列編號。編號從 1 開始
+#   OffsetY [整數] Y 位移 — Y 軸位移
+#   CellName [文字] 名稱 — 儲存格的名稱
+#   SingleCellColumn [文字] 資料行 — 資料行的索引或字母
+#   SingleCellRow [整數] 資料列 — 資料列編號。編號從 1 開始
+# 可能的錯誤：ClearCellsError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

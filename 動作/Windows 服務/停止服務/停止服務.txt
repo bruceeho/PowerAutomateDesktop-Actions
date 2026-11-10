@@ -1,0 +1,13 @@
+Services.Stop ServiceName: ``
+
+# ==================== 說明 ====================
+# 動作：停止服務  (Services.Stop)
+# 英文名稱：Stop service
+# 用途：停止正在執行的 Windows 服務
+# 位置：Windows 服務
+# 輸入參數：
+#   ServiceName [文字] 要停止的服務 — 要停止之服務的名稱
+# 可能的錯誤：ServiceNotFoundError、ServiceNotRunningError、StopServiceError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

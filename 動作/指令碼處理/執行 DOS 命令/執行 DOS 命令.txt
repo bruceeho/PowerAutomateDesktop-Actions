@@ -1,0 +1,34 @@
+# 【模式 RunDOSCommandWithCodePage】以隱藏模式執行 DOS 命令或主控台應用程式，並在完成後使用其他字碼頁擷取其輸出
+Scripting.RunDOSCommand.RunDOSCommandWithCodePage DOSCommandOrApplication: `` Encoding: Scripting.Encoding.utf_8 StandardError=> StandardError ExitCode=> ExitCode StandardOutput=> StandardOutput
+
+# 【模式 RunDOSCommandWithCodePageAndFailOnTimeout】以隱藏模式執行 DOS 命令或主控台應用程式，在完成後使用其他字碼頁擷取其輸出，並在分配的時間後失敗
+Scripting.RunDOSCommand.RunDOSCommandWithCodePageAndFailOnTimeout DOSCommandOrApplication: `` Encoding: Scripting.Encoding.utf_8 Timeout: 10 StandardError=> StandardError ExitCode=> ExitCode StandardOutput=> StandardOutput
+
+# 【模式 RunDOSCommand】以隱藏模式執行 DOS 命令或主控台應用程式，並在完成時擷取其輸出
+Scripting.RunDOSCommand.RunDOSCommand DOSCommandOrApplication: `` StandardError=> StandardError ExitCode=> ExitCode StandardOutput=> StandardOutput
+
+# 【模式 RunDOSCommandAndFailOnTimeout】以隱藏模式執行 DOS 命令或主控台應用程式，在完成時擷取其輸出，並在分配的時間後失敗
+Scripting.RunDOSCommand.RunDOSCommandAndFailOnTimeout DOSCommandOrApplication: `` Timeout: 10 StandardError=> StandardError ExitCode=> ExitCode StandardOutput=> StandardOutput
+
+# ==================== 說明 ====================
+# 動作：執行 DOS 命令  (Scripting.RunDOSCommand)
+# 英文名稱：Run DOS command
+# 用途：以隱藏模式執行 DOS 命令或主控台應用程式，並在完成時擷取其輸出
+# 位置：指令碼處理
+# 輸入參數：
+#   DOSCommandOrApplication [FileObject] DOS 命令或應用程式 — DOS 命令或主控台應用程式的名稱與引數 (如果適用)
+#   ChangeCodePage [布林，預設 False] 變更程式碼頁面 — 指定是否變更工作階段的目前字碼頁
+#   WorkingDirectory [FolderObject，選填] 工作資料夾 — 要使用資料夾的完整路徑 (如果適用)
+#   Encoding [選項，預設 utf_8] 編碼 — 讀取輸出時使用的編碼
+#       可用值：Scripting.Encoding.IBM037、Scripting.Encoding.IBM437、Scripting.Encoding.IBM500、Scripting.Encoding.ASMO_708、Scripting.Encoding.DOS_720、Scripting.Encoding.ibm737、Scripting.Encoding.ibm775、Scripting.Encoding.ibm850、Scripting.Encoding.ibm852、Scripting.Encoding.IBM855、Scripting.Encoding.ibm857、Scripting.Encoding.IBM00858、Scripting.Encoding.IBM860、Scripting.Encoding.ibm861、Scripting.Encoding.DOS_862、Scripting.Encoding.IBM863、Scripting.Encoding.IBM864、Scripting.Encoding.IBM865、Scripting.Encoding.cp866、Scripting.Encoding.ibm869、Scripting.Encoding.IBM870、Scripting.Encoding.windows_874、Scripting.Encoding.cp875、Scripting.Encoding.shift_jis、Scripting.Encoding.gb2312、Scripting.Encoding.ks_c_5601_1987、Scripting.Encoding.big5、Scripting.Encoding.IBM1026、Scripting.Encoding.IBM01047、Scripting.Encoding.IBM01140、Scripting.Encoding.IBM01141、Scripting.Encoding.IBM01142、Scripting.Encoding.IBM01143、Scripting.Encoding.IBM01144、Scripting.Encoding.IBM01145、Scripting.Encoding.IBM01146、Scripting.Encoding.IBM01147、Scripting.Encoding.IBM01148、Scripting.Encoding.IBM01149、Scripting.Encoding.utf_16、Scripting.Encoding.utf_16BE、Scripting.Encoding.windows_1250、Scripting.Encoding.windows_1251、Scripting.Encoding.Windows_1252、Scripting.Encoding.windows_1253、Scripting.Encoding.windows_1254、Scripting.Encoding.windows_1255、Scripting.Encoding.windows_1256、Scripting.Encoding.windows_1257、Scripting.Encoding.windows_1258、Scripting.Encoding.Johab、Scripting.Encoding.macintosh、Scripting.Encoding.x_mac_japanese、Scripting.Encoding.x_mac_chinesetrad、Scripting.Encoding.x_mac_korean、Scripting.Encoding.x_mac_arabic、Scripting.Encoding.x_mac_hebrew、Scripting.Encoding.x_mac_greek、Scripting.Encoding.x_mac_cyrillic、Scripting.Encoding.x_mac_chinesesimp、Scripting.Encoding.x_mac_romanian、Scripting.Encoding.x_mac_ukrainian、Scripting.Encoding.x_mac_thai、Scripting.Encoding.x_mac_ce、Scripting.Encoding.x_mac_icelandic、Scripting.Encoding.x_mac_turkish、Scripting.Encoding.x_mac_croatian、Scripting.Encoding.utf_32、Scripting.Encoding.utf_32BE、Scripting.Encoding.x_Chinese_CNS、Scripting.Encoding.x_cp20001、Scripting.Encoding.x_Chinese_Eten、Scripting.Encoding.x_cp20003、Scripting.Encoding.x_cp20004、Scripting.Encoding.x_cp20005、Scripting.Encoding.x_IA5、Scripting.Encoding.x_IA5_German、Scripting.Encoding.x_IA5_Swedish、Scripting.Encoding.x_IA5_Norwegian、Scripting.Encoding.us_ascii、Scripting.Encoding.x_cp20261、Scripting.Encoding.x_cp20269、Scripting.Encoding.IBM273、Scripting.Encoding.IBM277、Scripting.Encoding.IBM278、Scripting.Encoding.IBM280、Scripting.Encoding.IBM284、Scripting.Encoding.IBM285、Scripting.Encoding.IBM290、Scripting.Encoding.IBM297、Scripting.Encoding.IBM420、Scripting.Encoding.IBM423、Scripting.Encoding.IBM424、Scripting.Encoding.x_EBCDIC_KoreanExtended、Scripting.Encoding.IBM_Thai、Scripting.Encoding.koi8_r、Scripting.Encoding.IBM871、Scripting.Encoding.IBM880、Scripting.Encoding.IBM905、Scripting.Encoding.IBM00924、Scripting.Encoding.EUC_JP_20932、Scripting.Encoding.x_cp20936、Scripting.Encoding.x_cp20949、Scripting.Encoding.cp1025、Scripting.Encoding.koi8_u、Scripting.Encoding.iso_8859_1、Scripting.Encoding.iso_8859_2、Scripting.Encoding.iso_8859_3、Scripting.Encoding.iso_8859_4、Scripting.Encoding.iso_8859_5、Scripting.Encoding.iso_8859_6、Scripting.Encoding.iso_8859_7、Scripting.Encoding.iso_8859_8、Scripting.Encoding.iso_8859_9、Scripting.Encoding.iso_8859_13、Scripting.Encoding.iso_8859_15、Scripting.Encoding.x_Europa、Scripting.Encoding.iso_8859_8_i、Scripting.Encoding.iso_2022_jp_50220、Scripting.Encoding.csISO2022JP、Scripting.Encoding.iso_2022_jp_50222、Scripting.Encoding.iso_2022_kr、Scripting.Encoding.x_cp50227、Scripting.Encoding.euc_jp_51932、Scripting.Encoding.EUC_CN、Scripting.Encoding.euc_kr、Scripting.Encoding.hz_gb_2312、Scripting.Encoding.GB18030、Scripting.Encoding.x_iscii_de、Scripting.Encoding.x_iscii_be、Scripting.Encoding.x_iscii_ta、Scripting.Encoding.x_iscii_te、Scripting.Encoding.x_iscii_as、Scripting.Encoding.x_iscii_or、Scripting.Encoding.x_iscii_ka、Scripting.Encoding.x_iscii_ma、Scripting.Encoding.x_iscii_gu、Scripting.Encoding.x_iscii_pa、Scripting.Encoding.utf_7、Scripting.Encoding.utf_8
+#   FailOnTimeout [布林，預設 False] 逾時後失敗 — 指定 DOS 命令或應用程式將無限期執行，還是在設定的一段時間過後失敗
+#   Timeout [整數，預設 10] 逾時 — 等候指令碼完成的最大秒數 (-1 表示無限期)
+# 產生的變數：
+#   StandardError [文字] 標準錯誤 — 描述執行 DOS 命令或應用程式期間所發生錯誤 (如有) 的文字
+#   ExitCode [整數] 結束碼 — 命令或應用程式結束碼。這會是數值
+#   StandardOutput [文字] 標準輸出 — DOS 命令或應用程式的文字輸出
+# 可能的錯誤：ExecuteCommandOrConsoleApplicationError、ScriptTimeoutError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,30 @@
+# 【模式 SelectDateRange】顯示提示使用者輸入日期範圍的對話方塊
+Display.SelectDateDialog.SelectDateRange DateDialogFormat: Display.DateDialogFormat.DateOnly DefaultValue: `` DefaultValueForSecondDate: `` IsTopMost: False SelectedDate=> SelectedDate SecondSelectedDate=> SecondSelectedDate ButtonPressed=> ButtonPressed
+
+# 【模式 SelectDate】顯示提示使用者輸入日期的對話方塊
+Display.SelectDateDialog.SelectDate DateDialogFormat: Display.DateDialogFormat.DateOnly DefaultValue: `` IsTopMost: False SelectedDate=> SelectedDate ButtonPressed=> ButtonPressed
+
+# ==================== 說明 ====================
+# 動作：顯示選取日期對話方塊  (Display.SelectDateDialog)
+# 英文名稱：Display select date dialog
+# 用途：顯示提示使用者輸入日期或日期範圍的對話方塊
+# 位置：訊息方塊
+# 輸入參數：
+#   Title [文字，選填] 對話方塊標題 — 對話方塊標題
+#   Message [文字，選填] 對話方塊訊息 — 對話方塊訊息
+#   DateDialogType [選項，預設 SingleDate] 對話方塊類型 — 指定使用者是要輸入單一日期或是兩個日期做為日期範圍的端點
+#       可用值：Display.DateDialogType.SingleDate（單一日期）、Display.DateDialogType.DateRange（日期範圍 (2 個日期)）
+#   DateDialogFormat [選項，預設 DateOnly] 提示 — 指定使用者只輸入日期，或是輸入日期和時間
+#       可用值：Display.DateDialogFormat.DateOnly（只有日期）、Display.DateDialogFormat.DateAndTime（日期和時間）
+#   DefaultValue [Nullable<DateTime>] 預設值 — 日期的預設值
+#   DefaultValueForSecondDate [Nullable<DateTime>] 第二個日期的預設值 — 範圍中結束日期的預設值
+#   IsTopMost [布林，預設 False] 日期選取對話方塊一律保持在最上方 — 指定日期選取對話方塊是否應一律保持在所有其他視窗之上
+# 產生的變數：
+#   SelectedDate [日期時間] 選取的日期 — 使用者輸入的日期或預設日期
+#   SecondSelectedDate [日期時間] 選取的第二個日期 — 使用者輸入的第二個日期或預設日期
+#   ButtonPressed [文字] 按下的按鈕 — 使用者按下之按鈕的文字。系統會自動為使用者提供 [確定] 或 [取消] 選項
+# 可能的錯誤：SelectDateDialogError、SelectDateDialogInNonInteractiveModeError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

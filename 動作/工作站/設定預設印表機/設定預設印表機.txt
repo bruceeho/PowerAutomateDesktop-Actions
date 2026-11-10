@@ -1,0 +1,13 @@
+Workstation.SetDefaultPrinter PrinterName: ``
+
+# ==================== 說明 ====================
+# 動作：設定預設印表機  (Workstation.SetDefaultPrinter)
+# 英文名稱：Set default printer
+# 用途：將印表機設為預設印表機
+# 位置：工作站
+# 輸入參數：
+#   PrinterName [文字] 印表機名稱 — 要設定為預設的印表機名稱
+# 可能的錯誤：SetDefaultPrinterError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

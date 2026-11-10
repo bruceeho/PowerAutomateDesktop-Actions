@@ -1,0 +1,23 @@
+# 【模式 UpdateAndClearProcessingNotes】更新特定工作佇列項目的狀態與處理附註
+WorkQueues.UpdateWorkQueueItem.UpdateAndClearProcessingNotes WorkQueueItem: `` Status: WorkQueues.WorkQueueItemStatus.Processed InputValue: ``
+
+# 【模式 UpdateWithProcessingNotes】更新特定工作佇列項目的狀態與處理附註
+WorkQueues.UpdateWorkQueueItem.UpdateWithProcessingNotes WorkQueueItem: `` Status: WorkQueues.WorkQueueItemStatus.Processed InputValue: `` ProcessingResult: ``
+
+# ==================== 說明 ====================
+# 動作：更新工作佇列項目  (WorkQueues.UpdateWorkQueueItem)
+# 英文名稱：Update work queue item
+# 用途：更新特定工作佇列項目的狀態與處理附註
+# 位置：工作佇列
+# 輸入參數：
+#   WorkQueueItem [WorkQueueItem] 工作佇列項目 — 要更新的工作佇列項目
+#   Status [選項，預設 Processed] 狀態 — 工作佇列項目的新狀態
+#       可用值：WorkQueues.WorkQueueItemStatus.Unchanged（[未變更]）、WorkQueues.WorkQueueItemStatus.Processed（已處理）、WorkQueues.WorkQueueItemStatus.GenericException（一般例外狀況）、WorkQueues.WorkQueueItemStatus.ITException（IT 例外狀況）、WorkQueues.WorkQueueItemStatus.BusinessException（業務例外狀況）、WorkQueues.WorkQueueItemStatus.ProcessingTimeout（處理逾時）
+#   InputValue [文字] 輸入 — 項目輸入值的更新資料。在此輸入資料前，請確認已在 Power Automate 入口網站的工作佇列設定中啟用數值更新。
+#   ProcessingResult [文字] 處理附註 — 工作佇列項目的處理附註
+#   Clear [布林，預設 False] 清除處理附註 — 啟用後，它會清除此畫面上的處理附註欄位，並從資料庫中移除先前為此項目所擷取的所有處理附註
+# 可能的錯誤：WorkQueueItemNotFoundError、WorkQueueItemOnHoldError、SchemaValidationInvalidInputError、WorkQueueItemInputUpdateNotAllowedError、FailedToUpdateWorkQueueItemError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

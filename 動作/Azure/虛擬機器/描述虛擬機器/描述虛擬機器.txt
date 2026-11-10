@@ -1,0 +1,32 @@
+# 【模式 DescribeAllVirtualMachines】取得所有虛擬機器的所有資訊
+Azure.DescribeVirtualMachine.DescribeAllVirtualMachines AzureClient: `` Status: Azure.VMStatus.Any VirtualMachines=> VirtualMachines
+
+# 【模式 DescribeVirtualMachinesByResourceGroup】取得所指定資源群組之虛擬機器的資訊
+Azure.DescribeVirtualMachine.DescribeVirtualMachinesByResourceGroup AzureClient: `` ResourceGroup: `` Status: Azure.VMStatus.Any VirtualMachines=> VirtualMachines
+
+# 【模式 DescribeVirtualMachinesByName】取得具有指定名稱之虛擬機器的資訊
+Azure.DescribeVirtualMachine.DescribeVirtualMachinesByName AzureClient: `` VirtualMachineName: `` Status: Azure.VMStatus.Any VirtualMachines=> VirtualMachines
+
+# 【模式 DescribeVirtualMachinesByNameAndResourceGroup】取得具有指定名稱和資源群組之虛擬機器的資訊
+Azure.DescribeVirtualMachine.DescribeVirtualMachinesByNameAndResourceGroup AzureClient: `` ResourceGroup: `` VirtualMachineName: `` Status: Azure.VMStatus.Any VirtualMachines=> VirtualMachines
+
+# ==================== 說明 ====================
+# 動作：描述虛擬機器  (Azure.DescribeVirtualMachine)
+# 英文名稱：Describe virtual machine
+# 用途：根據指定的準則取得虛擬機器的所有資訊
+# 位置：Azure > 虛擬機器
+# 輸入參數：
+#   AzureClient [AzureClient] Azure 用戶端 — 用來連線 Azure 的用戶端
+#   RetrieveVMMode [選項，預設 All] 描述虛擬機器 — 指定要描述的虛擬機器
+#       可用值：Azure.RetrieveAzureResourceMode.All（所有）、Azure.RetrieveAzureResourceMode.ByResourceGroup（具有指定的資源群組）、Azure.RetrieveAzureResourceMode.ByName（在所有資源群組中具有指定的名稱）、Azure.RetrieveAzureResourceMode.ByResourceGroupAndName（在指定的資源群組中具有特定名稱）
+#   ResourceGroup [文字] 資源群組 — 虛擬機器的資源群組
+#   VirtualMachineName [文字] 虛擬機器名稱 — 虛擬機器的名稱
+#   Status [選項，預設 Any] 狀態 — 虛擬機器的狀態
+#       可用值：Azure.VMStatus.Running（正在執行）、Azure.VMStatus.Deallocating（正在解除配置）、Azure.VMStatus.Deallocated（已解除配置）、Azure.VMStatus.Starting（正在啟動）、Azure.VMStatus.Stopped（已停止）、Azure.VMStatus.Stopping（正在停止）、Azure.VMStatus.Unknown（未知）、Azure.VMStatus.Any（任何）
+# 產生的變數：
+#   VirtualMachines [List<AzureVirtualMachine>] 虛擬機器 — 所擷取包含所有相關資訊的虛擬機器
+# 可能的錯誤：VirtualMachineNotFoundError、ResourceGroupNotFoundError、FailedToDescribeVirtualMachinesError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

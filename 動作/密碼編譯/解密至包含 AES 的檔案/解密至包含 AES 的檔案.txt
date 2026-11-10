@@ -1,0 +1,43 @@
+# 【模式 DecryptToFileWithAES】根據指定的金鑰和編碼格式，將字串解密至包含 AES 的檔案
+Cryptography.DecryptToFile.DecryptToFileWithAES Encoding: Cryptography.EncryptionEncoding.Unicode TextToDecrypt: `` DecryptionKey: `` DecryptToFile: `` IfFileExists: Cryptography.IfFileExists.AddSequentialSuffix Padding: Cryptography.PaddingMode.PKCS7 KeySize: Cryptography.AESKeySize.Bits256 DecryptedFile=> DecryptedFile
+
+# 【模式 DecryptToFileWithAESUseSalt】根據指定的金鑰、編碼格式和 Salt 處理，將字串解密至包含 AES 的檔案
+Cryptography.DecryptToFile.DecryptToFileWithAESUseSalt Encoding: Cryptography.EncryptionEncoding.Unicode TextToDecrypt: `` DecryptionKey: `` DecryptToFile: `` IfFileExists: Cryptography.IfFileExists.AddSequentialSuffix Padding: Cryptography.PaddingMode.PKCS7 KeySize: Cryptography.AESKeySize.Bits256 Salt: `` Iterations: 100000 HashAlgorithm: Cryptography.EncryptionHashAlgorithm.SHA256 DecryptedFile=> DecryptedFile
+
+# 【模式 DecryptToFileWithAESUseIV】根據指定的金鑰、編碼格式和初始化向量，將字串解密至包含 AES 的檔案
+Cryptography.DecryptToFile.DecryptToFileWithAESUseIV Encoding: Cryptography.EncryptionEncoding.Unicode TextToDecrypt: `` DecryptionKey: `` DecryptToFile: `` IfFileExists: Cryptography.IfFileExists.AddSequentialSuffix Padding: Cryptography.PaddingMode.PKCS7 KeySize: Cryptography.AESKeySize.Bits256 InitializationVector: `` DecryptedFile=> DecryptedFile
+
+# 【模式 DecryptToFileWithAESUseSaltAndIV】根據指定的金鑰、編碼格式、Salt 處理和初始化向量，將字串解密至包含 AES 的檔案
+Cryptography.DecryptToFile.DecryptToFileWithAESUseSaltAndIV Encoding: Cryptography.EncryptionEncoding.Unicode TextToDecrypt: `` DecryptionKey: `` DecryptToFile: `` IfFileExists: Cryptography.IfFileExists.AddSequentialSuffix Padding: Cryptography.PaddingMode.PKCS7 KeySize: Cryptography.AESKeySize.Bits256 Salt: `` Iterations: 100000 HashAlgorithm: Cryptography.EncryptionHashAlgorithm.SHA256 InitializationVector: `` DecryptedFile=> DecryptedFile
+
+# ==================== 說明 ====================
+# 動作：解密至包含 AES 的檔案  (Cryptography.DecryptToFile)
+# 英文名稱：Decrypt to file with AES
+# 用途：根據指定的金鑰和編碼格式，將字串解密至包含 AES 的檔案
+# 位置：密碼編譯
+# 輸入參數：
+#   Encoding [選項，預設 Unicode] 編碼 — 要解密文字的編碼
+#       可用值：Cryptography.EncryptionEncoding.DefaultEncoding（系統預設）、Cryptography.EncryptionEncoding.ANSI（ASCII）、Cryptography.EncryptionEncoding.Unicode（Unicode）、Cryptography.EncryptionEncoding.BigEndianUnicode（位元組由大到小 Unicode）、Cryptography.EncryptionEncoding.UTF8（UTF-8）
+#   TextToDecrypt [文字] 要解密的文字 — 要採用 Base64 字串格式解密的文字
+#   DecryptionKey [文字(可加密)] 解密金鑰 — 要使用的解密金鑰
+#   DecryptToFile [FileObject] 解密至檔案 — 要儲存已解密文字的檔案
+#   IfFileExists [選項，預設 AddSequentialSuffix] 如果檔案已存在 — 指定當目的地檔案已經存在時應採取的行動
+#       可用值：Cryptography.IfFileExists.Overwrite（覆寫）、Cryptography.IfFileExists.DoNotModifyFiles（不要解密至檔案）、Cryptography.IfFileExists.AddSequentialSuffix（新增循序尾碼）
+#   Padding [選項，預設 PKCS7] 邊框間距 — 要用於所選解密演算法的填補
+#       可用值：Cryptography.PaddingMode.None（無​​）、Cryptography.PaddingMode.PKCS7（PKCS7）、Cryptography.PaddingMode.Zeros（零）、Cryptography.PaddingMode.ANSIX923（ANSIX923）、Cryptography.PaddingMode.ISO10126（ISO10126）
+#   KeySize [選項，預設 Bits256] 金鑰大小 — 要用於解密的金鑰大小
+#       可用值：Cryptography.AESKeySize.Bits128（128 位元）、Cryptography.AESKeySize.Bits192（192 位元）、Cryptography.AESKeySize.Bits256（256 位元）
+#   UseSalt [布林，預設 False] 使用 Salt 處理 — 指定是否要使用 Salt 處理來進行解密
+#   Salt [文字] 進行 Salt 處理 — 要用於 Base64 字串格式解密的 Salt 處理
+#   Iterations [整數，預設 100000] 反覆項目 — 要使用的反覆項目數量。請注意，這必須與加密輸入的反覆項目相同。請使用至少為 100000 的反覆項目計數，以降低暴力密碼破解攻擊的風險
+#   UseIV [布林，預設 False] 使用初始化向量 — 指定是否使用初始化向量。輸入 Base64 字串格式的初始化向量
+#   HashAlgorithm [選項，預設 SHA256] 雜湊演算法 — 用以解密檔案的雜湊演算法。注意，這必須與加密輸入的雜湊演算法相同。SHA1 易發生衝突。建議使用 SHA256 以上
+#       可用值：Cryptography.EncryptionHashAlgorithm.SHA1（SHA1）、Cryptography.EncryptionHashAlgorithm.SHA256（SHA256）、Cryptography.EncryptionHashAlgorithm.SHA384（SHA384）、Cryptography.EncryptionHashAlgorithm.SHA512（SHA512）
+#   InitializationVector [文字] 初始化向量 — 要用於解密的初始化向量
+# 產生的變數：
+#   DecryptedFile [FileObject] 解密的檔案 — 可供日後處理的已解密檔案
+# 可能的錯誤：DecryptToFileError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

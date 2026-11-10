@@ -1,0 +1,29 @@
+# 【模式 IsInstalled】檢查服務是否已安裝
+Services.IfServiceAction.IsInstalled Service: ``
+
+# 【模式 IsNotInstalled】檢查服務是否未安裝
+Services.IfServiceAction.IsNotInstalled Service: ``
+
+# 【模式 IsStopped】檢查服務是否已停止
+Services.IfServiceAction.IsStopped Service: ``
+
+# 【模式 IsRunning】檢查服務是否正在執行
+Services.IfServiceAction.IsRunning Service: ``
+
+# 【模式 IsPaused】檢查服務是否已暫停
+Services.IfServiceAction.IsPaused Service: ``
+
+# ==================== 說明 ====================
+# 動作：如果服務  (Services.IfServiceAction)
+# 英文名稱：If service
+# 用途：根據服務是否正在執行、已暫停、已停止或已在電腦上安裝，標示條件動作區塊的開頭
+# 位置：Windows 服務
+# 輸入參數：
+#   Service [文字]
+#   ServiceStatus [選項，預設 IsRunning]
+#       可用值：Services.IfService.IsStopped（已停止）、Services.IfService.IsInstalled（已安裝）、Services.IfService.IsNotInstalled（未安裝）、Services.IfService.IsRunning（正在執行）、Services.IfService.IsPaused（已暫停）
+# 可能的錯誤：ServiceNotFoundError、RetrieveStatusForServiceError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,19 @@
+File.WriteText File: `` TextToWrite: `` AppendNewLine: True IfFileExists: File.IfFileExists.Overwrite Encoding: File.FileEncoding.Unicode
+
+# ==================== 說明 ====================
+# 動作：將文字寫入檔案  (File.WriteText)
+# 英文名稱：Write text to file
+# 用途：寫入或附加文字至檔案
+# 位置：檔案
+# 輸入參數：
+#   File [FileObject] 檔案路徑 — 要寫入文字的檔案。這可以是檔案路徑，或是包含檔案或文字路徑的變數
+#   TextToWrite [一般值] 要寫入的文字 — 要寫入指定檔案的文字
+#   AppendNewLine [布林，預設 True] 附加新行 — 指定是否在整體文字結尾附加新行，以便寫入檔案
+#   IfFileExists [選項，預設 Overwrite] 如果檔案已存在 — 指定是否覆寫現有內容，或附加至現有內容的結尾。如果檔案不存在，這個動作會自動建立此檔案
+#       可用值：File.IfFileExists.Overwrite（覆寫現有內容）、File.IfFileExists.Append（附加內容）
+#   Encoding [選項，預設 Unicode] 編碼 — 要寫入文字檔案之指定文字所使用的編碼
+#       可用值：File.FileEncoding.DefaultEncoding（系統預設）、File.FileEncoding.UTF8（UTF-8）、File.FileEncoding.Unicode（Unicode）、File.FileEncoding.BigEndianUnicode（Unicode (位元組由大到小)）、File.FileEncoding.UTF8NoBOM（UTF-8 (沒有位元組順序標記)）、File.FileEncoding.UnicodeNoBOM（Unicode (沒有位元組順序標記)）、File.FileEncoding.ANSI（ASCII）
+# 可能的錯誤：WriteTextToFileError、InvalidDirectoryError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

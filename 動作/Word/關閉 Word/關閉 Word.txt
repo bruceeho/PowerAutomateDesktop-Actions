@@ -1,0 +1,26 @@
+# 【模式 Close】關閉 Word 執行個體
+Word.CloseWord.Close Instance: ``
+
+# 【模式 CloseAndSave】關閉並儲存 Word 執行個體
+Word.CloseWord.CloseAndSave Instance: ``
+
+# 【模式 CloseAndSaveAs】關閉 Word 執行個體並以指定格式儲存
+Word.CloseWord.CloseAndSaveAs Instance: `` DocumentFormat: Word.WordFormat.FromExtension DocumentPath: ``
+
+# ==================== 說明 ====================
+# 動作：關閉 Word  (Word.CloseWord)
+# 英文名稱：Close Word
+# 用途：關閉 Word 執行個體
+# 位置：Word
+# 輸入參數：
+#   Instance [WordInstanceHandle] Word 執行個體 — 要關閉的 Word 執行個體。此變數先前必須已使用「啟動 Word」或「附加至執行中的 Word」動作完成指定。
+#   CloseMode [選項，預設 DoNotSave] 在關閉 Word 之前 — 指定是否在關閉執行個體之前儲存此執行個體的文件及如何執行
+#       可用值：Word.CloseWordMode.DoNotSave（不要儲存文件）、Word.CloseWordMode.Save（儲存文件）、Word.CloseWordMode.SaveAs（另存文件為）
+#   DocumentFormat [選項，預設 FromExtension] 文件格式 — 文件的格式
+#       可用值：Word.WordFormat.DOCX（Word 文件 (*.docx)）、Word.WordFormat.DOCM（已啟用 Word 巨集的文件 (*.docm)）、Word.WordFormat.DOC（Word 97-2003 文件 (*.doc)）、Word.WordFormat.DOTX（Word 範本 (*.dotx)）、Word.WordFormat.DOTM（已啟用 Word 巨集的範本 (*.dotm)）、Word.WordFormat.DOT（Word 97-2003 文件範本 (*.dot)）、Word.WordFormat.PDF（PDF (*.pdf)）、Word.WordFormat.XPS（XPS 文件 (*.xps)）、Word.WordFormat.WebPageArchive（單一檔案網頁 (*.mhtm;*.mhtml)）、Word.WordFormat.WebPage（網頁 (*.htm;*.html)）、Word.WordFormat.WebPageFiltered（網頁，已篩選 (*.htm;*.html)）、Word.WordFormat.RTF（RTF 格式 (*.rtf)）、Word.WordFormat.Text（純文字 (*.txt)）、Word.WordFormat.TextLineBreaks（帶分行符號的文字 (*.txt)）、Word.WordFormat.DOSText（DOS 文字 (*.txt)）、Word.WordFormat.DOSTextLineBreaks（帶分行符號的 DOS 文字 (*.txt)）、Word.WordFormat.UnicodeText（Unicode 文字 (*.txt)）、Word.WordFormat.XML（Word XML 文件 (*.xml)）、Word.WordFormat.StrictOpenXMLDocument（Strict Open XML 文件 (*.docx)）、Word.WordFormat.ODT（OpenDocument 文字 (*.odt)）、Word.WordFormat.FromExtension（預設 (根據副檔名)）
+#   DocumentPath [FileObject] 文件路徑 — 文件的完整路徑。根據文件格式參數中的選擇，插入想要的檔案副檔名。
+# 可能的錯誤：CloseWordError、SaveWordError、WordOperationOnReadOnlyDocumentError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

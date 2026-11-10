@@ -1,0 +1,22 @@
+# 【模式 ActivateWorksheetByIndex】使用其索引，啟用 Excel 執行個體的特定工作表
+Excel.SetActiveWorksheet.ActivateWorksheetByIndex Instance: `` Index: ``
+
+# 【模式 ActivateWorksheetByName】使用其名稱，啟用 Excel 執行個體的特定工作表
+Excel.SetActiveWorksheet.ActivateWorksheetByName Instance: `` Name: ``
+
+# ==================== 說明 ====================
+# 動作：設定使用中 Excel 工作表  (Excel.SetActiveWorksheet)
+# 英文名稱：Set active Excel worksheet
+# 用途：啟用 Excel 執行個體的特定工作表
+# 位置：Excel
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 指定 Excel 執行個體。這個變數先前必須已使用「啟動 Excel」動作完成指定
+#   FindWorksheetBy [選項，預設 Name] 啟用工作表時搭配 — 指定要依名稱或索引尋找工作表
+#       可用值：Excel.FindWorksheetBy.Index（索引）、Excel.FindWorksheetBy.Name（名字）
+#   Name [文字] 工作表名稱 — 要啟用之工作表的名稱
+#   Index [整數] 工作表索引 — 要啟用之工作表的索引編號。編號從 1 開始，表示第一個工作表的索引是 1，第二張工作表的索引是 2，以此類推。
+# 可能的錯誤：WorksheetNotFoundError、ActivateWorksheetError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

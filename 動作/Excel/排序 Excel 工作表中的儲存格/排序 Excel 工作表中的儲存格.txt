@@ -1,0 +1,36 @@
+# 【模式 SortWorksheet】提供欄名稱或索引和排序方向，以排序 Excel 執行個體的工作表。
+Excel.SortCellsFromExcel.SortWorksheet Instance: `` SortParameters: `` FirstRowIsHeader: False
+
+# 【模式 SortTable】排序 Excel 執行個體之使用中工作表中表格的儲存格
+Excel.SortCellsFromExcel.SortTable Instance: `` TableName: `` SortParameters: ``
+
+# 【模式 SortRangeNamedCell】排序 Excel 執行個體之使用中工作表中的具名儲存格
+Excel.SortCellsFromExcel.SortRangeNamedCell Instance: `` NamedCell: `` SortParameters: `` FirstRowIsHeader: False
+
+# 【模式 SortRangeCoordinates】排序 Excel 執行個體之使用中工作表中的儲存格範圍
+Excel.SortCellsFromExcel.SortRangeCoordinates Instance: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` SortParameters: `` FirstRowIsHeader: False
+
+# ==================== 說明 ====================
+# 動作：排序 Excel 工作表中的儲存格  (Excel.SortCellsFromExcel)
+# 英文名稱：Sort cells in Excel worksheet
+# 用途：排序 Excel 工作表中的儲存格。
+# 位置：Excel
+# 輸入參數：
+#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要使用的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
+#   SortMode [選項，預設 Sheet] 排序欄於 — 指定要排序的欄是表格的一部分、依名稱或絕對座標指定的範圍，還是一般使用中工作表的一部分
+#       可用值：Excel.SortMode.Sheet（使用中工作表）、Excel.SortMode.Table（表格）、Excel.SortMode.Range（範圍）
+#   SortRangeMode [選項，預設 NamedCell] 範圍 — 指定要使用具名儲存格或絕對欄/索引來排序的範圍
+#       可用值：Excel.SortRangeMode.NamedCell（具名儲存格）、Excel.SortRangeMode.Coordinates（特定範圍）
+#   TableName [文字] 資料表名稱 — 表格的名稱
+#   NamedCell [文字] 儲存格名稱 — 代表範圍的名稱
+#   StartColumn [文字] 起始欄 — 第一欄的索引或字母
+#   StartRow [整數] 起始列 — 第一個列號。編號從 1 開始
+#   EndColumn [文字] 結尾欄 — 最後一欄的索引或字母
+#   EndRow [整數] 結尾列 — 最後一個列號。編號從 1 開始
+#   SortParameters [資料表] 排序方式 — 要套用的排序規則
+#   FirstRowIsHeader [布林，預設 False] 第一列為標題 — 指示工作表的第一列是標題
+# 可能的錯誤：SortCellsFromExcel
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

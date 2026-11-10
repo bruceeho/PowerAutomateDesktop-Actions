@@ -1,0 +1,32 @@
+# 【模式 CreateNewTab】建立新索引標籤，並瀏覽至指定 URL (Microsoft Edge、Chrome 和 Firefox 可支援)
+WebAutomation.CreateNewTab.CreateNewTab BrowserInstance: `` Url: `` WaitForPageToLoadTimeout: 60 NewBrowserInstance=> NewBrowserInstance
+
+# 【模式 CreateNewTabCloseDialog】建立新索引標籤並瀏覽至指定 URL。如果快顯對話方塊出現，請將它關閉 (Microsoft Edge、Chrome 和 Firefox 可支援)。
+WebAutomation.CreateNewTab.CreateNewTabCloseDialog BrowserInstance: `` Url: `` WaitForPageToLoadTimeout: 60 NewBrowserInstance=> NewBrowserInstance
+
+# 【模式 CreateNewTabPressDialogButton】建立新索引標籤並瀏覽至指定 URL，並於快顯對話方塊出現時，按下指定的按鈕 (Microsoft Edge、Chrome 和 Firefox 可支援)
+WebAutomation.CreateNewTab.CreateNewTabPressDialogButton BrowserInstance: `` Url: `` WaitForPageToLoadTimeout: 60 DialogButton: $'''OK''' NewBrowserInstance=> NewBrowserInstance
+
+# 【模式 CreateNewTabNoWait】建立新索引標籤並瀏覽至指定 URL，但不要等待網頁載入 (Microsoft Edge、Chrome 和 Firefox 可支援)
+WebAutomation.CreateNewTab.CreateNewTabNoWait BrowserInstance: `` Url: `` NewBrowserInstance=> NewBrowserInstance
+
+# ==================== 說明 ====================
+# 動作：建立新索引標籤  (WebAutomation.CreateNewTab)
+# 英文名稱：Create new tab
+# 用途：建立新索引標籤，並瀏覽至指定 URL (Microsoft Edge、Chrome 和 Firefox 可支援)
+# 位置：瀏覽器自動化
+# 輸入參數：
+#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
+#   Url [文字] 要瀏覽的目標 URL — 輸入要瀏覽的目標 URL 或包含 URL 的變數
+#   WaitForPageToLoad [布林，預設 True] 等待頁面載入 — 指定是否要等待新網頁完整載入再繼續進行
+#   WaitForPageToLoadTimeout [整數，預設 60] 網頁載入逾時 — 設定動作擲回錯誤之前的頁面載入時間，以秒為單位
+#   HandleDialogAction [選項，預設 DoNothing] 如果快顯對話方塊出現 — 指定若載入網頁時出現快顯對話方塊，要執行的操作
+#       可用值：WebAutomation.HandleDialogAction.CloseIt（關閉它）、WebAutomation.HandleDialogAction.PressButton（按下按鈕）、WebAutomation.HandleDialogAction.DoNothing（不執行任何動作）
+#   DialogButton [文字，預設 OK] 要按下的對話方塊按鈕 — 輸入快顯對話方塊出現時要按下的對話方塊按鈕
+# 產生的變數：
+#   NewBrowserInstance [WebBrowserInstanceHandle] 新網頁瀏覽器執行個體 — 要用於 Web 自動化動作的新網頁瀏覽器執行個體
+# 可能的錯誤：InvalidUrlError、CreateNewTabError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,24 @@
+# 【模式 GetSelectedRadiobutton】擷取選項按鈕群組中所選取選項按鈕的名稱
+UIAutomation.GetSelectedRadiobuttonInWindow.GetSelectedRadiobutton Control: `` BringToFront: True SelectedRadiobutton=> SelectedRadiobutton
+
+# 【模式 GetRadioButtonState】擷取所選取的選項按鈕狀態
+UIAutomation.GetSelectedRadiobuttonInWindow.GetRadioButtonState Control: `` BringToFront: True RadiobuttonState=> RadiobuttonState
+
+# ==================== 說明 ====================
+# 動作：取得視窗中選取的選項按鈕  (UIAutomation.GetSelectedRadiobuttonInWindow)
+# 英文名稱：Get selected radio button in window
+# 用途：擷取選項按鈕群組中所選取選項按鈕的名稱，或特定選項按鈕的狀態
+# 位置：使用者介面自動化 > 資料擷取
+# 輸入參數：
+#   Control [UIControl] UI 元素 — 選項按鈕或選項按鈕群組
+#   Operation [選項，預設 GetSelectedRadiobuttonInGroup] 作業 — 指定要擷取選項按鈕群組內所選取選項按鈕的名稱，或只擷取單一選項按鈕的狀態
+#       可用值：UIAutomation.RadiobuttonScanMode.GetSelectedRadiobuttonInGroup（取得群組中所選取選項按鈕的名稱）、UIAutomation.RadiobuttonScanMode.GetRadiobuttonState（取得選項按鈕的狀態）
+#   BringToFront [布林，預設 True] 移到最上層 — 指定在執行期間是否應將包含 UI 元素的視窗放在最上層。如果停用此選項，動作將在背景執行。請注意，並非所有 UI 元素都與停用該選項相容。此外，如果執行動作需要捲動，停用此選項可能無法擷取所有元素。
+# 產生的變數：
+#   RadiobuttonState [布林] 選項按鈕狀態 — 所選取選項按鈕的狀態
+#   SelectedRadiobutton [文字] 選取的選項按鈕名稱 — 指定的選項按鈕群組內選取的選項按鈕
+# 可能的錯誤：RetrieveRadioButtonStateError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,0 +1,15 @@
+FTP.RenameFile Connection: `` FileToRename: `` NewFileName: ``
+
+# ==================== 說明 ====================
+# 動作：重新命名 FTP 檔案  (FTP.RenameFile)
+# 英文名稱：Rename FTP File
+# 用途：重新命名位在 FTP 伺服器上的檔案
+# 位置：FTP
+# 輸入參數：
+#   Connection [FtpConnectionBase] FTP 連線 — 要使用的 FTP 連線。這個變數先前必須已使用「開啟 FTP」連線動作完成指定
+#   FileToRename [FtpFileObject] 要重新命名的檔案 — 要重新命名的檔案
+#   NewFileName [文字] 新檔名 — 檔案的新名稱。輸入包含路徑的名稱會將檔案移至該位置。如果該位置不存在，此動作將會擲回例外狀況
+# 可能的錯誤：NotConnectedError、CannotRenameFileError、FileNotFoundError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

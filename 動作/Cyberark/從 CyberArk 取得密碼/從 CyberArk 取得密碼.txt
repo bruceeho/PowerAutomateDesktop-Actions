@@ -1,0 +1,38 @@
+# 【模式 GetPasswordWithFileCertificate】使用從檔案載入的憑證，從 CyberArk 取得密碼
+Cyberark.GetPassword.GetPasswordWithFileCertificate ServerAddress: `` ApplicationId: `` Safe: `` Folder: `` Object: `` AcceptUntrustedCertificates: False CertificateFilePath: `` CertificateFilePassword: `` Timeout: 30 Response=> Response Password=> Password PlainTextPassword=> PlainTextPassword
+
+# 【模式 GetPassword】在無憑證情況下從 CyberArk 取得密碼
+Cyberark.GetPassword.GetPassword ServerAddress: `` ApplicationId: `` Safe: `` Folder: `` Object: `` AcceptUntrustedCertificates: False Timeout: 30 Response=> Response Password=> Password PlainTextPassword=> PlainTextPassword
+
+# 【模式 GetPasswordWithStoreCertificate】使用從存放區載入的憑證，從 CyberArk 取得密碼
+Cyberark.GetPassword.GetPasswordWithStoreCertificate ServerAddress: `` ApplicationId: `` Safe: `` Folder: `` Object: `` AcceptUntrustedCertificates: False UseOnlyValidCertificate: False StoreCertificatesPaths: `` Timeout: 30 Response=> Response Password=> Password PlainTextPassword=> PlainTextPassword
+
+# ==================== 說明 ====================
+# 動作：從 CyberArk 取得密碼  (Cyberark.GetPassword)
+# 英文名稱：Get password from CyberArk
+# 用途：從 CyberArk 擷取特定應用程式的密碼
+# 位置：Cyberark
+# 輸入參數：
+#   ServerAddress [文字] 伺服器位址 — 供 Web 要求連線的基礎 URI，例如 https://yourservice.skytap.com:111
+#   ApplicationId [文字] 這個應用程式註冊的 — 要用於 Web 要求的應用程式識別碼。若要尋找應用程式識別碼，請在網頁瀏覽器上開啟 CyberArk Password Vault 並巡覽至 [應用程式] 索引標籤。按一下 [元件]，然後開啟 Private Ark 應用程式，選取想要的保存庫。您可以在該處新增負責人。
+#   Safe [文字] 安全 — 應用程式所屬 CyberArk 的安全模式
+#   Folder [文字] 資料夾 — Web 要求查詢所需的資料夾
+#   Object [文字] 物件 — Web 要求查詢所需的物件
+#   ExtraData [文字，選填] 額外資料 — 用於 Web 要求查詢的額外資料 (如果有的話)
+#   AcceptUntrustedCertificates [布林，預設 False] 接受不受信任的憑證 — 指定是否要接受不受信任的憑證
+#   LoadCertificationFrom [選項，預設 None] 憑證位置 — 指定如何載入要求的憑證 (如有需要)
+#       可用值：Cyberark.CertificateLocation.None（不要使用憑證）、Cyberark.CertificateLocation.Store（從 Microsoft Store 載入憑證）、Cyberark.CertificateLocation.File（從檔案載入憑證）
+#   UseOnlyValidCertificate [布林，預設 False] 僅使用有效憑證 — 指定是否僅載入存放區的有效憑證
+#   CertificateFilePath [FileObject] 憑證路徑 — 憑證的路徑
+#   CertificateFilePassword [文字(可加密)] 憑證密碼 — 憑證檔案的密碼
+#   StoreCertificatesPaths [文字] 存放區憑證路徑 — 憑證存放區中的憑證路徑。憑證以序號表示。路徑應遵循 (憑證的本機路徑)/(憑證序號) 格式
+#   Timeout [整數，預設 30] 逾時 — 從 CyberArk 取得結果所需的等待時間 (以秒計)
+# 產生的變數：
+#   Response [自訂物件] 回應 — API 回應結果
+#   Password [文字(可加密)] 密碼 — 從 CyberArk 擷取的密碼
+#   PlainTextPassword [文字] 密碼 — 從 CyberArk 擷取的密碼
+# 可能的錯誤：SendWebRequestError、TimeoutExpiredError、ResponseFromWebRequestError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

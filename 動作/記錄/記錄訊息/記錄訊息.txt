@@ -1,0 +1,14 @@
+Logging.LogMessage Message: `` LogLevel: Logging.LogLevel.InfoLevel
+
+# ==================== 說明 ====================
+# 動作：記錄訊息  (Logging.LogMessage)
+# 英文名稱：Log message
+# 用途：將自訂文字訊息新增至流程執行動作詳細資料
+# 位置：記錄
+# 輸入參數：
+#   Message [文字] 訊息 — 要記錄的訊息
+#   LogLevel [選項，預設 InfoLevel] 記錄等級 — 訊息的嚴重性等級
+#       可用值：Logging.LogLevel.InfoLevel（資訊）、Logging.LogLevel.WarningLevel（警告）、Logging.LogLevel.ErrorLevel（錯誤）
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

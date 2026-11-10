@@ -1,0 +1,16 @@
+Folder.Move Folder: `` Destination: `` MovedFolder=> MovedFolder
+
+# ==================== 說明 ====================
+# 動作：移動資料夾  (Folder.Move)
+# 英文名稱：Move folder
+# 用途：將現有的資料夾移至目的地資料夾
+# 位置：資料夾
+# 輸入參數：
+#   Folder [FolderObject] 要移動的資料夾 — 輸入或選擇要移動之資料夾的完整路徑，或包含該資料夾的變數
+#   Destination [FolderObject] 目的地資料夾 — 輸入或選擇將要設為目的地資料夾的資料夾完整路徑，或包含資料夾的變數
+# 產生的變數：
+#   MovedFolder [FolderObject] 移動的資料夾 — 移動的資料夾物件 (這是一種表示，並可存取資料夾及其所有資訊)
+# 可能的錯誤：FolderNotFoundError、InvalidDestinationFolderError、MoveFolderError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

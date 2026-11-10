@@ -1,0 +1,17 @@
+Scripting.RunDotNetScript Language: Scripting.DotNetActionLanguageType.CSharp
+
+# ==================== 說明 ====================
+# 動作：執行 .NET 指令碼  (Scripting.RunDotNetScript)
+# 英文名稱：Run .NET script
+# 用途：執行使用者提供的 .NET 指令碼，並將其輸出儲存至變數。
+# 位置：指令碼處理
+# 輸入參數：
+#   Script [文字，選填] 要執行的 .NET 程式碼 — 要執行的 .NET 程式碼
+#   Language [選項，預設 CSharp] 語言 — 指令碼的語言
+#       可用值：Scripting.DotNetActionLanguageType.CSharp（C#）、Scripting.DotNetActionLanguageType.VisualBasic（VB.NET）
+#   Imports [文字，選填] .NET 指令碼匯入 — 要納入指令碼的 .NET 指令碼匯入
+#   ReferenceRootPath [FolderObject，選填] 要載入的參考 — .NET 動態連結程式庫 (.dll 檔案) 參考所在的根路徑
+# 可能的錯誤：RunDotNetScriptError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

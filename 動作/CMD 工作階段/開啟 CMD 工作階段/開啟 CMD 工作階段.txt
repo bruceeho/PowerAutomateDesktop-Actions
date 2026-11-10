@@ -1,0 +1,23 @@
+# 【模式 OpenWithCodePage】使用指定的字碼頁開啟新的 CMD 工作階段
+Cmd.Open.OpenWithCodePage Encoding: Cmd.Encoding.utf_8 Session=> Session
+
+# 【模式 Open】開啟新的 CMD 工作階段
+Cmd.Open.Open Session=> Session
+
+# ==================== 說明 ====================
+# 動作：開啟 CMD 工作階段  (Cmd.Open)
+# 英文名稱：Open CMD session
+# 用途：開啟新的 CMD 工作階段
+# 位置：CMD 工作階段
+# 輸入參數：
+#   Directory [FolderObject，選填] 工作資料夾 — 用於開始 CMD 工作階段的資料夾完整路徑 (如果適用)
+#   ChangeCodePage [布林，預設 False] 變更程式碼頁面 — 指定是否變更目前工作階段的字碼頁
+#   Encoding [選項，預設 utf_8] 編碼 — 讀取 cmd 輸出時使用的編碼
+#       可用值：Cmd.Encoding.IBM037、Cmd.Encoding.IBM437、Cmd.Encoding.IBM500、Cmd.Encoding.ASMO_708、Cmd.Encoding.DOS_720、Cmd.Encoding.ibm737、Cmd.Encoding.ibm775、Cmd.Encoding.ibm850、Cmd.Encoding.ibm852、Cmd.Encoding.IBM855、Cmd.Encoding.ibm857、Cmd.Encoding.IBM00858、Cmd.Encoding.IBM860、Cmd.Encoding.ibm861、Cmd.Encoding.DOS_862、Cmd.Encoding.IBM863、Cmd.Encoding.IBM864、Cmd.Encoding.IBM865、Cmd.Encoding.cp866、Cmd.Encoding.ibm869、Cmd.Encoding.IBM870、Cmd.Encoding.windows_874、Cmd.Encoding.cp875、Cmd.Encoding.shift_jis、Cmd.Encoding.gb2312、Cmd.Encoding.ks_c_5601_1987、Cmd.Encoding.big5、Cmd.Encoding.IBM1026、Cmd.Encoding.IBM01047、Cmd.Encoding.IBM01140、Cmd.Encoding.IBM01141、Cmd.Encoding.IBM01142、Cmd.Encoding.IBM01143、Cmd.Encoding.IBM01144、Cmd.Encoding.IBM01145、Cmd.Encoding.IBM01146、Cmd.Encoding.IBM01147、Cmd.Encoding.IBM01148、Cmd.Encoding.IBM01149、Cmd.Encoding.utf_16、Cmd.Encoding.utf_16BE、Cmd.Encoding.windows_1250、Cmd.Encoding.windows_1251、Cmd.Encoding.Windows_1252、Cmd.Encoding.windows_1253、Cmd.Encoding.windows_1254、Cmd.Encoding.windows_1255、Cmd.Encoding.windows_1256、Cmd.Encoding.windows_1257、Cmd.Encoding.windows_1258、Cmd.Encoding.Johab、Cmd.Encoding.macintosh、Cmd.Encoding.x_mac_japanese、Cmd.Encoding.x_mac_chinesetrad、Cmd.Encoding.x_mac_korean、Cmd.Encoding.x_mac_arabic、Cmd.Encoding.x_mac_hebrew、Cmd.Encoding.x_mac_greek、Cmd.Encoding.x_mac_cyrillic、Cmd.Encoding.x_mac_chinesesimp、Cmd.Encoding.x_mac_romanian、Cmd.Encoding.x_mac_ukrainian、Cmd.Encoding.x_mac_thai、Cmd.Encoding.x_mac_ce、Cmd.Encoding.x_mac_icelandic、Cmd.Encoding.x_mac_turkish、Cmd.Encoding.x_mac_croatian、Cmd.Encoding.utf_32、Cmd.Encoding.utf_32BE、Cmd.Encoding.x_Chinese_CNS、Cmd.Encoding.x_cp20001、Cmd.Encoding.x_Chinese_Eten、Cmd.Encoding.x_cp20003、Cmd.Encoding.x_cp20004、Cmd.Encoding.x_cp20005、Cmd.Encoding.x_IA5、Cmd.Encoding.x_IA5_German、Cmd.Encoding.x_IA5_Swedish、Cmd.Encoding.x_IA5_Norwegian、Cmd.Encoding.us_ascii、Cmd.Encoding.x_cp20261、Cmd.Encoding.x_cp20269、Cmd.Encoding.IBM273、Cmd.Encoding.IBM277、Cmd.Encoding.IBM278、Cmd.Encoding.IBM280、Cmd.Encoding.IBM284、Cmd.Encoding.IBM285、Cmd.Encoding.IBM290、Cmd.Encoding.IBM297、Cmd.Encoding.IBM420、Cmd.Encoding.IBM423、Cmd.Encoding.IBM424、Cmd.Encoding.x_EBCDIC_KoreanExtended、Cmd.Encoding.IBM_Thai、Cmd.Encoding.koi8_r、Cmd.Encoding.IBM871、Cmd.Encoding.IBM880、Cmd.Encoding.IBM905、Cmd.Encoding.IBM00924、Cmd.Encoding.EUC_JP_20932、Cmd.Encoding.x_cp20936、Cmd.Encoding.x_cp20949、Cmd.Encoding.cp1025、Cmd.Encoding.koi8_u、Cmd.Encoding.iso_8859_1、Cmd.Encoding.iso_8859_2、Cmd.Encoding.iso_8859_3、Cmd.Encoding.iso_8859_4、Cmd.Encoding.iso_8859_5、Cmd.Encoding.iso_8859_6、Cmd.Encoding.iso_8859_7、Cmd.Encoding.iso_8859_8、Cmd.Encoding.iso_8859_9、Cmd.Encoding.iso_8859_13、Cmd.Encoding.iso_8859_15、Cmd.Encoding.x_Europa、Cmd.Encoding.iso_8859_8_i、Cmd.Encoding.iso_2022_jp_50220、Cmd.Encoding.csISO2022JP、Cmd.Encoding.iso_2022_jp_50222、Cmd.Encoding.iso_2022_kr、Cmd.Encoding.x_cp50227、Cmd.Encoding.euc_jp_51932、Cmd.Encoding.EUC_CN、Cmd.Encoding.euc_kr、Cmd.Encoding.hz_gb_2312、Cmd.Encoding.GB18030、Cmd.Encoding.x_iscii_de、Cmd.Encoding.x_iscii_be、Cmd.Encoding.x_iscii_ta、Cmd.Encoding.x_iscii_te、Cmd.Encoding.x_iscii_as、Cmd.Encoding.x_iscii_or、Cmd.Encoding.x_iscii_ka、Cmd.Encoding.x_iscii_ma、Cmd.Encoding.x_iscii_gu、Cmd.Encoding.x_iscii_pa、Cmd.Encoding.utf_7、Cmd.Encoding.utf_8
+# 產生的變數：
+#   Session [CmdSessionHandle] CMD 工作階段 — 要與稍後 CMD 動作搭配使用的 CMD 工作階段
+# 可能的錯誤：OpenCmdError、WorkingDirectoryDoesNotExist
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

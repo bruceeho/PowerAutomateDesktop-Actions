@@ -1,0 +1,15 @@
+FTP.UploadFolders Connection: `` Folders: `` RemoteLocation: ``
+
+# ==================== 說明 ====================
+# 動作：將資料夾上傳至 FTP  (FTP.UploadFolders)
+# 英文名稱：Upload folder(s) to FTP
+# 用途：將一或多個資料夾上傳至 FTP 伺服器
+# 位置：FTP
+# 輸入參數：
+#   Connection [FtpConnectionBase] FTP 連線 — 要使用的 FTP 連線。這個變數先前必須已使用「開啟 FTP」連線動作完成指定
+#   Folders [List<FolderObject>] 要上傳的資料夾 — 要上傳的資料夾。FTP 伺服器的使用中目錄不應該出現即將上傳的資料夾
+#   RemoteLocation [文字] 遠端位置 — 資料夾應上傳至其中的位置
+# 可能的錯誤：NotConnectedError、RemoteDirectoryDoesNotExistError、FTPConnectionAbortedError、UploadDirectoryError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

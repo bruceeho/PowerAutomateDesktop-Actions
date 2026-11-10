@@ -1,0 +1,19 @@
+Text.Replace Text: `` TextToFind: `` IsRegEx: False IgnoreCase: False ReplaceWith: `` ActivateEscapeSequences: False Result=> Result
+
+# ==================== 說明 ====================
+# 動作：取代文字  (Text.Replace)
+# 英文名稱：Replace text
+# 用途：將指定的子文字所有出現的位置都取代為其他文字。也可用於規則運算式
+# 位置：文字
+# 輸入參數：
+#   Text [文字] 要剖析的文字 — 要剖析的文字
+#   TextToFind [文字] 要尋找的文字 — 要搜尋的子文字或規則運算式
+#   IsRegEx [布林，預設 False] 使用規則運算式進行尋找與取代 — 指定子文字是否為規則運算式。規則運算式會建立各種可能的子文字範圍。例如，'\d' 表示子文字可以是任何數字
+#   IgnoreCase [布林，預設 False] 忽略大小寫 — 指定要使用區分大小寫或不區分大小寫的比對方式來尋找要取代的子文字
+#   ReplaceWith [文字] 取代為 — 要取代所找到文字的文字或規則運算式
+#   ActivateEscapeSequences [布林，預設 False] 啟用逸出序列 — 指定是否要使用特殊序列。例如，替代文字中的 '\t' 會解譯為定位字元
+# 產生的變數：
+#   Result [文字] 結果文字 — 更新後的新文字
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

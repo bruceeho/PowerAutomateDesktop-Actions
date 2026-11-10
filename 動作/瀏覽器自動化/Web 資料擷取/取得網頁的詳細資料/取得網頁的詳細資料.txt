@@ -1,0 +1,17 @@
+WebAutomation.GetDetailsOfWebPage BrowserInstance: `` DetailsType: WebAutomation.DetailsType.Description Details=> Details
+
+# ==================== 說明 ====================
+# 動作：取得網頁的詳細資料  (WebAutomation.GetDetailsOfWebPage)
+# 英文名稱：Get details of web page
+# 用途：取得網頁的屬性，像是其標題或來源文字
+# 位置：瀏覽器自動化 > Web 資料擷取
+# 輸入參數：
+#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
+#   DetailsType [選項，預設 Description] 取得 — 選取要從網頁擷取的資訊
+#       可用值：WebAutomation.DetailsType.Description（網頁描述）、WebAutomation.DetailsType.MetaKeywords（網頁中繼關鍵字）、WebAutomation.DetailsType.Title（網頁標題）、WebAutomation.DetailsType.Text（網頁文字）、WebAutomation.DetailsType.Source（網頁來源）、WebAutomation.DetailsType.URLAddress（網頁瀏覽器目前的 URL 位址）
+# 產生的變數：
+#   Details [文字] 詳細資料​​ — 從網頁擷取的詳細資料
+# 可能的錯誤：GetDetailsOfWebPageError、ElementNotFoundError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

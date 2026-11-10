@@ -1,0 +1,18 @@
+Display.SelectFolder IsTopMost: False SelectedFolder=> SelectedFolder ButtonPressed=> ButtonPressed
+
+# ==================== 說明 ====================
+# 動作：顯示選取資料夾對話方塊  (Display.SelectFolder)
+# 英文名稱：Display select folder dialog
+# 用途：顯示選取資料夾對話方塊並提示使用者選取資料夾
+# 位置：訊息方塊
+# 輸入參數：
+#   Description [文字，選填] 對話方塊描述 — 選取資料夾對話方塊的描述。例如「請選取您要將檔案複製到其中的資料夾」
+#   InitialDirectory [FolderObject，選填] 初始資料夾 — 要開啟的初始資料夾。這會是預設資料夾，除非使用者選擇了新的資料夾
+#   IsTopMost [布林，預設 False] 資料夾選取對話方塊一律保持在最上方 — 指定資料夾選取對話方塊是否應一律保持在所有其他視窗之上
+# 產生的變數：
+#   SelectedFolder [FolderObject] 選取的資料夾 — 選取的資料夾
+#   ButtonPressed [文字] 按下的按鈕 — 已按下按鈕的文字。系統會自動為使用者提供 [確定] 或 [取消] 選項
+# 可能的錯誤：SelectFolderDialogError、SelectFolderDialogInNonInteractiveModeError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

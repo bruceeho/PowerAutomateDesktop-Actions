@@ -1,0 +1,22 @@
+# 【模式 PlaySound】播放來自 WAV 檔案的音效
+Workstation.PlaySound.PlaySound WavFile: ``
+
+# 【模式 PlaySystemSound】播放系統音效
+Workstation.PlaySound.PlaySystemSound SystemSound: Workstation.SystemSound.Asterisk
+
+# ==================== 說明 ====================
+# 動作：播放音效  (Workstation.PlaySound)
+# 英文名稱：Play sound
+# 用途：播放系統音效或 wav 檔案
+# 位置：工作站
+# 輸入參數：
+#   WavFile [FileObject] 要播放的檔案 — 要播放之特定 WAV 檔案的完整路徑
+#   SystemSound [選項，預設 Asterisk] 要播放的音效 — 要播放的特定音效
+#       可用值：Workstation.SystemSound.Asterisk（星號）、Workstation.SystemSound.Beep（嗶聲）、Workstation.SystemSound.Exclamation（驚嘆號）、Workstation.SystemSound.Hand（手形）、Workstation.SystemSound.Question（問號）
+#   PlaySoundFrom [選項，預設 System] 播放音效的來源 — 要播放的音效類型
+#       可用值：Workstation.PlaySoundFrom.System（系統）、Workstation.PlaySoundFrom.File（WAV 檔案）
+# 可能的錯誤：SoundFileNotFoundError、InvalidSoundFileError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

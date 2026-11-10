@@ -1,0 +1,14 @@
+Excel.GetColumnName CellColumnIndex: `` ColumnName=> ColumnName
+
+# ==================== 說明 ====================
+# 動作：取得 Excel 工作表的資料行名稱  (Excel.GetColumnName)
+# 英文名稱：Get column name on Excel worksheet
+# 用途：取得資料行的名稱
+# 位置：Excel
+# 輸入參數：
+#   CellColumnIndex [整數] 資料行編號 — 資料行編號
+# 產生的變數：
+#   ColumnName [文字] 資料行名稱 — 資料行的名稱
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

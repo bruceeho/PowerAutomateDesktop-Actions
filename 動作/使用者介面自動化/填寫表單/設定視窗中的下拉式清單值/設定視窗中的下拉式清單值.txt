@@ -1,0 +1,26 @@
+# 【模式 ClearDropDownListValue】清除視窗表單中下拉式清單的選取選項
+UIAutomation.SetDropDownListValueInWindow.ClearDropDownListValue
+
+# 【模式 SetDropDownListValueByName】依名稱設定視窗表單中下拉式清單的選取選項
+UIAutomation.SetDropDownListValueInWindow.SetDropDownListValueByName OptionsNames: `` UseRegularExpressions: False
+
+# 【模式 SetDropDownListValueByIndex】依索引設定視窗表單中下拉式清單的選取選項
+UIAutomation.SetDropDownListValueInWindow.SetDropDownListValueByIndex OptionsIndeces: ``
+
+# ==================== 說明 ====================
+# 動作：設定視窗中的下拉式清單值  (UIAutomation.SetDropDownListValueInWindow)
+# 英文名稱：Set drop-down list value in window
+# 用途：設定或清除視窗表單中下拉式清單的選取選項
+# 位置：使用者介面自動化 > 填寫表單
+# 輸入參數：
+#   Operation [選項，預設 ClearAllOptions] 作業 — 指定要依名稱或序數位置 (1 2 3 ...) 選取值，或清除下拉式清單中選取的值
+#       可用值：UIAutomation.DropDownListOperation.ClearAllOptions（清除選取的選項）、UIAutomation.DropDownListOperation.SelectOptionsByName（依名稱選取選項）、UIAutomation.DropDownListOperation.SelectOptionsByIndex（依索引選取選項）
+#   OptionsNames [文字] 選項名稱 — 輸入要在下拉式清單中供選取的單一選項或選項清單。只有在使用複選清單時，多個選項才有意義。如果清單是單選，則只會使用清單中指定的第一個選項。
+#   OptionsIndeces [文字] 選項索引 — 輸入要在下拉式清單中供選取的單一索引或索引清單。只有在使用複選清單時，多個選項才有意義。如果清單是單選，則只會使用清單中指定的第一個選項。
+#   UseRegularExpressions [布林，預設 False] 使用規則運算式 — 指定是否要將選項名稱值解譯為規則運算式
+#   Control [UIControl]
+# 可能的錯誤：SelectOptionInDropDownError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

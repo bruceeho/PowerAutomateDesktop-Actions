@@ -1,0 +1,15 @@
+XML.RemoveElementAttribute Document: `` AttributeName: ``
+
+# ==================== 說明 ====================
+# 動作：移除 XML 元素屬性  (XML.RemoveElementAttribute)
+# 英文名稱：Remove XML element attribute
+# 用途：移除 XML 元素中的屬性
+# 位置：XML
+# 輸入參數：
+#   Document [XmlNodeObject] XML 文件 — 要移除其屬性的 XML 文件或 XML 元素
+#   XPathQuery [文字，選填] XPath 查詢 — 要尋找子元素並移除其屬性的 XPath 運算式
+#   AttributeName [文字] 屬性名稱 — 要移除的屬性名稱
+# 可能的錯誤：InvalidXPathError、XPathNoElementError、AttributeNotFoundError、RemoveAttributeError
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

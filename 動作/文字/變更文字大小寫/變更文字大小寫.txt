@@ -1,0 +1,16 @@
+Text.ChangeCase NewCase: Text.CaseOption.UpperCase Result=> Result
+
+# ==================== 說明 ====================
+# 動作：變更文字大小寫  (Text.ChangeCase)
+# 英文名稱：Change text case
+# 用途：將文字大小寫變更為大寫、小寫、字首大寫或句首大寫
+# 位置：文字
+# 輸入參數：
+#   Text [文字，選填] 要轉換的文字 — 要轉換的文字
+#   NewCase [選項，預設 UpperCase] 轉換成 — 指定要使用的文字大小寫樣式
+#       可用值：Text.CaseOption.UpperCase（大寫）、Text.CaseOption.LowerCase（小寫）、Text.CaseOption.TitleCase（字首大寫）、Text.CaseOption.SentenceCase（句首大寫）
+# 產生的變數：
+#   Result [文字] 採用新的大小寫的文字 — 新的轉換文字
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

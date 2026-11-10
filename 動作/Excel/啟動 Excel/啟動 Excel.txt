@@ -1,0 +1,35 @@
+# 【模式 Launch】使用新的 Excel 程序啟動空白 Excel 文件
+Excel.LaunchExcel.Launch Visible: True UseMachineLocale: False LoadAddInsAndMacros: False Instance=> Instance
+
+# 【模式 LaunchAndOpen】使用新的 Excel 程序啟動 Excel 並開啟文件
+Excel.LaunchExcel.LaunchAndOpen Visible: True ReadOnly: False UseMachineLocale: False LoadAddInsAndMacros: False Path: `` Instance=> Instance
+
+# 【模式 LaunchUnderExistingProcess】使用現有的 Excel 程序啟動空白 Excel 文件
+Excel.LaunchExcel.LaunchUnderExistingProcess Visible: True UseMachineLocale: False Instance=> Instance
+
+# 【模式 LaunchAndOpenUnderExistingProcess】使用現有的 Excel 程序啟動 Excel 並開啟文件
+Excel.LaunchExcel.LaunchAndOpenUnderExistingProcess Visible: True ReadOnly: False UseMachineLocale: False Path: `` Instance=> Instance
+
+# ==================== 說明 ====================
+# 動作：啟動 Excel  (Excel.LaunchExcel)
+# 英文名稱：Launch Excel
+# 用途：啟動新的 Excel 執行個體或開啟 Excel 文件
+# 位置：Excel
+# 輸入參數：
+#   Visible [布林，預設 True] 顯示執行個體 — 指定要顯示或隱藏 Excel 視窗
+#   ReadProtectionPassword [文字(可加密)，選填] 讀取保護密碼 — 採用密碼保護之 Excel 文件的讀取保護密碼
+#   LaunchInNewInstance [布林，預設 False] 新 Excel 程序下的巢狀處理 — 指定 Excel 試算表是否應在唯一的 Excel 程序下。您將無法存取其他試算表中的巨集和增益集
+#   WriteProtectionPassword [文字(可加密)，選填] 寫入保護密碼 — 採用密碼保護之 Excel 文件的寫入保護密碼
+#   ReadOnly [布林，預設 False] 以唯讀方式開啟 — 指定是否要以唯讀模式開啟儲存的文件
+#   UseMachineLocale [布林，預設 False] 使用電腦地區設定 — 指定是否使用電腦地區設定
+#   LoadAddInsAndMacros [布林，預設 False] 載入增益集和巨集 — 指定是否將增益集和巨集載入至新的 Excel 執行個體
+#   LaunchExcelMode [選項，預設 NewDocument] 啟動 Excel — 指定要開啟新的 Excel 文件或開啟現有文件
+#       可用值：Excel.LaunchExcelMode.NewDocument（使用空白文件）、Excel.LaunchExcelMode.StoredDocument（並開啟以下文件）
+#   Path [FileObject] 文件路徑 — 要開啟之現有 Excel 文件的完整路徑
+# 產生的變數：
+#   Instance [ExcelInstanceHandle] 將 Excel 執行個體儲存至 — 可供後續 Excel 動作使用的特定 Excel 執行個體。這個做法可讓使用者指定要存取的 Excel 試算表
+# 可能的錯誤：LaunchExcelError、OpenDocumentError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取

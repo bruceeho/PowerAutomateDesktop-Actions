@@ -1,0 +1,30 @@
+# 【模式 GetAllSnapshots】取得所有快照集
+Azure.GetSnapshots.GetAllSnapshots AzureClient: `` Snapshots=> Snapshots
+
+# 【模式 GetSnapshotsByResourceGroup】取得位於所指定資源群組中的快照集
+Azure.GetSnapshots.GetSnapshotsByResourceGroup AzureClient: `` ResourceGroup: `` Snapshots=> Snapshots
+
+# 【模式 GetSnapshotsByName】取得具有指定名稱的快照集
+Azure.GetSnapshots.GetSnapshotsByName AzureClient: `` SnapshotName: `` Snapshots=> Snapshots
+
+# 【模式 GetSnapshotsByNameAndResourceGroup】取得具有指定名稱和資源群組的快照集
+Azure.GetSnapshots.GetSnapshotsByNameAndResourceGroup AzureClient: `` ResourceGroup: `` SnapshotName: `` Snapshots=> Snapshots
+
+# ==================== 說明 ====================
+# 動作：取得快照集  (Azure.GetSnapshots)
+# 英文名稱：Get snapshots
+# 用途：根據指定的準則取得快照集
+# 位置：Azure > 虛擬機器 > Snapshots
+# 輸入參數：
+#   AzureClient [AzureClient] Azure 用戶端 — 用來連線 Azure 的用戶端
+#   RetrieveSnapshotsMode [選項，預設 All] 擷取快照集 — 指定要擷取的快照集
+#       可用值：Azure.RetrieveAzureResourceMode.All（所有）、Azure.RetrieveAzureResourceMode.ByResourceGroup（具有指定的資源群組）、Azure.RetrieveAzureResourceMode.ByName（在所有資源群組中具有指定的名稱）、Azure.RetrieveAzureResourceMode.ByResourceGroupAndName（在指定的資源群組中具有特定名稱）
+#   ResourceGroup [文字] 資源群組 — 快照集所在的資源群組
+#   SnapshotName [文字] 快照集名稱 — 快照集的名稱
+# 產生的變數：
+#   Snapshots [List<AzureSnapshot>] 快照集 — 所擷取包含所有相關資訊的快照集
+# 可能的錯誤：SnapshotNotFoundError、ResourceGroupNotFoundError、FailedToGetSnapshotsError
+# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
+# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
+# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
+# 來源：從本機 PAD 模組 DLL 自動擷取
