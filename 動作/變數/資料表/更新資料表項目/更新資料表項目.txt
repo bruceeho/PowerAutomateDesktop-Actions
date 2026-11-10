@@ -1,16 +1,1 @@
 Variables.ModifyDataTableItem DataTable: `` ColumnNameOrIndex: `` RowIndex: `` Value: ``
-
-# ==================== 說明 ====================
-# 動作：更新資料表項目  (Variables.ModifyDataTableItem)
-# 英文名稱：Update data table item
-# 用途：更新定義欄中的資料表列項目
-# 位置：變數 > 資料表
-# 輸入參數：
-#   DataTable [資料表] 資料表 — 要使用的資料表變數。此變數必須先前已由產生資料表變數的動作指定
-#   ColumnNameOrIndex [文字] 資料行 — 要更新之項目的資料行名稱或索引
-#   RowIndex [整數] 資料列 — 要更新之項目的列索引
-#   Value [一般值] 新值 — 在指定的列索引和欄更新的新值
-# 可能的錯誤：IndexOutOfRangeError、ColumnNameNotFoundError、ColumnIndexOutOfRangeError、IncompatibleTypeError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

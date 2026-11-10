@@ -1,24 +1,3 @@
-# 【模式 LaunchExistingDbInAutomationMode】以自動化模式啟動 Access，並使用新的 Access 程序開啟資料庫
 Access.LaunchAccess.LaunchExistingDbInAutomationMode Path: `` Visible: True Exclusive: False Instance=> Instance
 
-# 【模式 LaunchExistingDbInUserControlMode】以使用者互動模式啟動 Access，並使用新的 Access 程序開啟資料庫
 Access.LaunchAccess.LaunchExistingDbInUserControlMode Path: `` Exclusive: False Instance=> Instance
-
-# ==================== 說明 ====================
-# 動作：啟動 Access  (Access.LaunchAccess)
-# 英文名稱：Launch Access
-# 用途：啟動 Access 資料庫
-# 位置：Access
-# 輸入參數：
-#   Path [FileObject] 資料庫路徑 — 要開啟的 Access 資料庫的完整路徑。
-#   UserControl [布林，預設 False] 使用者互動模式 — 指定 Access 執行個體是否允許使用者互動。此模式可在流程關閉後讓應用程式保持執行，並允許使用者互動同時進行自動化，但可能會導致需要使用者注意的快顯視窗和錯誤。
-#   Visible [布林，預設 True] 顯示執行個體 — 指定要顯示或隱藏 Access 視窗。
-#   Password [文字(可加密)，選填] 資料庫密碼 — 資料庫採用密碼保護時的加密密碼。
-#   Exclusive [布林，預設 False] 獨佔 — 指定是否要以獨佔模式開啟資料庫。設定為啟用時，資料庫在開啟時無法與其他人共用。
-# 產生的變數：
-#   Instance [AccessInstanceHandle] 將 Access 執行個體儲存至 — 可供後續 Access 動作使用的特定 Access 執行個體。這可讓使用者指定要存取多個可能存在的 Access 文件的哪一個。
-# 可能的錯誤：LaunchAccessFileNotFoundError、LaunchAccessOpenCurrentDatabaseError、LaunchAccessError、LaunchAccessInstallationError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

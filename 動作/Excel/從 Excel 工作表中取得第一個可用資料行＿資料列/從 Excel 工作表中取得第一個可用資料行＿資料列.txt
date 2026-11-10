@@ -1,16 +1,1 @@
 Excel.GetFirstFreeColumnRow Instance: `` FirstFreeRow=> FirstFreeRow FirstFreeColumn=> FirstFreeColumn
-
-# ==================== 說明 ====================
-# 動作：從 Excel 工作表中取得第一個可用資料行/資料列  (Excel.GetFirstFreeColumnRow)
-# 英文名稱：Get first free column/row from Excel worksheet
-# 用途：擷取使用中工作表的第一個可用資料行和/或資料列。這在將新資料加入至已包含資料的工作表時非常有用
-# 位置：Excel
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 指定 Excel 執行個體。這個變數先前必須已使用「啟動 Excel」動作完成指定
-# 產生的變數：
-#   FirstFreeRow [整數] 第一個可用列 — 第一個完整空白資料列的數值。例如，如果資料列 7 是第一個空白資料列，則會儲存為「7」
-#   FirstFreeColumn [整數] 第一個可用欄 — 第一個完整空白資料行的數值。例如，如果資料行 F 是第一個空白資料行，則會儲存為「6」
-# 可能的錯誤：RetrieveFirstFreeColumnRowError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,38 +1,5 @@
-# 【模式 CreateManagedDisk】建立受控磁碟
 Azure.CreateManagedDisk.CreateManagedDisk AzureClient: `` DiskName: `` ResourceGroupCreateOption: Azure.ResourceGroupCreateOption.UseExisting ResourceGroup: `` Location: `` SizeInGb: `` StorageAccountType: Azure.StorageAccountType.Standard ManagedDisk=> ManagedDisk
 
-# 【模式 CreateManagedDiskFromSnapshot】從快照集建立受控磁碟
 Azure.CreateManagedDisk.CreateManagedDiskFromSnapshot AzureClient: `` DiskName: `` ResourceGroupCreateOption: Azure.ResourceGroupCreateOption.UseExisting ResourceGroup: `` Location: `` SnapshotName: `` SnapshotResourceGroup: `` SizeInGb: `` StorageAccountType: Azure.StorageAccountType.Standard ManagedDisk=> ManagedDisk
 
-# 【模式 CreateManagedDiskFromStorageBlob】從儲存體 Blob 建立受控磁碟
 Azure.CreateManagedDisk.CreateManagedDiskFromStorageBlob AzureClient: `` DiskName: `` ResourceGroupCreateOption: Azure.ResourceGroupCreateOption.UseExisting ResourceGroup: `` Location: `` BlobUrl: `` SizeInGb: `` StorageAccountType: Azure.StorageAccountType.Standard StorageAccountName: `` ManagedDisk=> ManagedDisk
-
-# ==================== 說明 ====================
-# 動作：建立受控磁碟  (Azure.CreateManagedDisk)
-# 英文名稱：Create managed disk
-# 用途：建立具有指定設定的受控磁碟
-# 位置：Azure > 虛擬機器 > Disks
-# 輸入參數：
-#   AzureClient [AzureClient] Azure 用戶端 — 用來連線 Azure 的用戶端
-#   DiskName [文字] 磁碟名稱 — 要建立的受控磁碟名稱
-#   ResourceGroupCreateOption [選項，預設 UseExisting] 資源群組選項 — 指定將建立新的資源群組，或是使用現有的資源群組
-#       可用值：Azure.ResourceGroupCreateOption.UseExisting（使用現有的）、Azure.ResourceGroupCreateOption.CreateNew（新建）
-#   ResourceGroup [文字] 資源群組名稱 — 磁碟的資源群組
-#   Location [文字] 位置 — 建立新磁碟的位置
-#   Source [選項，預設 None] 來源類型 — 指定要建立空磁碟或使用另一個磁碟的快照集，或是使用儲存體帳戶中的 Blob
-#       可用值：Azure.DiskSource.None（無）、Azure.DiskSource.Snapshot（快照集）、Azure.DiskSource.StorageBlob（儲存體 Blob）
-#   SnapshotName [文字] 快照集名稱 — 做為來源使用的受控快照集
-#   SnapshotResourceGroup [文字] 快照集的資源群組 — 快照集的資源群組
-#   BlobUrl [文字] Blob URL — Blob 的 URL
-#   SizeInGb [整數] 磁碟大小 (GB) — 磁碟大小 (GB)
-#   StorageAccountType [選項，預設 Standard] 儲存體帳戶類型 — 磁碟類型
-#       可用值：Azure.StorageAccountType.Standard（標準 HDD）、Azure.StorageAccountType.Premium（進階 SSD）、Azure.StorageAccountType.StandardSSD（標準 SSD）、Azure.StorageAccountType.UltraSSD（Ultra SSD 磁碟）
-#   StorageAccountName [文字] 儲存體帳戶名稱 — 儲存 VHD 檔案所在的儲存體帳戶名稱
-#   AvailabilityZone [文字，選填] 可用性區域 — 受控磁碟的可用性區域
-# 產生的變數：
-#   ManagedDisk [AzureManagedDisk] 建立的 Azure 受控磁碟 — 建立的受控磁碟
-# 可能的錯誤：ResourceGroupAlreadyExistsError、ResourceGroupNotFoundError、ResourceAlreadyExists、SnapshotNotFoundError、FailedToCreateDiskError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

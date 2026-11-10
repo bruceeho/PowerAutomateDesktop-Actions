@@ -1,94 +1,37 @@
-# 【模式 LaunchFirefox】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化
 WebAutomation.LaunchFirefox.LaunchFirefox Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCache: False ClearCookies: False WaitForPageToLoadTimeout: 60 Timeout: 60 PiPUserDataFolderMode: WebAutomation.PiPUserDataFolderModeEnum.AutomaticProfile TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxCustomProfile】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化
 WebAutomation.LaunchFirefox.LaunchFirefoxCustomProfile Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCache: False ClearCookies: False WaitForPageToLoadTimeout: 60 Timeout: 60 PiPUserDataFolderPath: `` TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxCloseDialog】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化。如果快顯對話方塊出現，請將它關閉。
 WebAutomation.LaunchFirefox.LaunchFirefoxCloseDialog Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCache: False ClearCookies: False WaitForPageToLoadTimeout: 60 Timeout: 60 PiPUserDataFolderMode: WebAutomation.PiPUserDataFolderModeEnum.AutomaticProfile TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxCloseDialogCustomProfile】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化。如果快顯對話方塊出現，請將它關閉。
 WebAutomation.LaunchFirefox.LaunchFirefoxCloseDialogCustomProfile Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCache: False ClearCookies: False WaitForPageToLoadTimeout: 60 Timeout: 60 PiPUserDataFolderPath: `` TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxPressDialogButton】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化，並且於快顯對話方塊出現時按下指定的按鈕
 WebAutomation.LaunchFirefox.LaunchFirefoxPressDialogButton Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCache: False ClearCookies: False WaitForPageToLoadTimeout: 60 DialogButton: $'''OK''' Timeout: 60 PiPUserDataFolderMode: WebAutomation.PiPUserDataFolderModeEnum.AutomaticProfile TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxPressDialogButtonCustomProfile】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化，並且於快顯對話方塊出現時按下指定的按鈕
 WebAutomation.LaunchFirefox.LaunchFirefoxPressDialogButtonCustomProfile Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCache: False ClearCookies: False WaitForPageToLoadTimeout: 60 DialogButton: $'''OK''' Timeout: 60 PiPUserDataFolderPath: `` TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxNoWait】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化，並且不要等待網頁載入
 WebAutomation.LaunchFirefox.LaunchFirefoxNoWait Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCache: False ClearCookies: False Timeout: 60 PiPUserDataFolderMode: WebAutomation.PiPUserDataFolderModeEnum.AutomaticProfile TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxNoWaitCustomProfile】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化，並且不要等待網頁載入
 WebAutomation.LaunchFirefox.LaunchFirefoxNoWaitCustomProfile Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCache: False ClearCookies: False Timeout: 60 PiPUserDataFolderPath: `` TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxWithDriver】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化
 WebAutomation.LaunchFirefox.LaunchFirefoxWithDriver Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCookies: False WaitForPageToLoadTimeout: 60 Timeout: 60 PiPUserDataFolderMode: WebAutomation.PiPUserDataFolderModeEnum.AutomaticProfile TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxWithDriverCustomProfile】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化
 WebAutomation.LaunchFirefox.LaunchFirefoxWithDriverCustomProfile Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCookies: False WaitForPageToLoadTimeout: 60 Timeout: 60 PiPUserDataFolderPath: `` TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxWithDriverCloseDialog】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化。如果快顯對話方塊出現，請將它關閉。
 WebAutomation.LaunchFirefox.LaunchFirefoxWithDriverCloseDialog Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCookies: False WaitForPageToLoadTimeout: 60 Timeout: 60 PiPUserDataFolderMode: WebAutomation.PiPUserDataFolderModeEnum.AutomaticProfile TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxWithDriverCloseDialogCustomProfile】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化。如果快顯對話方塊出現，請將它關閉。
 WebAutomation.LaunchFirefox.LaunchFirefoxWithDriverCloseDialogCustomProfile Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCookies: False WaitForPageToLoadTimeout: 60 Timeout: 60 PiPUserDataFolderPath: `` TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxWithDriverPressDialogButton】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化，並且於快顯對話方塊出現時按下指定的按鈕
 WebAutomation.LaunchFirefox.LaunchFirefoxWithDriverPressDialogButton Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCookies: False WaitForPageToLoadTimeout: 60 DialogButton: $'''OK''' Timeout: 60 PiPUserDataFolderMode: WebAutomation.PiPUserDataFolderModeEnum.AutomaticProfile TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxWithDriverPressDialogButtonCustomProfile】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化，並且於快顯對話方塊出現時按下指定的按鈕
 WebAutomation.LaunchFirefox.LaunchFirefoxWithDriverPressDialogButtonCustomProfile Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCookies: False WaitForPageToLoadTimeout: 60 DialogButton: $'''OK''' Timeout: 60 PiPUserDataFolderPath: `` TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxWithDriverNoWait】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化，並且不要等待網頁載入
 WebAutomation.LaunchFirefox.LaunchFirefoxWithDriverNoWait Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCookies: False Timeout: 60 PiPUserDataFolderMode: WebAutomation.PiPUserDataFolderModeEnum.AutomaticProfile TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 LaunchFirefoxWithDriverNoWaitCustomProfile】啟動 Firefox 的新執行個體，讓網站和 Web 應用程式自動化，並且不要等待網頁載入
 WebAutomation.LaunchFirefox.LaunchFirefoxWithDriverNoWaitCustomProfile Url: `` WindowState: WebAutomation.BrowserWindowState.Normal ClearCookies: False Timeout: 60 PiPUserDataFolderPath: `` TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 AttachToFirefoxByTitle】依標題附加至 Firefox 的執行中執行個體，讓網站和 Web 應用程式自動化
 WebAutomation.LaunchFirefox.AttachToFirefoxByTitle TabTitle: `` AttachTimeout: 5 CommunicationMode: WebAutomation.BrowserCommunicationMethod.Extension TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 AttachToFirefoxByUrl】依 URL 附加至 Firefox 的執行中執行個體，讓網站和 Web 應用程式自動化
 WebAutomation.LaunchFirefox.AttachToFirefoxByUrl TabUrl: `` AttachTimeout: 5 CommunicationMode: WebAutomation.BrowserCommunicationMethod.Extension TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
 
-# 【模式 AttachToForegroundFirefox】附加至 Firefox 的前景執行個體，讓網站和 Web 應用程式自動化
 WebAutomation.LaunchFirefox.AttachToForegroundFirefox AttachTimeout: 5 CommunicationMode: WebAutomation.BrowserCommunicationMethod.Extension TargetDesktop: $'''{"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}''' BrowserInstance=> BrowserInstance
-
-# ==================== 說明 ====================
-# 動作：啟動新的 Firefox  (WebAutomation.LaunchFirefox)
-# 英文名稱：Launch new Firefox
-# 用途：啟動新執行個體或附加至 Firefox 的執行中執行個體，讓網站和 Web 應用程式自動化
-# 位置：瀏覽器自動化
-# 輸入參數：
-#   LaunchMode [選項，預設 LaunchNew] 啟動模式 — 指定要啟動新的 Firefox 執行個體，或附加至現有執行個體
-#       可用值：WebAutomation.LaunchMode.LaunchNew（啟動新執行個體）、WebAutomation.LaunchMode.Attach（附加至執行中的執行個體）
-#   AttachMode [選項，預設 ByTitle] 附加至 Firefox 索引標籤 — 指定要依標題、URL 附加至 Firefox 索引標籤，或附加至做為前景視窗執行的 Firefox 使用中索引標籤
-#       可用值：WebAutomation.AttachMode.ByTitle（依標題）、WebAutomation.AttachMode.ByUrl（依 URL）、WebAutomation.AttachMode.ForegroundWindow（使用前景視窗）
-#   Url [文字] 初始 URL — 輸入網頁瀏覽器啟動時要前往的網站 URL
-#   WindowState [選項，預設 Normal] 視窗狀態 — 指定要以標準、最小化或最大化狀態啟動瀏覽器視窗
-#       可用值：WebAutomation.BrowserWindowState.Normal（標準）、WebAutomation.BrowserWindowState.Maximized（已最大化）、WebAutomation.BrowserWindowState.Minimized（已最小化）
-#   TabTitle [文字] 索引標籤標題 — 輸入要做為附加目標的 Firefox 索引標籤標題 (或其中一部分)
-#   TabUrl [文字] 索引標籤 URL — 輸入要做為附加目標的 Firefox 索引標籤 URL (或其中一部分)
-#   ClearCache [布林，預設 False] 清除快取 — 指定是否要在啟動網頁瀏覽器後，隨即完整清除其快取
-#   ClearCookies [布林，預設 False] 清除 Cookie — 指定是否要在啟動網頁瀏覽器後，隨即清除當中儲存的所有 Cookie
-#   WaitForPageToLoad [布林，預設 True] 等待頁面載入 — 指定是否要等待新網頁完整載入再繼續進行
-#   WaitForPageToLoadTimeout [整數，預設 60] 網頁載入逾時 — 設定動作擲回錯誤之前的頁面載入時間，以秒為單位
-#   HandleDialogAction [選項，預設 DoNothing] 如果快顯對話方塊出現 — 指定若載入初始網頁時出現快顯對話方塊，要執行的操作
-#       可用值：WebAutomation.HandleDialogAction.CloseIt（關閉它）、WebAutomation.HandleDialogAction.PressButton（按下按鈕）、WebAutomation.HandleDialogAction.DoNothing（不執行任何動作）
-#   DialogButton [文字，預設 OK] 要按下的對話方塊按鈕 — 輸入快顯對話方塊出現時要按下的對話方塊按鈕
-#   Timeout [整數，預設 60] 逾時 — 設定您想要等候瀏覽器啟動的時間 (秒鐘)，在此時間過後，此動作即失敗
-#   AttachTimeout [整數，預設 5] 逾時 — 設定在動作失敗之前您希望等待瀏覽器連結的時間 (以秒為單位)
-#   CommunicationMode [選項，預設 Extension] 瀏覽器互動方式 — 選擇流程執行期間瀏覽器互動的方法。瀏覽器延伸選項需要安裝附加元件，並支援自動設定檔登入。或者，選擇 WebDriver 會直接連接到瀏覽器，但不支援自動設定檔登入。
-#       可用值：WebAutomation.BrowserCommunicationMethod.Extension（瀏覽器延伸）、WebAutomation.BrowserCommunicationMethod.WebDriver（WebDriver）
-#   PiPUserDataFolderMode [選項，預設 AutomaticProfile] 使用者資料的資料夾 — 指定當流程在 Picture-in-Picture 中執行時瀏覽器將使用的使用者資料夾。如果選取瀏覽器預設值，即無法同時在桌面和 Picture-in-Picture 中啟動瀏覽器。
-#       可用值：WebAutomation.PiPUserDataFolderModeEnum.AutomaticProfile（Picture-in-picture 預設值）、WebAutomation.PiPUserDataFolderModeEnum.DefaultProfile（瀏覽器預設值）、WebAutomation.PiPUserDataFolderModeEnum.CustomProfile（自訂）
-#   PiPUserDataFolderPath [FolderObject] 使用者資料的資料夾路徑 — 指定當流程在 Picture-in-Picture 中執行時瀏覽器將使用的使用者資料夾路徑。
-#   TargetDesktop [文字，預設 {"DisplayName":"Local Computer","Route":{"ServerType":"Local","ServerAddress":""}}] 目標桌面連接字串 — 設定瀏覽器要啟動的目標桌面的連接字串。
-# 產生的變數：
-#   BrowserInstance [WebBrowserInstanceHandle] Firefox 執行個體 — 要用於 Web 自動化動作的 Firefox 執行個體
-# 可能的錯誤：LaunchFirefoxError、InvalidUrlError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

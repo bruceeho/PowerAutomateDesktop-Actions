@@ -1,29 +1,5 @@
-# 【模式 ExtractImages】從 PDF 檔案中擷取所有影像
 PDF.ExtractImagesFromPDF.ExtractImages PDFFile: `` ImagesName: `` ImagesFolder: ``
 
-# 【模式 ExtractImagesFromPage】從 PDF 檔案的單一頁面擷取影像
 PDF.ExtractImagesFromPDF.ExtractImagesFromPage PDFFile: `` PageNumber: `` ImagesName: `` ImagesFolder: ``
 
-# 【模式 ExtractImagesFromPageRange】從 PDF 檔案的部分頁面擷取影像
 PDF.ExtractImagesFromPDF.ExtractImagesFromPageRange PDFFile: `` FromPageNumber: `` ToPageNumber: `` ImagesName: `` ImagesFolder: ``
-
-# ==================== 說明 ====================
-# 動作：從 PDF 擷取影像  (PDF.ExtractImagesFromPDF)
-# 英文名稱：Extract images from PDF
-# 用途：從 PDF 檔案中擷取影像
-# 位置：PDF
-# 輸入參數：
-#   PDFFile [FileObject] PDF 檔案 — 要擷取影像的 PDF 檔案。請輸入檔案路徑，或是包含檔案或文字路徑的變數
-#   Password [文字(可加密)，選填] 密碼 — PDF 檔案的密碼。如果 PDF 檔案未以密碼保護，請保留空白
-#   PagesToExtract [選項，預設 All] 要擷取的頁面 — 指定要擷取多少頁面: 所有頁面、單一頁面或頁面範圍
-#       可用值：PDF.ExtractionMode.All（全部）、PDF.ExtractionMode.Single（單一）、PDF.ExtractionMode.Range（範圍）
-#   PageNumber [整數] 單一頁碼 — 要擷取影像之單一頁面的頁碼
-#   FromPageNumber [整數] 起始頁碼 — 從中擷取影像之頁面範圍的起始頁碼
-#   ToPageNumber [整數] 結束頁碼 — 從中擷取影像之頁面範圍的結束頁碼
-#   ImagesName [文字] 影像名稱 — 影像名稱的起始方式。已擷取影像的名稱範例: GivenName_1、GivenName_2
-#   ImagesFolder [FolderObject] 儲存影像至 — 將擷取的影像另存為 .png 檔案的資料夾
-# 可能的錯誤：InvalidPasswordError、FailedToExtractImagesError、FolderDoesNotExistError、PDFFileDoesNotExistError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

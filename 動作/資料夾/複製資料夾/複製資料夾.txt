@@ -1,18 +1,1 @@
 Folder.Copy Folder: `` Destination: `` IfFolderExists: Folder.IfExists.DoNothing CopiedFolder=> CopiedFolder
-
-# ==================== 說明 ====================
-# 動作：複製資料夾  (Folder.Copy)
-# 英文名稱：Copy folder
-# 用途：將資料夾複製至目的地資料夾
-# 位置：資料夾
-# 輸入參數：
-#   Folder [FolderObject] 要複製的資料夾 — 輸入或選擇要複製之資料夾的完整路徑，或包含該資料夾的變數。如果資料夾路徑結尾是 \，則僅複製資料夾的內容 (檔案 + 子資料夾)。否則，資料夾本身 (及其內容) 會如同子資料夾複製到目的地資料夾中。
-#   Destination [FolderObject] 目的地資料夾 — 輸入或選擇將要設為目的地資料夾的資料夾完整路徑，或包含資料夾的變數
-#   IfFolderExists [選項，預設 DoNothing] 如果資料夾存在 — 指定在目的地資料夾已經存在的情況下，是否要覆寫檔案或全部都不複製。如果資料夾已經存在，但檔案為不同名稱，則舊檔案將持續保留在資料夾中。
-#       可用值：Folder.IfExists.DoNothing（不執行任何動作）、Folder.IfExists.Overwrite（覆寫）
-# 產生的變數：
-#   CopiedFolder [FolderObject] 複製的資料夾 — 複製的資料夾物件 (這是一種表示，並可存取資料夾及其所有資訊)
-# 可能的錯誤：FolderNotFoundError、InvalidDestinationFolderError、CopyFolderError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

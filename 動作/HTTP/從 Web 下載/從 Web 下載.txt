@@ -1,70 +1,23 @@
-# 【模式 Download】從 Web 下載文字並將其儲存
 Web.DownloadFromWeb.Download Url: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False WebPageText=> WebPageText
 
-# 【模式 DownloadToFile】從 Web 下載檔案並將其儲存
 Web.DownloadFromWeb.DownloadToFile Url: `` FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False DownloadedFile=> DownloadedFile
 
-# 【模式 DownloadToFolder】從 Web 下載檔案並使用原始檔案名稱將其儲存
 Web.DownloadFromWeb.DownloadToFolder Url: `` DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False DownloadedFile=> DownloadedFile
 
-# 【模式 DownloadUseAuth】使用驗證從 Web 下載文字並將其儲存
 Web.DownloadFromWeb.DownloadUseAuth Url: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False UserName: `` Password: `` WebPageText=> WebPageText
 
-# 【模式 DownloadToFileUseAuth】使用驗證從 Web 下載檔案並將其儲存
 Web.DownloadFromWeb.DownloadToFileUseAuth Url: `` FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False UserName: `` Password: `` DownloadedFile=> DownloadedFile
 
-# 【模式 DownloadToFolderUseAuth】使用驗證從 Web 下載檔案，並使用原始檔案名稱將其儲存
 Web.DownloadFromWeb.DownloadToFolderUseAuth Url: `` DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False UserName: `` Password: `` DownloadedFile=> DownloadedFile
 
-# 【模式 DownloadUsePost】使用 POST Web 要求從 Web 下載文字並將其儲存
 Web.DownloadFromWeb.DownloadUsePost Url: `` Parameters: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False WebPageText=> WebPageText
 
-# 【模式 DownloadToFileUsePost】使用 POST Web 要求從 Web 下載檔案並將其儲存
 Web.DownloadFromWeb.DownloadToFileUsePost Url: `` Parameters: `` FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False DownloadedFile=> DownloadedFile
 
-# 【模式 DownloadToFolderUsePost】使用 POST Web 要求從 Web 下載檔案，並使用原始檔案名稱將其儲存
 Web.DownloadFromWeb.DownloadToFolderUsePost Url: `` Parameters: `` DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False DownloadedFile=> DownloadedFile
 
-# 【模式 DownloadUsePostAndAuth】使用 POST Web 要求和驗證從 Web 下載文字並將其儲存
 Web.DownloadFromWeb.DownloadUsePostAndAuth Url: `` Parameters: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False UserName: `` Password: `` WebPageText=> WebPageText
 
-# 【模式 DownloadToFileUsePostAndAuth】使用 POST Web 要求和驗證從 Web 下載檔案並將其儲存
 Web.DownloadFromWeb.DownloadToFileUsePostAndAuth Url: `` Parameters: `` FilePath: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False UserName: `` Password: `` DownloadedFile=> DownloadedFile
 
-# 【模式 DownloadToFolderUsePostAndAuth】使用 POST Web 要求和驗證從 Web 下載檔案，並使用原始檔案名稱將其儲存
 Web.DownloadFromWeb.DownloadToFolderUsePostAndAuth Url: `` Parameters: `` DestinationFolder: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False UserName: `` Password: `` DownloadedFile=> DownloadedFile
-
-# ==================== 說明 ====================
-# 動作：從 Web 下載  (Web.DownloadFromWeb)
-# 英文名稱：Download from web
-# 用途：從 Web 下載文字或檔案並將其儲存
-# 位置：HTTP
-# 輸入參數：
-#   Url [文字] URL — 網頁或檔案的 URL
-#   Method [選項，預設 Get] 方法 — 指定擷取網站資訊的方式。當所需的所有資訊都在 URL 中時，應使用 GET，使用 POST 可輸入更多資訊 (密碼等)
-#       可用值：Web.DownloadMethod.Get（GET）、Web.DownloadMethod.Post（POST）
-#   Parameters [資料表] POST 參數 — 具有兩欄資料表形式的 POST 參數
-#   SaveResponse [選項，預設 ToVariable] 儲存回應 — 指定傳回資料的儲存方式
-#       可用值：Web.SaveResponse.ToVariable（將文字擷取到變數中 (適用於網頁)）、Web.SaveResponse.ToFile（儲存至磁碟 (適用於檔案)）
-#   FileName [選項，預設 KeepOriginal] 檔案名稱 — 指定是否保留已下載檔案的原始檔案名稱，或指定新名稱
-#       可用值：Web.FileName.KeepOriginal（保留原始檔案名稱 (僅指定目的地資料夾)）、Web.FileName.SpecifyFullPath（指定完整路徑 (目的地資料夾 + 自訂檔案名稱)）
-#   FilePath [FileObject] 目的地檔案路徑 — 將儲存由 Web 伺服器所傳回檔案的完整路徑 (資料夾加上檔案名稱)
-#   DestinationFolder [FolderObject] 目的地資料夾 — 將儲存從 Web 伺服器傳回檔案的資料夾
-#   ConnectionTimeout [整數，預設 30] 連線逾時 — 專員與伺服器建立連線所應等待的時間 (以秒計)
-#   FollowRedirection [布林，預設 True] 追蹤重新導向 — 指定是否允許 Web 伺服器將您重新導向至其他網頁或網站
-#   ClearCookies [布林，預設 False] 清除 Cookie — 指定是否清除此流程中由類似動作建立的所有 Cookie
-#   UserAgent [文字，預設 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6] 使用者 Agent — 指定要顯示為哪個瀏覽器識別。除非選擇特定瀏覽器識別，否則某些 Web 伺服器將禁止存取
-#   Encoding [選項，預設 AutoDetect] 編碼 — 網頁所用的編碼方式。如果選取 [自動偵測] 選項，則由 Web 伺服器指定要使用的編碼
-#       可用值：Web.Encoding.AutoDetect（自動偵測）、Web.Encoding.IBM037、Web.Encoding.IBM437、Web.Encoding.IBM500、Web.Encoding.ASMO_708、Web.Encoding.DOS_720、Web.Encoding.ibm737、Web.Encoding.ibm775、Web.Encoding.ibm850、Web.Encoding.ibm852、Web.Encoding.IBM855、Web.Encoding.ibm857、Web.Encoding.IBM00858、Web.Encoding.IBM860、Web.Encoding.ibm861、Web.Encoding.DOS_862、Web.Encoding.IBM863、Web.Encoding.IBM864、Web.Encoding.IBM865、Web.Encoding.cp866、Web.Encoding.ibm869、Web.Encoding.IBM870、Web.Encoding.windows_874、Web.Encoding.cp875、Web.Encoding.shift_jis、Web.Encoding.gb2312、Web.Encoding.ks_c_5601_1987、Web.Encoding.big5、Web.Encoding.IBM1026、Web.Encoding.IBM01047、Web.Encoding.IBM01140、Web.Encoding.IBM01141、Web.Encoding.IBM01142、Web.Encoding.IBM01143、Web.Encoding.IBM01144、Web.Encoding.IBM01145、Web.Encoding.IBM01146、Web.Encoding.IBM01147、Web.Encoding.IBM01148、Web.Encoding.IBM01149、Web.Encoding.utf_16、Web.Encoding.utf_16BE、Web.Encoding.windows_1250、Web.Encoding.windows_1251、Web.Encoding.Windows_1252、Web.Encoding.windows_1253、Web.Encoding.windows_1254、Web.Encoding.windows_1255、Web.Encoding.windows_1256、Web.Encoding.windows_1257、Web.Encoding.windows_1258、Web.Encoding.Johab、Web.Encoding.macintosh、Web.Encoding.x_mac_japanese、Web.Encoding.x_mac_chinesetrad、Web.Encoding.x_mac_korean、Web.Encoding.x_mac_arabic、Web.Encoding.x_mac_hebrew、Web.Encoding.x_mac_greek、Web.Encoding.x_mac_cyrillic、Web.Encoding.x_mac_chinesesimp、Web.Encoding.x_mac_romanian、Web.Encoding.x_mac_ukrainian、Web.Encoding.x_mac_thai、Web.Encoding.x_mac_ce、Web.Encoding.x_mac_icelandic、Web.Encoding.x_mac_turkish、Web.Encoding.x_mac_croatian、Web.Encoding.utf_32、Web.Encoding.utf_32BE、Web.Encoding.x_Chinese_CNS、Web.Encoding.x_cp20001、Web.Encoding.x_Chinese_Eten、Web.Encoding.x_cp20003、Web.Encoding.x_cp20004、Web.Encoding.x_cp20005、Web.Encoding.x_IA5、Web.Encoding.x_IA5_German、Web.Encoding.x_IA5_Swedish、Web.Encoding.x_IA5_Norwegian、Web.Encoding.us_ascii、Web.Encoding.x_cp20261、Web.Encoding.x_cp20269、Web.Encoding.IBM273、Web.Encoding.IBM277、Web.Encoding.IBM278、Web.Encoding.IBM280、Web.Encoding.IBM284、Web.Encoding.IBM285、Web.Encoding.IBM290、Web.Encoding.IBM297、Web.Encoding.IBM420、Web.Encoding.IBM423、Web.Encoding.IBM424、Web.Encoding.x_EBCDIC_KoreanExtended、Web.Encoding.IBM_Thai、Web.Encoding.koi8_r、Web.Encoding.IBM871、Web.Encoding.IBM880、Web.Encoding.IBM905、Web.Encoding.IBM00924、Web.Encoding.EUC_JP_20932、Web.Encoding.x_cp20936、Web.Encoding.x_cp20949、Web.Encoding.cp1025、Web.Encoding.koi8_u、Web.Encoding.iso_8859_1、Web.Encoding.iso_8859_2、Web.Encoding.iso_8859_3、Web.Encoding.iso_8859_4、Web.Encoding.iso_8859_5、Web.Encoding.iso_8859_6、Web.Encoding.iso_8859_7、Web.Encoding.iso_8859_8、Web.Encoding.iso_8859_9、Web.Encoding.iso_8859_13、Web.Encoding.iso_8859_15、Web.Encoding.x_Europa、Web.Encoding.iso_8859_8_i、Web.Encoding.iso_2022_jp_50220、Web.Encoding.csISO2022JP、Web.Encoding.iso_2022_jp_50222、Web.Encoding.iso_2022_kr、Web.Encoding.x_cp50227、Web.Encoding.euc_jp_51932、Web.Encoding.EUC_CN、Web.Encoding.euc_kr、Web.Encoding.hz_gb_2312、Web.Encoding.GB18030、Web.Encoding.x_iscii_de、Web.Encoding.x_iscii_be、Web.Encoding.x_iscii_ta、Web.Encoding.x_iscii_te、Web.Encoding.x_iscii_as、Web.Encoding.x_iscii_or、Web.Encoding.x_iscii_ka、Web.Encoding.x_iscii_ma、Web.Encoding.x_iscii_gu、Web.Encoding.x_iscii_pa、Web.Encoding.utf_7、Web.Encoding.utf_8
-#   AcceptUntrustedCertificates [布林，預設 False] 接受不受信任的憑證 — 指定是否接受不受信任的憑證
-#   UseCredentials [布林，預設 False] 使用者認證 — 指定 Web 伺服器是否要求 HTTP 驗證 (亦即當瀏覽器顯示詢問使用者名稱和密碼的快顯視窗時)
-#   UserName [文字] 使用者名稱 — Web 伺服器的使用者名稱
-#   Password [文字(可加密)] 密碼 — Web 伺服器的密碼
-# 產生的變數：
-#   WebPageText [文字] 網頁文字 — 網頁文字
-#   DownloadedFile [FileObject] 下載的檔案 — 下載的檔案
-# 可能的錯誤：DirectoryDoesNotExistError、DownloadFromWebError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

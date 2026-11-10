@@ -1,31 +1,3 @@
-# 【模式 WithoutUniqueId】將工作佇列項目新增至工作佇列
 WorkQueues.EnqueueWorkQueueItem.WithoutUniqueId WorkQueue: `` Status: WorkQueues.WorkQueueItemEnqueueStatus.Queued Priority: WorkQueues.WorkQueueItemPriority.Normal Name: `` Value: `` ExpiryDate: `` DelayUntil: `` ProcessingResult: `` WorkQueueItem=> WorkQueueItem
 
-# 【模式 WithUniqueId】將工作佇列項目新增至工作佇列
 WorkQueues.EnqueueWorkQueueItem.WithUniqueId WorkQueue: `` Status: WorkQueues.WorkQueueItemEnqueueStatus.Queued Priority: WorkQueues.WorkQueueItemPriority.Normal Name: `` Value: `` ExpiryDate: `` DelayUntil: `` ProcessingResult: `` UniqueId: `` WorkQueueItem=> WorkQueueItem
-
-# ==================== 說明 ====================
-# 動作：新增工作佇列項目  (WorkQueues.EnqueueWorkQueueItem)
-# 英文名稱：Add work queue item
-# 用途：將工作佇列項目新增至工作佇列
-# 位置：工作佇列
-# 輸入參數：
-#   WorkQueue [WorkQueue] 工作佇列 — 要新增項目的工作佇列
-#   Status [選項，預設 Queued] 狀態 — 新增工作佇列項目的狀態
-#       可用值：WorkQueues.WorkQueueItemEnqueueStatus.Queued（已排入佇列）、WorkQueues.WorkQueueItemEnqueueStatus.Paused（保留）
-#   Priority [選項，預設 Normal] 優先順序 — 優先順序 (低、一般、高)
-#       可用值：WorkQueues.WorkQueueItemPriority.High（高）、WorkQueues.WorkQueueItemPriority.Normal（一般）、WorkQueues.WorkQueueItemPriority.Low（低）
-#   Name [文字] 名稱 — 用於識別新工作佇列項目的自訂名稱
-#   Value [文字] 輸入 — 屬於要處理的值資料行的資料
-#   ExpiryDate [Nullable<DateTime>] 有效期限 — 定義的到期日和時間，否則將不包含有效期限
-#   DelayUntil [Nullable<DateTime>] 延遲到 — 將佇列項目保留在佇列狀態中，直到釋出進行處理的時間
-#   ProcessingResult [文字] 處理附註 — 任何相關的附註或指示
-#   HasUniqueId [布林，預設 False] 有唯一識別碼或參考 — 指定工作佇列項目是否將有唯一識別碼或參考
-#   UniqueId [文字] 唯一識別碼或參考 — 選用值，提供時，必須在此佇列中為唯一
-# 產生的變數：
-#   WorkQueueItem [WorkQueueItem] 工作佇列項目 — 新增至工作佇列中的工作佇列項目
-# 可能的錯誤：WorkQueueNotFoundError、WorkQueuePausedOrStoppedError、SchemaValidationInvalidInputError、FailedToEnqueueWorkQueueItemError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

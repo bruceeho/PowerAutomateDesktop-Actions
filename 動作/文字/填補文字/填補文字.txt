@@ -1,18 +1,1 @@
 Text.Pad PadPosition: Text.PadPosition.Left TotalLength: 10 PaddedText=> PaddedText
-
-# ==================== 說明 ====================
-# 動作：填補文字  (Text.Pad)
-# 英文名稱：Pad text
-# 用途：透過將字元新增至現有文字的左邊或右邊建立固定長度的文字
-# 位置：文字
-# 輸入參數：
-#   Text [文字，選填] 要用於填補的文字 — 要加長的文字
-#   PadPosition [選項，預設 Left] 填補 — 指定是否要新增字元至現有文字的左邊或右邊
-#       可用值：Text.PadPosition.Left（左）、Text.PadPosition.Right（右）
-#   PaddingText [文字，選填] 用於填補的文字 — 為使原始文字加長而新增的字元或文字
-#   TotalLength [整數，預設 10] 總長度 — 最終填補文字的字元總長度。這表示會重複新增用於填補的文字，直到最終文字達到指定的長度
-# 產生的變數：
-#   PaddedText [文字] 結果 — 新的填補文字
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

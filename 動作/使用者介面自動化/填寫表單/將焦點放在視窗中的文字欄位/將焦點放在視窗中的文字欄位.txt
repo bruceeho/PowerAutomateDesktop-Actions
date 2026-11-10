@@ -1,13 +1,1 @@
 UIAutomation.FocusTextField Control: ``
-
-# ==================== 說明 ====================
-# 動作：將焦點放在視窗中的文字欄位  (UIAutomation.FocusTextField)
-# 英文名稱：Focus text field in window
-# 用途：將焦點設定於視窗的文字方塊並捲動使其進入檢視範圍
-# 位置：使用者介面自動化 > 填寫表單
-# 輸入參數：
-#   Control [UIControl]
-# 可能的錯誤：FocusTextFieldError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

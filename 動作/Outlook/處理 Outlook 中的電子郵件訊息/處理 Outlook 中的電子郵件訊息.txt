@@ -1,26 +1,5 @@
-# 【模式 DeleteEmails】刪除從「擷取來自 Outlook 的電子郵件訊息」動作所取得的電子郵件訊息 (或電子郵件訊息清單)
 Outlook.ProcessEmailMessages.DeleteEmails Instance: `` Account: `` EmailsToProcess: ``
 
-# 【模式 MarkEmailsAsUnread】將從「擷取來自 Outlook 的電子郵件訊息」動作所取得的電子郵件訊息 (或電子郵件訊息清單) 標示為未讀取
 Outlook.ProcessEmailMessages.MarkEmailsAsUnread Instance: `` Account: `` EmailsToProcess: ``
 
-# 【模式 MoveEmails】移動從「擷取來自 Outlook 的電子郵件訊息」動作所取得的電子郵件訊息 (或電子郵件訊息清單)
 Outlook.ProcessEmailMessages.MoveEmails Instance: `` Account: `` EmailsToProcess: `` MailFolder: ``
-
-# ==================== 說明 ====================
-# 動作：處理 Outlook 中的電子郵件訊息  (Outlook.ProcessEmailMessages)
-# 英文名稱：Process email messages in Outlook
-# 用途：移動或刪除從「擷取來自 Outlook 的電子郵件訊息」動作所取得的電子郵件訊息 (或電子郵件訊息清單)。
-# 位置：Outlook
-# 輸入參數：
-#   Instance [OutlookInstanceHandle] Outlook 執行個體 — 要使用的 Outlook 執行個體。在「啟動 Outlook」動作中指定此變數
-#   Account [文字] 帳戶 — 使用 Outlook 帳戶名稱 (資料檔案名稱)
-#   EmailsToProcess [List<OutlookMailMessage>] 要處理的電子郵件訊息 — 要處理的電子郵件訊息。使用由「擷取來自 Outlook 的電子郵件訊息」動作所填入的變數
-#   Operation [選項，預設 Move] 作業 — 指定要在指定的電子郵件訊息上執行的作業
-#       可用值：Outlook.ProcessEmailOperation.Delete（刪除電子郵件訊息）、Outlook.ProcessEmailOperation.Move（將電子郵件訊息移至郵件資料夾）、Outlook.ProcessEmailOperation.MarkAsUnread（標示為未讀取）
-#   MailFolder [文字] 郵件資料夾 — 要從中擷取訊息的資料夾名稱。輸入子資料夾的完整資料夾路徑 (例如，Inbox\Work)
-# 可能的錯誤：OutlookAccountNotFoundError、MailFolderNotFoundError、ProcessEmailMessagesError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

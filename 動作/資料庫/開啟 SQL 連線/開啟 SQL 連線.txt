@@ -1,15 +1,1 @@
 Database.Connect ConnectionString: `` Connection=> Connection
-
-# ==================== 說明 ====================
-# 動作：開啟 SQL 連線  (Database.Connect)
-# 英文名稱：Open SQL connection
-# 用途：開啟新的資料庫連線
-# 位置：資料庫
-# 輸入參數：
-#   ConnectionString [文字] 連接字串 — 用來連接資料庫的連接字串
-# 產生的變數：
-#   Connection [SqlConnectionHandle] SQL 連線 — 新 SQL 連線的控制代碼
-# 可能的錯誤：ConnectToDataSourceError、InvalidConnectionStringError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

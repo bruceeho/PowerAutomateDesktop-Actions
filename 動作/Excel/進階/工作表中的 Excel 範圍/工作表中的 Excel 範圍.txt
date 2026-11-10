@@ -1,40 +1,7 @@
-# 【模式 LookupRangeNamedCellNonArray】尋找並傳回 Excel 的 LOOKUP 函數的結果
 Excel.LookupRange.LookupRangeNamedCellNonArray Instance: `` LookupValue: `` CellName: `` ValuesCellName: `` Result=> Result
 
-# 【模式 LookupRangeNamedCellArray】尋找並傳回 Excel 的 LOOKUP 函數的結果
 Excel.LookupRange.LookupRangeNamedCellArray Instance: `` LookupValue: `` CellName: `` Result=> Result
 
-# 【模式 LookupRangeCoordinatesNonArray】尋找並傳回 Excel 的 LOOKUP 函數的結果
 Excel.LookupRange.LookupRangeCoordinatesNonArray Instance: `` LookupValue: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` ValuesStartColumn: `` ValuesStartRow: `` ValuesEndColumn: `` ValuesEndRow: `` Result=> Result
 
-# 【模式 LookupRangeCoordinatesArray】尋找並傳回 Excel 的 LOOKUP 函數的結果
 Excel.LookupRange.LookupRangeCoordinatesArray Instance: `` LookupValue: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` Result=> Result
-
-# ==================== 說明 ====================
-# 動作：工作表中的 Excel 範圍  (Excel.LookupRange)
-# 英文名稱：Lookup range in Excel worksheet
-# 用途：尋找並傳回 Excel 的 LOOKUP 函數的結果
-# 位置：Excel > 進階
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-#   LookupValue [一般值] 查詢值 — 要在指定儲存格範圍內查詢的值
-#   Mode [選項，預設 NamedCells] 範圍格式 — 指定如何使用具名單元格或絕對欄/列索引來參考範圍
-#       可用值：Excel.LookupMode.NamedCells（具名儲存格）、Excel.LookupMode.CellCoordinates（具體範圍）
-#   CellName [文字] 儲存格名稱 — 要搜尋查詢值的儲存格範圍的名稱
-#   StartColumn [文字] 起始欄 — 要搜尋查詢值的範圍內第一欄的索引或字母
-#   StartRow [整數] 起始列 — 要搜尋查詢值的範圍內第一列的編號。編號從 1 開始
-#   EndColumn [文字] 結尾欄 — 要搜尋查詢值的範圍內最後一欄的索引或字母
-#   EndRow [整數] 結尾列 — 要搜尋查詢值的範圍內最後一列的編號。編號從 1 開始
-#   IsArrayForm [布林，預設 False] 陣列形式 — 陣列形式的 LOOKUP 會在陣列的第一列或第一欄中尋找指定的值，並傳回陣列最後一列或最後一欄中相同位置的值。如果要比對的值位於陣列的第一列或第一欄，請使用這種形式的 LOOKUP。如果保持停用此選項，將改用向量形式的 LOOKUP，在一列或一欄的範圍 (稱為向量) 內尋找值，並傳回第二個一列或一欄範圍內相同位置的值。
-#   ValuesCellName [文字] 結果來源的儲存格名稱 — 要傳回相符值的儲存格範圍的名稱
-#   ValuesStartColumn [文字] 結果來源的起始欄 — 要傳回相符值的範圍內第一欄的索引或字母
-#   ValuesStartRow [整數] 結果來源的起始列 — 要傳回相符值的範圍內的第一列編號。編號從 1 開始
-#   ValuesEndColumn [文字] 結果來源的結尾欄 — 要傳回相符值的範圍內最後一欄的索引或字母
-#   ValuesEndRow [整數] 結果來源的結尾列 — 要傳回相符值的範圍內的最後一列編號。編號從 1 開始
-# 產生的變數：
-#   Result [一般值] 查詢結果 — LOOKUP 函數傳回的值
-# 可能的錯誤：LookupRangeError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

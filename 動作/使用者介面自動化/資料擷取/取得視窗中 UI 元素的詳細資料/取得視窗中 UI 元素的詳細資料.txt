@@ -1,17 +1,1 @@
 UIAutomation.GetElementDetails Control: `` AttributeName: $'''Own Text''' BringToFront: True AttributeValue=> AttributeValue
-
-# ==================== 說明 ====================
-# 動作：取得視窗中 UI 元素的詳細資料  (UIAutomation.GetElementDetails)
-# 英文名稱：Get details of the UI element in window
-# 用途：取得視窗中 UI 元素的屬性值
-# 位置：使用者介面自動化 > 資料擷取
-# 輸入參數：
-#   Control [UIControl]
-#   AttributeName [文字，預設 Own Text] 屬性名稱 — 將擷取其值的屬性
-#   BringToFront [布林，預設 True] 移到最上層 — 指定在執行期間是否應將包含 UI 元素的視窗放在最上層。如果停用此選項，動作將在背景執行。請注意，並非所有 UI 元素都與停用該選項相容。此外，如果執行動作需要捲動，停用此選項可能無法擷取所有元素。
-# 產生的變數：
-#   AttributeValue [文字] UI 元素文字 — UI 元素的文字值
-# 可能的錯誤：RetrieveElementAttributeError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

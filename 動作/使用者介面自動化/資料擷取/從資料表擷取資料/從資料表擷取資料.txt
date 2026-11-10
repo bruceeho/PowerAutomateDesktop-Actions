@@ -1,24 +1,3 @@
-# 【模式 ExtractDataFromTable】以資料表的形式從表中擷取資料
 UIAutomation.ExtractDataFromTable.ExtractDataFromTable Control: `` BringToFront: True ExtractedData=> ExtractedData
 
-# 【模式 ExtractDataFromTableInExcelSpreadsheet】從 Excel 試算表中某個視窗的特定部分擷取資料
 UIAutomation.ExtractDataFromTable.ExtractDataFromTableInExcelSpreadsheet Control: `` BringToFront: True ExcelInstance=> ExcelInstance
-
-# ==================== 說明 ====================
-# 動作：從資料表擷取資料  (UIAutomation.ExtractDataFromTable)
-# 英文名稱：Extract data from table
-# 用途：從資料表或格線擷取資料
-# 位置：使用者介面自動化 > 資料擷取
-# 輸入參數：
-#   Control [UIControl] 資料表 — 從資料表或格線解壓縮資料
-#   StoreExtractedDataIn [選項，預設 ExcelSpreadsheet] 將擷取的資料儲存在 — 指定要儲存擷取資料的位置
-#       可用值：UIAutomation.StoreExtractedDataIn.ExcelSpreadsheet（Excel 試算表）、UIAutomation.StoreExtractedDataIn.Variable（變數）
-#   BringToFront [布林，預設 True]
-# 產生的變數：
-#   ExcelInstance [ExcelInstanceHandle] Excel 執行個體 — 包含所擷取資料的 Excel 執行個體。使用這個執行個體可透過 Excel 專屬動作操控試算表 (或儲存後將它關閉)。
-#   ExtractedData [一般值] 擷取的資料 — 資料表形式的擷取資料
-# 可能的錯誤：ExtractDataFromTableError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

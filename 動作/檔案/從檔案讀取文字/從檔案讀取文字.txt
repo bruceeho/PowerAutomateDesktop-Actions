@@ -1,25 +1,3 @@
-# 【模式 ReadText】將文字檔案內容讀取成文字
 File.ReadTextFromFile.ReadText File: `` Encoding: File.TextFileEncoding.UTF8 Content=> Content
 
-# 【模式 ReadTextAsList】以清單讀取文字檔案內容
 File.ReadTextFromFile.ReadTextAsList File: `` Encoding: File.TextFileEncoding.UTF8 Contents=> Contents
-
-# ==================== 說明 ====================
-# 動作：從檔案讀取文字  (File.ReadTextFromFile)
-# 英文名稱：Read text from file
-# 用途：讀取文字檔案的內容
-# 位置：檔案
-# 輸入參數：
-#   File [FileObject] 檔案路徑 — 要讀取的檔案
-#   StoreContentAs [選項，預設 SingleTextValue] 將內容儲存為 — 指定文字的儲存方式。選擇「單一文字值」以將整個文字儲存為單一文字值。選擇「清單」以將原始文字的每一行儲存為清單中的文字項目
-#       可用值：File.ReadTextAs.SingleTextValue（單一文字值）、File.ReadTextAs.List（清單 (每個均為清單項目)）
-#   Encoding [選項，預設 UTF8] 編碼 — 從文字檔中讀取指定文字的編碼。
-#       可用值：File.TextFileEncoding.DefaultEncoding（系統預設）、File.TextFileEncoding.UTF8（UTF-8）、File.TextFileEncoding.Unicode（Unicode）、File.TextFileEncoding.BigEndianUnicode（Unicode (位元組由大到小)）、File.TextFileEncoding.ANSI（ASCII）
-# 產生的變數：
-#   Content [文字] 目錄​​ — 做為文字的內容
-#   Contents [List<String>] 目錄​​ — 做為文字清單的內容
-# 可能的錯誤：DirectoryNotFoundError、FileNotFoundError、ReadFromFileError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

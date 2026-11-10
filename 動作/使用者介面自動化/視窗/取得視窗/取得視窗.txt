@@ -1,29 +1,5 @@
-# 【模式 Get】取得執行中視窗，用於自動化桌面應用程式
 UIAutomation.GetWindow.Get Control: `` BringWindowToFront: False WindowInstance=> WindowInstance
 
-# 【模式 GetUseTimeout】取得執行中視窗，用於自動化桌面應用程式；若在經過指定的時間之後仍找不到視窗，則會失敗
 UIAutomation.GetWindow.GetUseTimeout Control: `` BringWindowToFront: False Timeout: 5 WindowInstance=> WindowInstance
 
-# 【模式 GetForegroundWindow】取得前景視窗，用於自動化桌面應用程式
 UIAutomation.GetWindow.GetForegroundWindow WindowTitle=> WindowTitle WindowInstance=> WindowInstance
-
-# ==================== 說明 ====================
-# 動作：取得視窗  (UIAutomation.GetWindow)
-# 英文名稱：Get window
-# 用途：取得執行中視窗，用於自動化桌面應用程式
-# 位置：使用者介面自動化 > 視窗
-# 輸入參數：
-#   Control [UIControl] UI 元素 — 要取得的視窗選取器
-#   BringWindowToFront [布林，預設 False] 將視窗移至前景 — 指定是否要在取得視窗時自動將它移至前景
-#   UseTimeout [布林，預設 True] 找不到視窗則失敗 — 指定要不限時間等待視窗顯示，或是視窗未在設定的時段內顯示時使作業失敗。
-#   Timeout [整數，預設 5] 逾時 — 等待的逾時秒數
-#   GetWindowMode [選項，預設 SpecificWindow] 取得視窗 — 指定要使用選取器或前景視窗來尋找
-#       可用值：UIAutomation.GetWindowMode.SpecificWindow（特定視窗）、UIAutomation.GetWindowMode.ForegroundWindow（前景視窗）
-# 產生的變數：
-#   WindowTitle [文字] 視窗標題 — 前景視窗的標題
-#   WindowInstance [WindowInstanceHandle] 視窗執行個體 — 搭配較新版本使用者介面自動化動作使用的特定視窗執行個體
-# 可能的錯誤：GetWindowError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

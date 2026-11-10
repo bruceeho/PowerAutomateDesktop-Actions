@@ -1,34 +1,5 @@
-# 【模式 SelectCells】選取 Excel 執行個體之使用中工作表中的儲存格範圍
 Excel.SelectCellsFromExcel.SelectCells Instance: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: ``
 
-# 【模式 SelectCellsRelativeTo】選取 Excel 執行個體之使用中工作表中的儲存格範圍
 Excel.SelectCellsFromExcel.SelectCellsRelativeTo Instance: `` HorizontalDirection: Excel.HorizontalDirection.Left OffsetX: `` VerticalDirection: Excel.VerticalDirection.Above OffsetY: ``
 
-# 【模式 SelectNamedCell】選取 Excel 執行個體之使用中工作表中的具名儲存格
 Excel.SelectCellsFromExcel.SelectNamedCell Instance: `` CellName: ``
-
-# ==================== 說明 ====================
-# 動作：選取 Excel 工作表中的儲存格  (Excel.SelectCellsFromExcel)
-# 英文名稱：Select cells in Excel worksheet
-# 用途：選取 Excel 執行個體之使用中工作表中的儲存格範圍或具名儲存格
-# 位置：Excel > 進階
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-#   SpecifyCellsMode [選項，預設 Absolute] 選擇 — 指定要選取明確指定的儲存格範圍、相對於目前使用中儲存格的儲存格範圍或具名儲存格
-#       可用值：Excel.SpecifyCellsSelectionMode.Absolute（儲存格範圍）、Excel.SpecifyCellsSelectionMode.Relative（相對於使用中儲存格的儲存格範圍）、Excel.SpecifyCellsSelectionMode.NamedCells（具名儲存格）
-#   StartColumn [文字] 開始欄 — 第一欄的索引或字母
-#   HorizontalDirection [選項，預設 Left] X 軸方向 — X 軸位移方向。根據目前啟用的儲存格位置，要沿著水平軸查看的位置
-#       可用值：Excel.HorizontalDirection.Left（向左翻轉）、Excel.HorizontalDirection.Right（向右翻轉）
-#   StartRow [整數] 開始列 — 第一個列號。編號從 1 開始
-#   OffsetX [整數] X 位移 — X 軸位移
-#   EndColumn [文字] 結尾欄 — 最後一欄的索引或字母
-#   VerticalDirection [選項，預設 Above] Y 軸方向 — Y 軸位移方向。根據目前使用中儲存格的位置，要沿著垂直軸查看的位置
-#       可用值：Excel.VerticalDirection.Above（上方）、Excel.VerticalDirection.Below（下方）
-#   EndRow [整數] 結尾列 — 最後一個列號。編號從 1 開始
-#   OffsetY [整數] Y 位移 — Y 軸位移
-#   CellName [文字] 名稱 — 儲存格的名稱
-# 可能的錯誤：SelectCellsError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

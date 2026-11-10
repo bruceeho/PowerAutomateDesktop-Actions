@@ -1,19 +1,1 @@
 Cryptography.HashText HashAlgorithm: Cryptography.HashAlgorithm.SHA256 Encoding: Cryptography.EncryptionEncoding.Unicode TextToHash: `` HashedText=> HashedText
-
-# ==================== 說明 ====================
-# 動作：雜湊文字  (Cryptography.HashText)
-# 英文名稱：Hash text
-# 用途：使用指定的演算法和編碼格式，雜湊字串
-# 位置：密碼編譯
-# 輸入參數：
-#   HashAlgorithm [選項，預設 SHA256] 雜湊演算法 — 要用於雜湊的演算法
-#       可用值：Cryptography.HashAlgorithm.SHA256（SHA256）、Cryptography.HashAlgorithm.SHA384（SHA384）、Cryptography.HashAlgorithm.SHA512（SHA512）
-#   Encoding [選項，預設 Unicode] 編碼 — 要雜湊之文字的編碼
-#       可用值：Cryptography.EncryptionEncoding.DefaultEncoding（系統預設）、Cryptography.EncryptionEncoding.ANSI（ASCII）、Cryptography.EncryptionEncoding.Unicode（Unicode）、Cryptography.EncryptionEncoding.BigEndianUnicode（位元組由大到小 Unicode）、Cryptography.EncryptionEncoding.UTF8（UTF-8）
-#   TextToHash [文字] 要雜湊的文字 — 要雜湊的文字
-# 產生的變數：
-#   HashedText [文字] 雜湊的文字 — 可供日後處理的已雜湊文字
-# 可能的錯誤：HashTextError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

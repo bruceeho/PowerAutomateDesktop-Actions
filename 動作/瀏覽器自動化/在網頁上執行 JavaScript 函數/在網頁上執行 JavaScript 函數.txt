@@ -1,16 +1,1 @@
 WebAutomation.ExecuteJavascript BrowserInstance: `` Javascript: $'''function ExecuteScript() { /*your code here, return something (optionally); */ }''' Result=> Result
-
-# ==================== 說明 ====================
-# 動作：在網頁上執行 JavaScript 函數  (WebAutomation.ExecuteJavascript)
-# 英文名稱：Run JavaScript function on web page
-# 用途：在網頁上執行 JavaScript 函數並取得傳回的結果
-# 位置：瀏覽器自動化
-# 輸入參數：
-#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
-#   Javascript [文字，預設 function ExecuteScript() { /*your code here, return something (optionally); */ }] JavaScript 函數 — 輸入要在網頁上執行的 JavaScript 函數
-# 產生的變數：
-#   Result [文字] 結果 — 執行 JavaScript 函數的結果
-# 可能的錯誤：JavaScriptExecutionError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

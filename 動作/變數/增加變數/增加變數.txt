@@ -1,13 +1,1 @@
 Variables.IncreaseVariable Value: `` IncrementValue: ``
-
-# ==================== 說明 ====================
-# 動作：增加變數  (Variables.IncreaseVariable)
-# 英文名稱：Increase variable
-# 用途：將變數的值增加特定量
-# 位置：變數
-# 輸入參數：
-#   Value [數值] 變數名稱 — 要增加的數值
-#   IncrementValue [數值] 增加的量 — 要用來增加變數的數值，或先前所建立包含一個數值的變數
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

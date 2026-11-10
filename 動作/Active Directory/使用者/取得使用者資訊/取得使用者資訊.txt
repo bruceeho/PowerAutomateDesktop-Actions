@@ -1,16 +1,1 @@
 ActiveDirectory.GetUserInfo DistinguishedName: `` ParentDirectoryEntry: `` UserInfo=> UserInfo
-
-# ==================== 說明 ====================
-# 動作：取得使用者資訊  (ActiveDirectory.GetUserInfo)
-# 英文名稱：Get user info
-# 用途：取得使用者在 Active Directory 中的資訊
-# 位置：Active Directory > 使用者
-# 輸入參數：
-#   DistinguishedName [文字] 辨別名稱 — Active Directory 項目的辨別名稱
-#   ParentDirectoryEntry [ActiveDirectoryEntry] 上層目錄項目 — Active Directory 伺服器的上層項目
-# 產生的變數：
-#   UserInfo [UserInfo] 使用者資訊 — 使用者的資訊
-# 可能的錯誤：AuthenticationError、InvalidOperationError、ServerNotOperationalError、UnauthorizedAccessError、ActiveDirectoryEntryNotFound、ObjectDoesNotExistOnServerError、ActiveDirectoryError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

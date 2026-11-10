@@ -1,19 +1,1 @@
 MicrosoftCognitive.KeyPhrasesMicrosoft ServerLocation: MicrosoftCognitive.MicrosoftServerLocation.WestUS SubscriptionKey: `` Text: `` Timeout: 30 Response=> Response StatusCode=> StatusCode
-
-# ==================== 說明 ====================
-# 動作：KeyPhrasesMicrosoft  (MicrosoftCognitive.KeyPhrasesMicrosoft)
-# 位置：認知 > Microsoft > 文字分析
-# 輸入參數：
-#   ServerLocation [選項，預設 WestUS]
-#       可用值：MicrosoftCognitive.MicrosoftServerLocation.WestUS（美國西部）、MicrosoftCognitive.MicrosoftServerLocation.WestUS2（美國西部 2）、MicrosoftCognitive.MicrosoftServerLocation.EastUS（美國東部）、MicrosoftCognitive.MicrosoftServerLocation.EastUS2（美國東部 2）、MicrosoftCognitive.MicrosoftServerLocation.WestCentralUS（美國中西部）、MicrosoftCognitive.MicrosoftServerLocation.SouthCentralUS（美國中南部）、MicrosoftCognitive.MicrosoftServerLocation.WestEurope（西歐）、MicrosoftCognitive.MicrosoftServerLocation.NorthEurope（北歐）、MicrosoftCognitive.MicrosoftServerLocation.SoutheastAsia（東南亞）、MicrosoftCognitive.MicrosoftServerLocation.EastAsia（東亞）、MicrosoftCognitive.MicrosoftServerLocation.AustraliaEast（澳大利亞東部）、MicrosoftCognitive.MicrosoftServerLocation.BrazilSouth（巴西南部）、MicrosoftCognitive.MicrosoftServerLocation.CanadaCentral（加拿大中部）、MicrosoftCognitive.MicrosoftServerLocation.CentralIndia（印度中部）、MicrosoftCognitive.MicrosoftServerLocation.UKSouth（英國南部）、MicrosoftCognitive.MicrosoftServerLocation.JapanEast（日本東部）
-#   SubscriptionKey [文字]
-#   Text [List<String>]
-#   Language [文字，選填]
-#   Timeout [整數，預設 30]
-# 產生的變數：
-#   Response [自訂物件]
-#   StatusCode [整數]
-# 可能的錯誤：RequestTimeoutExpiredError、InvokeCognitiveServiceError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

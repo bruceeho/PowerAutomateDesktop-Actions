@@ -1,28 +1,7 @@
-# 【模式 ProcessIsRunning】檢查處理序是否正在執行
 System.IfProcessAction.ProcessIsRunning ProcessName: ``
 
-# 【模式 ProcessIsNotRunning】檢查處理序是否未執行
 System.IfProcessAction.ProcessIsNotRunning ProcessName: ``
 
-# 【模式 ProcessWithNameIsRunning】檢查指定使用者名稱下的程序是否正在執行
 System.IfProcessAction.ProcessWithNameIsRunning ProcessUser: `` ProcessName: ``
 
-# 【模式 ProcessWithNameIsNotRunning】檢查指定使用者名稱下的程序是否未執行
 System.IfProcessAction.ProcessWithNameIsNotRunning ProcessUser: `` ProcessName: ``
-
-# ==================== 說明 ====================
-# 動作：如果處理序  (System.IfProcessAction)
-# 英文名稱：If process
-# 用途：標記根據處理序是否執行的條件式動作區塊的開頭
-# 位置：系統
-# 輸入參數：
-#   ProcessUser [文字]
-#   UseProcessUser [布林，預設 False]
-#   CheckMode [選項，預設 IsRunning]
-#       可用值：System.IfProcess.IsRunning（正在執行）、System.IfProcess.IsNotRunning（未執行）
-#   ProcessName [文字]
-# 可能的錯誤：RetrieveProcessesError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

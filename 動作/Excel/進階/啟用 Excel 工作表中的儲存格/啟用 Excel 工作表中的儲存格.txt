@@ -1,29 +1,5 @@
-# 【模式 ActivateCell】透過提供欄與列，啟用 Excel 執行個體的使用中工作表中的儲存格
 Excel.ActivateCellInExcel.ActivateCell Instance: `` Column: `` Row: ``
 
-# 【模式 ActivateCellRelativeTo】指定欄、列和位移，啟用先前所啟用 Excel 執行個體的使用中工作表儲存格
 Excel.ActivateCellInExcel.ActivateCellRelativeTo Instance: `` Direction: Excel.TwoDimensionalDirection.Left OffsetFromActiveCell: ``
 
-# 【模式 ActivateNamedCell】透過提供儲存格名稱，啟用 Excel 執行個體的使用中工作表中的儲存格
 Excel.ActivateCellInExcel.ActivateNamedCell Instance: `` CellName: ``
-
-# ==================== 說明 ====================
-# 動作：啟用 Excel 工作表中的儲存格  (Excel.ActivateCellInExcel)
-# 英文名稱：Activate cell in Excel worksheet
-# 用途：透過提供欄、列、位移和儲存格名稱，啟用 Excel 執行個體的使用中工作表中的儲存格
-# 位置：Excel > 進階
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 指定要處理的 Excel 執行個體例。這個變數先前必須已使用「啟動 Excel」動作完成指定
-#   SpecifyCellsMode [選項，預設 Absolute] 啟用​​ — 選取要以絕對還是相對方式來依儲存格名稱指定儲存格。後者使用的是位移距離，也就是目前使用中儲存格與要啟用的儲存格之間的儲存格數目。
-#       可用值：Excel.SpecifyCellsActivationMode.Absolute（絕對定位的指定儲存格）、Excel.SpecifyCellsActivationMode.Relative（相對定位的指定儲存格）、Excel.SpecifyCellsActivationMode.NamedCells（具有名稱的儲存格）
-#   Column [文字] 資料行 — 儲存格欄的數值或字母
-#   Direction [選項，預設 Left] 方向 — 選取位移方向。選取要在何處尋找要根據目前使用中儲存格位置進行啟用的儲存格
-#       可用值：Excel.TwoDimensionalDirection.Left（向左翻轉）、Excel.TwoDimensionalDirection.Right（向右翻轉）、Excel.TwoDimensionalDirection.Above（上方）、Excel.TwoDimensionalDirection.Below（下方）
-#   Row [整數] 資料列 — 儲存格列的數值。編號從 1 開始
-#   OffsetFromActiveCell [整數] 與使用中儲存格間的位移 — 目前使用中儲存格與所需儲存格之間的距離 (儲存格數)。編號從 0 開始
-#   CellName [文字] 名稱 — 儲存格的名稱
-# 可能的錯誤：ActivateExcelCellError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

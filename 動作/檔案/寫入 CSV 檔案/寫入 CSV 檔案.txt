@@ -1,28 +1,3 @@
-# 【模式 WriteCSV】將資料表、資料列或清單寫入 CSV 檔案
 File.WriteToCSVFile.WriteCSV VariableToWrite: `` CSVFile: `` CsvFileEncoding: File.CSVEncoding.UTF8 IncludeColumnNames: False IfFileExists: File.IfFileExists.Overwrite ColumnsSeparator: File.CSVColumnsSeparator.SystemDefault
 
-# 【模式 WriteCSVWithCustomSeparator】將資料表、資料列或清單寫入 CSV 檔案
 File.WriteToCSVFile.WriteCSVWithCustomSeparator VariableToWrite: `` CSVFile: `` CsvFileEncoding: File.CSVEncoding.UTF8 IncludeColumnNames: False IfFileExists: File.IfFileExists.Overwrite CustomColumnsSeparator: ``
-
-# ==================== 說明 ====================
-# 動作：寫入 CSV 檔案  (File.WriteToCSVFile)
-# 英文名稱：Write to CSV file
-# 用途：將資料表、資料列或清單寫入 CSV 檔案
-# 位置：檔案
-# 輸入參數：
-#   VariableToWrite [一般值] 要寫入的變數 — 要寫入目標 CSV 檔案的資料表、資料列變數或清單變數
-#   CSVFile [FileObject] 檔案路徑 — 要將變數匯出至其中的 CSV 檔案。這可以是檔案路徑，或是包含檔案或文字路徑的變數
-#   CsvFileEncoding [選項，預設 UTF8] 編碼 — 寫入所指定 CSV 檔案時所使用的編碼
-#       可用值：File.CSVEncoding.SystemDefault（系統預設）、File.CSVEncoding.UTF8（UTF-8）、File.CSVEncoding.Unicode（Unicode）、File.CSVEncoding.BigEndianUnicode（Unicode (位元組由大到小)）、File.CSVEncoding.UTF8NoBOM（UTF-8 (沒有位元組順序標記)）、File.CSVEncoding.UnicodeNoBOM（Unicode (沒有位元組順序標記)）、File.CSVEncoding.ASCII（ASCII）
-#   IncludeColumnNames [布林，預設 False] 包含欄名稱 — 指定所指定變數的欄名稱是否要設為 CSV 檔案的第一列。只有當目標 CSV 檔案一開始並不存在，或者存在但文字為空白時，這個選項才會生效
-#   IfFileExists [選項，預設 Overwrite] 如果檔案已存在 — 指定當檔案系統中已存在目標 CSV 檔案時應採取的行動
-#       可用值：File.IfFileExists.Overwrite（覆寫現有內容）、File.IfFileExists.Append（附加內容）
-#   ColumnsSeparator [選項，預設 SystemDefault] 分隔符號 — 要在所指定 CSV 檔案中使用的欄分隔符號
-#       可用值：File.CSVColumnsSeparator.SystemDefault（系統預設）、File.CSVColumnsSeparator.Comma（逗號）、File.CSVColumnsSeparator.Semicolon（分號）、File.CSVColumnsSeparator.Tab（定位字元）
-#   UseCustomSeparator [布林，預設 False] 使用自訂欄分隔符號 — 指定是否使用自訂欄分隔符號，或預先定義的
-#   CustomColumnsSeparator [文字] 自訂欄分隔符號 — 要在 CSV 檔案中使用的自訂欄分隔符號
-# 可能的錯誤：WriteToCSVError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

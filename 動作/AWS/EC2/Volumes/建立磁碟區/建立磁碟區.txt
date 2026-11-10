@@ -1,30 +1,3 @@
-# 【模式 CreateVolume】建立 EBS 磁碟區以附加至相同可用性區域中的執行個體
 AWS.CreateVolume.CreateVolume Ec2Client: `` AvailabilityZone: `` Size: `` Encrypted: False VolumeType: AWS.VolumeType.Gp2 Volume=> Volume
 
-# 【模式 CreateVolumeFromSnapshot】從 EBS 快照集建立 EBS 磁碟區
 AWS.CreateVolume.CreateVolumeFromSnapshot Ec2Client: `` AvailabilityZone: `` SnapshotId: `` Encrypted: False VolumeType: AWS.VolumeType.Gp2 Volume=> Volume
-
-# ==================== 說明 ====================
-# 動作：建立磁碟區  (AWS.CreateVolume)
-# 英文名稱：Create volume
-# 用途：建立 EBS 磁碟區以附加至相同可用性區域中的執行個體
-# 位置：AWS > EC2 > Volumes
-# 輸入參數：
-#   Ec2Client [Ec2ClientObject]
-#   Name [文字，選填]
-#   Purpose [文字，選填]
-#   AvailabilityZone [文字]
-#   FromSnapshot [布林，預設 False]
-#   SnapshotId [文字]
-#   Size [文字]
-#   SnapshotSize [文字，選填]
-#   Encrypted [布林，預設 False]
-#   VolumeType [選項，預設 Gp2]
-#       可用值：AWS.VolumeType.Gp2（Gp2）、AWS.VolumeType.Standard（標準）、AWS.VolumeType.Io1（Io1）、AWS.VolumeType.Sc1（Sc1）、AWS.VolumeType.St1（St1）
-# 產生的變數：
-#   Volume [Volume]
-# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、InvalidParameterError、InvalidZoneError、LimitExceededError、NotAvailableInZoneError、RequestFailedError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

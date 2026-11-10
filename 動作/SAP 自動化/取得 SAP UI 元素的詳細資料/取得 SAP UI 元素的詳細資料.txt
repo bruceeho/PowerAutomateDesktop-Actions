@@ -1,17 +1,1 @@
 SAP.GetSapElementDetail SapInstance: `` ElementId: `` AttributeName: $'''Own Text''' AttributeValue=> AttributeValue
-
-# ==================== 說明 ====================
-# 動作：取得 SAP UI 元素的詳細資料  (SAP.GetSapElementDetail)
-# 英文名稱：Get details of SAP UI element
-# 用途：取得 SAP 視窗中 SAP UI 元素的屬性值。
-# 位置：SAP 自動化
-# 輸入參數：
-#   SapInstance [SapInstanceHandle] SAP 執行個體 — 選取保存您要使用的 SAP 執行個體的變數。此變數應已定義在先前的 SAP 登入動作中。
-#   ElementId [文字] SAP 元素識別碼 — SAP 元素的識別碼。此參數決定了 SAP 中將與動作互動的 UI 元素。您可以使用下方的按鈕，在 SAP 畫面中指定 SAP UI 元素，或手動插入值。
-#   AttributeName [文字，預設 Own Text] 屬性名稱 — 將擷取其值的屬性。
-# 產生的變數：
-#   AttributeValue [文字] SAPAttributeValue — SAP UI 元素屬性的值。
-# 可能的錯誤：GetSapElementDetailActionError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

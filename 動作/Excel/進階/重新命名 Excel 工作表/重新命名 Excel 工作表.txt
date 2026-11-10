@@ -1,23 +1,3 @@
-# 【模式 RenameWorksheetWithIndex】重新命名依索引所指定 Excel 執行個體的特定工作表
 Excel.RenameWorksheet.RenameWorksheetWithIndex Instance: `` Index: `` NewName: ``
 
-# 【模式 RenameWorksheetWithName】重新命名依名稱所指定 Excel 執行個體的特定工作表
 Excel.RenameWorksheet.RenameWorksheetWithName Instance: `` Name: `` NewName: ``
-
-# ==================== 說明 ====================
-# 動作：重新命名 Excel 工作表  (Excel.RenameWorksheet)
-# 英文名稱：Rename Excel worksheet
-# 用途：重新命名 Excel 執行個體的特定工作表
-# 位置：Excel > 進階
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 指定 Excel 執行個體。這個變數先前必須已使用「啟動 Excel」動作完成指定
-#   FindWorksheetBy [選項，預設 Name] 重新命名工作表 — 指定要依名稱或索引尋找工作表
-#       可用值：Excel.FindWorksheetBy.Index（索引）、Excel.FindWorksheetBy.Name（名字）
-#   Name [文字] 工作表名稱 — 要重新命名之工作表的名稱
-#   Index [整數] 工作表索引 — 要重新命名之工作表的索引編號。編號從 1 開始，表示第一個工作表的索引是 1，第二張工作表的索引是 2，以此類推。
-#   NewName [文字] 工作表新名稱 — 工作表的新名稱
-# 可能的錯誤：WorksheetNotFoundError、RenameWorksheetError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

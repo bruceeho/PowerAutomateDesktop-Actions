@@ -1,26 +1,3 @@
-# 【模式 CreateTesseractEngine】建立 Tesseract OCR 引擎
 OCR.CreateTesseractEngine.CreateTesseractEngine Language: OCR.TesseractLanguage.English ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 TesseractEngine=> TesseractEngine
 
-# 【模式 CreateCustomTesseractEngine】建立自訂 Tesseract OCR 引擎
 OCR.CreateTesseractEngine.CreateCustomTesseractEngine LanguageAbbreviation: `` LanguageDataPath: `` ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 TesseractEngine=> TesseractEngine
-
-# ==================== 說明 ====================
-# 動作：建立 Tesseract OCR 引擎  (OCR.CreateTesseractEngine)
-# 英文名稱：Create Tesseract OCR engine
-# 用途：建立 Tesseract OCR 引擎
-# 位置：OCR
-# 輸入參數：
-#   UseOtherLanguage [布林，預設 False] 使用其他語言 — 指定是否使用「Tesseract 語言」欄位中未提供的語言
-#   Language [選項，預設 English] Tesseract 語言 — Tesseract 引擎偵測的文字語言
-#       可用值：OCR.TesseractLanguage.English、OCR.TesseractLanguage.German、OCR.TesseractLanguage.Spanish、OCR.TesseractLanguage.French、OCR.TesseractLanguage.Italian
-#   LanguageAbbreviation [文字] 語言縮寫 — 要使用之語言的 Tesseract 縮寫。例如，如果資料是 'eng.traineddata'，請在欄位中輸入 'eng'
-#   LanguageDataPath [FolderObject] 語言資料路徑  — 儲存指定語言 Tesseract 資料的資料夾路徑
-#   ImageWidthMultiplier [整數，預設 1] 影像寬度乘數 — 影像的寬度乘數
-#   ImageHeightMultiplier [整數，預設 1] 影像高度乘數 — 影像的高度乘數
-# 產生的變數：
-#   TesseractEngine [OCREngineObject] OCR 引擎 — 要與後續 OCR 動作搭配使用的 OCR 引擎
-# 可能的錯誤：CreateOCREngineError、DataPathFolderNotFoundError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

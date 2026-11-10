@@ -1,16 +1,1 @@
 Display.ShowCustomDialog CardTemplateJson: `` CustomFormData=> CustomFormData ButtonPressed=> ButtonPressed
-
-# ==================== 說明 ====================
-# 動作：顯示自訂表單  (Display.ShowCustomDialog)
-# 英文名稱：Display custom form
-# 用途：顯示可包含多種元素類型的自訂表單，例如文字、數字或檔案輸入等。
-# 位置：訊息方塊
-# 輸入參數：
-#   CardTemplateJson [文字] CardTemplateJson — CardTemplateJson
-# 產生的變數：
-#   CustomFormData [自訂物件] 自訂表單回覆 — 包含使用者輸入的自訂物件
-#   ButtonPressed [文字] 按下的按鈕 — 所按下按鈕的識別碼
-# 可能的錯誤：ShowCustomDialogError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

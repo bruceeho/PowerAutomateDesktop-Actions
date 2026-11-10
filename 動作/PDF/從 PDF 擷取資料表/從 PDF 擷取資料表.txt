@@ -1,31 +1,5 @@
-# 【模式 ExtractTables】從 PDF 檔案擷取資料表
 PDF.ExtractTablesFromPDF.ExtractTables PDFFile: `` MultiPageTables: True SetFirstRowAsHeader: True ExtractedPDFTables=> ExtractedPDFTables
 
-# 【模式 ExtractTablesFromPage】從 PDF 檔案的單一頁面擷取資料表
 PDF.ExtractTablesFromPDF.ExtractTablesFromPage PDFFile: `` PageNumber: `` MultiPageTables: True SetFirstRowAsHeader: True ExtractedPDFTables=> ExtractedPDFTables
 
-# 【模式 ExtractTablesFromPageRange】從 PDF 檔案的頁面範圍擷取資料表
 PDF.ExtractTablesFromPDF.ExtractTablesFromPageRange PDFFile: `` FromPageNumber: `` ToPageNumber: `` MultiPageTables: True SetFirstRowAsHeader: True ExtractedPDFTables=> ExtractedPDFTables
-
-# ==================== 說明 ====================
-# 動作：從 PDF 擷取資料表  (PDF.ExtractTablesFromPDF)
-# 英文名稱：Extract tables from PDF
-# 用途：從 PDF 檔案擷取資料表
-# 位置：PDF
-# 輸入參數：
-#   PDFFile [FileObject] PDF 檔案 — 要從中擷取資料表的 PDF 檔案。請輸入檔案路徑，即一個包含檔案或文字路徑的變數
-#   Password [文字(可加密)，選填] 密碼 — PDF 檔案的密碼。如果 PDF 未以密碼保護，請保留空白
-#   PagesToExtract [選項，預設 All] 要擷取的頁面 — 指定有幾頁要擷取資料表: 所有頁面、單一頁面或頁面範圍
-#       可用值：PDF.ExtractionMode.All（全部）、PDF.ExtractionMode.Single（單一）、PDF.ExtractionMode.Range（範圍）
-#   PageNumber [整數] 單一頁碼 — 要擷取資料表的單一頁碼
-#   FromPageNumber [整數] 起始頁碼 — 從中擷取資料表之頁面範圍的起始頁碼
-#   ToPageNumber [整數] 結束頁碼 — 從中擷取資料表之頁面範圍的結束頁碼
-#   MultiPageTables [布林，預設 True] 合併跨頁面邊距的資料表 — 指定是否要合併指定的頁面範圍內跨頁面邊距的資料表
-#   SetFirstRowAsHeader [布林，預設 True] 第一行包含欄名稱 — 指定資料表的第一行是否包含欄名稱
-# 產生的變數：
-#   ExtractedPDFTables [List<PDFTableInfo>] 擷取的 PDF 資料表，並以清單形式顯示資訊 — 擷取的資料表，並以清單形式顯示其資訊
-# 可能的錯誤：PDFFileDoesNotExistError、InvalidPasswordError、FailedToExtractTablesError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

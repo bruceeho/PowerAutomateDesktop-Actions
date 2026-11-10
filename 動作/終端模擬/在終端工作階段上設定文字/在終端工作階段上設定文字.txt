@@ -1,34 +1,7 @@
-# 【模式 SetTextOnCursorPosition】在終端工作階段的游標位置上設定文字
 TerminalEmulation.SetTextOnTerminalSession.SetTextOnCursorPosition Text: `` TreatAtCharacterAsLiteral: False Session: ``
 
-# 【模式 SetTextOnFieldWithLabel】在指定標籤的指定終端工作階段欄位上設定文字
 TerminalEmulation.SetTextOnTerminalSession.SetTextOnFieldWithLabel Text: `` FieldLabel: `` TreatAtCharacterAsLiteral: False Session: ``
 
-# 【模式 SetTextOnFieldWithIndex】在指定索引的指定終端工作階段欄位上設定文字
 TerminalEmulation.SetTextOnTerminalSession.SetTextOnFieldWithIndex Text: `` Index: `` TreatAtCharacterAsLiteral: False Session: ``
 
-# 【模式 SetTextOnFieldAtPosition】在指定位置的指定終端工作階段欄位上設定文字
 TerminalEmulation.SetTextOnTerminalSession.SetTextOnFieldAtPosition Text: `` Row: `` Column: `` TreatAtCharacterAsLiteral: False Session: ``
-
-# ==================== 說明 ====================
-# 動作：在終端工作階段上設定文字  (TerminalEmulation.SetTextOnTerminalSession)
-# 英文名稱：Set text on terminal session
-# 用途：在終端工作階段上設定文字
-# 位置：終端模擬
-# 輸入參數：
-#   Text [文字(可加密)] 文字 — 要在指定位置設定的文字
-#   SetTextOn [選項，預設 Field] 設定文字 — 要設定文字的位置
-#       可用值：TerminalEmulation.SetTextSource.CursorPosition（游標位置）、TerminalEmulation.SetTextSource.Field（欄位）
-#   GetFieldBy [選項，預設 FieldLabel] 欄位取得方式 — 指定尋找欄位的方式
-#       可用值：TerminalEmulation.GetFieldBy.FieldLabel（標籤）、TerminalEmulation.GetFieldBy.Index（索引）、TerminalEmulation.GetFieldBy.Position（位置）
-#   Row [整數] 列 — 畫面上欄位的垂直位置
-#   FieldLabel [文字] 標籤 — 要尋找的欄位標籤
-#   Index [整數] 索引 — 畫面上欄位的索引
-#   Column [整數] 欄 — 畫面上欄位的水平位置
-#   TreatAtCharacterAsLiteral [布林，預設 False] 將 '@' 字元視為文字 — 核取此方塊可將 '@' 字元視為文字傳送。如果將此選項保持停用狀態，則會將其視為特殊字元傳送
-#   Session [TerminalSessionHandle] 終端工作階段 — 要處理的終端工作階段
-# 可能的錯誤：EmulatorCommunicationError、FieldIndexOutOfBoundsError、FieldLabelNotFoundError、ScreenPositionOutOfBoundsError、NoFieldFoundAtGivenPositionError、UnformattedTerminalScreenError、PositionCommandsNotSupportedByEmulatorError、OperationUnavailableForSessionTypeError、InputTextRejectedError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

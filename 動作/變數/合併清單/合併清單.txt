@@ -1,16 +1,1 @@
 Variables.MergeLists SecondList: `` FirstList: `` OutputList=> OutputList
-
-# ==================== 說明 ====================
-# 動作：合併清單  (Variables.MergeLists)
-# 英文名稱：Merge lists
-# 用途：將兩份清單合併成一份
-# 位置：變數
-# 輸入參數：
-#   SecondList [List<Object>] 第二份清單 — 要合併的第二份項目清單
-#   FirstList [List<Object>] 第一份清單 — 要合併的第一份項目清單
-# 產生的變數：
-#   OutputList [List<Object>] 輸出清單 — 合併的清單。初始清單不受影響
-# 可能的錯誤：IncompatibleTypesListsError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

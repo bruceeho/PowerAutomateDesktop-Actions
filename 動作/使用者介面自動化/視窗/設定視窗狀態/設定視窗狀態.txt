@@ -1,28 +1,5 @@
-# 【模式 SetState】透過 UI 元素還原、最大化或最小化特定視窗
 UIAutomation.SetWindowState.SetState State: UIAutomation.WindowState.Restored
 
-# 【模式 SetStateByInstanceOrHandle】透過視窗執行個體或控點還原、最大化或最小化特定視窗
 UIAutomation.SetWindowState.SetStateByInstanceOrHandle WindowInstance: `` State: UIAutomation.WindowState.Restored
 
-# 【模式 SetStateByTitleClass】透過視窗標題和/或類別還原、最大化或最小化特定視窗
 UIAutomation.SetWindowState.SetStateByTitleClass State: UIAutomation.WindowState.Restored
-
-# ==================== 說明 ====================
-# 動作：設定視窗狀態  (UIAutomation.SetWindowState)
-# 英文名稱：Set window state
-# 用途：還原、最大化或最小化特定視窗
-# 位置：使用者介面自動化 > 視窗
-# 輸入參數：
-#   FindWindowMode [選項，預設 Control] 尋找視窗模式 — 指定要使用 UI 元素或視窗標題/類別組合尋找視窗
-#       可用值：UIAutomation.FindWindowBy.Control（透過視窗 UI 元素）、UIAutomation.FindWindowBy.InstanceOrHandle（透過視窗執行個體/控點）、UIAutomation.FindWindowBy.TitleAndClass（透過標題和/或類別）
-#   Control [UIControl]
-#   Title [文字，選填] 視窗標題 — 視窗標題。可使用萬用字元，如 '?' 或 '*'。
-#   WindowInstance [整數] 視窗執行個體 — 要設定狀態之視窗的執行個體或控點
-#   Class [文字，選填] 視窗類別 — 如果有兩個標題相同的視窗，則視窗類別有助於區分兩者。在這種情況下，請輸入要使用的視窗類別
-#   State [選項，預設 Restored] 視窗狀態 — 選擇要顯示視窗的狀態
-#       可用值：UIAutomation.WindowState.Restored（已還原）、UIAutomation.WindowState.Maximized（已最大化）、UIAutomation.WindowState.Minimized（已最小化）
-# 可能的錯誤：WindowNotFoundError、SetWindowStateError、WindowOperationInNonInteractiveModeError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

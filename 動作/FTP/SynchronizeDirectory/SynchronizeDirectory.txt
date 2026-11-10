@@ -1,47 +1,11 @@
-# 【模式 SynchronizeUploadAll】同步處理上傳
 FTP.SynchronizeDirectory.SynchronizeUploadAll Connection: `` LocalFolder: `` FtpDirectory: `` DeleteIfSourceAbsent: False IncludeSubdirectories: True TimeDifferenceHours: 0 TimeDifferenceMinutes: 0 TimeDifferenceAhead: True FtpFilesAdded=> FtpFilesAdded FtpFilesModified=> FtpFilesModified FtpFilesDeleted=> FtpFilesDeleted
 
-# 【模式 SynchronizeUploadIncludeFilter】同步處理上傳
 FTP.SynchronizeDirectory.SynchronizeUploadIncludeFilter Connection: `` FileFilter: $'''*''' LocalFolder: `` FtpDirectory: `` DeleteIfSourceAbsent: False IncludeSubdirectories: True TimeDifferenceHours: 0 TimeDifferenceMinutes: 0 TimeDifferenceAhead: True FtpFilesAdded=> FtpFilesAdded FtpFilesModified=> FtpFilesModified FtpFilesDeleted=> FtpFilesDeleted
 
-# 【模式 SynchronizeUploadExcludeFilter】同步處理上傳
 FTP.SynchronizeDirectory.SynchronizeUploadExcludeFilter Connection: `` FileFilter: $'''*''' LocalFolder: `` FtpDirectory: `` DeleteIfSourceAbsent: False IncludeSubdirectories: True TimeDifferenceHours: 0 TimeDifferenceMinutes: 0 TimeDifferenceAhead: True FtpFilesAdded=> FtpFilesAdded FtpFilesModified=> FtpFilesModified FtpFilesDeleted=> FtpFilesDeleted
 
-# 【模式 SynchronizeDownloadAll】同步處理下載
 FTP.SynchronizeDirectory.SynchronizeDownloadAll Connection: `` LocalFolder: `` FtpDirectory: `` DeleteIfSourceAbsent: False IncludeSubdirectories: True TimeDifferenceHours: 0 TimeDifferenceMinutes: 0 TimeDifferenceAhead: True FilesAdded=> FilesAdded FilesModified=> FilesModified FilesDeleted=> FilesDeleted
 
-# 【模式 SynchronizeDownloadIncludeFilter】同步處理下載
 FTP.SynchronizeDirectory.SynchronizeDownloadIncludeFilter Connection: `` FileFilter: $'''*''' LocalFolder: `` FtpDirectory: `` DeleteIfSourceAbsent: False IncludeSubdirectories: True TimeDifferenceHours: 0 TimeDifferenceMinutes: 0 TimeDifferenceAhead: True FilesAdded=> FilesAdded FilesModified=> FilesModified FilesDeleted=> FilesDeleted
 
-# 【模式 SynchronizeDownloadExcludeFilter】同步處理下載
 FTP.SynchronizeDirectory.SynchronizeDownloadExcludeFilter Connection: `` FileFilter: $'''*''' LocalFolder: `` FtpDirectory: `` DeleteIfSourceAbsent: False IncludeSubdirectories: True TimeDifferenceHours: 0 TimeDifferenceMinutes: 0 TimeDifferenceAhead: True FilesAdded=> FilesAdded FilesModified=> FilesModified FilesDeleted=> FilesDeleted
-
-# ==================== 說明 ====================
-# 動作：SynchronizeDirectory  (FTP.SynchronizeDirectory)
-# 位置：FTP
-# 輸入參數：
-#   Connection [FtpConnectionBase]
-#   SynchronizationDirection [選項，預設 Download]
-#       可用值：FTP.SynchronizationDirection.Download（遠端 -> 本機 (下載)）、FTP.SynchronizationDirection.Upload（本機 -> 遠端 (上傳)）
-#   FilesToSync [選項，預設 All]
-#       可用值：FTP.FtpFilesToSync.All（所有檔案）、FTP.FtpFilesToSync.IncludeFilter（僅限符合檔案篩選的檔案）、FTP.FtpFilesToSync.ExcludeFilter（僅限不符合檔案篩選的檔案）
-#   FileFilter [文字，預設 *]
-#   LocalFolder [FolderObject]
-#   FtpDirectory [FtpFolderObject，預設 /]
-#   DeleteIfSourceAbsent [布林，預設 False]
-#   IncludeSubdirectories [布林，預設 True]
-#   TimeDifferenceHours [整數，預設 0]
-#   TimeDifferenceMinutes [整數，預設 0]
-#   TimeDifferenceAhead [布林，預設 True]
-# 產生的變數：
-#   FtpFilesAdded [List<FtpFileObject>]
-#   FtpFilesModified [List<FtpFileObject>]
-#   FtpFilesDeleted [List<FtpFileObject>]
-#   FilesAdded [List<FileObject>]
-#   FilesModified [List<FileObject>]
-#   FilesDeleted [List<FileObject>]
-# 可能的錯誤：ListingError、NotConnectedError、FileNotFoundError、FTPConnectionAbortedError、UploadFileError、RemoteFileDoesNotExistError、CannotDownloadFileError、DeleteDirectoryError、SynchronizationFailedError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

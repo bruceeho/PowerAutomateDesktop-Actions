@@ -1,19 +1,1 @@
 AWS.CreateSnapshot Ec2Client: `` VolumeId: `` Snapshot=> Snapshot
-
-# ==================== 說明 ====================
-# 動作：建立快照集  (AWS.CreateSnapshot)
-# 英文名稱：Create snapshot
-# 用途：建立 EBS 磁碟區的快照集，並將其儲存在 Amazon S3 中
-# 位置：AWS > EC2 > Snapshots
-# 輸入參數：
-#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
-#   VolumeId [文字] 磁碟區識別碼 — EBS 磁碟區的識別碼
-#   Name [文字，選填] 名稱 — 快照集的名稱
-#   Description [文字，選填] 描述 — 快照集的描述
-#   Purpose [文字，選填] 用途 — 快照集的用途
-# 產生的變數：
-#   Snapshot [Snapshot] 快照集 — 建立的快照集
-# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、InvalidVolumeError、LimitExceededError、RequestFailedError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

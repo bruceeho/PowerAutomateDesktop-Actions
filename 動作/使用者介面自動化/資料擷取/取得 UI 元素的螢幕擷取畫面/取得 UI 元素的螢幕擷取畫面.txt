@@ -1,25 +1,3 @@
-# 【模式 TakeScreenshotOfUIElement】取得視窗中 UI 元素的螢幕擷取畫面
 UIAutomation.TakeScreenshotOfUIElement.TakeScreenshotOfUIElement Control: ``
 
-# 【模式 TakeScreenshotOfUIElementAndSaveToFile】取得 UI 元素的螢幕擷取畫面
 UIAutomation.TakeScreenshotOfUIElement.TakeScreenshotOfUIElementAndSaveToFile Control: `` ImageFilePath: `` ImageFormat: UIAutomation.ImageFormat.Bmp ImageFile=> ImageFile
-
-# ==================== 說明 ====================
-# 動作：取得 UI 元素的螢幕擷取畫面  (UIAutomation.TakeScreenshotOfUIElement)
-# 英文名稱：Take screenshot of UI element
-# 用途：取得視窗中 UI 元素的螢幕擷取畫面
-# 位置：使用者介面自動化 > 資料擷取
-# 輸入參數：
-#   Control [UIControl] UI 元素 — 視窗中要擷取為螢幕擷取畫面的 UI 元素
-#   SaveMode [選項，預設 Clipboard] 儲存模式 — 指定要將影像儲存至檔案，或儲存至剪貼簿
-#       可用值：UIAutomation.SaveMode.Clipboard（剪貼簿）、UIAutomation.SaveMode.File（檔案）
-#   ImageFilePath [FileObject] 影像檔路徑 — 設定要儲存檔案的完整路徑
-#   ImageFormat [選項，預設 Bmp] 檔案格式 — 影像檔的檔案格式
-#       可用值：UIAutomation.ImageFormat.Bmp（BMP）、UIAutomation.ImageFormat.Gif（GIF）、UIAutomation.ImageFormat.Jpeg（JPG）、UIAutomation.ImageFormat.Png（PNG）、UIAutomation.ImageFormat.Tiff（TIFF）
-# 產生的變數：
-#   ImageFile [FileObject] 影像檔 — 產生螢幕擷取畫面影像檔的檔案路徑
-# 可能的錯誤：UIElementNotFoundError、SaveImageError、TakeScreenshotError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

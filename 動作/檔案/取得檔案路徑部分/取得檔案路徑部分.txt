@@ -1,19 +1,1 @@
 File.GetPathPart File: `` RootPath=> RootPath Directory=> Directory FileName=> FileName FileNameWithoutExtension=> FileNameWithoutExtension Extension=> Extension
-
-# ==================== 說明 ====================
-# 動作：取得檔案路徑部分  (File.GetPathPart)
-# 英文名稱：Get file path part
-# 用途：從表示檔案路徑的文字中擷取一或多個部分 (目錄、檔名、副檔名等)
-# 位置：檔案
-# 輸入參數：
-#   File [FileObject] 檔案路徑 — 要做為來源的檔案路徑
-# 產生的變數：
-#   RootPath [FolderObject] 根路徑 — 來源檔案的根路徑
-#   Directory [FolderObject] 目錄 — 來源檔案的目錄
-#   FileName [文字] 檔案名稱 — 來源檔案的名稱
-#   FileNameWithoutExtension [文字] 不含副檔名的檔案名稱 — 來源檔案的檔案名稱 (不含副檔名)
-#   Extension [文字] 擴充功能 — 來源檔案的副檔名 (例如 .doc)
-# 可能的錯誤：InvalidFilePathError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

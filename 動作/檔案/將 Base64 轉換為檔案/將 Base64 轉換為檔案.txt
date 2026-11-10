@@ -1,16 +1,1 @@
 File.ConvertFromBase64 Base64Text: `` File: `` IfFileExists: File.IfExists.DoNothing
-
-# ==================== 說明 ====================
-# 動作：將 Base64 轉換為檔案  (File.ConvertFromBase64)
-# 英文名稱：Convert Base64 to file
-# 用途：將 Base64 編碼文字轉換為檔案
-# 位置：檔案
-# 輸入參數：
-#   Base64Text [文字] Base64 編碼文字 — Base64 編碼文字
-#   File [FileObject] 檔案路徑 — 要寫入的檔案
-#   IfFileExists [選項，預設 DoNothing] 如果檔案已存在 — 指定當目的地資料夾中已存在相同名稱的檔案時應採取的行動
-#       可用值：File.IfExists.DoNothing（不執行任何動作）、File.IfExists.Overwrite（覆寫）
-# 可能的錯誤：InvalidDirectoryError、ConvertBase64ToFileError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

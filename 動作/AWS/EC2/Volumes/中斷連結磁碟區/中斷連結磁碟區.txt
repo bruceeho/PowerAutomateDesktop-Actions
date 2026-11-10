@@ -1,17 +1,1 @@
 AWS.DetachVolume Ec2Client: `` VolumeId: `` Force: False
-
-# ==================== 說明 ====================
-# 動作：中斷連結磁碟區  (AWS.DetachVolume)
-# 英文名稱：Detach volume
-# 用途：將 EBS 磁碟區與 EC2 執行個體中斷連結
-# 位置：AWS > EC2 > Volumes
-# 輸入參數：
-#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
-#   VolumeId [文字] 磁碟區識別碼 — EBS 磁碟區的識別碼
-#   InstanceId [文字，選填] 執行個體識別碼 — 執行個體的識別碼
-#   Device [文字，選填] 裝置名稱 — 裝置的名稱
-#   Force [布林，預設 False] 強制中斷連結 — 指定當先前的中斷連結嘗試未徹底發生作用時，是否要強制中斷連結。
-# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、UnsupportedOperationError、InvalidParameterError、InvalidAttachmentError、IncorrectStateError、RequestFailedError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

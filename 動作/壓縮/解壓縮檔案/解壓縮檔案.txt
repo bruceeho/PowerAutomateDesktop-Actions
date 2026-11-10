@@ -1,17 +1,1 @@
 Compression.UnzipFiles ArchivePath: `` DestinationFolder: ``
-
-# ==================== 說明 ====================
-# 動作：解壓縮檔案  (Compression.UnzipFiles)
-# 英文名稱：Unzip files
-# 用途：解壓縮 ZIP 封存中所含的一或多個檔案或資料夾
-# 位置：壓縮
-# 輸入參數：
-#   ArchivePath [FileObject] 封存路徑 — 要解壓縮之 ZIP 檔案的完整路徑
-#   DestinationFolder [FolderObject] 目的地資料夾 — 要將封存解壓縮至其中之資料夾的完整路徑。這個動作會覆寫資料夾中檔名與封存中檔案同名的檔案
-#   Password [文字(可加密)，選填] 密碼 — 用於此封存的密碼 (如果有的話)。如果 ZIP 檔案未採用密碼保護，請將此處保留空白
-#   IncludeMask [文字，選填] 包含遮罩 — 這個篩選會限制將檔案解壓縮至此處輸入路徑。這時可使用萬用字元，例如「*.txt」或「document?.doc」(不含引號)。若要允許多個檔案篩選，請以分號分隔選項，例如「*.txt;*.exe」
-#   ExcludeMask [文字，選填] 排除遮罩 — 指定用於限制解壓縮檔案的篩選。這時可使用萬用字元，例如「*.txt」或「document?.doc」(不含引號)。若要允許多個檔案篩選，請以分號分隔選項，例如「*.txt;*.exe」
-# 可能的錯誤：CreateFolderError、ArchiveNotFoundError、InvalidArchiveError、UnzipError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,28 +1,3 @@
-# 【模式 SaveEmails】儲存來自特定帳戶的 Outlook 電子郵件訊息
 Outlook.SaveOutlookEmailMessages.SaveEmails Instance: `` Account: `` EmailsToSave: `` SaveFormat: Outlook.MessageType.OutlookMessageFormatUnicode SaveEmailsTo: `` MessagesFiles=> MessagesFiles
 
-# 【模式 SaveEmailsAs】儲存來自特定帳戶的 Outlook 電子郵件訊息
 Outlook.SaveOutlookEmailMessages.SaveEmailsAs Instance: `` Account: `` EmailsToSave: `` SaveFormat: Outlook.MessageType.OutlookMessageFormatUnicode SaveEmailsAs: `` SaveEmailsTo: `` MessagesFiles=> MessagesFiles
-
-# ==================== 說明 ====================
-# 動作：儲存 Outlook 電子郵件訊息  (Outlook.SaveOutlookEmailMessages)
-# 英文名稱：Save Outlook email messages
-# 用途：儲存來自特定帳戶的 Outlook 電子郵件訊息
-# 位置：Outlook
-# 輸入參數：
-#   Instance [OutlookInstanceHandle] Outlook 執行個體 — 要使用的 Outlook 執行個體。在「啟動 Outlook」動作中指定此變數
-#   Account [文字] 帳戶 — 使用 Outlook 帳戶名稱 (資料檔案名稱)
-#   EmailsToSave [List<OutlookMailMessage>] 要儲存的電子郵件訊息 — 要儲存的電子郵件訊息。使用由「擷取來自 Outlook 的電子郵件訊息」動作所填入的變數
-#   SaveFormat [選項，預設 OutlookMessageFormatUnicode] 儲存格式 — 指定儲存訊息的格式
-#       可用值：Outlook.MessageType.TextOnly（純文字 (*.txt)）、Outlook.MessageType.OutlookTemplate（Outlook 範本 (*.oft)）、Outlook.MessageType.OutlookMessageFormat（Outlook 訊息格式 (*.msg)）、Outlook.MessageType.OutlookMessageFormatUnicode（Outlook 訊息格式 - Unicode (*.msg)）、Outlook.MessageType.Html（HTML (*.html)）、Outlook.MessageType.MhtFiles（MHT 檔案 (*.mht)）
-#   SaveAsMode [選項，預設 DefaultName] 檔案名稱 — 指定要使用預設名稱 (主旨) 來儲存訊息，或是提供其他名稱
-#       可用值：Outlook.SaveAsMode.DefaultName（預設值）、Outlook.SaveAsMode.CustomName（自訂）
-#   SaveEmailsAs [文字] 另存新檔 — 指定訊息的自訂名稱，不同的訊息會因為自動新增的尾碼而有不同的名稱
-#   SaveEmailsTo [FolderObject] 將電子郵件訊息儲存至 — 要在其中儲存訊息的資料夾
-# 產生的變數：
-#   MessagesFiles [List<String>] 已儲存的訊息檔案 — 已儲存待稍後處理之電子郵件訊息的檔案路徑
-# 可能的錯誤：OutlookAccountNotFoundError、DirectoryNotFoundError、MessageDeletedOrMovedError、SaveEmailMessagesError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

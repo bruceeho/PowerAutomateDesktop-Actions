@@ -1,29 +1,7 @@
-# 【模式 TerminateProcessByName】依名稱立即停止正在執行的處理序
 System.TerminateProcess.TerminateProcessByName ProcessName: ``
 
-# 【模式 TerminateProcessById】依識別碼立即停止正在執行的處理序
 System.TerminateProcess.TerminateProcessById ProcessId: ``
 
-# 【模式 TerminateProcessByNameWithUserName】根據執行該程序的名稱和使用者名稱，立即停止正在執行的程序
 System.TerminateProcess.TerminateProcessByNameWithUserName ProcessName: `` ProcessUser: ``
 
-# 【模式 TerminateProcessByIdWithUserName】根據執行該程序的識別碼和使用者名稱，立即停止正在執行的程序
 System.TerminateProcess.TerminateProcessByIdWithUserName ProcessId: `` ProcessUser: ``
-
-# ==================== 說明 ====================
-# 動作：終止處理序  (System.TerminateProcess)
-# 英文名稱：Terminate process
-# 用途：立即停止正在執行的處理序
-# 位置：系統
-# 輸入參數：
-#   ProcessName [文字] 處理序名稱 — 要終止之處理序的名稱。如果有多個同名的處理序正在執行，則會將它們全部終止
-#   ProcessId [整數] 處理序識別碼 — 要終止之處理序的識別碼
-#   UseProcessUser [布林，預設 False] 寄件使用者 — 指定要終止的程序是否在特定使用者下執行
-#   ProcessUser [文字] 使用者名稱 — 指定執行該程序之使用者的名稱。格式為網域\使用者名稱或使用者名稱。
-#   SpecifyProcessBy [選項，預設 Name] 指定處理序的依據 — 指定要依名稱或識別碼指定要終止的處理序
-#       可用值：System.SpecifyProcessBy.Id（處理序識別碼）、System.SpecifyProcessBy.Name（處理序名稱）
-# 可能的錯誤：InvalidProcessIdError、TerminateProcessError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

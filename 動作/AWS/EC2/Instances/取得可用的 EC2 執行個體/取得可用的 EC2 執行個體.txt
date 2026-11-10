@@ -1,18 +1,1 @@
 AWS.GetAvailableEC2Instances Ec2Client: `` InstanceState: AWS.InstanceState.All Ec2InstancesInfo=> Ec2InstancesInfo
-
-# ==================== 說明 ====================
-# 動作：取得可用的 EC2 執行個體  (AWS.GetAvailableEC2Instances)
-# 英文名稱：Get available EC2 instances
-# 用途：取得相關 EC2 執行個體的資訊
-# 位置：AWS > EC2 > Instances
-# 輸入參數：
-#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
-#   AvailabilityZone [文字，選填] 可用性區域 — 指定可用性區域 (地區碼後面加上字母識別碼)
-#   InstanceState [選項，預設 All] 執行個體狀態 — 執行個體的狀態 (擱置中、正在執行、正在關閉、已終止、正在停止、已停止)
-#       可用值：AWS.InstanceState.Pending（暫止）、AWS.InstanceState.All（所有）、AWS.InstanceState.Unknown（未知）、AWS.InstanceState.Running（正在執行）、AWS.InstanceState.ShuttingDown（正在關閉）、AWS.InstanceState.Terminated（已終止）、AWS.InstanceState.Stopping（正在停止）、AWS.InstanceState.Stopped（已停止）
-# 產生的變數：
-#   Ec2InstancesInfo [List<Ec2InstanceInfo>] EC2 執行個體 — EC2 執行個體的清單
-# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、RequestFailedError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

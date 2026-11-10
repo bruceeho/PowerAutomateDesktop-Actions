@@ -1,40 +1,7 @@
-# 【模式 EncryptFromFileWithAES】使用金鑰和指定的編碼格式，加密包含 AES 的檔案內容
 Cryptography.EncryptFromFile.EncryptFromFileWithAES Encoding: Cryptography.EncryptionEncoding.Unicode FileToEncrypt: `` EncryptionKey: `` PaddingMode: Cryptography.PaddingMode.PKCS7 KeySize: Cryptography.AESKeySize.Bits256 EncryptedText=> EncryptedText
 
-# 【模式 EncryptFromFileWithAESUseIV】使用金鑰、指定的編碼格式和隨機產生的初始化向量，加密包含 AES 的檔案內容
 Cryptography.EncryptFromFile.EncryptFromFileWithAESUseIV Encoding: Cryptography.EncryptionEncoding.Unicode FileToEncrypt: `` EncryptionKey: `` PaddingMode: Cryptography.PaddingMode.PKCS7 KeySize: Cryptography.AESKeySize.Bits256 EncryptedText=> EncryptedText InitializationVector=> InitializationVector
 
-# 【模式 EncryptFromFileWithAESUseSalt】使用金鑰、指定的編碼格式和隨機產生的 Salt 處理，加密包含 AES 的檔案內容
 Cryptography.EncryptFromFile.EncryptFromFileWithAESUseSalt Encoding: Cryptography.EncryptionEncoding.Unicode FileToEncrypt: `` EncryptionKey: `` PaddingMode: Cryptography.PaddingMode.PKCS7 KeySize: Cryptography.AESKeySize.Bits256 Iterations: 100000 HashAlgorithm: Cryptography.EncryptionHashAlgorithm.SHA256 EncryptedText=> EncryptedText Salt=> Salt
 
-# 【模式 EncryptFromFileWithAESUseSaltAndIV】使用金鑰、指定的編碼格式和隨機產生的 Salt 處理和初始化向量，加密包含 AES 的檔案內容
 Cryptography.EncryptFromFile.EncryptFromFileWithAESUseSaltAndIV Encoding: Cryptography.EncryptionEncoding.Unicode FileToEncrypt: `` EncryptionKey: `` PaddingMode: Cryptography.PaddingMode.PKCS7 KeySize: Cryptography.AESKeySize.Bits256 Iterations: 100000 HashAlgorithm: Cryptography.EncryptionHashAlgorithm.SHA256 EncryptedText=> EncryptedText Salt=> Salt InitializationVector=> InitializationVector
-
-# ==================== 說明 ====================
-# 動作：從包含 AES 的檔案進行加密  (Cryptography.EncryptFromFile)
-# 英文名稱：Encrypt from file with AES
-# 用途：使用金鑰和指定的編碼格式，加密包含 AES 的檔案內容
-# 位置：密碼編譯
-# 輸入參數：
-#   Encoding [選項，預設 Unicode] 編碼 — 要加密之檔案的編碼
-#       可用值：Cryptography.EncryptionEncoding.DefaultEncoding（系統預設）、Cryptography.EncryptionEncoding.ANSI（ASCII）、Cryptography.EncryptionEncoding.Unicode（Unicode）、Cryptography.EncryptionEncoding.BigEndianUnicode（位元組由大到小 Unicode）、Cryptography.EncryptionEncoding.UTF8（UTF-8）
-#   FileToEncrypt [FileObject] 要加密的檔案 — 儲存要加密之內容的文字檔
-#   EncryptionKey [文字(可加密)] 加密金鑰 — 要使用的加密金鑰
-#   PaddingMode [選項，預設 PKCS7] 邊框間距 — 要用於所選加密演算法的填補
-#       可用值：Cryptography.PaddingMode.None（無​​）、Cryptography.PaddingMode.PKCS7（PKCS7）、Cryptography.PaddingMode.Zeros（零）、Cryptography.PaddingMode.ANSIX923（ANSIX923）、Cryptography.PaddingMode.ISO10126（ISO10126）
-#   KeySize [選項，預設 Bits256] 金鑰大小 — 要用於加密的金鑰大小 (位元)
-#       可用值：Cryptography.AESKeySize.Bits128（128 位元）、Cryptography.AESKeySize.Bits192（192 位元）、Cryptography.AESKeySize.Bits256（256 位元）
-#   UseSalt [布林，預設 False] 使用 Salt 處理 — 指定加密時是否使用 Salt 處理。啟用此選項時，隨機產生的 Salt 處理會變成 Base64 字串格式的輸出。
-#   Iterations [整數，預設 100000] 反覆項目 — 要使用的反覆項目數量。請注意，如果要解密輸出，必須使用相同的反覆項目。請使用至少為 100000 的反覆項目計數，以降低暴力密碼破解攻擊的風險
-#   UseIV [布林，預設 False] 使用初始化向量 — 指定是否使用初始化向量。啟用此選項時，隨機產生的初始化向量會變成 Base64 字串格式的輸出
-#   HashAlgorithm [選項，預設 SHA256] 雜湊演算法 — 用以從檔案加密的雜湊演算法。注意，解密輸出時必須使用相同的雜湊演算法。SHA1 易發生衝突。建議使用 SHA256 以上
-#       可用值：Cryptography.EncryptionHashAlgorithm.SHA1（SHA1）、Cryptography.EncryptionHashAlgorithm.SHA256（SHA256）、Cryptography.EncryptionHashAlgorithm.SHA384（SHA384）、Cryptography.EncryptionHashAlgorithm.SHA512（SHA512）
-# 產生的變數：
-#   EncryptedText [文字] 加密的文字 — 可供日後處理之已解密檔案的文字
-#   Salt [文字] 進行 Salt 處理 — 可供日後處理的隨機產生 Salt 處理值
-#   InitializationVector [文字] 初始化向量 — 可供日後處理的隨機產生初始化向量值
-# 可能的錯誤：FileNotFoundError、EncryptFileError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

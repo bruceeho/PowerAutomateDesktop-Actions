@@ -1,17 +1,1 @@
 XML.ReadFromFile File: `` Encoding: XML.FileEncoding.DefaultEncoding XmlDocument=> XmlDocument
-
-# ==================== 說明 ====================
-# 動作：從檔案讀取 XML  (XML.ReadFromFile)
-# 英文名稱：Read XML from file
-# 用途：將 XML 檔案的內容讀取至變數中
-# 位置：XML
-# 輸入參數：
-#   File [FileObject] 檔案路徑 — 包含要讀取的 XML 文件的檔案
-#   Encoding [選項，預設 DefaultEncoding] 編碼 — 指定的檔案所使用的編碼
-#       可用值：XML.FileEncoding.DefaultEncoding（系統預設）、XML.FileEncoding.ASCII（ASCII）、XML.FileEncoding.Unicode（Unicode）、XML.FileEncoding.BigEndianUnicode（Unicode (位元組由大到小)）、XML.FileEncoding.UTF8（UTF-8）
-# 產生的變數：
-#   XmlDocument [XmlNodeObject] XML 文件 — 包含所讀取 XML 文件的變數
-# 可能的錯誤：DirectoryNotFoundError、FileNotFoundError、ReadFileError、InvalidFileError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

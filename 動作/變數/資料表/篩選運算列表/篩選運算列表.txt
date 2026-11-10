@@ -1,17 +1,1 @@
 Variables.FilterDataTable DataTable: `` FilterParameters: `` MatchCase: True FilteredDataTable=> FilteredDataTable
-
-# ==================== 說明 ====================
-# 動作：篩選運算列表  (Variables.FilterDataTable)
-# 英文名稱：Filter data table
-# 用途：根據已執行的規則篩選運算列表列
-# 位置：變數 > 資料表
-# 輸入參數：
-#   DataTable [資料表] 運算列表 — 要使用的運算列表變數。此變數必須先前已由產生運算列表變數的動作指定
-#   FilterParameters [資料表] 篩選參數 — 將用來篩選運算列表的參數
-#   MatchCase [布林，預設 True] 大小寫須相符 — 指定是否搜尋區分大小寫的資料。僅適用於篩選條件: 等於、不等於、包含、不包含、開始是、開頭不是、結束是、結尾不是。
-# 產生的變數：
-#   FilteredDataTable [資料表] 篩選後的運算列表 — 套用篩選條件後產生的運算列表
-# 可能的錯誤：ColumnNameNotFoundError、ColumnIndexOutOfRangeError、ColumnTypeMismatchError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

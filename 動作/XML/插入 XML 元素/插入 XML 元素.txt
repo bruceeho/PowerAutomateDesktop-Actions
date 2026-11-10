@@ -1,15 +1,1 @@
 XML.InsertElement Document: `` XPathQuery: `` Element: ``
-
-# ==================== 說明 ====================
-# 動作：插入 XML 元素  (XML.InsertElement)
-# 英文名稱：Insert XML element
-# 用途：在 XML 文件中插入新的 XML 元素
-# 位置：XML
-# 輸入參數：
-#   Document [XmlNodeObject] XML 文件 — 要插入新 XML 元素的 XML 文件
-#   XPathQuery [文字] XPath 查詢 — 要尋找上層 XML 元素並將新元素插入其中的 XPath 運算式
-#   Element [XmlNodeObject] 要插入的 XML 元素 — 要插入 XML 文件的新 XML 元素
-# 可能的錯誤：InvalidXPathError、XPathNoElementError、InsertElementError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

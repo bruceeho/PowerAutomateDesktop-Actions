@@ -1,41 +1,9 @@
-# 【模式 Read】讀取 Excel 執行個體之目前所選取儲存格的值
 Excel.ReadFromExcel.Read GetCellContentsMode: Excel.GetCellContentsMode.TypedValues FirstLineIsHeader: False Instance: `` RangeValue=> RangeValue
 
-# 【模式 ReadCell】讀取 Excel 執行個體之單一儲存格的值
 Excel.ReadFromExcel.ReadCell StartColumn: `` StartRow: `` GetCellContentsMode: Excel.GetCellContentsMode.TypedValues Instance: `` CellValue=> CellValue
 
-# 【模式 ReadCells】讀取 Excel 執行個體之儲存格範圍的值
 Excel.ReadFromExcel.ReadCells StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` GetCellContentsMode: Excel.GetCellContentsMode.TypedValues FirstLineIsHeader: False Instance: `` RangeValue=> RangeValue
 
-# 【模式 ReadAllCells】讀取 Excel 執行個體中所有資料的值
 Excel.ReadFromExcel.ReadAllCells GetCellContentsMode: Excel.GetCellContentsMode.TypedValues FirstLineIsHeader: False Instance: `` RangeValue=> RangeValue
 
-# 【模式 ReadNamedCell】讀取 Excel 執行個體的具名儲存格的值
 Excel.ReadFromExcel.ReadNamedCell GetCellContentsMode: Excel.GetCellContentsMode.TypedValues CellName: `` TrimEmptyCells: False Instance: `` RangeValue=> RangeValue
-
-# ==================== 說明 ====================
-# 動作：讀取自 Excel 工作表  (Excel.ReadFromExcel)
-# 英文名稱：Read from Excel worksheet
-# 用途：讀取 Excel 執行個體之使用中工作表的儲存格、具名儲存格或儲存格範圍的值
-# 位置：Excel
-# 輸入參數：
-#   ReadMode [選項，預設 SingleCell] 擷取 — 指定要擷取單一儲存格、儲存格範圍中的資料表、整個工作表或具名儲存格的值
-#       可用值：Excel.ReadExcelCellsMode.SingleCell（單一儲存格的值）、Excel.ReadExcelCellsMode.RangeOfCells（儲存格範圍中的值）、Excel.ReadExcelCellsMode.Selection（選取範圍的值）、Excel.ReadExcelCellsMode.AllCells（工作表中所有可用的值）、Excel.ReadExcelCellsMode.NamedCells（具名儲存格的值）
-#   StartColumn [文字] 開始欄 — 以數值或字母表示的儲存格資料行 (單一儲存格的值) 或第一個資料行
-#   StartRow [整數] 開始列 — 儲存格資料列 (單一儲存格的值) 或第一個資料列編號
-#   EndColumn [文字] 結尾欄 — 以數值或字母表示的最後一個資料行
-#   EndRow [整數] 結尾列 — 最後一個資料列編號
-#   GetCellContentsMode [選項，預設 TypedValues] 取得儲存格內容為 — 指定是否以最接近的符合類型擷取儲存格內容，例如日期的 Date Time、數字的 Numeric 等，純粹以文字或格式化的儲存格文字擷取
-#       可用值：Excel.GetCellContentsMode.TypedValues（已輸入的值）、Excel.GetCellContentsMode.PlainText（純文字）、Excel.GetCellContentsMode.FormattedTextValues（經過格式化的文字值）
-#   CellName [文字] 名稱 — 儲存格的名稱
-#   FirstLineIsHeader [布林，預設 False] 第一個行範圍包含欄名稱 — 指定是否將第一列視為欄名稱。在這種情況下，名稱不會讀取為送入資料表的資料，且稍後動作可以依欄名來搜尋資料
-#   TrimEmptyCells [布林，預設 False] 忽略右側的空白欄和底部的空白列 — 如果啟用此選項，將修剪位於擷取區段右側的連續空白欄和底部的連續空白列
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-# 產生的變數：
-#   CellValue [一般值] 儲存格值 — 單一儲存格的值
-#   RangeValue [資料表] 儲存格值 — 做為資料表的儲存格範圍的值
-# 可能的錯誤：ReadCellsError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

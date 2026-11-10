@@ -1,17 +1,1 @@
 DateTime.Subtract TimeUnit: DateTime.DifferenceTimeUnit.Days FromDate: `` SubstractDate: `` TimeDifference=> TimeDifference
-
-# ==================== 說明 ====================
-# 動作：減去日期  (DateTime.Subtract)
-# 英文名稱：Subtract dates
-# 用途：尋找兩個指定日期的時差 (天、小時、分鐘或秒)
-# 位置：日期時間
-# 輸入參數：
-#   TimeUnit [選項，預設 Days] 取得差異 — 要用來表示差異的時間單位
-#       可用值：DateTime.DifferenceTimeUnit.Seconds（秒）、DateTime.DifferenceTimeUnit.Minutes（分鐘）、DateTime.DifferenceTimeUnit.Hours（小時）、DateTime.DifferenceTimeUnit.Days（天）
-#   FromDate [日期時間] 開始日期 — 要從其中減去第一個日期時間的日期時間。這將是基準日期時間，因此一般會將後面的日期/時間置於此屬性中
-#   SubstractDate [日期時間] 減去日期 — 要減去的日期時間
-# 產生的變數：
-#   TimeDifference [數值] 時差 — 時間差異 (數值)
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

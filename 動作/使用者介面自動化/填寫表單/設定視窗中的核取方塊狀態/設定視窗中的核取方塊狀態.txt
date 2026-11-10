@@ -1,15 +1,1 @@
 UIAutomation.SetCheckboxState CheckboxState: UIAutomation.CheckboxState.Checked Control: ``
-
-# ==================== 說明 ====================
-# 動作：設定視窗中的核取方塊狀態  (UIAutomation.SetCheckboxState)
-# 英文名稱：Set checkbox state in window
-# 用途：勾選或取消勾選視窗表單中的核取方塊
-# 位置：使用者介面自動化 > 填寫表單
-# 輸入參數：
-#   CheckboxState [選項，預設 Checked] 將核取方塊狀態設定為 — 指定核取方塊將變成已勾選或未勾選
-#       可用值：UIAutomation.CheckboxState.Checked（已勾選）、UIAutomation.CheckboxState.Unchecked（未勾選）
-#   Control [UIControl]
-# 可能的錯誤：SetCheckboxStateError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

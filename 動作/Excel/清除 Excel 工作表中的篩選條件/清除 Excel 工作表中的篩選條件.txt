@@ -1,29 +1,7 @@
-# 【模式 ClearFilterWorksheet】清除使用中工作表中儲存格的所有篩選條件
 Excel.ClearFilterFromExcel.ClearFilterWorksheet Instance: ``
 
-# 【模式 ClearFilterSpecificColumnWorksheet】清除使用中工作表中特定欄的篩選條件
 Excel.ClearFilterFromExcel.ClearFilterSpecificColumnWorksheet Instance: `` Column: ``
 
-# 【模式 ClearFilterTable】清除表格中的所有篩選條件
 Excel.ClearFilterFromExcel.ClearFilterTable Instance: `` TableName: ``
 
-# 【模式 ClearFilterTableSpecificColumn】清除表格中特定欄的篩選條件
 Excel.ClearFilterFromExcel.ClearFilterTableSpecificColumn Instance: `` TableName: `` Column: ``
-
-# ==================== 說明 ====================
-# 動作：清除 Excel 工作表中的篩選條件  (Excel.ClearFilterFromExcel)
-# 英文名稱：Clear filters in Excel worksheet
-# 用途：清除 Excel 工作表中指定欄的篩選條件。
-# 位置：Excel
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要使用的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-#   ClearFilterMode [選項，預設 ActiveSheet] 清除以下位置的篩選條件 — 指定要從整個使用中工作表還是從特定表格中清除篩選條件<
-#       可用值：Excel.ClearFilterMode.ActiveSheet（使用中工作表）、Excel.ClearFilterMode.Table（表格）
-#   TableName [文字] 資料表名稱 — 表格的名稱
-#   ClearFiltersSpecificColumn [布林，預設 False] 清除特定欄的篩選條件 — 清除特定欄的篩選條件
-#   Column [文字] 清除欄中的篩選條件 — 要清除已套用篩選條件的欄名稱
-# 可能的錯誤：ClearFilterFromExcel
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

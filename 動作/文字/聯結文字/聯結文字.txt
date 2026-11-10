@@ -1,28 +1,5 @@
-# 【模式 Join】透過使用分隔符號分隔項目的方式，將清單轉換成文字值
 Text.JoinText.Join List: `` Result=> Result
 
-# 【模式 JoinWithDelimiter】透過使用指定的自訂分隔符號分隔項目的方式，將清單轉換成文字值
 Text.JoinText.JoinWithDelimiter List: `` StandardDelimiter: Text.StandardDelimiter.Space DelimiterTimes: 1 Result=> Result
 
-# 【模式 JoinWithCustomDelimiter】透過使用自訂分隔符號分隔項目的方式，將清單轉換成文字值
 Text.JoinText.JoinWithCustomDelimiter List: `` CustomDelimiter: `` Result=> Result
-
-# ==================== 說明 ====================
-# 動作：聯結文字  (Text.JoinText)
-# 英文名稱：Join text
-# 用途：透過使用指定的分隔符號分隔項目的方式，將清單轉換成文字值
-# 位置：文字
-# 輸入參數：
-#   List [List<String>] 指定要聯結的清單 — 要轉換為文字的清單
-#   DelimiterType [選項，預設 None] 用來分隔清單項目的分隔符號 — 指定不使用分隔符號、使用標準分隔符號或使用自訂分隔符號
-#       可用值：Text.JoinTextDelimiter.None（無​​）、Text.JoinTextDelimiter.Standard（標準）、Text.JoinTextDelimiter.Custom（自訂）
-#   StandardDelimiter [選項，預設 Space] 標準分隔符號 — 指定要使用的分隔符號
-#       可用值：Text.StandardDelimiter.Space（空格）、Text.StandardDelimiter.Tab（Tab）、Text.StandardDelimiter.NewLine（新行）
-#   CustomDelimiter [文字] 自訂分隔符號 — 要做為分隔符號使用的字元
-#   DelimiterTimes [整數，預設 1] 次數 — 指定要使用指定的分隔符號的次數
-# 產生的變數：
-#   Result [文字] 結果 — 新的分隔文字
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,18 +1,1 @@
 UIAutomation.GetWindowDetails ExtractionOperation: UIAutomation.WindowProperties.Title BringToFront: True Control: `` Property=> Property
-
-# ==================== 說明 ====================
-# 動作：取得視窗的詳細資料  (UIAutomation.GetWindowDetails)
-# 英文名稱：Get details of window
-# 用途：取得視窗的屬性，像是其標題或來源文字
-# 位置：使用者介面自動化 > 資料擷取
-# 輸入參數：
-#   ExtractionOperation [選項，預設 Title] 視窗屬性 — 選擇要擷取的視窗屬性
-#       可用值：UIAutomation.WindowProperties.Title（取得視窗標題）、UIAutomation.WindowProperties.Text（取得視窗文字）、UIAutomation.WindowProperties.Bounds（取得視窗位置和大小）、UIAutomation.WindowProperties.ProcessName（取得程序名稱）
-#   BringToFront [布林，預設 True] 移到最上層 — 指定在執行期間是否應將包含 UI 元素的視窗放在最上層。如果停用此選項，動作將在背景執行。請注意，並非所有 UI 元素都與停用該選項相容。此外，如果執行動作需要捲動，停用此選項可能無法擷取所有元素。
-#   Control [UIControl]
-# 產生的變數：
-#   Property [一般值] 視窗屬性 — 擷取的視窗資訊
-# 可能的錯誤：RetrieveWindowPropertyError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

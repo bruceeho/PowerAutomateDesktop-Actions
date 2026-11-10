@@ -1,14 +1,1 @@
 UIAutomation.PressButton Control: `` Simulate: False
-
-# ==================== 說明 ====================
-# 動作：按視窗中的按鈕  (UIAutomation.PressButton)
-# 英文名稱：Press button in window
-# 用途：按下視窗按鈕
-# 位置：使用者介面自動化 > 填寫表單
-# 輸入參數：
-#   Control [UIControl]
-#   Simulate [布林，預設 False]
-# 可能的錯誤：PressButtonError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

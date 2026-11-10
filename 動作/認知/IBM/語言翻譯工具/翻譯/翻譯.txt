@@ -1,32 +1,3 @@
-# 【模式 TranslateWithModelId】叫用名為「翻譯」的 IBM 服務，並使用模型識別碼
 IBMCognitive.TranslateIBM.TranslateWithModelId ApiKey: `` VersionDate: `` Location: IBMCognitive.LanguageTranslatorServiceLocation.UsEast InstanceId: `` ModelId: `` Text: `` Timeout: 30 Response=> Response StatusCode=> StatusCode
 
-# 【模式 TranslateWithSourceAndTarget】叫用名為「翻譯」的 IBM 服務，並使用來源/目標語言組
 IBMCognitive.TranslateIBM.TranslateWithSourceAndTarget ApiKey: `` VersionDate: `` Location: IBMCognitive.LanguageTranslatorServiceLocation.UsEast InstanceId: `` Source: `` Target: `` Text: `` Timeout: 30 Response=> Response StatusCode=> StatusCode
-
-# ==================== 說明 ====================
-# 動作：翻譯  (IBMCognitive.TranslateIBM)
-# 英文名稱：Translate
-# 用途：叫用名為「翻譯」的 IBM 服務
-# 位置：認知 > IBM > 語言翻譯工具
-# 輸入參數：
-#   ApiKey [文字] API 金鑰 — 要用來進行此呼叫的 API 金鑰
-#   VersionDate [文字] 版本日期 — 要使用之 API 的發行日期
-#   Location [選項，預設 UsEast] 服務端點位置 — 帳戶的服務位置。可透過資源區段中的 IBM「管理」查看
-#       可用值：IBMCognitive.LanguageTranslatorServiceLocation.UsSouth（美國南部）、IBMCognitive.LanguageTranslatorServiceLocation.UsEast（美國東部）、IBMCognitive.LanguageTranslatorServiceLocation.Europe（歐洲）、IBMCognitive.LanguageTranslatorServiceLocation.Australia（澳洲）、IBMCognitive.LanguageTranslatorServiceLocation.Japan（日本）、IBMCognitive.LanguageTranslatorServiceLocation.Uk（英國）、IBMCognitive.LanguageTranslatorServiceLocation.Korea（南韓）
-#   InstanceId [文字] 執行個體識別碼 — 服務的執行個體識別碼。
-#   TranslateMode [選項，預設 ModelId] 翻譯模式 — 指定要用於此呼叫的模式
-#       可用值：IBMCognitive.TranslateModeType.ModelId（模型識別碼）、IBMCognitive.TranslateModeType.SourceTarget（來源和目標）
-#   Source [文字] 來源媒體 — 文字的來源語言
-#   ModelId [文字] 模型識別碼 — 將用於文字翻譯之翻譯模型的唯一 model_id
-#   Target [文字] 目標 — 翻譯目標語言 (以 2 或 5 字母語言代碼表示)
-#   Text [List<String>] 文字 — 要傳送的文字，或是要另行翻譯的單字清單
-#   Timeout [整數，預設 30] 逾時 — 專員與伺服器建立連線所應等待的時間 (以秒計)，而此時間過後，連線即失敗
-# 產生的變數：
-#   Response [自訂物件] 回應 — API 呼叫的結果
-#   StatusCode [整數] 狀態碼 — 傳回的狀態碼
-# 可能的錯誤：RequestTimeoutExpiredError、InvokeCognitiveServiceError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

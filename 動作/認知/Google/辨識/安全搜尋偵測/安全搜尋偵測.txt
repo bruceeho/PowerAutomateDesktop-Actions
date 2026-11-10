@@ -1,26 +1,3 @@
-# 【模式 SafeSearchDetectionFromFile】使用從檔案載入的資料，叫用名為「安全搜尋偵測」的 Google Cloud Vision 服務
 GoogleCognitive.SafeSearchDetectionGoogle.SafeSearchDetectionFromFile APIKey: `` ImageFile: `` Timeout: 30 Response=> Response StatusCode=> StatusCode
 
-# 【模式 SafeSearchDetectionFromGCS】使用從 GCS 內容 URI 載入的資料，叫用名為「安全搜尋偵測」的 Google Cloud Vision 服務
 GoogleCognitive.SafeSearchDetectionGoogle.SafeSearchDetectionFromGCS APIKey: `` ImageUrl: `` Timeout: 30 Response=> Response StatusCode=> StatusCode
-
-# ==================== 說明 ====================
-# 動作：安全搜尋偵測  (GoogleCognitive.SafeSearchDetectionGoogle)
-# 英文名稱：Safe search detection
-# 用途：叫用名為「安全搜尋偵測」的 Google Cloud Vision 服務
-# 位置：認知 > Google > 辨識
-# 輸入參數：
-#   APIKey [文字] API 金鑰 — 此 API 呼叫要使用的 Google Cloud API 金鑰
-#   ProvideImage [選項，預設 FilePath] 提供影像 — 指定影像是由完整路徑還是 Google Cloud Storage URI 來提供
-#       可用值：GoogleCognitive.ProvideFileType.FilePath（從檔案）、GoogleCognitive.ProvideFileType.Url（從 GCS）
-#   ImageFile [FileObject] 影像檔 — 要傳輸之影像檔的完整路徑 (資料夾和檔案名稱)
-#   ImageUrl [文字] GCS 影像 URI — 位於 Google Cloud Storage 之影像的 URI
-#   Timeout [整數，預設 30] 逾時 — 專員與伺服器建立連線所應等待的時間 (以秒計)，而此時間過後，連線即失敗
-# 產生的變數：
-#   Response [自訂物件] 回應 — API 回應結果
-#   StatusCode [整數] 狀態碼 — 傳回的狀態碼
-# 可能的錯誤：InvokeCognitiveServiceError、RequestTimeoutExpiredError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

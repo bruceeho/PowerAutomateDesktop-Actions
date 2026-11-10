@@ -1,15 +1,1 @@
 UIAutomation.IfRemoteDesktopIsAvailableAction Control: `` Mode: UIAutomation.CheckRemoteDesktopAvailabilityMode.IsAvailable
-
-# ==================== 說明 ====================
-# 動作：如果虛擬桌面可用  (UIAutomation.IfRemoteDesktopIsAvailableAction)
-# 英文名稱：If virtual desktop available
-# 用途：標記條件式動作區塊的開始，取決於包含指定 UI 元素的虛擬桌面是否可用。
-# 位置：使用者介面自動化
-# 輸入參數：
-#   Control [UIControl] UI 元素 — 要檢查的虛擬桌面中的 UI 元素。
-#   Mode [選項，預設 IsAvailable] 檢查虛擬桌面是否 — 檢查虛擬桌面是否可用。
-#       可用值：UIAutomation.CheckRemoteDesktopAvailabilityMode.IsAvailable（可用）、UIAutomation.CheckRemoteDesktopAvailabilityMode.IsNotAvailable（無法提供）
-# 可能的錯誤：CheckRemoteDesktopAvailabilityError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

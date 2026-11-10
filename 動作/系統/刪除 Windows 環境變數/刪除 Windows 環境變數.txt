@@ -1,15 +1,1 @@
 System.DeleteEnvironmentVariable Type: System.EnvironmentVariableType.User Name: ``
-
-# ==================== 說明 ====================
-# 動作：刪除 Windows 環境變數  (System.DeleteEnvironmentVariable)
-# 英文名稱：Delete Windows environment variable
-# 用途：從指定的範圍刪除環境變數
-# 位置：系統
-# 輸入參數：
-#   Type [選項，預設 User] 類型 — 要刪除的環境變數類型
-#       可用值：System.EnvironmentVariableType.User（使用者）、System.EnvironmentVariableType.System（系統）
-#   Name [文字] 環境變數名稱 — 要刪除的環境變數名稱
-# 可能的錯誤：DeleteEnvironmentVariableError、InsufficientPermissionsError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

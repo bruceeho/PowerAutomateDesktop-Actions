@@ -1,15 +1,1 @@
 Folder.GetSpecialFolder SpecialFolder: Folder.SpecialFolder.DesktopDirectory SpecialFolderPath=> SpecialFolderPath
-
-# ==================== 說明 ====================
-# 動作：取得特殊資料夾  (Folder.GetSpecialFolder)
-# 英文名稱：Get special folder
-# 用途：擷取 Windows 特殊資料夾的路徑 (如桌面、我的圖片、網際網路快取等)
-# 位置：資料夾
-# 輸入參數：
-#   SpecialFolder [選項，預設 DesktopDirectory] 特殊資料夾名稱 — 選擇特殊資料夾的名稱 (如「我的文件」或「桌面」。這是不論路徑如何指定都必須使用，才能在任何電腦上尋找特殊資料夾的內容。
-#       可用值：Folder.SpecialFolder.Programs（程式）、Folder.SpecialFolder.Personal（文件​​）、Folder.SpecialFolder.Favorites（我的最愛）、Folder.SpecialFolder.Startup（開機）、Folder.SpecialFolder.Recent（最近）、Folder.SpecialFolder.SendTo（傳送到）、Folder.SpecialFolder.StartMenu（開始功能表）、Folder.SpecialFolder.MyMusic（音樂）、Folder.SpecialFolder.DesktopDirectory（桌面）、Folder.SpecialFolder.Templates（範本）、Folder.SpecialFolder.ApplicationData（應用程式資料）、Folder.SpecialFolder.LocalApplicationData（本機應用程式資料）、Folder.SpecialFolder.InternetCache（網際網路快取）、Folder.SpecialFolder.Cookies（Cookie）、Folder.SpecialFolder.History（記錄）、Folder.SpecialFolder.CommonApplicationData（通用應用程式資料）、Folder.SpecialFolder.System（系統）、Folder.SpecialFolder.ProgramFiles（程式檔案）、Folder.SpecialFolder.MyPictures（圖片）、Folder.SpecialFolder.CommonProgramFiles（公用程式檔案）
-# 產生的變數：
-#   SpecialFolderPath [FolderObject] 特殊資料夾路徑 — 特殊資料夾物件 (這是一種表示，並可存取資料夾及其所有資訊)
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

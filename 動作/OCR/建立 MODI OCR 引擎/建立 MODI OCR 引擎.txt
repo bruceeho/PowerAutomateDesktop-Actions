@@ -1,18 +1,1 @@
 OCR.CreateMODIEngine Language: OCR.MODILanguage.English ImageWidthMultiplier: 1 ImageHeightMultiplier: 1 MODIEngine=> MODIEngine
-
-# ==================== 說明 ====================
-# 動作：建立 MODI OCR 引擎  (OCR.CreateMODIEngine)
-# 英文名稱：Create MODI OCR engine
-# 用途：建立 MODI OCR 引擎
-# 位置：OCR
-# 輸入參數：
-#   Language [選項，預設 English] MODI 語言 — MODI 引擎偵測的文字語言
-#       可用值：OCR.MODILanguage.ChineseSimplified（簡體中文）、OCR.MODILanguage.ChineseTraditional（繁體中文）、OCR.MODILanguage.Czech（捷克文）、OCR.MODILanguage.Danish（丹麥文）、OCR.MODILanguage.Dutch（荷蘭文）、OCR.MODILanguage.English（英文）、OCR.MODILanguage.Finnish（芬蘭文）、OCR.MODILanguage.French（法文）、OCR.MODILanguage.German（德文）、OCR.MODILanguage.Greek（希臘文）、OCR.MODILanguage.Hungarian（匈牙利文）、OCR.MODILanguage.Italian（義大利文）、OCR.MODILanguage.Japanese（日文）、OCR.MODILanguage.Korean（韓文）、OCR.MODILanguage.Norwegian（挪威文）、OCR.MODILanguage.Polish（波蘭文）、OCR.MODILanguage.Portuguese（葡萄牙文）、OCR.MODILanguage.Russian（俄文）、OCR.MODILanguage.Spanish（西班牙文）、OCR.MODILanguage.Swedish（瑞典文）、OCR.MODILanguage.Turkish（土耳其文）
-#   ImageWidthMultiplier [整數，預設 1] 影像寬度乘數 — 影像的寬度乘數
-#   ImageHeightMultiplier [整數，預設 1] 影像高度乘數 — 影像的高度乘數
-# 產生的變數：
-#   MODIEngine [OCREngineObject] OCR 引擎 — 要與後續 OCR 動作搭配使用的 OCR 引擎
-# 可能的錯誤：CreateOCREngineError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,15 +1,1 @@
 File.ConvertToBase64 File: `` Base64Text=> Base64Text
-
-# ==================== 說明 ====================
-# 動作：將檔案轉換為 Base64  (File.ConvertToBase64)
-# 英文名稱：Convert file to Base64
-# 用途：將檔案轉換為 Base64 編碼文字
-# 位置：檔案
-# 輸入參數：
-#   File [FileObject] 檔案路徑 — 要讀取的檔案
-# 產生的變數：
-#   Base64Text [文字] 要寫入的 Base64 編碼文字 — Base64 編碼文字
-# 可能的錯誤：FileNotFoundError、ConvertFileToBase64Error
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

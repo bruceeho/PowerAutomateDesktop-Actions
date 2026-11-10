@@ -1,33 +1,9 @@
-# 【模式 EnableUser】啟用 Active Directory 中的使用者
 ActiveDirectory.ModifyUser.EnableUser DistinguishedName: `` ParentDirectoryEntry: ``
 
-# 【模式 DisableUser】停用 Active Directory 中的使用者
 ActiveDirectory.ModifyUser.DisableUser DistinguishedName: `` ParentDirectoryEntry: ``
 
-# 【模式 RenameUser】重新命名 Active Directory 中的使用者
 ActiveDirectory.ModifyUser.RenameUser DistinguishedName: `` NewName: `` ParentDirectoryEntry: ``
 
-# 【模式 DeleteUser】刪除 Active Directory 中的使用者
 ActiveDirectory.ModifyUser.DeleteUser DistinguishedName: `` ParentDirectoryEntry: ``
 
-# 【模式 ResetUserPassword】重設 Active Directory 中使用者的密碼
 ActiveDirectory.ModifyUser.ResetUserPassword DistinguishedName: `` NewPassword: `` ParentDirectoryEntry: ``
-
-# ==================== 說明 ====================
-# 動作：修改使用者  (ActiveDirectory.ModifyUser)
-# 英文名稱：Modify user
-# 用途：修改 Active Directory 中的使用者
-# 位置：Active Directory > 使用者
-# 輸入參數：
-#   DistinguishedName [文字] 辨別名稱 — Active Directory 項目的辨別名稱
-#   Operation [選項，預設 EnableDisable] 作業 — 選取要執行的作業
-#       可用值：ActiveDirectory.UserOperation.EnableDisable（啟用/停用使用者）、ActiveDirectory.UserOperation.Rename（重新命名使用者）、ActiveDirectory.UserOperation.Delete（刪除使用者）、ActiveDirectory.UserOperation.ResetPassword（重設密碼）
-#   NewPassword [文字(可加密)] 新密碼 — 輸入群組的新密碼
-#   EnableUser [布林，預設 False] 啟用使用者 — 啟用或停用使用者
-#   NewName [文字] 新名稱 — 輸入群組的新名稱
-#   ParentDirectoryEntry [ActiveDirectoryEntry] 上層目錄項目 — Active Directory 伺服器的上層項目
-# 可能的錯誤：AuthenticationError、InvalidOperationError、ServerNotOperationalError、UnauthorizedAccessError、ActiveDirectoryEntryNotFound、ObjectDoesNotExistOnServerError、ObjectAlreadyExistsError、InvalidAttributeSyntaxError、ActiveDirectoryError、SetOrUpdatePasswordError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

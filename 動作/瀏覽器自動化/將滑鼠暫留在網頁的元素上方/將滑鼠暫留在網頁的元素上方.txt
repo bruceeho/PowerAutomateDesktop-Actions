@@ -1,15 +1,1 @@
 WebAutomation.HoverOverElement BrowserInstance: `` Control: `` UseActualMouse: False
-
-# ==================== 說明 ====================
-# 動作：將滑鼠暫留在網頁的元素上方  (WebAutomation.HoverOverElement)
-# 英文名稱：Hover mouse over element on web page
-# 用途：將滑鼠暫留在網頁的元素上方
-# 位置：瀏覽器自動化
-# 輸入參數：
-#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
-#   Control [WebControl] UI 元素 — 選取網頁上要暫留的 UI 元素
-#   UseActualMouse [布林，預設 False] 移動滑鼠以懸停 — 指定是否要將滑鼠游標實體移動到元素上，以懸停在 UI 元素上。模擬懸停無法執行元素有意進行的動作時，便必須實體懸停。由於此選項要求聚焦於瀏覽器視窗，因此會自動將之切換到前景。
-# 可能的錯誤：HoverOverElementError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

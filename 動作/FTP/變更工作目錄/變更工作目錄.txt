@@ -1,14 +1,1 @@
 FTP.ChangeWorkingDirectory Connection: `` SetWorkingDirectoryTo: ``
-
-# ==================== 說明 ====================
-# 動作：變更工作目錄  (FTP.ChangeWorkingDirectory)
-# 英文名稱：Change working directory
-# 用途：這個動作會設定 FTP 連線的目前工作目錄
-# 位置：FTP
-# 輸入參數：
-#   Connection [FtpConnectionBase] 連接 — FTP 連線
-#   SetWorkingDirectoryTo [文字] 將工作目錄設為 — 設定要設為工作目錄的路徑
-# 可能的錯誤：NotConnectedError、DirectoryDoesNotExistError、CannotChangeWorkingDirectoryError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

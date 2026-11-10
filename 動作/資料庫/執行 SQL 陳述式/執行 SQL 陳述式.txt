@@ -1,25 +1,3 @@
-# 【模式 ConnectAndExecute】連接資料庫並執行 SQL 陳述式
 Database.ExecuteSqlStatement.ConnectAndExecute ConnectionString: `` Statement: `` Timeout: 30 Result=> Result
 
-# 【模式 Execute】連接資料庫並執行 SQL 陳述式
 Database.ExecuteSqlStatement.Execute Connection: `` Statement: `` Timeout: 30 Result=> Result
-
-# ==================== 說明 ====================
-# 動作：執行 SQL 陳述式  (Database.ExecuteSqlStatement)
-# 英文名稱：Execute SQL statement
-# 用途：連接資料庫並執行 SQL 陳述式
-# 位置：資料庫
-# 輸入參數：
-#   ConnectionString [文字] 連接字串 — 用來連接資料庫的連接字串
-#   Connection [SqlConnectionHandle] SQL 連線 — 新 SQL 連線的控制代碼
-#   Statement [文字] SQL 陳述式 — 要執行至資料庫的 SQL 陳述式
-#   Timeout [整數，預設 30] 逾時 — 可等候資料庫結果的最長時間
-#   GetConnection [選項，預設 SQLConnectionVariable] 取得連線透過 — 指定是否要從指定的連接字串建立新的連線，或選取已經開啟的連線
-#       可用值：Database.GetSQLConnectionBy.ConnectionString（連接字串）、Database.GetSQLConnectionBy.SQLConnectionVariable（SQL 連線變數）
-# 產生的變數：
-#   Result [資料表] 查詢結果 — 資料表格式的資料庫結果，包含列與欄
-# 可能的錯誤：ConnectToDataSourceError、InvalidConnectionStringError、SqlStatementError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

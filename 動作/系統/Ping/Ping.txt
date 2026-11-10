@@ -1,16 +1,1 @@
 System.Ping Timeout: 5000 HostName: `` RoundTripTime=> RoundTripTime PingResult=> PingResult
-
-# ==================== 說明 ====================
-# 動作：Ping  (System.Ping)
-# 用途：傳送訊息以判斷是否可透過網路存取遠端電腦
-# 位置：系統
-# 輸入參數：
-#   Timeout [整數，預設 5000] 逾時 — 等待 Ping 回覆訊息的毫秒數上限
-#   HostName [文字] 主機名稱 — 遠端電腦的名稱或 IP 位址
-# 產生的變數：
-#   RoundTripTime [整數] 往返時間 — Ping 完成所用的毫秒數
-#   PingResult [文字] Ping 結果 — Ping 訊息的狀態 (成功或失敗)
-# 可能的錯誤：PingError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

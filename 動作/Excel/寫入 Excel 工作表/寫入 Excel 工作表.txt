@@ -1,28 +1,5 @@
-# 【模式 Write】在 Excel 執行個體的目前使用中儲存格中寫入某些值
 Excel.WriteToExcel.Write Instance: `` Value: ``
 
-# 【模式 WriteCell】在 Excel 執行個體的指定儲存格中寫入某些值
 Excel.WriteToExcel.WriteCell Instance: `` Value: `` Column: `` Row: ``
 
-# 【模式 WriteNamedCell】在 Excel 執行個體的指定具名儲存格中寫入某些值
 Excel.WriteToExcel.WriteNamedCell Instance: `` Value: `` CellName: `` WriteToAllCells: False
-
-# ==================== 說明 ====================
-# 動作：寫入 Excel 工作表  (Excel.WriteToExcel)
-# 英文名稱：Write to Excel worksheet
-# 用途：在 Excel 執行個體的儲存格、具名儲存格或儲存格範圍中寫入值
-# 位置：Excel
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-#   Value [一般值] 要寫入的值 — 輸入要插入的文字、數字或變數。如果變數包含資料表，則會填入右側及下方的儲存格，以覆寫現有的資料，如果是清單，則會填入下方的儲存格
-#   WriteMode [選項，預設 SpecifiedCell] 寫入模式 — 指定要寫入指定的儲存格、具名儲存格或目前使用中儲存格
-#       可用值：Excel.WriteExcelMode.SpecifiedCell（於指定的儲存格）、Excel.WriteExcelMode.ActiveCell（於目前使用中儲存格）、Excel.WriteExcelMode.NamedCells（在具名儲存格上）
-#   Column [文字] 資料行 — 儲存格要寫入之欄號或字母
-#   Row [整數] 資料列 — 要寫入儲存格的所在列。編號從 1 開始，表示第一個工作表的索引是 1，第二張工作表的索引是 2，以此類推。
-#   CellName [文字] 名稱 — 儲存格的名稱
-#   WriteToAllCells [布林，預設 False] 填入整個範圍 — 如果啟用此選項，將以提供的值填入整個選取的範圍
-# 可能的錯誤：WriteToExcelError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

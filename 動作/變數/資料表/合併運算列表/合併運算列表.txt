@@ -1,16 +1,1 @@
 Variables.MergeDataTables FirstDataTable: `` SecondDataTable: `` MergeMode: Variables.MergeMode.AddExtraColumns
-
-# ==================== 說明 ====================
-# 動作：合併運算列表  (Variables.MergeDataTables)
-# 英文名稱：Merge data tables
-# 用途：將兩個運算列表合併在一起，指定當其欄不同時的合併行為
-# 位置：變數 > 資料表
-# 輸入參數：
-#   FirstDataTable [資料表] 第一個運算列表 — 要使用的第一個運算列表變數。這也會是動作將保留合併運算列表的產生的變數
-#   SecondDataTable [資料表] 第二個運算列表 — 將合併至第一個運算列表的第二個運算列表。
-#   MergeMode [選項，預設 AddExtraColumns] 合併模式 — 當表格沒有相關的欄時將套用的合併行為
-#       可用值：Variables.MergeMode.AddExtraColumns（新增額外欄）、Variables.MergeMode.IgnoreExtraColumns（忽略額外欄）、Variables.MergeMode.ErrorOnExtraColumns（額外欄發生錯誤）
-# 可能的錯誤：MissingSchemaError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

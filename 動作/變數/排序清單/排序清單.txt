@@ -1,28 +1,3 @@
-# 【模式 SortList】排序清單的項目。使用相同類型的項目
 Variables.SortList.SortList List: ``
 
-# 【模式 SortListByProperty】排序清單的項目，以便能夠使用既定的排序方向指定多個屬性進行排序
 Variables.SortList.SortListByProperty List: `` SortDirection1: Variables.SortDirection.Ascending SortDirection2: Variables.SortDirection.Ascending SortDirection3: Variables.SortDirection.Ascending
-
-# ==================== 說明 ====================
-# 動作：排序清單  (Variables.SortList)
-# 英文名稱：Sort list
-# 用途：排序清單的項目。使用相同類型的項目
-# 位置：變數
-# 輸入參數：
-#   List [List<Object>] 要排序的清單 — 包含要排序之清單的變數
-#   SortByProperty [布林，預設 False] 依清單項目的屬性排序 — 如果清單項目是物件 (像是檔案、資料夾等)，啟用此選項即可依特定屬性排序項目。若讓此選項保持停用，則會依預設屬性排序元素 (例如，檔案物件將依其完整路徑排序)
-#   Property1 [文字，選填] 做為排序依據的第一個屬性 — 做為排序清單依據的項目屬性名稱。請參考說明檔案，了解每個物件的屬性名稱
-#   SortDirection1 [選項，預設 Ascending] 排序 — 指定要依第一個屬性的遞增或遞減順序進行排序
-#       可用值：Variables.SortDirection.Ascending（遞增）、Variables.SortDirection.Descending（遞減）
-#   Property2 [文字，選填] 做為排序依據的第二個屬性 — 做為排序清單依據的第二個屬性名稱
-#   SortDirection2 [選項，預設 Ascending] 排序 — 指定要依第二個屬性的遞增或遞減順序進行排序
-#       可用值：Variables.SortDirection.Ascending（遞增）、Variables.SortDirection.Descending（遞減）
-#   Property3 [文字，選填] 做為排序依據的第三個屬性 — 做為排序清單依據的第三個屬性名稱
-#   SortDirection3 [選項，預設 Ascending] 排序 — 指定要依第三個屬性的遞增或遞減順序進行排序
-#       可用值：Variables.SortDirection.Ascending（遞增）、Variables.SortDirection.Descending（遞減）
-# 可能的錯誤：NoPropertySpecifiedError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

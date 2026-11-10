@@ -1,18 +1,1 @@
 Azure.CreateSession ClientId: `` ClientSecret: `` TenantId: `` AzureClient=> AzureClient
-
-# ==================== 說明 ====================
-# 動作：建立工作階段  (Azure.CreateSession)
-# 英文名稱：Create session
-# 用途：使用服務主體建立 Azure 工作階段
-# 位置：Azure
-# 輸入參數：
-#   ClientId [文字] 用戶端識別碼 — 應用程式的用戶端識別碼，也稱為應用程式識別碼，用來識別使用權杖的應用程式
-#   ClientSecret [文字(可加密)] 用戶端密碼 — 用戶端識別碼的密碼
-#   TenantId [文字] 租用戶識別碼 — Azure Active Directory 的目錄識別碼
-#   SubscriptionId [文字，選填] 訂閱識別碼 — Azure 訂閱識別碼。如果未提供，則會使用預設訂閱
-# 產生的變數：
-#   AzureClient [AzureClient] Azure 用戶端 — 建立的 Azure 用戶端
-# 可能的錯誤：FailedToCreateAzureClientError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

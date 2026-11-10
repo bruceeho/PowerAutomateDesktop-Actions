@@ -1,34 +1,9 @@
-# 【模式 WebPageToContainElement】檢查網頁上是否有特定元素存在
 WebAutomation.WaitForWebPageContentAction.WebPageToContainElement BrowserInstance: `` Control: ``
 
-# 【模式 WebPageToNotContainElement】檢查網頁上是否沒有特定元素存在
 WebAutomation.WaitForWebPageContentAction.WebPageToNotContainElement BrowserInstance: `` Control: ``
 
-# 【模式 WebPageToContainText】檢查網頁上是否有特定文字存在
 WebAutomation.WaitForWebPageContentAction.WebPageToContainText BrowserInstance: `` Text: ``
 
-# 【模式 WebPageToNotContainText】檢查網頁上是否沒有特定文字存在
 WebAutomation.WaitForWebPageContentAction.WebPageToNotContainText BrowserInstance: `` Text: ``
 
-# 【模式 WebPageToContainElementInState】檢查特定 Web 元素是否存在於網頁中並處於特定狀態
 WebAutomation.WaitForWebPageContentAction.WebPageToContainElementInState BrowserInstance: `` Control: `` State: WebAutomation.ElementState.Enabled
-
-# ==================== 說明 ====================
-# 動作：等待網頁內容  (WebAutomation.WaitForWebPageContentAction)
-# 英文名稱：Wait for web page content
-# 用途：暫停流程，直到網頁上特定文字片段或網頁元素出現或消失
-# 位置：瀏覽器自動化
-# 輸入參數：
-#   BrowserInstance [WebBrowserInstanceHandle]
-#   ContainsMode [選項，預設 ToContainElement]
-#       可用值：WebAutomation.WaitForWebPage.ToContainElement（包含元素）、WebAutomation.WaitForWebPage.ToNotContainElement（不包含元素）、WebAutomation.WaitForWebPage.ToContainText（包含文字）、WebAutomation.WaitForWebPage.ToNotContainText（不包含文字）
-#   Control [WebControl]
-#   CheckElementState [布林，預設 False]
-#   Text [文字]
-#   State [選項，預設 Enabled]
-#       可用值：WebAutomation.ElementState.Enabled（已啟用）、WebAutomation.ElementState.Disabled（已停用）
-# 可能的錯誤：WaitForWebPageContentError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

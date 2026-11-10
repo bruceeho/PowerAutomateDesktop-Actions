@@ -1,16 +1,1 @@
 Text.Trim TrimOption: Text.TrimOption.Both TrimmedText=> TrimmedText
-
-# ==================== 說明 ====================
-# 動作：修剪文字  (Text.Trim)
-# 英文名稱：Trim text
-# 用途：從現有文字開頭和/或結尾處移除所有空白字元出現的位置 (如空格、定位字元或新行)
-# 位置：文字
-# 輸入參數：
-#   Text [文字，選填] 要修剪的文字 — 要修剪的文字
-#   TrimOption [選項，預設 Both] 要修剪的項目 — 指定要移除空白字元的位置
-#       可用值：Text.TrimOption.FromStart（開頭處的空白字元）、Text.TrimOption.ToEnd（結尾處的空白字元）、Text.TrimOption.Both（開頭和結尾處的空白字元）
-# 產生的變數：
-#   TrimmedText [文字] 修剪的文字 — 修剪後的新文字
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

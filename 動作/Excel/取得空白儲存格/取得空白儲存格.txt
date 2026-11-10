@@ -1,53 +1,15 @@
-# 【模式 GetEmptyCellsNamedCellFirstEmptyCell】取得 Excel 執行個體的使用中工作表中，具名範圍內的第一個空白儲存格。
 Excel.GetEmptyCellFromExcel.GetEmptyCellsNamedCellFirstEmptyCell Instance: `` EmptyCellsSearchDirection: Excel.EmptyCellsSearchDirection.Rows NamedCell: `` EmptyCellRowIndex=> EmptyCellRowIndex EmptyCellColumnIndex=> EmptyCellColumnIndex
 
-# 【模式 GetEmptyCellsNamedCellFirstEmptyCellInRow】取得 Excel 執行個體的使用中工作表中，具名儲存格的特定列內的第一個空白儲存格。
 Excel.GetEmptyCellFromExcel.GetEmptyCellsNamedCellFirstEmptyCellInRow Instance: `` SearchRow: `` NamedCell: `` EmptyCellRowIndex=> EmptyCellRowIndex EmptyCellColumnIndex=> EmptyCellColumnIndex
 
-# 【模式 GetEmptyCellsNamedCellFirstEmptyCellInColumn】取得特定欄中具名儲存格的第一個空白儲存格
 Excel.GetEmptyCellFromExcel.GetEmptyCellsNamedCellFirstEmptyCellInColumn Instance: `` SearchColumn: `` NamedCell: `` EmptyCellRowIndex=> EmptyCellRowIndex EmptyCellColumnIndex=> EmptyCellColumnIndex
 
-# 【模式 GetEmptyCellsNamedCellAllEmptyCells】取得 Excel 執行個體的使用中工作表中，具名儲存格內的所有空白儲存格。
 Excel.GetEmptyCellFromExcel.GetEmptyCellsNamedCellAllEmptyCells Instance: `` NamedCell: `` EmptyCells=> EmptyCells
 
-# 【模式 GetEmptyCellsAbsoluteRangeFirstEmptyCell】取得 Excel 執行個體的使用中工作表中，特定範圍內的第一個空白儲存格。
 Excel.GetEmptyCellFromExcel.GetEmptyCellsAbsoluteRangeFirstEmptyCell Instance: `` EmptyCellsSearchDirection: Excel.EmptyCellsSearchDirection.Rows StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` EmptyCellRowIndex=> EmptyCellRowIndex EmptyCellColumnIndex=> EmptyCellColumnIndex
 
-# 【模式 GetEmptyCellsAbsoluteRangeFirstEmptyCellInRow】取得 Excel 執行個體的使用中工作表中，範圍內特定列內的第一個空白儲存格。
 Excel.GetEmptyCellFromExcel.GetEmptyCellsAbsoluteRangeFirstEmptyCellInRow Instance: `` SearchRow: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` EmptyCellRowIndex=> EmptyCellRowIndex EmptyCellColumnIndex=> EmptyCellColumnIndex
 
-# 【模式 GetEmptyCellsAbsoluteRangeFirstEmptyCellInColumn】取得 Excel 執行個體的使用中工作表中，範圍內特定欄內的第一個空白儲存格。
 Excel.GetEmptyCellFromExcel.GetEmptyCellsAbsoluteRangeFirstEmptyCellInColumn Instance: `` SearchColumn: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` EmptyCellRowIndex=> EmptyCellRowIndex EmptyCellColumnIndex=> EmptyCellColumnIndex
 
-# 【模式 GetEmptyCellsAbsoluteRangeAllEmptyCells】取得 Excel 執行個體的使用中工作表中，特定範圍內的所有空白儲存格。
 Excel.GetEmptyCellFromExcel.GetEmptyCellsAbsoluteRangeAllEmptyCells Instance: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` EmptyCells=> EmptyCells
-
-# ==================== 說明 ====================
-# 動作：取得空白儲存格  (Excel.GetEmptyCellFromExcel)
-# 英文名稱：Get empty cell
-# 用途：取得空白儲存格
-# 位置：Excel
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要使用的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-#   EmptyCellsOperation [選項，預設 FirstEmptyCell] 作業 — 指定要搜尋特定範圍內的第一個空白儲存格還是所有空白儲存格
-#       可用值：Excel.EmptyCellsOperation.FirstEmptyCell（第一個空白儲存格）、Excel.EmptyCellsOperation.FirstEmptyCellInColumn（欄的第一個空白儲存格）、Excel.EmptyCellsOperation.FirstEmptyCellInRow（列的第一個空白儲存格）、Excel.EmptyCellsOperation.AllEmptyCells（所有空白儲存格）
-#   EmptyCellsSearchDirection [選項，預設 Rows] 搜尋方向 — 指定要依列還是欄搜尋來尋找特定範圍內的第一個空白儲存格。
-#       可用值：Excel.EmptyCellsSearchDirection.Rows（依列）、Excel.EmptyCellsSearchDirection.Columns（依欄）
-#   SearchColumn [文字] 欄 — 欄
-#   SearchRow [整數] 列 — 列
-#   GetEmptyCellsRangeMode [選項，預設 NamedCell] 搜尋範圍: — 在以開始欄/列和結束欄/列定義的範圍內，搜尋具名儲存格中的空白儲存格
-#       可用值：Excel.GetEmptyCellsRangeMode.NamedCell（具名儲存格）、Excel.GetEmptyCellsRangeMode.Coordinates（特定範圍）
-#   NamedCell [文字] 儲存格名稱 — 代表範圍的名稱
-#   StartColumn [文字] 起始欄 — 第一欄的索引或字母
-#   StartRow [整數] 起始列 — 第一個列號。編號從 1 開始
-#   EndColumn [文字] 結尾欄 — 最後一欄的索引或字母
-#   EndRow [整數] 結尾列 — 最後一個列號。編號從 1 開始
-# 產生的變數：
-#   EmptyCells [資料表] 匯出儲存格 — 找到空白儲存格清單
-#   EmptyCellRowIndex [整數] 空白儲存格列索引 — 找到第一個空白儲存格列的索引
-#   EmptyCellColumnIndex [整數] 空白儲存格欄索引 — 找到第一個空白儲存格的欄索引
-# 可能的錯誤：GetEmptyCells
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

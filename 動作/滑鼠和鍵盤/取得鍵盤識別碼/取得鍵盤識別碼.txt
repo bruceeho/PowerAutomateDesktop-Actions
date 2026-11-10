@@ -1,13 +1,1 @@
 MouseAndKeyboard.GetKeyboardLayout KeyboardLayoutId=> KeyboardLayoutId
-
-# ==================== 說明 ====================
-# 動作：取得鍵盤識別碼  (MouseAndKeyboard.GetKeyboardLayout)
-# 英文名稱：Get keyboard identifier
-# 用途：從機器的登錄中擷取使用中的鍵盤識別碼
-# 位置：滑鼠和鍵盤
-# 產生的變數：
-#   KeyboardLayoutId [整數] 鍵盤識別碼金鑰 — 使用中鍵盤識別碼的登錄機碼
-# 可能的錯誤：GetCurrentKeyboardLayoutError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,17 +1,1 @@
 ActiveDirectory.CreateObject ObjectType: ActiveDirectory.ObjectType.Computer ObjectName: `` ParentDirectoryEntry: ``
-
-# ==================== 說明 ====================
-# 動作：建立物件  (ActiveDirectory.CreateObject)
-# 英文名稱：Create object
-# 用途：在 Active Directory 中建立物件
-# 位置：Active Directory > 物件
-# 輸入參數：
-#   Location [文字，選填] 位置 — 將在其中建立群組的位置
-#   ObjectType [選項，預設 Computer] 物件類型 — 物件的類型
-#       可用值：ActiveDirectory.ObjectType.Computer（電腦）、ActiveDirectory.ObjectType.OrganizationalUnit（組織單位）
-#   ObjectName [文字] 物件名稱 — 新建立的物件的名稱
-#   ParentDirectoryEntry [ActiveDirectoryEntry] 上層目錄項目 — Active Directory 伺服器的上層項目
-# 可能的錯誤：AuthenticationError、InvalidOperationError、ServerNotOperationalError、UnauthorizedAccessError、ActiveDirectoryEntryNotFound、ObjectAlreadyExistsError、InvalidAttributeSyntaxError、ActiveDirectoryError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

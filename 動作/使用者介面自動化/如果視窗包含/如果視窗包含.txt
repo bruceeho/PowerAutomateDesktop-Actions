@@ -1,34 +1,9 @@
-# 【模式 WindowContainsElement】檢查視窗中是否有特定 UI 元素存在
 UIAutomation.IfWindowContainsAction.WindowContainsElement
 
-# 【模式 WindowDoesNotContainElement】檢查視窗中是否沒有特定 UI 元素存在
 UIAutomation.IfWindowContainsAction.WindowDoesNotContainElement
 
-# 【模式 WindowContainsElementInState】檢查特定 UI 元素是否存在視窗中且處於特定狀態
 UIAutomation.IfWindowContainsAction.WindowContainsElementInState State: UIAutomation.State.Enabled
 
-# 【模式 WindowContainsText】檢查視窗中是否有特定文字存在
 UIAutomation.IfWindowContainsAction.WindowContainsText Text: `` Window: ``
 
-# 【模式 WindowDoesNotContainText】檢查視窗中是否沒有特定文字存在
 UIAutomation.IfWindowContainsAction.WindowDoesNotContainText Text: `` Window: ``
-
-# ==================== 說明 ====================
-# 動作：如果視窗包含  (UIAutomation.IfWindowContainsAction)
-# 英文名稱：If window contains
-# 用途：標記根據視窗中是否存在一段特定文字或 UI 元素之條件式動作區塊的開頭
-# 位置：使用者介面自動化
-# 輸入參數：
-#   CheckElementState [布林，預設 False]
-#   Text [文字]
-#   Window [UIControl]
-#   Control [UIControl]
-#   State [選項，預設 Enabled]
-#       可用值：UIAutomation.State.Enabled（已啟用）、UIAutomation.State.Disabled（已停用）
-#   ContainsMode [選項，預設 ContainsElement]
-#       可用值：UIAutomation.ContainsMode.ContainsElement（包含 UI 元素）、UIAutomation.ContainsMode.DoesNotContainElement（不包含 UI 元素）、UIAutomation.ContainsMode.ContainsText（包含文字）、UIAutomation.ContainsMode.DoesNotContainText（不包含文字）
-# 可能的錯誤：IfWindowContainsError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

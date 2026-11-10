@@ -1,37 +1,7 @@
-# 【模式 FindSingle】尋找包含指定文字的第一次出現的儲存格
 Excel.FindAndReplace.FindSingle Instance: `` TextToFind: `` MatchCase: False MatchEntireCellContents: False SearchBy: Excel.SearchOrder.Rows FoundColumnIndex=> FoundColumnIndex FoundRowIndex=> FoundRowIndex
 
-# 【模式 FindAndReplaceSingle】尋找並取代包含指定文字的第一個出現的儲存格
 Excel.FindAndReplace.FindAndReplaceSingle Instance: `` TextToFind: `` TextToReplaceWith: `` MatchCase: False MatchEntireCellContents: False SearchBy: Excel.SearchOrder.Rows FoundColumnIndex=> FoundColumnIndex FoundRowIndex=> FoundRowIndex
 
-# 【模式 FindAll】尋找包含指定文字的所有儲存格
 Excel.FindAndReplace.FindAll Instance: `` TextToFind: `` MatchCase: False MatchEntireCellContents: False SearchBy: Excel.SearchOrder.Rows Cells=> Cells
 
-# 【模式 FindAndReplaceAll】尋找並取代包含指定文字的所有儲存格
 Excel.FindAndReplace.FindAndReplaceAll Instance: `` TextToFind: `` TextToReplaceWith: `` MatchCase: False MatchEntireCellContents: False SearchBy: Excel.SearchOrder.Rows Cells=> Cells
-
-# ==================== 說明 ====================
-# 動作：在 Excel 工作表中尋找並取代儲存格  (Excel.FindAndReplace)
-# 英文名稱：Find and replace cells in Excel worksheet
-# 用途：在 Excel 執行個體的使用中工作表中查詢文字，並用其他文字取代
-# 位置：Excel > 進階
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-#   Mode [選項，預設 Find] 搜尋模式 — 要搜尋的模式
-#       可用值：Excel.FindAndReplaceMode.Find（尋找）、Excel.FindAndReplaceMode.FindAndReplace（尋找及取代）
-#   AllMatches [布林，預設 False] 所有相符項目 — 指定是要在找到的所有相符儲存格中，或是僅在第一個相符儲存格中尋找/取代文字
-#   TextToFind [文字] 要尋找的文字 — 要在工作表中尋找的文字
-#   TextToReplaceWith [文字] 要用以取代的文字 — 用於取代相符儲存格的文字
-#   MatchCase [布林，預設 False] 大小寫須相符 — 指定是否搜尋區分大小寫的資料
-#   MatchEntireCellContents [布林，預設 False] 比對整個儲存格內容 — 指定是否搜尋僅包含指定文字的儲存格
-#   SearchBy [選項，預設 Rows] 搜尋依據 — 搜尋文字的順序
-#       可用值：Excel.SearchOrder.Rows（資料列）、Excel.SearchOrder.Columns（資料行）
-# 產生的變數：
-#   Cells [資料表] 儲存格 — 符合準則的儲存格清單
-#   FoundColumnIndex [整數] 資料行索引 — 已找到資料行的索引
-#   FoundRowIndex [整數] 資料列索引 — 已找到資料列的索引
-# 可能的錯誤：FindAndReplaceError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

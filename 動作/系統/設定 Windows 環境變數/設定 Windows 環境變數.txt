@@ -1,16 +1,1 @@
 System.SetEnvironmentVariable Value: `` Type: System.EnvironmentVariableType.User Name: ``
-
-# ==================== 說明 ====================
-# 動作：設定 Windows 環境變數  (System.SetEnvironmentVariable)
-# 英文名稱：Set Windows environment variable
-# 用途：將環境變數設定為指定值
-# 位置：系統
-# 輸入參數：
-#   Value [文字] 新的環境變數值 — 要設定為環境變數的值
-#   Type [選項，預設 User] 類型 — 環境變數的類型
-#       可用值：System.EnvironmentVariableType.User（使用者）、System.EnvironmentVariableType.System（系統）
-#   Name [文字] 環境變數名稱 — 環境變數的名稱
-# 可能的錯誤：SetEnvironmentVariableError、InsufficientPermissionsError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

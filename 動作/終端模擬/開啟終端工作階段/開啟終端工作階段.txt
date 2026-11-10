@@ -1,35 +1,5 @@
-# 【模式 OpenSession】使用 HLLAPI 開啟新的終端工作階段
 TerminalEmulation.OpenTerminalSession.OpenSession HllapiPath: `` SessionName: `` Session=> Session
 
-# 【模式 OpenSessionUsingReflectionProfile】使用現有設定的反射開啟新的終端工作階段
 TerminalEmulation.OpenTerminalSession.OpenSessionUsingReflectionProfile InstallationPath: `` Profile: `` Attach: False Session=> Session
 
-# 【模式 OpenSessionUsingReflection】使用反射開啟新的終端工作階段
 TerminalEmulation.OpenTerminalSession.OpenSessionUsingReflection InstallationPath: `` HostType: TerminalEmulation.HostType.IBM3270 Host: `` Port: `` Attach: False Session=> Session
-
-# ==================== 說明 ====================
-# 動作：開啟終端工作階段  (TerminalEmulation.OpenTerminalSession)
-# 英文名稱：Open terminal session
-# 用途：開啟新的終端工作階段
-# 位置：終端模擬
-# 輸入參數：
-#   HllapiPath [FileObject] HLLAPI DLL 路徑 — 提供者的 HLLAPI DLL。RocketSoftware BlueZone 預設名稱: 'ehlapi64.dll'。IBM Personal Communications 預設名稱: 'EHLAPI32.dll'。MicroFocus Rumba 預設路徑: 'System/ehlapi32.Dll'。Cybelesoft zScope 預設名稱: 'zHllap32.dll' 或任何其他在其安裝資料夾中提供 HLLAPI DLL 的提供者。
-#   InstallationPath [FolderObject] 安裝路徑 — 提供者的應用程式在使用者檔案系統上的安裝路徑
-#   SessionName [文字] 工作階段名稱 — 要連線之工作階段的名稱。這是 HLLAPI 的簡短名稱，且為主機工作階段的唯一識別碼。可以在終端模擬器的組態設定中找到它。
-#   Configuration [選項，預設 ExistingProfile] 設定 — 選擇 [現有設定檔] 以選取包含預先設定終端模擬連線的檔案。選擇 [指定連線] 以指定連線類型、主機位址和連接埠。
-#       可用值：TerminalEmulation.Configuration.ExistingProfile（現有設定檔）、TerminalEmulation.Configuration.SpecifyConnection（指定連線）
-#   Profile [FileObject] 設定檔 — 包含預先設定連線的檔案
-#   HostType [選項，預設 IBM3270] 主機類型 — 連線的主機類型
-#       可用值：TerminalEmulation.HostType.IBM3270（IBM 3270）、TerminalEmulation.HostType.IBM5250（IBM 5250）
-#   Host [文字] 主機位址 — 要與其連線的主機位址
-#   Port [整數] 連接埠 — 要用於此連線的連接埠
-#   Attach [布林，預設 False] 附加至執行中的工作階段 — 指定是否附加至目前開啟/執行中的終端工作階段
-#   Provider [選項，預設 Reflection] 提供者 — 要使用的終端模擬
-#       可用值：TerminalEmulation.Provider.Reflection（微焦點反射）、TerminalEmulation.Provider.HLLAPI（HLLAPI）
-# 產生的變數：
-#   Session [TerminalSessionHandle] 終端工作階段 — 與稍後的終端模擬命令一起使用的特定終端工作階段
-# 可能的錯誤：EmulatorCommunicationError、ProfileError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

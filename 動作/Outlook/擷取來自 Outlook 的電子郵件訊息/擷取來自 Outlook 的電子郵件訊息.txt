@@ -1,33 +1,3 @@
-# 【模式 RetrieveEmails】擷取來自 Outlook 帳戶的電子郵件訊息
 Outlook.RetrieveEmailMessages.RetrieveEmails Instance: `` Account: `` MailFolder: `` EmailsToRetrieve: Outlook.RetrieveMessagesMode.All MarkAsRead: True ReadBodyAsHtml: False Messages=> Messages
 
-# 【模式 RetrieveEmailsAndSaveAttachments】從 Outlook 帳戶擷取電子郵件訊息，並儲存其附件
 Outlook.RetrieveEmailMessages.RetrieveEmailsAndSaveAttachments Instance: `` Account: `` MailFolder: `` EmailsToRetrieve: Outlook.RetrieveMessagesMode.All MarkAsRead: True ReadBodyAsHtml: False SaveAttachmentsInto: `` Messages=> Messages
-
-# ==================== 說明 ====================
-# 動作：擷取來自 Outlook 的電子郵件訊息  (Outlook.RetrieveEmailMessages)
-# 英文名稱：Retrieve email messages from Outlook
-# 用途：擷取來自 Outlook 帳戶的電子郵件訊息
-# 位置：Outlook
-# 輸入參數：
-#   Instance [OutlookInstanceHandle] Outlook 執行個體 — 要使用的 Outlook 執行個體。在「啟動 Outlook」動作中指定此變數
-#   Account [文字] 帳戶 — 使用 Outlook 帳戶名稱 (資料檔案名稱)
-#   MailFolder [文字] 郵件資料夾 — 要從中擷取訊息的資料夾名稱。輸入子資料夾的完整資料夾路徑 (例如: Inbox\Work)
-#   EmailsToRetrieve [選項，預設 All] 擷取 — 指定是否擷取資料夾中的所有訊息，或只擷取未讀的訊息
-#       可用值：Outlook.RetrieveMessagesMode.All（所有電子郵件訊息）、Outlook.RetrieveMessagesMode.Unread（僅限未讀電子郵件訊息）、Outlook.RetrieveMessagesMode.Read（僅限已讀電子郵件訊息）
-#   MarkAsRead [布林，預設 True] 標示為已讀取 — 指定是否將已擷取的所有未讀訊息標示為已讀取
-#   ReadBodyAsHtml [布林，預設 False] 以 HTML 讀取正文 — 指定是否要以 HTML 讀取訊息正文
-#   FromContains [文字，選填] 寄件者包含 — 要擷取其電子郵件之寄件者的完整電子郵件地址。將此屬性保留空白，即可擷取所有電子郵件，無論寄件者是誰。這可能必須採用 X.500 格式，視電子郵件伺服器設定而定
-#   ToContains [文字，選填] 收件者包含 — 要擷取電子郵件之收件者的完整電子郵件地址 (多個地址請以空格或分號隔開)。將此屬性保留空白，即可擷取所有電子郵件，無論收件者是誰。這可能必須採用 X.500 格式，視電子郵件伺服器設定而定
-#   SubjectContains [文字，選填] 主旨包含 — 要在電子郵件主旨中尋找的關鍵片語。保留此屬性空白時，可擷取所有電子郵件訊息而不管其主旨為何
-#   BodyContains [文字，選填] 本文包含 — 要在電子郵件本文中尋找的關鍵片語。保留此屬性空白時，可擷取所有電子郵件訊息而不管其內容為何
-#   AttachmentsOptions [選項，預設 DoNotSave] 附件 — 指定是否要儲存已擷取之電子郵件訊息的附件
-#       可用值：Outlook.AttachmentsOptions.Save（儲存附件）、Outlook.AttachmentsOptions.DoNotSave（不要儲存附件）
-#   SaveAttachmentsInto [FolderObject] 將附件儲存至 — 要儲存已擷取電子郵件之附件的路徑
-# 產生的變數：
-#   Messages [List<OutlookMailMessage>] 已擷取的訊息 — 稍後要處理的已擷取電子郵件訊息。變數包含 Outlook 訊息物件的清單
-# 可能的錯誤：OutlookAccountNotFoundError、InvalidMailFolderError、SaveAttachmentsDirectoryNotFoundError、RetrieveEmailMessagesError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

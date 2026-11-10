@@ -1,13 +1,1 @@
 Variables.RemoveDuplicateItemsFromList IgnoreCase: False List: ``
-
-# ==================== 說明 ====================
-# 動作：從清單中移除重複的項目  (Variables.RemoveDuplicateItemsFromList)
-# 英文名稱：Remove duplicate items from list
-# 用途：移除清單中多次出現的項目，使結果清單中的每個項目都不重複
-# 位置：變數
-# 輸入參數：
-#   IgnoreCase [布林，預設 False] 搜尋重複的項目時忽略文字大小寫 — 指定搜尋重複的項目時，是否對文字執行不區分大小寫的比較 (僅適用於文字項目構成的清單)
-#   List [List<Object>] 要移除其中重複項目的清單 — 要從中移除重複項目的清單變數
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

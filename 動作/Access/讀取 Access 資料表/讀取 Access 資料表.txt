@@ -1,16 +1,1 @@
 Access.ReadAccessTable Instance: `` TableName: `` Result=> Result
-
-# ==================== 說明 ====================
-# 動作：讀取 Access 資料表  (Access.ReadAccessTable)
-# 英文名稱：Read Access table
-# 用途：讀取 Access 資料表
-# 位置：Access
-# 輸入參數：
-#   Instance [AccessInstanceHandle] Access 執行個體 — 要處理的 Access 執行個體。此變數必須先以 [啟動 Access] 動作加以指定。
-#   TableName [文字] 資料表名稱 — Access 資料表的名稱。請注意，您必須輸入資料表的確切名稱，因為它會儲存在特定的 Access 資料庫中。
-# 產生的變數：
-#   Result [資料表] 讀取結果 — 讀取查詢的結果
-# 可能的錯誤：ReadAccessTableError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

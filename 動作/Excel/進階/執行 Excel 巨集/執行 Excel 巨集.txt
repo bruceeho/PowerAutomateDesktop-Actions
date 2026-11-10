@@ -1,14 +1,1 @@
 Excel.RunMacro Macro: `` Instance: ``
-
-# ==================== 說明 ====================
-# 動作：執行 Excel 巨集  (Excel.RunMacro)
-# 英文名稱：Run Excel macro
-# 用途：在 Excel 執行個體之文件上執行指定的巨集
-# 位置：Excel > 進階
-# 輸入參數：
-#   Macro [文字] 巨集 — 要執行的巨集。文字應該包含巨集的名稱，後面接上任何引數 (選擇性)，所有引數均以分號隔開
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-# 可能的錯誤：RunMacroError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

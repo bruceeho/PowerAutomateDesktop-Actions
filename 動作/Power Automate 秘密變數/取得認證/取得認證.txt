@@ -1,16 +1,1 @@
 PowerAutomateSecretVariables.GetCredential Timeout: 0 CredentialId: `` Credential=> Credential
-
-# ==================== 說明 ====================
-# 動作：取得認證  (PowerAutomateSecretVariables.GetCredential)
-# 英文名稱：Get credential
-# 用途：擷取透過 Power Automate 入口網站頁面為此環境建立的認證值
-# 位置：Power Automate 秘密變數
-# 輸入參數：
-#   Timeout [整數，預設 0] 逾時 — 取得認證的最長等待時間 (秒)
-#   CredentialId [文字] 認證 — 要擷取值的認證
-# 產生的變數：
-#   Credential [Credential] 認證 — 擷取的認證內容
-# 可能的錯誤：FailedToGetCredentialError、InvalidCredentialsConfigurationError、CredentialTimeoutError、FailedToContactCredentialsVaultError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

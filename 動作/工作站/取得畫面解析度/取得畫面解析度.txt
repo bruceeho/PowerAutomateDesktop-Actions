@@ -1,18 +1,1 @@
 Workstation.GetScreenResolution MonitorNumber: `` MonitorWidth=> MonitorWidth MonitorHeight=> MonitorHeight MonitorBitCount=> MonitorBitCount MonitorFrequency=> MonitorFrequency
-
-# ==================== 說明 ====================
-# 動作：取得畫面解析度  (Workstation.GetScreenResolution)
-# 英文名稱：Get screen resolution
-# 用途：取得所選取螢幕的寬度、高度、位元數和頻率
-# 位置：工作站
-# 輸入參數：
-#   MonitorNumber [整數] 螢幕數目 — 要取得其解析度的螢幕數目
-# 產生的變數：
-#   MonitorWidth [整數] 螢幕寬度 — 螢幕的寬度
-#   MonitorHeight [整數] 螢幕高度 — 螢幕的高度
-#   MonitorBitCount [整數] 螢幕位元數 — 螢幕位元數
-#   MonitorFrequency [整數] 螢幕頻率 — 螢幕頻率
-# 可能的錯誤：GetScreenResolutionError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

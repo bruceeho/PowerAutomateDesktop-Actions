@@ -1,23 +1,5 @@
-# 【模式 Stopped】檢查服務是否已停止
 Services.WaitForServiceAction.Stopped Service: ``
 
-# 【模式 Started】檢查服務是否正在執行
 Services.WaitForServiceAction.Started Service: ``
 
-# 【模式 Paused】檢查服務是否已暫停
 Services.WaitForServiceAction.Paused Service: ``
-
-# ==================== 說明 ====================
-# 動作：等待服務  (Services.WaitForServiceAction)
-# 英文名稱：Wait for service
-# 用途：暫停執行流程，直到某個服務啟動、停止或暫停
-# 位置：Windows 服務
-# 輸入參數：
-#   Service [文字]
-#   WaitFor [選項，預設 ToStart]
-#       可用值：Services.WaitForService.ToStop（停止）、Services.WaitForService.ToStart（啟動）、Services.WaitForService.ToPause（暫停）
-# 可能的錯誤：ServiceNotFoundError、RetrieveStatusForServiceError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

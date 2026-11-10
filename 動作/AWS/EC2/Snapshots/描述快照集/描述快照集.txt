@@ -1,34 +1,9 @@
-# 【模式 DescribeAllSnapshots】描述所有 EBS 快照集
 AWS.DescribeSnapshots.DescribeAllSnapshots Ec2Client: `` Snapshots=> Snapshots
 
-# 【模式 DescribeSnapshotsById】描述具有指定識別碼的 EBS 快照集
 AWS.DescribeSnapshots.DescribeSnapshotsById Ec2Client: `` Snapshots=> Snapshots
 
-# 【模式 DescribeSnapshotsByOwnerId】描述具有指定負責人識別碼的 EBS 快照集
 AWS.DescribeSnapshots.DescribeSnapshotsByOwnerId Ec2Client: `` Snapshots=> Snapshots
 
-# 【模式 DescribeSnapshotsByRestorableUserId】描述可依據 AWS 帳戶的指定識別碼還原的 EBS 快照集
 AWS.DescribeSnapshots.DescribeSnapshotsByRestorableUserId Ec2Client: `` Snapshots=> Snapshots
 
-# 【模式 DescribeSnapshotsByCustomFilter】描述使用自訂篩選的 EBS 快照集
 AWS.DescribeSnapshots.DescribeSnapshotsByCustomFilter Ec2Client: `` Snapshots=> Snapshots
-
-# ==================== 說明 ====================
-# 動作：描述快照集  (AWS.DescribeSnapshots)
-# 英文名稱：Describe snapshots
-# 用途：描述指定的可用 EBS 快照集
-# 位置：AWS > EC2 > Snapshots
-# 輸入參數：
-#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
-#   DescribeSnapshotsMode [選項，預設 AllSnapshots] 描述快照集模式 — 指定要取得已定義區域的所有快照集，還是要依據其識別碼、負責人或者可還原這些快照集的使用者來篩選快照集
-#       可用值：AWS.DescribeSnapshotsMode.AllSnapshots（所有快照集）、AWS.DescribeSnapshotsMode.SnapshotsById（依識別碼描述的快照集）、AWS.DescribeSnapshotsMode.SnapshotsByOwnerId（依負責人識別碼描述的快照集）、AWS.DescribeSnapshotsMode.SnapshotsByRestorableUserId（可依據使用者識別碼還原的快照集）、AWS.DescribeSnapshotsMode.SnapshotsByCustomFilter（依自訂篩選描述的快照集）
-#   SnapshotIds [List<String>，選填] 快照集識別碼 — 要描述的快照集識別碼
-#   OwnerIds [List<String>，選填] 負責人識別碼 — 擁有快照集的負責人識別碼
-#   RestorableByUserIds [List<String>，選填] 可依據使用者識別碼還原 — 可從快照集建立磁碟區之 AWS 帳戶的識別碼
-# 產生的變數：
-#   Snapshots [List<Snapshot>] 擷取的快照集 — 包含所有相關資訊的已擷取快照集
-# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、InvalidSnapshotError、InvalidUserOrOwnerError、RequestFailedError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

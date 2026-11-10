@@ -1,34 +1,5 @@
-# 【模式 SelectFromListOrInsertValue】顯示對話方塊，並提供選項讓使用者從清單中選取
 Display.SelectFromListDialog.SelectFromListOrInsertValue List: `` IsTopMost: False SelectedItem=> SelectedItem SelectedIndex=> SelectedIndex ButtonPressed=> ButtonPressed
 
-# 【模式 SelectFromList】顯示對話方塊，並提供選項讓使用者從清單中選取
 Display.SelectFromListDialog.SelectFromList List: `` IsTopMost: False AllowEmpty: False SelectedItem=> SelectedItem SelectedIndex=> SelectedIndex ButtonPressed=> ButtonPressed
 
-# 【模式 SelectItemsFromList】顯示對話方塊，並提供選項讓使用者從清單中選取
 Display.SelectFromListDialog.SelectItemsFromList List: `` IsTopMost: False AllowEmpty: False PreSelectItemsWithPlus: False SelectedItems=> SelectedItems SelectedIndexes=> SelectedIndexes ButtonPressed=> ButtonPressed
-
-# ==================== 說明 ====================
-# 動作：顯示從清單選取對話方塊  (Display.SelectFromListDialog)
-# 英文名稱：Display select from list dialog
-# 用途：顯示對話方塊，並提供選項讓使用者從清單中選取
-# 位置：訊息方塊
-# 輸入參數：
-#   Title [文字，選填] 對話方塊標題 — 對話方塊標題
-#   Message [文字，選填] 對話方塊訊息 — 對話方塊訊息
-#   List [一般值] 提供選項的清單 — 要顯示為下拉式功能表的清單，用來為使用者提供選項
-#   IsTopMost [布林，預設 False] 選取對話方塊一律保持在最上方 — 指定選取對話方塊是否應一律保持在所有其他視窗之上
-#   LimitToList [布林，預設 True] 限於清單 — 指定是否允許使用者輸入自己的回答，而非所顯示清單的內容
-#   AllowEmpty [布林，預設 False] 允許空白選取項目 — 允許使用者不選取任何項目，建立空白的選取項目輸出
-#   AllowMultiple [布林，預設 False] 允許多重選取 — 允許使用者選取一個以上的選項。這表示，選取的項目和選取的索引變數將會包含項目清單
-#   PreSelectItemsWithPlus [布林，預設 False] 預選開頭為 + 號的項目 — 指定前面加上 '+' 號的項目是否會顯示為自動預選狀態
-# 產生的變數：
-#   SelectedItem [文字] 選取的項目 — 從清單選取的文字形式項目
-#   SelectedItems [List<String>] 選取的項目 — 從清單選取的文字清單形式項目
-#   SelectedIndex [整數] 選取的索引 — 從清單中選取的項目索引編號。第一個項目使用 0，因為索引是以 0 為基礎。您可以使用項目編號來取代您選擇的全文
-#   SelectedIndexes [List<Int32>] 選取的索引 — 從清單中選取的項目索引編號。第一個項目使用 0，因為索引是以 0 為基礎。您可以使用項目編號來取代您選擇的全文
-#   ButtonPressed [文字] 按下的按鈕 — 使用者按下的按鈕名稱 ([確定] 或 [取消])
-# 可能的錯誤：SelectDialogError、SelectDialogInNonInteractiveModeError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

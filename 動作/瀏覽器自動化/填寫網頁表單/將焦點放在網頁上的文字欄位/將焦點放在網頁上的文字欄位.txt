@@ -1,30 +1,7 @@
-# 【模式 Focus】將焦點設定在網頁的輸入元素上，並捲動使其進入檢視範圍
 WebAutomation.Focus.Focus BrowserInstance: `` Control: `` WaitForPageToLoadTimeout: 60
 
-# 【模式 FocusCloseDialog】將焦點設定在網頁的輸入元素上，並捲動使其進入檢視範圍。如果快顯對話方塊出現，請將它關閉。
 WebAutomation.Focus.FocusCloseDialog BrowserInstance: `` Control: `` WaitForPageToLoadTimeout: 60
 
-# 【模式 FocusPressDialogButton】將焦點設定在網頁的輸入元素上，並捲動使其進入檢視範圍，如果快顯對話方塊出現，則按下指定的按鈕。
 WebAutomation.Focus.FocusPressDialogButton BrowserInstance: `` Control: `` WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
 
-# 【模式 FocusNoWait】將焦點設定在網頁的輸入元素上，並捲動使其進入檢視範圍，但不要等待網頁載入
 WebAutomation.Focus.FocusNoWait BrowserInstance: `` Control: ``
-
-# ==================== 說明 ====================
-# 動作：將焦點放在網頁上的文字欄位  (WebAutomation.Focus)
-# 英文名稱：Focus text field on web page
-# 用途：將焦點設定在網頁的輸入元素上，並捲動使其進入檢視範圍
-# 位置：瀏覽器自動化 > 填寫網頁表單
-# 輸入參數：
-#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
-#   Control [WebControl] UI 元素 — 選取網頁上要擁有焦點的 UI 元素
-#   WaitForPageToLoad [布林，預設 True] 等待頁面載入 — 指定是否要等待新網頁完整載入再繼續進行
-#   WaitForPageToLoadTimeout [整數，預設 60] 網頁載入逾時 — 設定動作擲回錯誤之前的頁面載入時間，以秒為單位
-#   HandleDialogAction [選項，預設 DoNothing] 如果快顯對話方塊出現 — 指定快顯對話方塊出現時要執行的操作
-#       可用值：WebAutomation.HandleDialogAction.CloseIt（關閉它）、WebAutomation.HandleDialogAction.PressButton（按下按鈕）、WebAutomation.HandleDialogAction.DoNothing（不執行任何動作）
-#   DialogButton [文字，預設 OK] 要按下的對話方塊按鈕 — 輸入快顯對話方塊出現時要按下的對話方塊按鈕
-# 可能的錯誤：ElementNotFoundError、FocusTextFieldError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,12 +1,1 @@
 Variables.DeleteEmptyRowsFromDataTable DataTable: ``
-
-# ==================== 說明 ====================
-# 動作：從資料表刪除空白資料列  (Variables.DeleteEmptyRowsFromDataTable)
-# 英文名稱：Delete empty rows from data table
-# 用途：從資料表刪除儲存格全部為空白的資料列
-# 位置：變數 > 資料表
-# 輸入參數：
-#   DataTable [資料表] 運算列表 — 要使用的運算列表變數。此變數必須先前已由產生運算列表變數的動作指定
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

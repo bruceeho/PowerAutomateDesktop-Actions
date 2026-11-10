@@ -1,13 +1,1 @@
 MouseAndKeyboard.BlockInput BlockIt: True
-
-# ==================== 說明 ====================
-# 動作：封鎖輸入  (MouseAndKeyboard.BlockInput)
-# 英文名稱：Block Input
-# 用途：封鎖使用者滑鼠和鍵盤輸入，讓流程能夠執行滑鼠和鍵盤動作，而不受使用者干擾
-# 位置：滑鼠和鍵盤
-# 輸入參數：
-#   BlockIt [布林，預設 True] 封鎖它 — 指定要封鎖或解除封鎖滑鼠和鍵盤輸入
-# 可能的錯誤：BlockInNonInteractiveModeError、BlockInputError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

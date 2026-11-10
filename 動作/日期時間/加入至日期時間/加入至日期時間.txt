@@ -1,17 +1,1 @@
 DateTime.Add DateTime: `` TimeToAdd: `` TimeUnit: DateTime.TimeUnit.Seconds ResultedDate=> ResultedDate
-
-# ==================== 說明 ====================
-# 動作：加入至日期時間  (DateTime.Add)
-# 英文名稱：Add to datetime
-# 用途：在日期時間值加入 (或減去) 特定的秒、分鐘、小時或天數值
-# 位置：日期時間
-# 輸入參數：
-#   DateTime [日期時間] 日期時間 — 要變更的日期時間值
-#   TimeToAdd [整數] 加 — 要加入的數值。若要減去時間，此值會是負數。例如，在此加入 -7 天，即可倒退一個星期
-#   TimeUnit [選項，預設 Seconds] 時間單位 — 要加入時間的時間單位
-#       可用值：DateTime.TimeUnit.Seconds（秒）、DateTime.TimeUnit.Minutes（分鐘）、DateTime.TimeUnit.Hours（小時）、DateTime.TimeUnit.Days（天）、DateTime.TimeUnit.Months（月份）、DateTime.TimeUnit.Years（年）
-# 產生的變數：
-#   ResultedDate [日期時間] 產生的日期 — 全新、變更的日期時間值
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

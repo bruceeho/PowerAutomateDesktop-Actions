@@ -1,16 +1,1 @@
 UIAutomation.UseDesktop Control: `` ClickType: UIAutomation.DesktopClickType.LeftClick LaunchNewApplication: True
-
-# ==================== 說明 ====================
-# 動作：使用桌面  (UIAutomation.UseDesktop)
-# 英文名稱：Use desktop
-# 用途：執行桌面和工作列相關作業
-# 位置：使用者介面自動化
-# 輸入參數：
-#   Control [UIControl] UI 元素 — 執行按一下的 UI 元素
-#   ClickType [選項，預設 LeftClick] 按一下類型 — 要執行的點擊類型
-#       可用值：UIAutomation.DesktopClickType.LeftClick（按滑鼠左鍵）、UIAutomation.DesktopClickType.RightClick（按滑鼠右鍵）、UIAutomation.DesktopClickType.DoubleClick（按兩下）
-#   LaunchNewApplication [布林，預設 True] 用滑鼠左鍵按一下工作列時啟動新的應用程式 — 當此參數設為 'true' 時，可確保在快速啟動列 (也就是 Windows 7 或更新版本的工作列) 中用滑鼠左鍵按一下應用程式的圖示時，會建立其新視窗。若取消勾選此選項，會將已在執行的應用程式執行個體移至前景。
-# 可能的錯誤：TaskbarOperationFailed
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

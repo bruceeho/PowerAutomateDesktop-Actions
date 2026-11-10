@@ -1,15 +1,1 @@
 File.ConvertToBinary File: `` BinaryData=> BinaryData
-
-# ==================== 說明 ====================
-# 動作：將檔案轉換為二進位資料  (File.ConvertToBinary)
-# 英文名稱：Convert file to binary data
-# 用途：將檔案轉換為二進位資料
-# 位置：檔案
-# 輸入參數：
-#   File [FileObject] 檔案路徑 — 要讀取的檔案
-# 產生的變數：
-#   BinaryData [BinaryObject] 二進位資料 — 要寫入的二進位資料
-# 可能的錯誤：FileNotFoundError、ConvertFileToBinaryError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,26 +1,3 @@
-# 【模式 DeleteCell】從 Excel 刪除單一儲存格
 Excel.DeleteCells.DeleteCell StartColumn: `` StartRow: `` ShiftCellsDirection: Excel.ShiftCellsDirection.Left Instance: ``
 
-# 【模式 DeleteCells】從 Excel 刪除儲存格範圍
 Excel.DeleteCells.DeleteCells StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` ShiftCellsDirection: Excel.ShiftCellsDirection.Left Instance: ``
-
-# ==================== 說明 ====================
-# 動作：從 Excel 工作表刪除  (Excel.DeleteCells)
-# 英文名稱：Delete from Excel worksheet
-# 用途：刪除 Excel 執行個體之使用中工作表的儲存格或儲存格範圍
-# 位置：Excel > 進階
-# 輸入參數：
-#   DeleteCellsMode [選項，預設 SingleCell] 擷取 — 指定是否從儲存格範圍中刪除單一儲存格或資料表
-#       可用值：Excel.DeleteCellsMode.SingleCell（單一儲存格的值）、Excel.DeleteCellsMode.RangeOfCells（儲存格範圍中的值）
-#   StartColumn [文字] 開始資料行 — 以數值或字母表示的儲存格資料行 (單一儲存格的值) 或第一個資料行
-#   StartRow [整數] 開始資料列 — 儲存格資料列 (單一儲存格的值) 或第一個資料列編號
-#   EndColumn [文字] 結尾資料行 — 以數值或字母表示的最後一個資料行
-#   EndRow [整數] 結尾資料列 — 最後一個資料列編號
-#   ShiftCellsDirection [選項，預設 Left] 轉換方向 — 轉換方向
-#       可用值：Excel.ShiftCellsDirection.Left（向左翻轉）、Excel.ShiftCellsDirection.Up（向上）
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-# 可能的錯誤：DeleteCellsError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

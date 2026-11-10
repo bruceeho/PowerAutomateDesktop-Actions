@@ -1,13 +1,1 @@
 Outlook.Close Instance: ``
-
-# ==================== 說明 ====================
-# 動作：關閉 Outlook  (Outlook.Close)
-# 英文名稱：Close Outlook
-# 用途：關閉先前啟動的 Outlook 執行個體
-# 位置：Outlook
-# 輸入參數：
-#   Instance [OutlookInstanceHandle] Outlook 執行個體 — 要使用的 Outlook 執行個體。在「啟動 Outlook」動作中指定此變數
-# 可能的錯誤：CloseOutlookError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

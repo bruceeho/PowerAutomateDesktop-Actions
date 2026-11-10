@@ -1,57 +1,15 @@
-# 【模式 FilterSimpleWorksheet】篩選使用中工作表的儲存格
 Excel.FilterCellsFromExcel.FilterSimpleWorksheet Instance: `` Column: `` SimpleFilterValues: ``
 
-# 【模式 FilterAdvancedWorksheet】篩選使用中工作表的儲存格
 Excel.FilterCellsFromExcel.FilterAdvancedWorksheet Instance: `` Column: `` AdvancedFilterFirstConditionOperator: Excel.FilterConditionOperator.Equal AdvancedFilterSecondConditionOperator: Excel.FilterConditionOperator.None AdvancedFilterLogicalOperator: Excel.FilterLogicalOperator.IsOr
 
-# 【模式 FilterSimpleTable】篩選表格的儲存格
 Excel.FilterCellsFromExcel.FilterSimpleTable Instance: `` Column: `` TableName: `` SimpleFilterValues: ``
 
-# 【模式 FilterAdvancedTable】篩選表格的儲存格
 Excel.FilterCellsFromExcel.FilterAdvancedTable Instance: `` Column: `` TableName: `` AdvancedFilterFirstConditionOperator: Excel.FilterConditionOperator.Equal AdvancedFilterSecondConditionOperator: Excel.FilterConditionOperator.None AdvancedFilterLogicalOperator: Excel.FilterLogicalOperator.IsOr
 
-# 【模式 FilterSimpleRangeNamedCell】篩選具名儲存格中的儲存格
 Excel.FilterCellsFromExcel.FilterSimpleRangeNamedCell Instance: `` Column: `` NamedCell: `` SimpleFilterValues: ``
 
-# 【模式 FilterAdvancedRangeNamedCell】篩選具名儲存格中的儲存格
 Excel.FilterCellsFromExcel.FilterAdvancedRangeNamedCell Instance: `` Column: `` NamedCell: `` AdvancedFilterFirstConditionOperator: Excel.FilterConditionOperator.Equal AdvancedFilterSecondConditionOperator: Excel.FilterConditionOperator.None AdvancedFilterLogicalOperator: Excel.FilterLogicalOperator.IsOr
 
-# 【模式 FilterSimpleRangeCoordinates】篩選特定範圍的儲存格
 Excel.FilterCellsFromExcel.FilterSimpleRangeCoordinates Instance: `` Column: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` SimpleFilterValues: ``
 
-# 【模式 FilterAdvancedRangeCoordinates】篩選特定範圍的儲存格
 Excel.FilterCellsFromExcel.FilterAdvancedRangeCoordinates Instance: `` Column: `` StartColumn: `` StartRow: `` EndColumn: `` EndRow: `` AdvancedFilterFirstConditionOperator: Excel.FilterConditionOperator.Equal AdvancedFilterSecondConditionOperator: Excel.FilterConditionOperator.None AdvancedFilterLogicalOperator: Excel.FilterLogicalOperator.IsOr
-
-# ==================== 說明 ====================
-# 動作：篩選 Excel 工作表中的儲存格  (Excel.FilterCellsFromExcel)
-# 英文名稱：Filter cells in Excel worksheet
-# 用途：套用 Excel 工作表中指定欄的篩選條件。
-# 位置：Excel
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要使用的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-#   Column [文字] 要篩選的欄 — 要篩選的欄的名稱或索引。如果欄是表格的一部分，請使用標題名稱。
-#   FilterMode [選項，預設 ActiveSheet] 篩選欄於 — 指定要篩選的欄是表格的一部分、依名稱或絕對座標指定的範圍，還是一般使用中工作表的一部分
-#       可用值：Excel.FilterMode.ActiveSheet（使用中工作表）、Excel.FilterMode.Table（表格）、Excel.FilterMode.Range（範圍）
-#   FilterRangeMode [選項，預設 NamedCell] 範圍 — 指定要使用具名儲存格或絕對欄/索引來篩選的範圍
-#       可用值：Excel.FilterRangeMode.NamedCell（具名儲存格）、Excel.FilterRangeMode.Coordinates（特定範圍）
-#   TableName [文字] 資料表名稱 — 表格的名稱
-#   NamedCell [文字] 儲存格名稱 — 代表範圍的名稱
-#   StartColumn [文字] 起始欄 — 第一欄的索引或字母
-#   StartRow [整數] 起始列 — 第一個列號。編號從 1 開始
-#   EndColumn [文字] 結尾欄 — 最後一欄的索引或字母
-#   EndRow [整數] 結尾列 — 最後一個列號。編號從 1 開始
-#   AdvancedFilterFirstConditionOperator [選項，預設 Equal] 第一個條件運算子 — 第一個條件運算子
-#       可用值：Excel.FilterConditionOperator.None（無）、Excel.FilterConditionOperator.Equal（=）、Excel.FilterConditionOperator.GreaterThan（>）、Excel.FilterConditionOperator.GreaterThanOrEqual（>=）、Excel.FilterConditionOperator.LessThan（<）、Excel.FilterConditionOperator.LessThanOrEqual（<=）、Excel.FilterConditionOperator.NotEqual（<>）、Excel.FilterConditionOperator.IsEmpty（為空白）、Excel.FilterConditionOperator.IsNotEmpty（不為空白）、Excel.FilterConditionOperator.StartsWith（開頭為）、Excel.FilterConditionOperator.EndsWith（結束值）、Excel.FilterConditionOperator.Contains（包含）、Excel.FilterConditionOperator.NotStartsWith（開頭不是）、Excel.FilterConditionOperator.NotEndsWith（不結束於）、Excel.FilterConditionOperator.NotContains（未包含）
-#   AdvancedFilterFirstConditionValue [文字，選填] 第一個條件值 — 第一個條件值
-#   AdvancedFilterSecondConditionOperator [選項，預設 None] 第二個條件運算子 — 第二個條件運算子
-#       可用值：Excel.FilterConditionOperator.None（無）、Excel.FilterConditionOperator.Equal（=）、Excel.FilterConditionOperator.GreaterThan（>）、Excel.FilterConditionOperator.GreaterThanOrEqual（>=）、Excel.FilterConditionOperator.LessThan（<）、Excel.FilterConditionOperator.LessThanOrEqual（<=）、Excel.FilterConditionOperator.NotEqual（<>）、Excel.FilterConditionOperator.IsEmpty（為空白）、Excel.FilterConditionOperator.IsNotEmpty（不為空白）、Excel.FilterConditionOperator.StartsWith（開頭為）、Excel.FilterConditionOperator.EndsWith（結束值）、Excel.FilterConditionOperator.Contains（包含）、Excel.FilterConditionOperator.NotStartsWith（開頭不是）、Excel.FilterConditionOperator.NotEndsWith（不結束於）、Excel.FilterConditionOperator.NotContains（未包含）
-#   AdvancedFilterSecondConditionValue [文字，選填] 第二個條件值 — 第二個條件值
-#   AdvancedFilterLogicalOperator [選項，預設 IsOr] 結合 — 結合
-#       可用值：Excel.FilterLogicalOperator.IsOr（或）、Excel.FilterLogicalOperator.IsAnd（和）
-#   SimpleFilterValues [List<String>] 篩選值 — 篩選值
-#   IsAdvancedFilter [布林，預設 False] 是進階篩選條件 — 是進階篩選條件
-# 可能的錯誤：FilterCellsFromExcel
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

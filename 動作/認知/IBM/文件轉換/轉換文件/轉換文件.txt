@@ -1,33 +1,5 @@
-# 【模式 ConvertToAnswerUnits】叫用名為「轉換文件」的 IBM 服務，將文件轉換為應答單位
 IBMCognitive.ConvertDocumentIBM.ConvertToAnswerUnits Username: `` Password: `` VersionDate: `` FilePath: `` MimeType: IBMCognitive.MimeType.TextHtml Timeout: 30 Response=> Response StatusCode=> StatusCode
 
-# 【模式 ConvertToHtml】叫用名為「轉換文件」的 IBM 服務，將文件轉換為 HTML
 IBMCognitive.ConvertDocumentIBM.ConvertToHtml Username: `` Password: `` VersionDate: `` FilePath: `` MimeType: IBMCognitive.MimeType.TextHtml Timeout: 30 Response=> Response StatusCode=> StatusCode
 
-# 【模式 ConvertToText】叫用名為「轉換文件」的 IBM 服務，將文件轉換為文件
 IBMCognitive.ConvertDocumentIBM.ConvertToText Username: `` Password: `` VersionDate: `` FilePath: `` MimeType: IBMCognitive.MimeType.TextHtml Timeout: 30 Response=> Response StatusCode=> StatusCode
-
-# ==================== 說明 ====================
-# 動作：轉換文件  (IBMCognitive.ConvertDocumentIBM)
-# 英文名稱：Convert document
-# 用途：叫用名為「轉換文件」的 IBM 服務
-# 位置：認知 > IBM > 文件轉換
-# 輸入參數：
-#   Username [文字] 使用者名稱 — 要用來進行此呼叫的使用者名稱
-#   Password [文字(可加密)] 密碼 — 要用來進行此呼叫的密碼
-#   VersionDate [文字] 版本日期 — 要使用之 API 的發行日期
-#   FilePath [FileObject] 檔案路徑 — 要分析之檔案的路徑
-#   MimeType [選項，預設 TextHtml] MIME 類型 — 檔案的 MIME 類型
-#       可用值：IBMCognitive.MimeType.TextHtml（text/html）、IBMCognitive.MimeType.TextXhtmlXml（text/xhtml+xml）、IBMCognitive.MimeType.ApplicationPdf（application/pdf）、IBMCognitive.MimeType.ApplicationMsWord（application/msword）、IBMCognitive.MimeType.ApplicationVndOpenXmlFormatsOfficeDocumentWordProcessingmlDocument（application/vnd.openxmlformats-officedocument.wordprocessingml.document）
-#   ConversionTarget [選項，預設 AnswerUnits] 轉換目標 — 轉換的輸出格式
-#       可用值：IBMCognitive.ConversionTarget.AnswerUnits（應答單位）、IBMCognitive.ConversionTarget.NormalizedHtml（標準化 HTML）、IBMCognitive.ConversionTarget.NormalizedText（標準化文字）
-#   AnswerUnits [文字，選填] 應答單位 — 標題層級 (表示為以逗號分隔的字串)
-#   Timeout [整數，預設 30] 逾時 — 專員與伺服器建立連線所應等待的時間 (以秒計)，而此時間過後，連線即失敗
-# 產生的變數：
-#   Response [自訂物件] 回應 — API 呼叫的結果
-#   StatusCode [整數] 狀態碼 — API 呼叫的狀態碼
-# 可能的錯誤：RequestTimeoutExpiredError、InvokeCognitiveServiceError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

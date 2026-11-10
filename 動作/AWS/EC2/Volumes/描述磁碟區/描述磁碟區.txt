@@ -1,27 +1,5 @@
-# 【模式 DescribeAllVolumes】描述所有 EBS 磁碟區
 AWS.DescribeVolumes.DescribeAllVolumes Ec2Client: `` Volumes=> Volumes
 
-# 【模式 DescribeVolumesByInstance】描述指定執行個體的 EBS 磁碟區
 AWS.DescribeVolumes.DescribeVolumesByInstance Ec2Client: `` InstanceId: `` Volumes=> Volumes
 
-# 【模式 DescribeVolumesByIds】描述指定的 EBS 磁碟區 
 AWS.DescribeVolumes.DescribeVolumesByIds Ec2Client: `` VolumeIds: `` Volumes=> Volumes
-
-# ==================== 說明 ====================
-# 動作：描述磁碟區  (AWS.DescribeVolumes)
-# 英文名稱：Describe volumes
-# 用途：描述指定的 EBS 磁碟區
-# 位置：AWS > EC2 > Volumes
-# 輸入參數：
-#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
-#   DescribeVolumesMode [選項，預設 AllVolumes] 描述磁碟區模式 — 指定要描述的是所有磁碟區、識別碼所指定磁碟區還是執行個體磁碟區
-#       可用值：AWS.DescribeVolumesMode.AllVolumes（所有磁碟區）、AWS.DescribeVolumesMode.AllVolumesOfTheSpecifiedInstance（指定執行個體的磁碟區）、AWS.DescribeVolumesMode.SpecificVolumes（具有指定識別碼的磁碟區）
-#   VolumeIds [List<String>] 磁碟區識別碼 — 要描述的磁碟區識別碼
-#   InstanceId [文字] 執行個體識別碼 — 附加磁碟區所至執行個體的識別碼
-# 產生的變數：
-#   Volumes [List<Volume>] 擷取的 EBS 磁碟區 — 包含所有相關資訊的已擷取 EBS 磁碟區
-# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、InvalidParameterError、RequestFailedError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

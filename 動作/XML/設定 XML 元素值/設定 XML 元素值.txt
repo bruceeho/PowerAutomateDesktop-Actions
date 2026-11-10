@@ -1,15 +1,1 @@
 XML.SetElementValue Document: `` ElementValue: ``
-
-# ==================== 說明 ====================
-# 動作：設定 XML 元素值  (XML.SetElementValue)
-# 英文名稱：Set XML element value
-# 用途：設定 XML 元素的值
-# 位置：XML
-# 輸入參數：
-#   Document [XmlNodeObject] XML 文件 — 要擷取其值的 XML 文件或 XML 元素
-#   XPathQuery [文字，選填] XPath 查詢 — 要尋找子元素並擷取其值的 XPath 運算式
-#   ElementValue [文字] XML 元素值 — XML 元素的新值
-# 可能的錯誤：InvalidXPathError、XPathNoElementError、SetElementError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

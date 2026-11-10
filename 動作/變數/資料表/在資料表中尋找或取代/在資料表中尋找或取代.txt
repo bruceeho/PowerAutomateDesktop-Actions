@@ -1,49 +1,15 @@
-# 【模式 FindItemInDataTableEverywhere】<if(ALLMATCHES)>在資料表中尋找包含指定文字的所有項目<else>在資料表中尋找包含指定文字的第一個項目<endif>
 Variables.FindOrReplaceInDataTable.FindItemInDataTableEverywhere DataTable: `` AllMatches: True ValueToFind: `` MatchCase: False MatchEntireCellContents: False DataTableMatches=> DataTableMatches
 
-# 【模式 FindItemInDataTableByColumnIndex】<if(ALLMATCHES)>在資料表中尋找指定欄位包含指定文字的所有項目<else>在資料表中尋找指定欄位包含指定文字的第一個項目<endif>
 Variables.FindOrReplaceInDataTable.FindItemInDataTableByColumnIndex DataTable: `` AllMatches: True ValueToFind: `` MatchCase: False MatchEntireCellContents: False ColumnNameOrIndex: `` DataTableMatches=> DataTableMatches
 
-# 【模式 FindItemInDataTableWithRegexEverywhere】<if(ALLMATCHES)>在資料表中尋找符合指定之規則運算式的所有項目<else>在資料表中尋找符合指定之規則運算式的第一個項目<endif>
 Variables.FindOrReplaceInDataTable.FindItemInDataTableWithRegexEverywhere DataTable: `` AllMatches: True ValueToFind: `` DataTableMatches=> DataTableMatches
 
-# 【模式 FindItemInDataTableWithRegexByColumnIndex】<if(ALLMATCHES)>在資料表中尋找符合指定之規則運算式的所有項目<else>在資料表中尋找符合指定之規則運算式的第一個項目<endif>
 Variables.FindOrReplaceInDataTable.FindItemInDataTableWithRegexByColumnIndex DataTable: `` AllMatches: True ValueToFind: `` ColumnNameOrIndex: `` DataTableMatches=> DataTableMatches
 
-# 【模式 ReplaceItemInDataTableEverywhere】<if(ALLMATCHES)>在資料表中尋找及取代包含指定文字的所有項目<else>在資料表中尋找及取代包含指定文字的第一個項目<endif>
 Variables.FindOrReplaceInDataTable.ReplaceItemInDataTableEverywhere DataTable: `` AllMatches: True ValueToFind: `` MatchCase: False MatchEntireCellContents: False TextToReplaceWith: `` DataTableMatches=> DataTableMatches
 
-# 【模式 ReplaceItemInDataTableByColumnIndex】<if(ALLMATCHES)>在資料表中尋找及取代包含指定文字的所有項目<else>在資料表中尋找及取代包含指定文字的第一個項目<endif>
 Variables.FindOrReplaceInDataTable.ReplaceItemInDataTableByColumnIndex DataTable: `` AllMatches: True ValueToFind: `` MatchCase: False MatchEntireCellContents: False TextToReplaceWith: `` ColumnNameOrIndex: `` DataTableMatches=> DataTableMatches
 
-# 【模式 ReplaceItemInDataTableWithRegexEverywhere】<if(ALLMATCHES)>在資料表中尋找及取代符合指定 RegEx 的所有項目<else>在資料表中尋找及取代符合指定 RegEx 的第一個項目<endif>
 Variables.FindOrReplaceInDataTable.ReplaceItemInDataTableWithRegexEverywhere DataTable: `` AllMatches: True ValueToFind: `` TextToReplaceWith: `` DataTableMatches=> DataTableMatches
 
-# 【模式 ReplaceItemInDataTableWithRegexByColumnIndex】<if(ALLMATCHES)>在資料表中尋找及取代符合指定 RegEx 的所有項目<else>在資料表中尋找及取代符合指定 RegEx 的第一個項目<endif>
 Variables.FindOrReplaceInDataTable.ReplaceItemInDataTableWithRegexByColumnIndex DataTable: `` AllMatches: True ValueToFind: `` TextToReplaceWith: `` ColumnNameOrIndex: `` DataTableMatches=> DataTableMatches
-
-# ==================== 說明 ====================
-# 動作：在資料表中尋找或取代  (Variables.FindOrReplaceInDataTable)
-# 英文名稱：Find or replace in data table
-# 用途：尋找及/或取代資料表值
-# 位置：變數 > 資料表
-# 輸入參數：
-#   DataTable [資料表] 資料表 — 要使用的資料表變數。此變數必須先前已由產生資料表變數的動作指定
-#   SearchMode [選項，預設 Find] 搜尋模式 — 要搜尋的模式 (「尋找」或「尋找及取代」)
-#       可用值：Variables.FindOrReplaceDataTableSearchMode.Find（尋找）、Variables.FindOrReplaceDataTableSearchMode.FindAndReplace（尋找及取代）
-#   AllMatches [布林，預設 True] 所有相符項目 — 指定是要在找到的所有相符儲存格中，或是僅在第一個相符儲存格中尋找或取代文字。
-#   ValueToFind [文字] 要尋找的文字 — 要在資料表中尋找的文字
-#   UseRegex [布林，預設 False] 使用規則運算式尋找 — 指定是否使用規則運算式比對儲存格內容與要尋找的文字
-#   MatchCase [布林，預設 False] 大小寫須相符 — 指定是否搜尋區分大小寫的資料
-#   MatchEntireCellContents [布林，預設 False] 比對整個儲存格內容 — 指定是否搜尋僅包含指定文字的儲存格
-#   TextToReplaceWith [文字] 要用以取代的文字 — 用於取代相符儲存格的文字
-#   SearchBy [選項，預設 Everywhere] 搜尋依據 — 搜尋文字的順序 (所有位置，或在欄中)
-#       可用值：Variables.FindOrReplaceDataTableSearchArea.Everywhere（所有位置）、Variables.FindOrReplaceDataTableSearchArea.OnColumn（在欄中）
-#   ColumnNameOrIndex [文字] 欄索引或名稱 — 欄標題名稱或索引值
-# 產生的變數：
-#   DataTableMatches [資料表] 資料表相符項目 — 包含要比對之列和欄索引的資料表。
-# 可能的錯誤：InvalidRegexError、ColumnNameNotFoundError、ColumnIndexOutOfRangeError、IncompatibleTypeError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

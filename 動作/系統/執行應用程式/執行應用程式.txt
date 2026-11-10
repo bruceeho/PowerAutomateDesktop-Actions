@@ -1,32 +1,5 @@
-# 【模式 RunApplication】透過執行相關聯的應用程式來執行應用程式或開啟文件
 System.RunApplication.RunApplication ApplicationPath: `` WindowStyle: System.ProcessWindowStyle.Normal ProcessId=> ProcessId
 
-# 【模式 RunApplicationAndWaitToLoad】透過執行相關聯的應用程式來執行應用程式或開啟文件，並等待其載入
 System.RunApplication.RunApplicationAndWaitToLoad ApplicationPath: `` WindowStyle: System.ProcessWindowStyle.Normal Timeout: 0 WindowHandle=> WindowHandle ProcessId=> ProcessId
 
-# 【模式 RunApplicationAndWaitToComplete】透過執行相關聯的應用程式來執行應用程式或開啟文件，並等待其完成
 System.RunApplication.RunApplicationAndWaitToComplete ApplicationPath: `` WindowStyle: System.ProcessWindowStyle.Normal Timeout: 0 ExitCode=> ExitCode ProcessId=> ProcessId
-
-# ==================== 說明 ====================
-# 動作：執行應用程式  (System.RunApplication)
-# 英文名稱：Run application
-# 用途：透過執行相關聯的應用程式來執行應用程式或開啟文件
-# 位置：系統
-# 輸入參數：
-#   ApplicationPath [FileObject] 應用程式路徑 — 完整檔案路徑形式的可執行檔
-#   CommandLineArguments [文字，選填] 命令列引數 — 在可執行檔名稱後面新增額外的引數。例如，在應用程式路徑中輸入 notepad.exe，以及在命令列引數中輸入特定文字檔
-#   WorkingDirectory [FolderObject，選填] 工作資料夾 — 工作用資料夾的完整路徑 (如果適用)。
-#   WindowStyle [選項，預設 Normal] 視窗樣式 — 選擇應用程式視窗開啟時的外觀和大小
-#       可用值：System.ProcessWindowStyle.Normal（標準）、System.ProcessWindowStyle.Hidden（已隱藏）、System.ProcessWindowStyle.Minimized（已最小化）、System.ProcessWindowStyle.Maximized（已最大化）
-#   WaitApplication [選項，預設 DoNotWait] 應用程式啟動後 — 指定下一個動作要立即執行，或是等到程式載入或完成才執行
-#       可用值：System.WaitForApplication.DoNotWait（立即繼續）、System.WaitForApplication.WaitToLoad（等待應用程式載入）、System.WaitForApplication.WaitToComplete（等待應用程式完成）
-#   Timeout [整數，預設 0] 逾時 — 最長等待時間，以及強制繼續之前經過的時間
-# 產生的變數：
-#   ExitCode [整數] 結束代碼 — 應用程式結束代碼
-#   WindowHandle [整數] 視窗控制代碼 — 視窗控制代碼。開啟新視窗時，會擷取視窗控制代碼的值，並將它儲存在此變數中。視窗控制代碼非常實用，可在後續動作中專門用於識別視窗。
-#   ProcessId [整數] 處理序識別碼 — 處理序識別碼輸出
-# 可能的錯誤：FileOrApplicationNotFoundError、FileOrApplicationAccessDeniedError、RetrieveWindowHandleError、ExecuteApplicationOrOpenFileError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

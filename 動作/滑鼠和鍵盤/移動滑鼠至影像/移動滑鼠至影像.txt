@@ -1,50 +1,7 @@
-# 【模式 MoveMouseToImage】將滑鼠移至畫面上或前景視窗中找到的影像上方
 MouseAndKeyboard.MoveMouseToImage.MoveMouseToImage Images: `` SearchForImageOn: MouseAndKeyboard.SearchTarget.EntireScreen MousePositionOnImage: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 Tolerance: 10 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Occurence: 1 Timeout: 5 SearchAlgorithm: MouseAndKeyboard.ImageFinderAlgorithm.Legacy X=> X Y=> Y
 
-# 【模式 ClickImage】按一下畫面上或前景視窗中找到的影像
 MouseAndKeyboard.MoveMouseToImage.ClickImage Images: `` SearchForImageOn: MouseAndKeyboard.SearchTarget.EntireScreen MousePositionOnImage: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 Tolerance: 10 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Occurence: 1 Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClick: 0 SearchAlgorithm: MouseAndKeyboard.ImageFinderAlgorithm.Legacy X=> X Y=> Y
 
-# 【模式 MoveMouseToImageOfSubregion】將滑鼠移至畫面上或前景視窗中透過搜尋特定子區域找到的影像上方
 MouseAndKeyboard.MoveMouseToImage.MoveMouseToImageOfSubregion Images: `` SearchForImageOn: MouseAndKeyboard.SearchTarget.EntireScreen X1: `` Y1: `` X2: `` Y2: `` MousePositionOnImage: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 Tolerance: 10 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Occurence: 1 Timeout: 5 SearchAlgorithm: MouseAndKeyboard.ImageFinderAlgorithm.Legacy X=> X Y=> Y
 
-# 【模式 ClickImageOfSubregion】按一下畫面上或前景視窗中透過搜尋特定子區域找到的影像
 MouseAndKeyboard.MoveMouseToImage.ClickImageOfSubregion Images: `` SearchForImageOn: MouseAndKeyboard.SearchTarget.EntireScreen X1: `` Y1: `` X2: `` Y2: `` MousePositionOnImage: MouseAndKeyboard.PositionOnImage.MiddleCenter OffsetX: 0 OffsetY: 0 Tolerance: 10 MovementStyle: MouseAndKeyboard.MovementStyle.Instant Occurence: 1 Timeout: 5 ClickType: MouseAndKeyboard.ClickType.LeftClick SecondsBeforeClick: 0 SearchAlgorithm: MouseAndKeyboard.ImageFinderAlgorithm.Legacy X=> X Y=> Y
-
-# ==================== 說明 ====================
-# 動作：移動滑鼠至影像  (MouseAndKeyboard.MoveMouseToImage)
-# 英文名稱：Move mouse to image
-# 用途：將滑鼠移至畫面上或前景視窗中找到的影像上方
-# 位置：滑鼠和鍵盤
-# 輸入參數：
-#   Images [List<PngEncodedImage>] 要將滑鼠移到其上的影像 — 要移動滑鼠的目標影像清單
-#   SearchForImageOn [選項，預設 EntireScreen] 在以下位置搜尋影像: — 指定只在最前面的視窗中搜尋指定的影像，或是在整個可見的畫面中搜尋。如果畫面上的影像並非清楚可見，則兩個選項都找不到該影像
-#       可用值：MouseAndKeyboard.SearchTarget.EntireScreen（整個畫面）、MouseAndKeyboard.SearchTarget.ForegroundWindow（僅前景視窗）
-#   SearchMode [選項，預設 Whole] 搜尋模式 — 指定要掃描整個畫面 (或視窗) 尋找提供的影像，或是只掃描其子區域
-#       可用值：MouseAndKeyboard.SearchMode.Whole（搜尋整個畫面或前景視窗）、MouseAndKeyboard.SearchMode.Subregion（在指定的畫面或前景視窗子區域搜尋）
-#   X1 [Nullable<Int32>] X1 — 要進行搜尋的子區域起始點 X
-#   Y1 [Nullable<Int32>] Y1 — 要進行搜尋的子區域起始點 Y
-#   X2 [Nullable<Int32>] X2 — 要進行搜尋的子區域結束點 X
-#   Y2 [Nullable<Int32>] Y2 — 要進行搜尋的子區域結束點 Y
-#   MousePositionOnImage [選項，預設 MiddleCenter] 相對於影像的滑鼠位置 — 滑鼠將移至該處的影像區段
-#       可用值：MouseAndKeyboard.PositionOnImage.TopLeft（左上角）、MouseAndKeyboard.PositionOnImage.TopCenter（中上）、MouseAndKeyboard.PositionOnImage.TopRight（右上角）、MouseAndKeyboard.PositionOnImage.MiddleLeft（左中部分）、MouseAndKeyboard.PositionOnImage.MiddleCenter（中央）、MouseAndKeyboard.PositionOnImage.MiddleRight（右中部分）、MouseAndKeyboard.PositionOnImage.BottomLeft（左下角）、MouseAndKeyboard.PositionOnImage.BottomCenter（中下）、MouseAndKeyboard.PositionOnImage.BottomRight（右下角）
-#   OffsetX [整數，預設 0] 位移 X — 將滑鼠從位置向右位移的像素數
-#   OffsetY [整數，預設 0] 位移 Y — 將滑鼠從位置向下位移的像素數
-#   Tolerance [整數，預設 10] 容許度 — 指定特定影像與原始影像的差異程度。對於基本影像比對演算法，推薦容錯為 10，進階為 4。
-#   MovementStyle [選項，預設 Instant] 滑鼠移動樣式 — 指定移動樣式，滑鼠將依此樣式從上一個位置移至所記錄路由的開頭 (或其最終位置)
-#       可用值：MouseAndKeyboard.MovementStyle.Instant（立即）、MouseAndKeyboard.MovementStyle.AnimateSlow（採用動畫 (低速)）、MouseAndKeyboard.MovementStyle.AnimateNormal（採用動畫 (常速)）、MouseAndKeyboard.MovementStyle.AnimateFast（採用動畫 (高速)）
-#   Occurence [整數，預設 1] 出現次數 — 所找到要將滑鼠移至該處的影像出現次數
-#   Timeout [整數，預設 5] 失敗逾時 — 失敗逾時秒數
-#   ClickOnImage [布林，預設 False] 移動滑鼠後傳送按一下 — 指定是否在滑鼠定位在影像上方之後傳送按一下
-#   ClickType [選項，預設 LeftClick] 按一下類型 — 要傳送至影像的滑鼠按一下
-#       可用值：MouseAndKeyboard.ClickType.LeftClick（按滑鼠左鍵）、MouseAndKeyboard.ClickType.RightClick（按滑鼠右鍵）、MouseAndKeyboard.ClickType.DoubleClick（按兩下）、MouseAndKeyboard.ClickType.LeftButtonDown（左鍵按下）、MouseAndKeyboard.ClickType.LeftButtonUp（左鍵放開）、MouseAndKeyboard.ClickType.RightButtonDown（右鍵按下）、MouseAndKeyboard.ClickType.RightButtonUp（右鍵放開）、MouseAndKeyboard.ClickType.MiddleClick（按滑鼠中間鍵）
-#   SecondsBeforeClick [整數，預設 0] 按一下之前的秒數 — 傳送按一下之前等待的秒數
-#   SearchAlgorithm [選項，預設 Legacy] 影像比對演算法 — 選取搜尋影像時要使用的搜尋演算法。
-#       可用值：MouseAndKeyboard.ImageFinderAlgorithm.Legacy（基本）、MouseAndKeyboard.ImageFinderAlgorithm.Template（進階）
-# 產生的變數：
-#   X [整數] 找到影像的位置 - X 座標 — 在畫面上找到影像之位置的 X 座標。如果是在前景視窗中搜尋影像，傳回的座標是與視窗左上角的相對位置
-#   Y [整數] 找到影像的位置 - Y 座標 — 在畫面上找到影像之位置的 Y 座標。如果是在前景視窗中搜尋影像，傳回的座標是與視窗左上角的相對位置
-# 可能的錯誤：ImageNotFoundOnScreenError、MoveMouseInNonInteractiveModeError、MoveMouseError、InvalidSubregionCoordinatesError、NotEnoughImageOccurencesError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

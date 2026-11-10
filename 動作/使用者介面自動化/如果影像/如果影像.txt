@@ -1,49 +1,15 @@
-# 【模式 ExistsOnScreen】檢查影像是否存在整個畫面上
 UIAutomation.IfImageAction.ExistsOnScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
 
-# 【模式 ExistsOnSubregionOfScreen】檢查影像是否存在子區域畫面上
 UIAutomation.IfImageAction.ExistsOnSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
 
-# 【模式 ExistsOnForeground】檢查影像是否存在前景視窗中
 UIAutomation.IfImageAction.ExistsOnForeground Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
 
-# 【模式 ExistsOnSubregionOfForeground】檢查影像是否存在前景視窗的子區域中
 UIAutomation.IfImageAction.ExistsOnSubregionOfForeground Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
 
-# 【模式 DoesNotExistOnScreen】檢查影像是否不存在整個畫面上
 UIAutomation.IfImageAction.DoesNotExistOnScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
 
-# 【模式 DoesNotExistOnSubregionOfScreen】檢查影像是否不存在子區域畫面上
 UIAutomation.IfImageAction.DoesNotExistOnSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
 
-# 【模式 DoesNotExistOnForeground】檢查影像是否不存在前景視窗中
 UIAutomation.IfImageAction.DoesNotExistOnForeground Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
 
-# 【模式 DoesNotExistOnSubregionOfForeground】檢查影像是否不存在前景視窗的子區域中
 UIAutomation.IfImageAction.DoesNotExistOnSubregionOfForeground Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
-
-# ==================== 說明 ====================
-# 動作：如果影像  (UIAutomation.IfImageAction)
-# 英文名稱：If image
-# 用途：此動作標記根據畫面上是否找到所選取影像的條件式動作區塊的開頭
-# 位置：使用者介面自動化
-# 輸入參數：
-#   CheckMode [選項，預設 Exists]
-#       可用值：UIAutomation.IfImageExists.Exists（存在）、UIAutomation.IfImageExists.DoesNotExist（不存在）
-#   Images [List<PngEncodedImage>]
-#   SearchForImageOn [選項，預設 EntireScreen]
-#       可用值：UIAutomation.SearchTarget.EntireScreen（整個畫面）、UIAutomation.SearchTarget.ForegroundWindow（僅前景視窗）
-#   SearchMode [選項，預設 Whole]
-#       可用值：UIAutomation.SearchMode.Whole（搜尋整個畫面或前景視窗）、UIAutomation.SearchMode.Subregion（在指定的畫面或前景視窗子區域搜尋）
-#   FindAllImages [布林，預設 False]
-#   X1 [Nullable<Int32>]
-#   X2 [Nullable<Int32>]
-#   Y1 [Nullable<Int32>]
-#   Y2 [Nullable<Int32>]
-#   Tolerance [整數，預設 10]
-#   SearchAlgorithm [選項，預設 Legacy]
-#       可用值：UIAutomation.ImageFinderAlgorithm.Legacy（基本）、UIAutomation.ImageFinderAlgorithm.Template（進階）
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,18 +1,1 @@
 AWS.StopEC2Instance Ec2Client: `` InstanceIds: `` Force: False Hibernate: False StoppingEc2Instances=> StoppingEc2Instances
-
-# ==================== 說明 ====================
-# 動作：停止 EC2 執行個體  (AWS.StopEC2Instance)
-# 英文名稱：Stop EC2 instance
-# 用途：停止 EC2 執行個體
-# 位置：AWS > EC2 > Instances
-# 輸入參數：
-#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
-#   InstanceIds [List<String>] 執行個體識別碼 — 要停止的執行個體識別碼
-#   Force [布林，預設 False] 強制停止 — 指定是否要強制執行個體停止。執行個體沒有機會可以排清檔案系統快取或檔案系統中繼資料
-#   Hibernate [布林，預設 False] 休眠:  — 指定如果執行個體啟動時已啟用休眠，是否要讓執行個體休眠。如果執行個體無法順利休眠，就會發生正常關機
-# 產生的變數：
-#   StoppingEc2Instances [List<InstanceStateChange>] 正在停止執行個體 — 已停止執行個體的傳回資訊
-# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、UnsupportedOperationError、InvalidInstanceIdError、RequestFailedError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

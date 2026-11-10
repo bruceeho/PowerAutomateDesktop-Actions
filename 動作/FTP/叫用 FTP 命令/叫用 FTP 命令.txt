@@ -1,18 +1,1 @@
 FTP.InvokeCommand Connection: `` Command: `` ReplyCode=> ReplyCode ReplyText=> ReplyText
-
-# ==================== 說明 ====================
-# 動作：叫用 FTP 命令  (FTP.InvokeCommand)
-# 英文名稱：Invoke FTP command
-# 用途：在伺服器上叫用指定的常值 FTP 命令
-# 位置：FTP
-# 輸入參數：
-#   Connection [FtpConnectionBase] FTP 連線 — 要使用的 FTP 連線。這個變數先前必須已使用「開啟 FTP」連線動作完成指定
-#   Command [文字] FTP 命令 — 要搭配任何引數一起執行的命令。例如，您可以在此處執行 FEAT 或 CHMOD
-#   ValidReplyCodes [文字，選填] 有效的回覆代碼 — 可由命令傳回的代碼 (分號分隔)。如果 FTP 命令傳回不是此處輸入的代碼，這個動作會擲回例外狀況。僅適用於簡單 FTP 或 FTPS 連線
-# 產生的變數：
-#   ReplyCode [文字] 將回覆代碼儲存至 — 傳回的實際代碼。僅適用於簡單 FTP 或 FTPS 連線
-#   ReplyText [文字] 將回覆文字儲存至 — FTP 伺服器傳回的文字
-# 可能的錯誤：InvokeCommandError、NotConnectedError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

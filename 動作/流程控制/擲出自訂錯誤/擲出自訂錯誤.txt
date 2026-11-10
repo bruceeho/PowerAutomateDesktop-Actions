@@ -1,13 +1,1 @@
 FlowControl.ThrowCustomError CustomErrorCode: `` CustomErrorMessage: ``
-
-# ==================== 說明 ====================
-# 動作：擲出自訂錯誤  (FlowControl.ThrowCustomError)
-# 英文名稱：Throw custom error
-# 用途：擲出帶有自訂錯誤名稱及訊息的錯誤
-# 位置：流程控制
-# 輸入參數：
-#   CustomErrorCode [CustomErrorCode] 錯誤名稱 — 錯誤的名稱。區塊錯誤處理機制將會攔截此名稱。
-#   CustomErrorMessage [文字] 錯誤訊息 — 錯誤的訊息
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

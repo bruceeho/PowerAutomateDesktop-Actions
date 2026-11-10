@@ -1,32 +1,7 @@
-# 【模式 FocusAndSendKeysByControl】透過 UI 元素啟動特定視窗並移至前景
 MouseAndKeyboard.SendKeys.FocusAndSendKeysByControl Control: `` TextToSend: `` DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: False
 
-# 【模式 FocusAndSendKeysByInstanceOrHandle】透過視窗執行個體或控點啟動特定視窗並移至前景，然後傳送索引鍵。
 MouseAndKeyboard.SendKeys.FocusAndSendKeysByInstanceOrHandle WindowInstance: `` TextToSend: `` DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: False
 
-# 【模式 FocusAndSendKeysByTitleClass】將具有標題和類別的視窗設為焦點，然後傳送索引鍵。
 MouseAndKeyboard.SendKeys.FocusAndSendKeysByTitleClass TextToSend: `` DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: False
 
-# 【模式 FocusAndSendKeys】將前景視窗設為焦點，然後傳送索引鍵。
 MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: `` DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: False
-
-# ==================== 說明 ====================
-# 動作：傳送按鍵  (MouseAndKeyboard.SendKeys)
-# 英文名稱：Send keys
-# 用途：將按鍵傳送至目前使用中的應用程式
-# 位置：滑鼠和鍵盤
-# 輸入參數：
-#   SendKeysTo [選項，預設 Foreground] 傳送索引鍵給 — 指定是否要將金鑰傳送至前景視窗或至 UI 元素，或至視窗執行個體，或視窗標題/類別的組合。
-#       可用值：MouseAndKeyboard.SendKeysTo.Foreground（前景視窗）、MouseAndKeyboard.SendKeysTo.Control（UI 元素）、MouseAndKeyboard.SendKeysTo.InstanceOrHandle（視窗執行個體/控點）、MouseAndKeyboard.SendKeysTo.TitleAndClass（標題和 (或) 類別）
-#   Title [文字，選填] 視窗標題 — 視窗標題。可使用萬用字元，如 '?' 或 '*'。
-#   WindowInstance [整數] 視窗執行個體 — 要設定焦點之視窗的執行個體或控點
-#   Control [UIControl] UI 元素 — UI 元素
-#   Class [文字，選填] 視窗類別 — 如果有兩個標題相同的視窗，則視窗類別有助於區分兩者。在這種情況下，請輸入要使用的視窗類別。
-#   TextToSend [文字(可加密)] 要傳送的文字 — 要傳送到應用程式的文字。若要模擬正在按下的實體鍵，請使用大括號 {} 符號 (例如，若要按下 Enter，請使用 {Enter})。若要將按鍵當做輔助按鍵，請在兩個按鍵都使用大括號 {} 符號 (例如，若要按下 Ctrl + A，請使用 {Control}({A}))。
-#   DelayBetweenKeystrokes [整數，預設 10] 兩次按鍵輸入之間的延遲 — 指定兩次傳送按鍵輸入之間的延遲毫秒數，以避免輸入錯誤
-#   SendTextAsHardwareKeys [布林，預設 False] 將文字做為硬體按鍵傳送 — 傳送整段文字時模擬鍵盤上的實際按鍵輸入
-# 可能的錯誤：SendKeystrokesInNonInteractiveModeError、InvalidKeystrokesError、NoActiveApplicationError、SendKeystrokesError、WindowNotFoundError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

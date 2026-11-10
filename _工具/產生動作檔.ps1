@@ -76,46 +76,10 @@ foreach ($a in ($j | Sort-Object Module, Order)) {
       foreach ($p in $ins) { if ($argset.ContainsKey($p.Name) -and -not (SkipEmpty $p)) { $line += " $($p.Name): $(ValueFor $p $a.RobinModule)" } }
       foreach ($p in $outs) { if ($argset.ContainsKey($p.Name)) { $line += " $($p.Name)=> $($p.Name)" } }
       if (-not $first) { [void]$sb.AppendLine() }
-      $desc = if ($s.DescZh) { $s.DescZh } else { $s.Name }
-      [void]$sb.AppendLine("# 【模式 $($s.Name)】$desc")
       [void]$sb.AppendLine($line)
       $first = $false
     }
   }
-
-  [void]$sb.AppendLine()
-  [void]$sb.AppendLine("# ==================== 說明 ====================")
-  [void]$sb.AppendLine("# 動作：$name  ($robinBase)")
-  if ($a.En -and $a.En -ne $name) { [void]$sb.AppendLine("# 英文名稱：$($a.En)") }
-  if ($a.DescZh) { [void]$sb.AppendLine("# 用途：$($a.DescZh)") }
-  [void]$sb.AppendLine("# 位置：$($parts -join ' > ')")
-  if ($ins.Count) {
-    [void]$sb.AppendLine("# 輸入參數：")
-    foreach ($p in $ins) {
-      $t = if ($typeZh.ContainsKey($p.Type)) { $typeZh[$p.Type] } else { $p.Type }
-      if ($p.IsEnum) { $t = '選項' }
-      $d = if ($p.HasDefault -and "$($p.Default)" -ne '') { "，預設 $($p.Default)" } elseif (SkipEmpty $p) { "，選填" } else { '' }
-      $zh = if ($p.Zh) { $p.Zh } else { '' }
-      $ln = "#   $($p.Name) [$t$d] $zh"
-      if ($p.DescZh) { $ln += " — $($p.DescZh)" }
-      [void]$sb.AppendLine($ln.TrimEnd())
-      if ($p.IsEnum -and @($p.Enum).Count) {
-        [void]$sb.AppendLine("#       可用值：" + ((@($p.Enum) | ForEach-Object { if ($_.Zh) { "$($a.RobinModule).$($p.EnumType).$($_.Name)（$($_.Zh)）" } else { "$($a.RobinModule).$($p.EnumType).$($_.Name)" } }) -join '、'))
-      }
-    }
-  }
-  if ($outs.Count) {
-    [void]$sb.AppendLine("# 產生的變數：")
-    foreach ($p in $outs) {
-      $t = if ($typeZh.ContainsKey($p.Type)) { $typeZh[$p.Type] } else { $p.Type }
-      $ln = "#   $($p.Name) [$t] $($p.Zh)"; if ($p.DescZh) { $ln += " — $($p.DescZh)" }
-      [void]$sb.AppendLine($ln.TrimEnd())
-    }
-  }
-  if (@($a.Throws).Count) { [void]$sb.AppendLine("# 可能的錯誤：" + (@($a.Throws) -join '、')) }
-  if ($sels.Count) { [void]$sb.AppendLine("# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。") }
-  [void]$sb.AppendLine("# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: `$'''值''')。"); [void]$sb.AppendLine('# 註：`` 代表需要自行填入的值（文字用 $''''''內容'''''' 包起來，變數直接寫名稱）。')
-  [void]$sb.AppendLine("# 來源：從本機 PAD 模組 DLL 自動擷取")
 
   $dir = Join-Path $actRoot "$dirRel\$leaf"
   New-Item -ItemType Directory -Force -Path $dir | Out-Null
@@ -151,8 +115,7 @@ foreach ($b in $builtin) {
   $file = Join-Path $dir "$(Safe $b.N).txt"
   if (Test-Path $file) { [void]$skipped.Add("builtin $($b.N) -> $file"); continue }
   New-Item -ItemType Directory -Force -Path $dir | Out-Null
-  $src = if ($b.V) { '# 來源：Robin 內建語法（不在模組 DLL 裡）；此寫法已在你的舊流程中出現過，確定正確。' } else { '# 來源：Robin 內建語法（不在模組 DLL 裡）；依常見寫法整理，尚未在你的流程中驗證，第一次使用請貼上確認。' }
-  $txt = "$($b.C)`r`n`r`n# ==================== 說明 ====================`r`n# 動作：$($b.N)`r`n# 用途：$($b.D)`r`n$src`r`n"
+  $txt = "$($b.C)`r`n"
   [IO.File]::WriteAllText($file, $txt, $utf8)
   $written++
   [void]$csv.Add([pscustomobject]@{ 模組=$b.P; 分類=''; 動作=$b.N; Robin=($b.C -split "`r`n")[0]; 模式數=0; 檔案=$file.Substring($OutRoot.Length + 1); 備註=$(if ($b.V) { '內建語法(已驗證)' } else { '內建語法(未驗證)' }) })

@@ -1,16 +1,1 @@
 MouseAndKeyboard.SetKeyState Key: MouseAndKeyboard.MultiStateKey.CapsLock State: MouseAndKeyboard.KeyState.ModeOn
-
-# ==================== 說明 ====================
-# 動作：設定按鍵狀態  (MouseAndKeyboard.SetKeyState)
-# 英文名稱：Set key state
-# 用途：設定 Caps Lock、Num Lock 或 Scroll Lock 這些按鍵的狀態 (開或關)
-# 位置：滑鼠和鍵盤
-# 輸入參數：
-#   Key [選項，預設 CapsLock] 按鍵 — 指定要設定的按鍵
-#       可用值：MouseAndKeyboard.MultiStateKey.CapsLock（Caps Lock）、MouseAndKeyboard.MultiStateKey.NumLock（Num Lock）、MouseAndKeyboard.MultiStateKey.ScrollLock（Scroll Lock）
-#   State [選項，預設 ModeOn] 狀態 — 指定要將按鍵狀態設定為開或關
-#       可用值：MouseAndKeyboard.KeyState.ModeOff（關）、MouseAndKeyboard.KeyState.ModeOn（開）
-# 可能的錯誤：SetKeyStateInNonInteractiveModeError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

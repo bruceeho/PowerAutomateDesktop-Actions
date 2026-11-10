@@ -1,20 +1,3 @@
-# 【模式 WaitForMouseToBecomeDifferentThan】檢查滑鼠游標是否不同於指定的游標
 MouseAndKeyboard.WaitForMouseAction.WaitForMouseToBecomeDifferentThan MousePointerState: MouseAndKeyboard.MousePointerState.Arrow
 
-# 【模式 WaitForMouseToBecome】檢查滑鼠游標是否為特定值
 MouseAndKeyboard.WaitForMouseAction.WaitForMouseToBecome MousePointerState: MouseAndKeyboard.MousePointerState.Arrow
-
-# ==================== 說明 ====================
-# 動作：等待滑鼠  (MouseAndKeyboard.WaitForMouseAction)
-# 英文名稱：Wait for mouse
-# 用途：暫停執行流程，直到滑鼠指標變更 (通常變更前後會是「等待游標」或沙漏)
-# 位置：滑鼠和鍵盤
-# 輸入參數：
-#   MouseEvent [選項，預設 Become]
-#       可用值：MouseAndKeyboard.WaitForMouseEvent.Become（變成是）、MouseAndKeyboard.WaitForMouseEvent.BecomeNot（變成不是）
-#   MousePointerState [選項，預設 Arrow]
-#       可用值：MouseAndKeyboard.MousePointerState.Arrow（箭頭）、MouseAndKeyboard.MousePointerState.AppStarting（應用程式啟動中）、MouseAndKeyboard.MousePointerState.Cross（叉）、MouseAndKeyboard.MousePointerState.Hand（手形）、MouseAndKeyboard.MousePointerState.Help（說明）、MouseAndKeyboard.MousePointerState.IBeam（IBeam）、MouseAndKeyboard.MousePointerState.WaitCursor（等待游標）
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

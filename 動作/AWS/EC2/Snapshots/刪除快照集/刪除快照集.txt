@@ -1,14 +1,1 @@
 AWS.DeleteSnapshot Ec2Client: `` SnapshotId: ``
-
-# ==================== 說明 ====================
-# 動作：刪除快照集  (AWS.DeleteSnapshot)
-# 英文名稱：Delete snapshot
-# 用途：刪除指定的快照集
-# 位置：AWS > EC2 > Snapshots
-# 輸入參數：
-#   Ec2Client [Ec2ClientObject] EC2 用戶端 — EC2 用戶端
-#   SnapshotId [文字] 快照集識別碼 — 要刪除之 EBS 快照集的識別碼
-# 可能的錯誤：AuthenticationFailureError、UnauthorizedOperationError、InvalidSnapshotError、ResourceIsInUseError、RequestFailedError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

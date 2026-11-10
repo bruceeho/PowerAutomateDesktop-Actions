@@ -1,14 +1,1 @@
 Excel.InsertRow Instance: `` Index: ``
-
-# ==================== 說明 ====================
-# 動作：將列插入 Excel 工作表  (Excel.InsertRow)
-# 英文名稱：Insert row to Excel worksheet
-# 用途：將列插入 Excel 執行個體之所選列上方
-# 位置：Excel > 進階
-# 輸入參數：
-#   Instance [ExcelInstanceHandle] Excel 執行個體 — 要處理的 Excel 執行個體。此變數先前必須已在「啟動 Excel」動作中指定
-#   Index [整數] 列索引 — 要在上方加入新列之列的索引。編號從 1 開始
-# 可能的錯誤：RowNotFoundError、InsertRowError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

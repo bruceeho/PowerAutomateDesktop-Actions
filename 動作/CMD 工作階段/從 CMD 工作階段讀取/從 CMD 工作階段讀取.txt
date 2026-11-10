@@ -1,22 +1,3 @@
-# 【模式 Read】讀取 CMD 工作階段的輸出
 Cmd.ReadFromCmdSession.Read Session: `` CmdOutput=> CmdOutput
 
-# 【模式 ReadAndSplit】讀取 CMD 工作階段的輸出與錯誤
 Cmd.ReadFromCmdSession.ReadAndSplit Session: `` CmdError=> CmdError CmdOutput=> CmdOutput
-
-# ==================== 說明 ====================
-# 動作：從 CMD 工作階段讀取  (Cmd.ReadFromCmdSession)
-# 英文名稱：Read from CMD session
-# 用途：讀取 CMD 工作階段的輸出
-# 位置：CMD 工作階段
-# 輸入參數：
-#   SplitOutputAndError [布林，預設 False] 將輸出與誤差分開 — 指定要將標準輸出與標準誤差儲存至不同變數，還是合併成一個變數
-#   Session [CmdSessionHandle] CMD 工作階段 — 先前開啟的 CMD 工作階段
-# 產生的變數：
-#   CmdError [文字] CMD 標準誤差 — CMD 工作階段的標準誤差
-#   CmdOutput [文字] CMD 標準輸出 — CMD 工作階段的標準輸出
-# 可能的錯誤：SessionClosedError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

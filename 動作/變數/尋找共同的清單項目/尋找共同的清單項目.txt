@@ -1,15 +1,1 @@
 Variables.FindCommonListItems FirstList: `` SecondList: `` OutputList=> OutputList
-
-# ==================== 說明 ====================
-# 動作：尋找共同的清單項目  (Variables.FindCommonListItems)
-# 英文名稱：Find common list items
-# 用途：比較兩份清單，並建立擁有兩個清單之共同項目的新清單
-# 位置：變數
-# 輸入參數：
-#   FirstList [List<Object>] 第一份清單 — 包含要比較的第一份清單的變數
-#   SecondList [List<Object>] 第二份清單 — 包含要比較的第二份清單的變數
-# 產生的變數：
-#   OutputList [List<Object>] 將共同項目儲存至 — 共同項目的新清單
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

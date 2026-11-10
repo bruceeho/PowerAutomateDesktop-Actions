@@ -1,36 +1,3 @@
-# 【模式 InvokeSoapService】從 SOAP Web 服務叫用方法
 Web.InvokeSoapService.InvokeSoapService RequestBody: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
 
-# 【模式 InvokeSoapServiceUseAuth】使用驗證從 SOAP Web 服務叫用方法
 Web.InvokeSoapService.InvokeSoapServiceUseAuth RequestBody: `` ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False Username: `` Password: `` TrimRequestBody: True ResponseHeaders=> ResponseHeaders Response=> Response StatusCode=> StatusCode
-
-# ==================== 說明 ====================
-# 動作：叫用 SOAP Web 服務  (Web.InvokeSoapService)
-# 英文名稱：Invoke SOAP web service
-# 用途：從 SOAP Web 服務叫用方法
-# 位置：HTTP
-# 輸入參數：
-#   Url [文字]
-#   CustomHeaders [文字，選填]
-#   RequestBody [文字]
-#   ConnectionTimeout [整數，預設 30]
-#   FollowRedirection [布林，預設 True]
-#   ClearCookies [布林，預設 False]
-#   FailOnErrorStatus [布林，預設 False]
-#   UserAgent [文字，預設 Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6]
-#   Encoding [選項，預設 AutoDetect]
-#       可用值：Web.Encoding.AutoDetect（自動偵測）、Web.Encoding.IBM037、Web.Encoding.IBM437、Web.Encoding.IBM500、Web.Encoding.ASMO_708、Web.Encoding.DOS_720、Web.Encoding.ibm737、Web.Encoding.ibm775、Web.Encoding.ibm850、Web.Encoding.ibm852、Web.Encoding.IBM855、Web.Encoding.ibm857、Web.Encoding.IBM00858、Web.Encoding.IBM860、Web.Encoding.ibm861、Web.Encoding.DOS_862、Web.Encoding.IBM863、Web.Encoding.IBM864、Web.Encoding.IBM865、Web.Encoding.cp866、Web.Encoding.ibm869、Web.Encoding.IBM870、Web.Encoding.windows_874、Web.Encoding.cp875、Web.Encoding.shift_jis、Web.Encoding.gb2312、Web.Encoding.ks_c_5601_1987、Web.Encoding.big5、Web.Encoding.IBM1026、Web.Encoding.IBM01047、Web.Encoding.IBM01140、Web.Encoding.IBM01141、Web.Encoding.IBM01142、Web.Encoding.IBM01143、Web.Encoding.IBM01144、Web.Encoding.IBM01145、Web.Encoding.IBM01146、Web.Encoding.IBM01147、Web.Encoding.IBM01148、Web.Encoding.IBM01149、Web.Encoding.utf_16、Web.Encoding.utf_16BE、Web.Encoding.windows_1250、Web.Encoding.windows_1251、Web.Encoding.Windows_1252、Web.Encoding.windows_1253、Web.Encoding.windows_1254、Web.Encoding.windows_1255、Web.Encoding.windows_1256、Web.Encoding.windows_1257、Web.Encoding.windows_1258、Web.Encoding.Johab、Web.Encoding.macintosh、Web.Encoding.x_mac_japanese、Web.Encoding.x_mac_chinesetrad、Web.Encoding.x_mac_korean、Web.Encoding.x_mac_arabic、Web.Encoding.x_mac_hebrew、Web.Encoding.x_mac_greek、Web.Encoding.x_mac_cyrillic、Web.Encoding.x_mac_chinesesimp、Web.Encoding.x_mac_romanian、Web.Encoding.x_mac_ukrainian、Web.Encoding.x_mac_thai、Web.Encoding.x_mac_ce、Web.Encoding.x_mac_icelandic、Web.Encoding.x_mac_turkish、Web.Encoding.x_mac_croatian、Web.Encoding.utf_32、Web.Encoding.utf_32BE、Web.Encoding.x_Chinese_CNS、Web.Encoding.x_cp20001、Web.Encoding.x_Chinese_Eten、Web.Encoding.x_cp20003、Web.Encoding.x_cp20004、Web.Encoding.x_cp20005、Web.Encoding.x_IA5、Web.Encoding.x_IA5_German、Web.Encoding.x_IA5_Swedish、Web.Encoding.x_IA5_Norwegian、Web.Encoding.us_ascii、Web.Encoding.x_cp20261、Web.Encoding.x_cp20269、Web.Encoding.IBM273、Web.Encoding.IBM277、Web.Encoding.IBM278、Web.Encoding.IBM280、Web.Encoding.IBM284、Web.Encoding.IBM285、Web.Encoding.IBM290、Web.Encoding.IBM297、Web.Encoding.IBM420、Web.Encoding.IBM423、Web.Encoding.IBM424、Web.Encoding.x_EBCDIC_KoreanExtended、Web.Encoding.IBM_Thai、Web.Encoding.koi8_r、Web.Encoding.IBM871、Web.Encoding.IBM880、Web.Encoding.IBM905、Web.Encoding.IBM00924、Web.Encoding.EUC_JP_20932、Web.Encoding.x_cp20936、Web.Encoding.x_cp20949、Web.Encoding.cp1025、Web.Encoding.koi8_u、Web.Encoding.iso_8859_1、Web.Encoding.iso_8859_2、Web.Encoding.iso_8859_3、Web.Encoding.iso_8859_4、Web.Encoding.iso_8859_5、Web.Encoding.iso_8859_6、Web.Encoding.iso_8859_7、Web.Encoding.iso_8859_8、Web.Encoding.iso_8859_9、Web.Encoding.iso_8859_13、Web.Encoding.iso_8859_15、Web.Encoding.x_Europa、Web.Encoding.iso_8859_8_i、Web.Encoding.iso_2022_jp_50220、Web.Encoding.csISO2022JP、Web.Encoding.iso_2022_jp_50222、Web.Encoding.iso_2022_kr、Web.Encoding.x_cp50227、Web.Encoding.euc_jp_51932、Web.Encoding.EUC_CN、Web.Encoding.euc_kr、Web.Encoding.hz_gb_2312、Web.Encoding.GB18030、Web.Encoding.x_iscii_de、Web.Encoding.x_iscii_be、Web.Encoding.x_iscii_ta、Web.Encoding.x_iscii_te、Web.Encoding.x_iscii_as、Web.Encoding.x_iscii_or、Web.Encoding.x_iscii_ka、Web.Encoding.x_iscii_ma、Web.Encoding.x_iscii_gu、Web.Encoding.x_iscii_pa、Web.Encoding.utf_7、Web.Encoding.utf_8
-#   AcceptUntrustedCertificates [布林，預設 False]
-#   UseAuthentication [布林，預設 False]
-#   Username [文字]
-#   Password [文字(可加密)]
-#   TrimRequestBody [布林，預設 True]
-# 產生的變數：
-#   ResponseHeaders [List<String>]
-#   Response [文字]
-#   StatusCode [整數]
-# 可能的錯誤：InvokeSoapServiceError、InvalidCustomHeaderError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

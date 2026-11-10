@@ -1,34 +1,3 @@
-# 【模式 AnalyzeFromText】叫用名為「分析語氣」的 IBM 服務，並透過變數提供文字
 IBMCognitive.AnalyzeToneIBM.AnalyzeFromText ApiKey: `` VersionDate: `` Location: IBMCognitive.ToneAnalyzerServiceLocation.UsEast InstanceId: `` Text: `` ContentType: IBMCognitive.ContentType.TextPlain Timeout: 30 Response=> Response StatusCode=> StatusCode
 
-# 【模式 AnalyzeFromFile】從檔案中叫用名為「分析語氣」的 IBM 服務
 IBMCognitive.AnalyzeToneIBM.AnalyzeFromFile ApiKey: `` VersionDate: `` Location: IBMCognitive.ToneAnalyzerServiceLocation.UsEast InstanceId: `` FilePath: `` ContentType: IBMCognitive.ContentType.TextPlain Timeout: 30 Response=> Response StatusCode=> StatusCode
-
-# ==================== 說明 ====================
-# 動作：分析語氣  (IBMCognitive.AnalyzeToneIBM)
-# 英文名稱：Analyze tone
-# 用途：叫用名為「分析語氣」的 IBM 服務
-# 位置：認知 > IBM > 語氣分析程式
-# 輸入參數：
-#   ApiKey [文字] API 金鑰 — 要用來進行此呼叫的 API 金鑰
-#   VersionDate [文字] 版本日期 — 要使用之 API 的發行日期
-#   Location [選項，預設 UsEast] 服務端點位置 — 帳戶的服務位置。可透過資源區段中的 IBM「管理」查看
-#       可用值：IBMCognitive.ToneAnalyzerServiceLocation.UsSouth（美國南部）、IBMCognitive.ToneAnalyzerServiceLocation.UsEast（美國東部）、IBMCognitive.ToneAnalyzerServiceLocation.Europe（歐洲）、IBMCognitive.ToneAnalyzerServiceLocation.Australia（澳洲）、IBMCognitive.ToneAnalyzerServiceLocation.Japan（日本）、IBMCognitive.ToneAnalyzerServiceLocation.Uk（英國）、IBMCognitive.ToneAnalyzerServiceLocation.Korea（南韓）
-#   InstanceId [文字] 執行個體識別碼 — 服務的執行個體識別碼。
-#   ProvideText [選項，預設 Text] 提供文字 — 指定將如何提供要分析的文字
-#       可用值：IBMCognitive.ProvideTextType.Text（從文字）、IBMCognitive.ProvideTextType.File（從檔案）
-#   Text [文字] 文字 — 要分析的文字
-#   FilePath [FileObject] 檔案路徑 — 要分析之檔案的路徑
-#   ContentType [選項，預設 TextPlain] 內容類型 — 將傳送的文字的內容類型
-#       可用值：IBMCognitive.ContentType.TextPlain（text/plain）、IBMCognitive.ContentType.TextHtml（text/html）、IBMCognitive.ContentType.ApplicationJson（application/json）
-#   Tones [文字，選填] 語氣 — 將用於篩選結果的語氣 (選用)
-#   Sentences [文字，選填] 句子 — 指定是否要移除句子分析
-#   Timeout [整數，預設 30] 逾時 — 專員與伺服器建立連線所應等待的時間 (以秒計)，而此時間過後，連線即失敗
-# 產生的變數：
-#   Response [自訂物件] 回應 — API 呼叫的結果
-#   StatusCode [整數] 狀態碼 — API 呼叫的狀態碼
-# 可能的錯誤：RequestTimeoutExpiredError、InvokeCognitiveServiceError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

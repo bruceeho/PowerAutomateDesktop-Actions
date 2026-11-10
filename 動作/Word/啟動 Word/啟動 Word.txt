@@ -1,26 +1,3 @@
-# 【模式 Launch】啟動 Word (空白文件)
 Word.LaunchWord.Launch Visible: True Instance=> Instance
 
-# 【模式 LaunchAndOpen】使用新的 Word 程序來啟動 Word 和開啟文件
 Word.LaunchWord.LaunchAndOpen Visible: True ReadOnly: False Path: `` Instance=> Instance
-
-# ==================== 說明 ====================
-# 動作：啟動 Word  (Word.LaunchWord)
-# 英文名稱：Launch Word
-# 用途：啟動新的 Word 執行個體或開啟 Word 文件
-# 位置：Word
-# 輸入參數：
-#   ReadProtectionPassword [文字(可加密)，選填] 讀取保護密碼 — 採用密碼保護之 Word 文件的讀取保護密碼
-#   Visible [布林，預設 True] 顯示執行個體 — 指定要顯示或隱藏 Word 視窗
-#   WriteProtectionPassword [文字(可加密)，選填] 寫入保護密碼 — 採用密碼保護之 Word 文件的寫入保護密碼
-#   ReadOnly [布林，預設 False] 以唯讀方式開啟 — 指定是否要以唯讀模式開啟儲存的文件
-#   Path [FileObject] 文件路徑 — 要開啟的現有 Word 文件的完整路徑
-#   LaunchWordMode [選項，預設 NewDocument] 啟動 Word — 指定要開啟新的 Word 文件還是現有文件
-#       可用值：Word.LaunchWordMode.NewDocument（使用空白文件）、Word.LaunchWordMode.StoredDocument（並開啟以下文件）
-# 產生的變數：
-#   Instance [WordInstanceHandle] 將 Word 執行個體儲存至 — 可供後續 Word 動作使用的特定 Word 執行個體。這可讓使用者指定要存取多個可能存在的 Word 文件的哪一個
-# 可能的錯誤：LauchWordError、LaunchWordFileNotFoundError、LaunchWordOpenExistingDocumentError、LaunchWordApplicationError、LaunchWordInstallationError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

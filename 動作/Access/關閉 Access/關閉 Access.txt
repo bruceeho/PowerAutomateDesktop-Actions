@@ -1,15 +1,1 @@
 Access.CloseAccess Instance: `` CloseMode: Access.CloseAccessMode.DoNotSave
-
-# ==================== 說明 ====================
-# 動作：關閉 Access  (Access.CloseAccess)
-# 英文名稱：Close Access
-# 用途：關閉 Access 執行個體
-# 位置：Access
-# 輸入參數：
-#   Instance [AccessInstanceHandle] Access 執行個體 — 要關閉的 Access 執行個體。這個變數先前必須已使用 [啟動 Access] 完成指定。
-#   CloseMode [選項，預設 DoNotSave] 在關閉 Access 之前 — 指定是否要在關閉執行個體之前儲存此執行個體的資料庫
-#       可用值：Access.CloseAccessMode.DoNotSave（不要儲存變更）、Access.CloseAccessMode.Save（儲存變更）
-# 可能的錯誤：CloseAccessError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

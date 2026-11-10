@@ -1,14 +1,1 @@
 FTP.CreateDirectory Connection: `` Directory: ``
-
-# ==================== 說明 ====================
-# 動作：建立 FTP 目錄  (FTP.CreateDirectory)
-# 英文名稱：Create FTP directory
-# 用途：在 FTP 伺服器上建立目錄
-# 位置：FTP
-# 輸入參數：
-#   Connection [FtpConnectionBase] FTP 連線 — 要使用的 FTP 連線。這個變數先前必須已使用「開啟 FTP」連線動作完成指定
-#   Directory [FtpFolderObject] 新目錄 — 新目錄。如有指定路徑，就會建立指向新目錄的所有新資料夾
-# 可能的錯誤：AccessDeniedError、FileExistsError、CreateDirectoryError、DirectoryDoesNotExistError、NotConnectedError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

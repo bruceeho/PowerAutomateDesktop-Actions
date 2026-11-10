@@ -1,48 +1,15 @@
-# 【模式 PopulateTextField】在網頁上的文字欄位中填入指定文字
 WebAutomation.PopulateTextField.PopulateTextField BrowserInstance: `` Control: `` Text: `` Mode: WebAutomation.PopulateTextMode.Replace EmulateTyping: True UnfocusAfterPopulate: True WaitForPageToLoadTimeout: 60
 
-# 【模式 PopulateTextFieldCloseDialog】在網頁的文字欄位中填入指定的文字。如果快顯對話方塊出現，請將它關閉。
 WebAutomation.PopulateTextField.PopulateTextFieldCloseDialog BrowserInstance: `` Control: `` Text: `` Mode: WebAutomation.PopulateTextMode.Replace EmulateTyping: True UnfocusAfterPopulate: True WaitForPageToLoadTimeout: 60
 
-# 【模式 PopulateTextFieldPressDialogButton】在網頁的文字欄位中填入指定的文字，並於快顯對話方塊出現時按下指定的按鈕
 WebAutomation.PopulateTextField.PopulateTextFieldPressDialogButton BrowserInstance: `` Control: `` Text: `` Mode: WebAutomation.PopulateTextMode.Replace EmulateTyping: True UnfocusAfterPopulate: True WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
 
-# 【模式 PopulateTextFieldNoWait】在網頁的文字欄位中填入指定的文字，但不要等待頁面載入
 WebAutomation.PopulateTextField.PopulateTextFieldNoWait BrowserInstance: `` Control: `` Text: `` Mode: WebAutomation.PopulateTextMode.Replace EmulateTyping: True UnfocusAfterPopulate: True
 
-# 【模式 PopulateTextFieldUsePhysicalKeyboard】在網頁上的文字欄位中填入指定文字
 WebAutomation.PopulateTextField.PopulateTextFieldUsePhysicalKeyboard BrowserInstance: `` Control: `` Text: `` Mode: WebAutomation.PopulateTextMode.Replace UnfocusAfterPopulate: True WaitForPageToLoadTimeout: 60
 
-# 【模式 PopulateTextFieldCloseDialogUsePhysicalKeyboard】在網頁的文字欄位中填入指定的文字。如果快顯對話方塊出現，請將它關閉。
 WebAutomation.PopulateTextField.PopulateTextFieldCloseDialogUsePhysicalKeyboard BrowserInstance: `` Control: `` Text: `` Mode: WebAutomation.PopulateTextMode.Replace UnfocusAfterPopulate: True WaitForPageToLoadTimeout: 60
 
-# 【模式 PopulateTextFieldPressDialogButtonUsePhysicalKeyboard】在網頁的文字欄位中填入指定的文字，並於快顯對話方塊出現時按下指定的按鈕
 WebAutomation.PopulateTextField.PopulateTextFieldPressDialogButtonUsePhysicalKeyboard BrowserInstance: `` Control: `` Text: `` Mode: WebAutomation.PopulateTextMode.Replace UnfocusAfterPopulate: True WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
 
-# 【模式 PopulateTextFieldNoWaitUsePhysicalKeyboard】在網頁的文字欄位中填入指定的文字，但不要等待頁面載入
 WebAutomation.PopulateTextField.PopulateTextFieldNoWaitUsePhysicalKeyboard BrowserInstance: `` Control: `` Text: `` Mode: WebAutomation.PopulateTextMode.Replace UnfocusAfterPopulate: True
-
-# ==================== 說明 ====================
-# 動作：填入網頁上的文字欄位  (WebAutomation.PopulateTextField)
-# 英文名稱：Populate text field on web page
-# 用途：在網頁上的文字欄位中填入指定文字
-# 位置：瀏覽器自動化 > 填寫網頁表單
-# 輸入參數：
-#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
-#   Control [WebControl] UI 元素 — 選取要填入內容的文字欄位
-#   Text [文字(可加密)] 文字 — 輸入要填入文字欄位的文字
-#   Mode [選項，預設 Replace] 如果欄位不是空白 — 指定是要取代現有內容還是附加。
-#       可用值：WebAutomation.PopulateTextMode.Replace（取代文字）、WebAutomation.PopulateTextMode.Append（附加文字）
-#   UsePhysicalKeyboard [布林，預設 True] 使用實體按鍵輸入填入文字 — 填入文字至 UI 文字欄位元素時，使用實體按鍵輸入進行模擬。針對模擬文字填入未對元素執行刻意動作的情況，需要實體按鍵輸入。由於此選項要求聚焦於瀏覽器視窗，因此會自動將之切換到前景。
-#   EmulateTyping [布林，預設 True] 模擬輸入 — 指定要單純設定文字方塊的值，以便一次填入文字欄位，或是要逐一傳送字元來模擬使用者打字。後者速度較慢，但是某些複雜的網頁會需要此方法。
-#   UnfocusAfterPopulate [布林，預設 True] 填入後讓文字方塊失去焦點 — 選擇是否要在此動作填入指定的文字之後，隨即讓文字方塊失去焦點。若採用抓取自動完成清單，此參數應設為 "False"。
-#   WaitForPageToLoad [布林，預設 True] 等待頁面載入 — 指定在文字欄位中填入內容後，是否要等待新網頁完整載入
-#   WaitForPageToLoadTimeout [整數，預設 60] 網頁載入逾時 — 設定動作擲回錯誤之前的頁面載入時間，以秒為單位
-#   HandleDialogAction [選項，預設 DoNothing] 如果快顯對話方塊出現 — 指定在文字欄位中填入內容之後出現快顯對話方塊時要執行的操作
-#       可用值：WebAutomation.HandleDialogAction.CloseIt（關閉它）、WebAutomation.HandleDialogAction.PressButton（按下按鈕）、WebAutomation.HandleDialogAction.DoNothing（不執行任何動作）
-#   DialogButton [文字，預設 OK] 要按下的對話方塊按鈕 — 輸入快顯對話方塊出現時要按下的對話方塊按鈕
-# 可能的錯誤：ElementNotFoundError、PopulateTextFieldError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

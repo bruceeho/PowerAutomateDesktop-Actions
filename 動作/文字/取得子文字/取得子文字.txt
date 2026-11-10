@@ -1,32 +1,7 @@
-# 【模式 GetText】擷取值的文字
 Text.GetSubtext.GetText Text: `` Subtext=> Subtext
 
-# 【模式 GetSubtextFrom】從指定位置到結尾擷取文字值的子文字
 Text.GetSubtext.GetSubtextFrom Text: `` CharacterPosition: `` Subtext=> Subtext
 
-# 【模式 GetSubtextFromStartTo】從文字值的開頭擷取指定長度的子文字
 Text.GetSubtext.GetSubtextFromStartTo Text: `` NumberOfChars: `` Subtext=> Subtext
 
-# 【模式 GetSubtext】擷取指定起始索引和長度的文字值的子文字
 Text.GetSubtext.GetSubtext Text: `` CharacterPosition: `` NumberOfChars: `` Subtext=> Subtext
-
-# ==================== 說明 ====================
-# 動作：取得子文字  (Text.GetSubtext)
-# 英文名稱：Get subtext
-# 用途：從文字值擷取子文字
-# 位置：文字
-# 輸入參數：
-#   Text [文字] 原始文字 — 要從中擷取一段文字的文字
-#   StartIndex [選項，預設 CharacterPosition] 起始索引 — 指定如何尋找擷取文字的起點
-#       可用值：Text.SubtextStartIndex.StartOfText（文字開頭）、Text.SubtextStartIndex.CharacterPosition（字元位置）
-#   CharacterPosition [整數] 字元位置 — 要擷取的第一個字元的位置。這是從零開始的索引，從零開始計算第一個字元
-#   Length [選項，預設 NumberOfChars] 長度 — 指定子文字會延續至文字結尾，或只包含特定字元數
-#       可用值：Text.SubtextLength.EndOfText（文字結尾）、Text.SubtextLength.NumberOfChars（字元數）
-#   NumberOfChars [整數] 字元數 — 要擷取的字元數
-# 產生的變數：
-#   Subtext [文字] 子文字 — 擷取的子文字
-# 可能的錯誤：StartIndexOrLengthOutOfRangeError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

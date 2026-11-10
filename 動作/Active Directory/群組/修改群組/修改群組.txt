@@ -1,29 +1,7 @@
-# 【模式 RenameGroup】重新命名 Active Directory 中的群組
 ActiveDirectory.ModifyGroup.RenameGroup DistinguishedName: `` NewName: `` ParentDirectoryEntry: ``
 
-# 【模式 DeleteGroup】刪除 Active Directory 中的群組
 ActiveDirectory.ModifyGroup.DeleteGroup DistinguishedName: `` ParentDirectoryEntry: ``
 
-# 【模式 AddUserToGroup】將使用者新增至 Active Directory 中的群組
 ActiveDirectory.ModifyGroup.AddUserToGroup DistinguishedName: `` UserDistinguishedName: `` ParentDirectoryEntry: ``
 
-# 【模式 RemoveUserFromGroup】從 Active Directory 中的群組移除使用者
 ActiveDirectory.ModifyGroup.RemoveUserFromGroup DistinguishedName: `` UserDistinguishedName: `` ParentDirectoryEntry: ``
-
-# ==================== 說明 ====================
-# 動作：修改群組  (ActiveDirectory.ModifyGroup)
-# 英文名稱：Modify group
-# 用途：修改 Active Directory 中的群組
-# 位置：Active Directory > 群組
-# 輸入參數：
-#   DistinguishedName [文字] 辨別名稱 — Active Directory 項目的辨別名稱
-#   Operation [選項，預設 Rename] 作業 — 選取要執行的作業
-#       可用值：ActiveDirectory.GroupOperation.Rename（重新命名群組）、ActiveDirectory.GroupOperation.Delete（刪除群組）、ActiveDirectory.GroupOperation.AddUser（加入使用者）、ActiveDirectory.GroupOperation.RemoveUser（移除使用者）
-#   NewName [文字] 新名稱 — 群組的新名稱
-#   UserDistinguishedName [文字] 使用者辨別名稱 — 指定使用者的辨別名稱
-#   ParentDirectoryEntry [ActiveDirectoryEntry] 上層目錄項目 — Active Directory 伺服器的上層項目
-# 可能的錯誤：AuthenticationError、InvalidOperationError、ServerNotOperationalError、UnauthorizedAccessError、ActiveDirectoryEntryNotFound、ObjectDoesNotExistOnServerError、ObjectAlreadyExistsError、ActiveDirectoryError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

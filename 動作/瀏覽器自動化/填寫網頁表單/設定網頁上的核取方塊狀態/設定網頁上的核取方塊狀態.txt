@@ -1,32 +1,7 @@
-# 【模式 SetCheckboxState】勾選或取消勾選網頁表單中的核取方塊
 WebAutomation.SetCheckboxState.SetCheckboxState BrowserInstance: `` Control: `` State: WebAutomation.CheckboxState.Checked WaitForPageToLoadTimeout: 60
 
-# 【模式 SetCheckboxStateCloseDialog】勾選或取消勾選網頁表單中的核取方塊。如果快顯對話方塊出現，請將它關閉。
 WebAutomation.SetCheckboxState.SetCheckboxStateCloseDialog BrowserInstance: `` Control: `` State: WebAutomation.CheckboxState.Checked WaitForPageToLoadTimeout: 60
 
-# 【模式 SetCheckboxStatePressDialogButton】勾選或取消勾選網頁表單中的核取方塊，並於快顯對話方塊出現時按下指定的按鈕
 WebAutomation.SetCheckboxState.SetCheckboxStatePressDialogButton BrowserInstance: `` Control: `` State: WebAutomation.CheckboxState.Checked WaitForPageToLoadTimeout: 60 DialogButton: $'''OK'''
 
-# 【模式 SetCheckboxStateNoWait】勾選或取消勾選網頁表單中的核取方塊，但不要等待頁面載入
 WebAutomation.SetCheckboxState.SetCheckboxStateNoWait BrowserInstance: `` Control: `` State: WebAutomation.CheckboxState.Checked
-
-# ==================== 說明 ====================
-# 動作：設定網頁上的核取方塊狀態  (WebAutomation.SetCheckboxState)
-# 英文名稱：Set check box state on web page
-# 用途：勾選或取消勾選網頁表單中的核取方塊
-# 位置：瀏覽器自動化 > 填寫網頁表單
-# 輸入參數：
-#   BrowserInstance [WebBrowserInstanceHandle] 網頁瀏覽器執行個體 — 輸入或選擇包含要使用的網頁瀏覽器執行個體的變數
-#   Control [WebControl] UI 元素 — 選取要設定狀態的核取方塊
-#   State [選項，預設 Checked] 核取方塊狀態 — 選取核取方塊狀態
-#       可用值：WebAutomation.CheckboxState.Checked（已勾選）、WebAutomation.CheckboxState.Unchecked（未勾選）
-#   WaitForPageToLoad [布林，預設 True] 等待頁面載入 — 指定設定核取方塊狀態後，是否要等待新網頁完整載入
-#   WaitForPageToLoadTimeout [整數，預設 60] 網頁載入逾時 — 設定動作擲回錯誤之前的頁面載入時間，以秒為單位
-#   HandleDialogAction [選項，預設 DoNothing] 如果快顯對話方塊出現 — 指定設定核取方塊狀態之後出現快顯對話方塊時要執行的操作
-#       可用值：WebAutomation.HandleDialogAction.CloseIt（關閉它）、WebAutomation.HandleDialogAction.PressButton（按下按鈕）、WebAutomation.HandleDialogAction.DoNothing（不執行任何動作）
-#   DialogButton [文字，預設 OK] 要按下的對話方塊按鈕 — 輸入快顯對話方塊出現時要按下的對話方塊按鈕
-# 可能的錯誤：ElementNotFoundError、SetCheckboxStateError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

@@ -1,17 +1,1 @@
 WorkQueues.GetWorkQueueItems WorkQueue: `` FilterRows: `` RowsToReturn: 5000 WorkQueueItems=> WorkQueueItems
-
-# ==================== 說明 ====================
-# 動作：透過篩選取得工作佇列項目  (WorkQueues.GetWorkQueueItems)
-# 英文名稱：Get work queue items by filter
-# 用途：根據 FetchXML 篩選運算式擷取一個或多個工作佇列項目
-# 位置：工作佇列
-# 輸入參數：
-#   WorkQueue [WorkQueue] 工作佇列 — 要從中取得工作佇列項目的工作佇列 (若有)
-#   FilterRows [文字] 篩選資料列 — 將用於取得工作佇列項目的 FetchXML 篩選運算式
-#   RowsToReturn [整數，預設 5000] 要傳回的資料列 — 要傳回的項目數目
-# 產生的變數：
-#   WorkQueueItems [List<WorkQueueItem>] 工作佇列項目 — 擷取的工作佇列項目
-# 可能的錯誤：WorkQueueNotFoundError、WorkQueuePausedOrStoppedError、InvalidFetchXMLError、FailedToGetWorkQueueItemsError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

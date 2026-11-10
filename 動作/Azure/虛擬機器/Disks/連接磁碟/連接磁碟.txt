@@ -1,26 +1,3 @@
-# 【模式 AttachManagedDisk】將受控資料磁碟連接至具有指定名稱和資源群組的虛擬機器
 Azure.AttachDisk.AttachManagedDisk AzureClient: `` VirtualMachineName: `` ResourceGroup: `` DiskName: `` DiskResourceGroup: ``
 
-# 【模式 AttachUnManagedDisk】將非受控磁碟連接至具有指定名稱和資源群組的 VM
 Azure.AttachDisk.AttachUnManagedDisk AzureClient: `` VirtualMachineName: `` ResourceGroup: `` StorageAccount: `` Container: `` VhdName: ``
-
-# ==================== 說明 ====================
-# 動作：連接磁碟  (Azure.AttachDisk)
-# 英文名稱：Attach disk
-# 用途：將現有磁碟連接至具有指定名稱和資源群組的虛擬機器
-# 位置：Azure > 虛擬機器 > Disks
-# 輸入參數：
-#   AzureClient [AzureClient] Azure 用戶端 — 用來連線 Azure 的用戶端
-#   VirtualMachineName [文字] 虛擬機器名稱 — 將連接磁碟的 VM
-#   ResourceGroup [文字] VM 資源群組 — VM 的資源群組
-#   IsManagedDisk [布林，預設 True] 磁碟受控 — 指定要連接的磁碟是否受控
-#   DiskName [文字] 磁碟名稱 — 要連接的磁碟名稱
-#   DiskResourceGroup [文字] 磁碟的資源群組 — 磁碟的資源群組
-#   StorageAccount [文字] 儲存體帳戶 — VHD 檔案所在的儲存體帳戶
-#   Container [文字] 容器 — 保存 VHD 檔案的容器
-#   VhdName [文字] VHD 檔案 — VHD 檔案的名稱
-# 可能的錯誤：VirtualMachineNotFoundError、DiskNotFoundError、ManagedAndUnManagedDiskNotAllowedTogetherError、FailedToAttachDiskError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

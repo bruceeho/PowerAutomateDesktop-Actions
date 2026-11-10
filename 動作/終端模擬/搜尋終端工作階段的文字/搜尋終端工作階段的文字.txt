@@ -1,18 +1,1 @@
 TerminalEmulation.FindTextFromTerminalSession Text: `` IsRegEx: False ColumnSize: 80 Session: `` Results=> Results
-
-# ==================== 說明 ====================
-# 動作：搜尋終端工作階段的文字  (TerminalEmulation.FindTextFromTerminalSession)
-# 英文名稱：Search for text on terminal session
-# 用途：搜尋在終端工作階段中所有出現的特定文字
-# 位置：終端模擬
-# 輸入參數：
-#   Text [文字] 要搜尋的文字 — 要在終端畫面上搜尋的文字或規則運算式
-#   IsRegEx [布林，預設 False] 規則運算式 — 指定是否要搜尋規則運算式而不是純文字
-#   ColumnSize [整數，預設 80] 資料行大小 — 終端畫面上的資料行數
-#   Session [TerminalSessionHandle] 終端工作階段 — 先前開啟的終端工作階段
-# 產生的變數：
-#   Results [資料表] 終端尋找結果 — 擷取自終端工作階段畫面的搜尋結果
-# 可能的錯誤：EmulatorCommunicationError、TextNotFoundError、InvalidRegexError
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

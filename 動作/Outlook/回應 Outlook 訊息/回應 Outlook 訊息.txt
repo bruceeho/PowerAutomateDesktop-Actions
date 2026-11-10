@@ -1,30 +1,5 @@
-# 【模式 ReplyToEmail】透過回覆對 Outlook 訊息做出回應
 Outlook.RespondToMailMessage.ReplyToEmail Instance: `` Account: `` MailMessage: ``
 
-# 【模式 ReplyAllToEmail】透過全部回覆對 Outlook 訊息做出回應
 Outlook.RespondToMailMessage.ReplyAllToEmail Instance: `` Account: `` MailMessage: ``
 
-# 【模式 ForwardEmail】透過轉寄 Outlook 訊息對其做出回應
 Outlook.RespondToMailMessage.ForwardEmail Instance: `` Account: `` MailMessage: `` SendTo: ``
-
-# ==================== 說明 ====================
-# 動作：回應 Outlook 訊息  (Outlook.RespondToMailMessage)
-# 英文名稱：Respond to Outlook message
-# 用途：透過回覆、全部回覆或轉寄對 Outlook 訊息做出回應
-# 位置：Outlook
-# 輸入參數：
-#   Instance [OutlookInstanceHandle] Outlook 執行個體 — 要使用的 Outlook 執行個體。在「啟動 Outlook」動作中指定此變數
-#   Account [文字] 帳戶 — 使用 Outlook 帳戶名稱 (資料檔案名稱)
-#   MailMessage [OutlookMailMessage] 郵件訊息 — 要處理的電子郵件訊息。使用由「擷取來自 Outlook 的電子郵件訊息」動作所填入的變數
-#   ResponseAction [選項，預設 Reply] 回應動作 — 指定是否要以訊息回覆 (給寄件者或全部) 或轉寄收到的訊息
-#       可用值：Outlook.ResponseAction.Reply（回覆）、Outlook.ResponseAction.ReplyAll（全部回覆）、Outlook.ResponseAction.Forward（轉寄）
-#   SendTo [文字] 收件者 — 收件者的電子郵件地址。如果要輸入的電子郵件地址不止一個，請使用空格或分號來分隔地址清單
-#   CC [文字，選填] 副本 — 副本收件者的電子郵件地址。如果要輸入的電子郵件地址不止一個，請使用空格或分號來分隔地址清單
-#   BCC [文字，選填] 密件副本 — 密件副本 (隱藏) 收件者的電子郵件地址。如果要輸入的電子郵件地址不止一個，請使用空格或分號來分隔地址清單
-#   Body [文字，選填] 本文 — 本文的文字
-#   Attachments [List<FileObject>，選填] 附件 — 任何附件的完整路徑。將多個檔案放在雙引號 (") 裡面，並用空白字元隔開
-# 可能的錯誤：OutlookAccountNotFoundError、SendEmailMessageError、AttachmentNotFoundError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取

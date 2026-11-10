@@ -1,24 +1,3 @@
-# 【模式 PopulateTextField】用指定文字填入視窗中的文字方塊
 UIAutomation.PopulateTextField.PopulateTextField Text: `` Mode: UIAutomation.PopulateTextMode.Replace ClickType: UIAutomation.PopulateMouseClickType.SingleClick
 
-# 【模式 SimulatePopulateTextField】用指定文字填入視窗中的文字方塊
 UIAutomation.PopulateTextField.SimulatePopulateTextField Text: `` Mode: UIAutomation.PopulateTextMode.Replace
-
-# ==================== 說明 ====================
-# 動作：填入視窗中的文字欄位  (UIAutomation.PopulateTextField)
-# 英文名稱：Populate text field in window
-# 用途：用指定文字填入視窗中的文字方塊
-# 位置：使用者介面自動化 > 填寫表單
-# 輸入參數：
-#   Text [文字(可加密)] 要填入的文字 — 要填入文字欄位的文字
-#   Mode [選項，預設 Replace] 如果欄位不是空白 — 指定是要取代現有內容還是附加。
-#       可用值：UIAutomation.PopulateTextMode.Replace（取代文字）、UIAutomation.PopulateTextMode.Append（附加文字）
-#   ClickType [選項，預設 SingleClick] 填入之前按一下 — 指定在填入文字欄位之前是否要按滑鼠左鍵。
-#       可用值：UIAutomation.PopulateMouseClickType.SingleClick（按滑鼠左鍵）、UIAutomation.PopulateMouseClickType.DoubleClick（按兩下）、UIAutomation.PopulateMouseClickType.None（否）
-#   Simulate [布林，預設 False] 模擬動作 — 在將文字填入 UI 文字欄位元素時以程式設計方式模擬按鍵輸入。此選項不需要聚焦於 UI 元素的畫面，它不會自動將其帶入前景。請注意，此選項可能不適用於所有 UI 元素。
-#   Control [UIControl]
-# 可能的錯誤：PopulateTextFieldError
-# 註：每種模式各有一行，只複製需要的那一行。未列出的參數由模式自動決定。
-# 註：標示「選填」的參數預設不寫在代碼行裡，需要時自行加上（例如 ParamName: $'''值''')。
-# 註：`` 代表需要自行填入的值（文字用 $'''內容''' 包起來，變數直接寫名稱）。
-# 來源：從本機 PAD 模組 DLL 自動擷取
