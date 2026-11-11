@@ -9,3 +9,6 @@ desktop.ini
 
 # 比對實測動作.ps1 的輸出
 _工具/比對結果.csv
+
+# Claude Code 個人設定（權限等），不上傳
+.claude/settings.local.json

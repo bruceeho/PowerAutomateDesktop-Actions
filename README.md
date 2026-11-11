@@ -33,6 +33,8 @@ PowerAutomateDesktop_動作\
 ├─ 流程\        使用這個專案時，實際要貼進 PAD 的流程程式碼（每個專案一個子資料夾）
 ├─ 需求文件\    流程的相關文件：需求、規格、代碼表、截圖等，寫流程時拿來對照
 ├─ _工具\       產生、更新、比對動作庫的 PowerShell 腳本
+├─ .claude\commands\  給 Claude Code 用的引導指令（/pad-new-flow 等）
+├─ CLAUDE.md    Claude 開啟這個資料夾時自動讀取的專案指引
 └─ 動作總表.csv 所有動作的一覽表
 ```
 
@@ -156,7 +158,31 @@ PowerAutomateDesktop_動作\
 
 ## 🤖 用 Claude 處理這些檔案
 
-在 Claude 桌面版的 **Code** 分頁，把工作資料夾設成這個專案資料夾（`PowerAutomateDesktop_動作`），再用下面的 prompt 開頭。
+在 Claude 桌面版的 **Code** 分頁（或終端機的 Claude Code），把工作資料夾設成這個專案資料夾（`PowerAutomateDesktop_動作`）。
+
+### 自動載入的指引：[CLAUDE.md](CLAUDE.md)
+
+Claude 開啟這個資料夾時會自動讀 `CLAUDE.md`，裡面規定了：先讀 README、**資訊不足時先列出缺少的項目問使用者，不直接假設寫程式**、程式碼風格、帳密與網頁操作的安全規則。
+
+### 引導指令（[`.claude/commands/`](<.claude/commands>)）
+
+在對話框輸入 `/` 就能選用。每個指令會先引導 Claude 確認方向，缺什麼資訊會一次列出來請你補：
+
+| 指令 | 什麼時候用 | Claude 會先確認的事 |
+|---|---|---|
+| `/pad-new-flow <要做什麼>` | 從頭寫新流程 | 觸發方式、系統與網址、輸入／輸出、步驟、例外處理、網頁元素、子流程、測試方式、執行環境 |
+| `/pad-check-requirements <需求文件>` | 開發前檢查需求 | 缺少的資料、不完整的規則、例外處理、重複執行、通知、環境差異、文件錯誤、明碼帳密 |
+| `/pad-modify-flow <檔案> <改什麼>` | 修改既有流程 | 修改範圍、預期結果、影響的其他子流程、新欄位、要保留的既有行為 |
+| `/pad-get-element-ids <頁面與欄位>` | 需要網頁欄位 Id | 引導你在內建瀏覽器登入並開好頁面，Claude 只讀不點 |
+| `/pad-fix-paste <檔案與狀況>` | 貼不進去或執行出錯 | 是哪一種錯誤、貼了哪份、錯誤訊息，再依檢查清單排查 |
+
+例如：
+
+```text
+/pad-new-flow 每天早上下載某網站的報表，存成 Excel 放到共用資料夾
+```
+
+### 不用指令時的 prompt 範本
 
 **🆕 寫新流程**
 
@@ -206,6 +232,7 @@ powershell -ExecutionPolicy Bypass -File ".\_工具\更新動作清單.ps1"
 
 | 日期 | 版本 | 變更內容 |
 |---|---|---|
+| 2026-11-12 | （本次） | 新增 `CLAUDE.md` 與 5 個 Claude 引導指令（`.claude/commands/`），README 補上用法 |
 | 2026-11-12 | `1126d05` | README 改為 Markdown（README.md），新增工具用途、動作總表連結、工具腳本說明與版本變更紀錄 |
 | 2026-11-12 | `a9bd42e` | 說明「流程」「需求文件」資料夾用途；新增程式碼風格與「用 Claude 處理這些檔案」 |
 | 2026-11-11 | `b51cd42` | 新增 49 個 SharePoint 雲端連接器動作（去識別範本）；產生動作檔.ps1 重建總表時保留雲端連接器列 |
