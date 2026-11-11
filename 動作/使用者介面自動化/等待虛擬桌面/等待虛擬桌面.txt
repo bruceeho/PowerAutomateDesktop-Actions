@@ -1,1 +1,1 @@
-UIAutomation.WaitForRemoteDesktopAction Control: `` Mode: UIAutomation.CheckRemoteDesktopAvailabilityMode.IsAvailable
+WAIT (UIAutomation.WaitForRemoteDesktop Control: `` Mode: UIAutomation.CheckRemoteDesktopAvailabilityMode.IsAvailable) FOR 10

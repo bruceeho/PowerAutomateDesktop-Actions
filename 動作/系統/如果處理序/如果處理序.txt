@@ -1,7 +1,11 @@
-System.IfProcessAction.ProcessIsRunning ProcessName: ``
+IF (System.IfProcess.ProcessIsRunning ProcessName: ``) THEN
+END
 
-System.IfProcessAction.ProcessIsNotRunning ProcessName: ``
+IF (System.IfProcess.ProcessIsNotRunning ProcessName: ``) THEN
+END
 
-System.IfProcessAction.ProcessWithNameIsRunning ProcessUser: `` ProcessName: ``
+IF (System.IfProcess.ProcessWithNameIsRunning ProcessUser: `` ProcessName: ``) THEN
+END
 
-System.IfProcessAction.ProcessWithNameIsNotRunning ProcessUser: `` ProcessName: ``
+IF (System.IfProcess.ProcessWithNameIsNotRunning ProcessUser: `` ProcessName: ``) THEN
+END

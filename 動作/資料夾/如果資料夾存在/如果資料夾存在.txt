@@ -1,3 +1,5 @@
-Folder.IfFolderExistsAction.Exists Path: ``
+IF (Folder.IfFolderExists.Exists Path: ``) THEN
+END
 
-Folder.IfFolderExistsAction.DoesNotExist Path: ``
+IF (Folder.IfFolderExists.DoesNotExist Path: ``) THEN
+END

@@ -1,1 +1,1 @@
-Text.Replace Text: `` TextToFind: `` IsRegEx: False IgnoreCase: False ReplaceWith: `` ActivateEscapeSequences: False Result=> Result
+Text.Replace.ReplaceTextWithRegex Text: `` TextToFind: `` IgnoreCase: False ReplaceWith: `` ActivateEscapeSequences: False Result=> Result

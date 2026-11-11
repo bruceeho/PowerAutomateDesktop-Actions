@@ -1,5 +1,5 @@
 UIAutomation.CloseWindow.Close
 
-UIAutomation.CloseWindow.CloseByTitleClass
+UIAutomation.CloseWindow.CloseByTitleClass Title: `` Class: $''''''
 
 UIAutomation.CloseWindow.CloseByInstanceOrHandle WindowInstance: ``

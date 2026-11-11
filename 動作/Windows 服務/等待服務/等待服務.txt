@@ -1,5 +1,5 @@
-Services.WaitForServiceAction.Stopped Service: ``
+WAIT (Services.WaitForService.Stopped Service: ``) FOR 10
 
-Services.WaitForServiceAction.Started Service: ``
+WAIT (Services.WaitForService.Started Service: ``) FOR 10
 
-Services.WaitForServiceAction.Paused Service: ``
+WAIT (Services.WaitForService.Paused Service: ``) FOR 10

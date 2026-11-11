@@ -35,5 +35,20 @@
       IF x <> $'''''' THEN ... END、EXIT LOOP、EXIT Code: 0
   - 單獨貼上一段時，變數尚未定義而出現紅色錯誤是正常的，整段流程貼完就會消失。
 
+實測校正（2026-11-11）
+  - 拿「流程」資料夾裡能執行的流程比對動作庫，修正了以下問題：
+      如果… 類動作（如果檔案已存在、如果網頁包含、如果影像、如果視窗…）要寫成
+        IF (WebAutomation.IfWebPageContains.WebPageContainsElement ...) THEN
+        END
+      等待… 類動作（等待網頁內容、等候檔案、等待處理序、等待視窗…）要寫成
+        WAIT (WebAutomation.WaitForWebPageContent.WebPageToContainElement ...) FOR 10
+      原本動作名稱多了 Action（例如 IfWebPageContainsAction、WaitProcessAction），貼上會變成未知動作，已改掉。
+      取代文字：只保留實測可用的 Text.Replace.ReplaceTextWithRegex（一般文字也能用，不是特殊符號就不用跳脫）。
+      修剪文字、填補文字、顯示訊息：補上 Text、PaddingText、Title、Message 參數。
+  - 要確認動作庫是否還有對不上的地方：執行 _工具\比對實測動作.ps1，
+    會列出「流程」資料夾實際用到、但動作庫找不到或參數不同的寫法，並存成 _工具\比對結果.csv。
+  - 動作名稱以實際能執行的流程為準；參數名稱和選項可以參考動作庫。
+  - 有些參數是選填的，動作庫裡不會列出（例如 MatchMode、CommandLineArguments），需要時自行加上。
+
 更新
   PAD 更新後執行 _工具\更新動作清單.ps1，只會新增缺少的動作，不會覆寫既有檔案。

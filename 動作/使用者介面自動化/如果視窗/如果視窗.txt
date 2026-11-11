@@ -1,23 +1,35 @@
-UIAutomation.IfWindowAction.IsOpen
+IF (UIAutomation.IfWindow.IsOpen) THEN
+END
 
-UIAutomation.IfWindowAction.IsOpenByInstanceOrHandle WindowInstance: ``
+IF (UIAutomation.IfWindow.IsOpenByInstanceOrHandle WindowInstance: ``) THEN
+END
 
-UIAutomation.IfWindowAction.IsOpenByTitleClass
+IF (UIAutomation.IfWindow.IsOpenByTitleClass) THEN
+END
 
-UIAutomation.IfWindowAction.IsNotOpen
+IF (UIAutomation.IfWindow.IsNotOpen) THEN
+END
 
-UIAutomation.IfWindowAction.IsNotOpenByInstanceOrHandle WindowInstance: ``
+IF (UIAutomation.IfWindow.IsNotOpenByInstanceOrHandle WindowInstance: ``) THEN
+END
 
-UIAutomation.IfWindowAction.IsNotOpenByTitleClass
+IF (UIAutomation.IfWindow.IsNotOpenByTitleClass) THEN
+END
 
-UIAutomation.IfWindowAction.IsFocused
+IF (UIAutomation.IfWindow.IsFocused) THEN
+END
 
-UIAutomation.IfWindowAction.IsFocusedByInstanceOrHandle WindowInstance: ``
+IF (UIAutomation.IfWindow.IsFocusedByInstanceOrHandle WindowInstance: ``) THEN
+END
 
-UIAutomation.IfWindowAction.IsFocusedByTitleClass
+IF (UIAutomation.IfWindow.IsFocusedByTitleClass) THEN
+END
 
-UIAutomation.IfWindowAction.IsNotFocused
+IF (UIAutomation.IfWindow.IsNotFocused) THEN
+END
 
-UIAutomation.IfWindowAction.IsNotFocusedByInstanceOrHandle WindowInstance: ``
+IF (UIAutomation.IfWindow.IsNotFocusedByInstanceOrHandle WindowInstance: ``) THEN
+END
 
-UIAutomation.IfWindowAction.IsNotFocusedByTitleClass
+IF (UIAutomation.IfWindow.IsNotFocusedByTitleClass) THEN
+END

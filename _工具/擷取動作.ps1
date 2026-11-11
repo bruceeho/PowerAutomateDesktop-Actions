@@ -55,7 +55,9 @@ foreach ($dll in $dlls) {
     while ($b) { if ($b.Name -eq 'ActionBase') { $isAction = $true; break }; $b = $b.BaseType }
     if (-not $isAction) { continue }
     $cads = @(); try { $cads = @($t.GetCustomAttributesData()) } catch {}
-    $aa = $cads | Where-Object { $_.AttributeType.Name -eq 'ActionAttribute' } | Select-Object -First 1
+    # 條件(如果…)與等待動作用的是 ConditionActionAttribute / WaitActionAttribute，Id 才是 Robin 真正的名稱
+    $aa = $cads | Where-Object { $_.AttributeType.Name -match 'ActionAttribute$' } | Select-Object -First 1
+    $kind = if ($aa) { $aa.AttributeType.Name } else { '' }
     $id = $null; $cat = $null; $order = 999; $hidden = $false
     if ($aa) { $id = Get-AttrArg $aa 'Id'; $cat = Get-AttrArg $aa 'Category'; $o2 = Get-AttrArg $aa 'Order'; if ($o2 -ne $null) { $order = $o2 }; if ((Get-AttrArg $aa 'Hidden') -eq $true -or (Get-AttrArg $aa 'IsHidden') -eq $true) { $hidden = $true } }
     if (-not $id -and $aa) { $id = Get-AttrArg $aa 'Name' }; if (-not $id) { $id = $t.Name }
@@ -108,7 +110,7 @@ foreach ($dll in $dlls) {
     [void]$results.Add([pscustomobject]@{
       Module = $modName; ModuleZh = $modZh; RobinModule = $robinMod; Id = $id; Class = $t.FullName; CategoryPath = $catPath; Order = $order
       Zh = (& $L "$($rp)_FriendlyName"); En = (& $E "$($rp)_FriendlyName"); DescZh = (& $L "$($rp)_Description"); SummaryZh = (& $L "$($rp)_Summary"); ResPrefix = $rp
-      Params = @($params | Sort-Object Order); Selectors = $sels; Throws = $throws; Obsolete = $obsolete; Hidden = $hidden
+      Params = @($params | Sort-Object Order); Selectors = $sels; Kind = $kind; Throws = $throws; Obsolete = $obsolete; Hidden = $hidden
     })
   }
 }

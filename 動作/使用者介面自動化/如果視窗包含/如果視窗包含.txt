@@ -1,9 +1,14 @@
-UIAutomation.IfWindowContainsAction.WindowContainsElement
+IF (UIAutomation.IfWindowContains.WindowContainsElement) THEN
+END
 
-UIAutomation.IfWindowContainsAction.WindowDoesNotContainElement
+IF (UIAutomation.IfWindowContains.WindowDoesNotContainElement) THEN
+END
 
-UIAutomation.IfWindowContainsAction.WindowContainsElementInState State: UIAutomation.State.Enabled
+IF (UIAutomation.IfWindowContains.WindowContainsElementInState State: UIAutomation.State.Enabled) THEN
+END
 
-UIAutomation.IfWindowContainsAction.WindowContainsText Text: `` Window: ``
+IF (UIAutomation.IfWindowContains.WindowContainsText Text: `` Window: ``) THEN
+END
 
-UIAutomation.IfWindowContainsAction.WindowDoesNotContainText Text: `` Window: ``
+IF (UIAutomation.IfWindowContains.WindowDoesNotContainText Text: `` Window: ``) THEN
+END

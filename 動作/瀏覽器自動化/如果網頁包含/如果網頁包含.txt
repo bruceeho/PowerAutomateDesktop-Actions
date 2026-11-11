@@ -1,9 +1,14 @@
-WebAutomation.IfWebPageContainsAction.WebPageContainsElement BrowserInstance: `` Control: ``
+IF (WebAutomation.IfWebPageContains.WebPageContainsElement BrowserInstance: `` Control: ``) THEN
+END
 
-WebAutomation.IfWebPageContainsAction.WebPageDoesNotContainElement BrowserInstance: `` Control: ``
+IF (WebAutomation.IfWebPageContains.WebPageDoesNotContainElement BrowserInstance: `` Control: ``) THEN
+END
 
-WebAutomation.IfWebPageContainsAction.WebPageContainsText BrowserInstance: `` Text: ``
+IF (WebAutomation.IfWebPageContains.WebPageContainsText BrowserInstance: `` Text: ``) THEN
+END
 
-WebAutomation.IfWebPageContainsAction.WebPageDoesNotContainText BrowserInstance: `` Text: ``
+IF (WebAutomation.IfWebPageContains.WebPageDoesNotContainText BrowserInstance: `` Text: ``) THEN
+END
 
-WebAutomation.IfWebPageContainsAction.WebPageContainsElementInState BrowserInstance: `` Control: `` State: WebAutomation.ElementState.Enabled
+IF (WebAutomation.IfWebPageContains.WebPageContainsElementInState BrowserInstance: `` Control: `` State: WebAutomation.ElementState.Enabled) THEN
+END

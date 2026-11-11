@@ -1,23 +1,23 @@
-UIAutomation.WaitForWindowAction.ToOpen FocusWindow: False
+WAIT (UIAutomation.WaitForWindow.ToOpen FocusWindow: False) FOR 10
 
-UIAutomation.WaitForWindowAction.ToOpenByInstanceOrHandle WindowInstance: `` FocusWindow: False
+WAIT (UIAutomation.WaitForWindow.ToOpenByInstanceOrHandle WindowInstance: `` FocusWindow: False) FOR 10
 
-UIAutomation.WaitForWindowAction.ToOpenByTitleClass FocusWindow: False
+WAIT (UIAutomation.WaitForWindow.ToOpenByTitleClass Title: `` Class: $'''''' FocusWindow: False) FOR 10
 
-UIAutomation.WaitForWindowAction.ToClose
+WAIT (UIAutomation.WaitForWindow.ToClose) FOR 10
 
-UIAutomation.WaitForWindowAction.ToCloseByInstanceOrHandle WindowInstance: ``
+WAIT (UIAutomation.WaitForWindow.ToCloseByInstanceOrHandle WindowInstance: ``) FOR 10
 
-UIAutomation.WaitForWindowAction.ToCloseByTitleClass
+WAIT (UIAutomation.WaitForWindow.ToCloseByTitleClass) FOR 10
 
-UIAutomation.WaitForWindowAction.ToBecomeFocused
+WAIT (UIAutomation.WaitForWindow.ToBecomeFocused) FOR 10
 
-UIAutomation.WaitForWindowAction.ToBecomeFocusedByInstanceOrHandle WindowInstance: ``
+WAIT (UIAutomation.WaitForWindow.ToBecomeFocusedByInstanceOrHandle WindowInstance: ``) FOR 10
 
-UIAutomation.WaitForWindowAction.ToBecomeFocusedByTitleClass
+WAIT (UIAutomation.WaitForWindow.ToBecomeFocusedByTitleClass) FOR 10
 
-UIAutomation.WaitForWindowAction.ToLoseFocus
+WAIT (UIAutomation.WaitForWindow.ToLoseFocus) FOR 10
 
-UIAutomation.WaitForWindowAction.ToLoseFocusByInstanceOrHandle WindowInstance: ``
+WAIT (UIAutomation.WaitForWindow.ToLoseFocusByInstanceOrHandle WindowInstance: ``) FOR 10
 
-UIAutomation.WaitForWindowAction.ToLoseFocusByTitleClass
+WAIT (UIAutomation.WaitForWindow.ToLoseFocusByTitleClass) FOR 10

@@ -1,9 +1,14 @@
-Services.IfServiceAction.IsInstalled Service: ``
+IF (Services.IfService.IsInstalled Service: ``) THEN
+END
 
-Services.IfServiceAction.IsNotInstalled Service: ``
+IF (Services.IfService.IsNotInstalled Service: ``) THEN
+END
 
-Services.IfServiceAction.IsStopped Service: ``
+IF (Services.IfService.IsStopped Service: ``) THEN
+END
 
-Services.IfServiceAction.IsRunning Service: ``
+IF (Services.IfService.IsRunning Service: ``) THEN
+END
 
-Services.IfServiceAction.IsPaused Service: ``
+IF (Services.IfService.IsPaused Service: ``) THEN
+END

@@ -1,1 +1,2 @@
-UIAutomation.IfRemoteDesktopIsAvailableAction Control: `` Mode: UIAutomation.CheckRemoteDesktopAvailabilityMode.IsAvailable
+IF (UIAutomation.IfRemoteDesktopIsAvailable Control: `` Mode: UIAutomation.CheckRemoteDesktopAvailabilityMode.IsAvailable) THEN
+END

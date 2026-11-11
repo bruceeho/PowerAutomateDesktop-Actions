@@ -1,3 +1,5 @@
-File.IfFileAction.Exists File: ``
+IF (File.IfFile.Exists File: ``) THEN
+END
 
-File.IfFileAction.DoesNotExist File: ``
+IF (File.IfFile.DoesNotExist File: ``) THEN
+END

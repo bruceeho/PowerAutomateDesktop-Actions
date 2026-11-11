@@ -1,15 +1,23 @@
-UIAutomation.IfImageAction.ExistsOnScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
+IF (UIAutomation.IfImage.ExistsOnScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy) THEN
+END
 
-UIAutomation.IfImageAction.ExistsOnSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
+IF (UIAutomation.IfImage.ExistsOnSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy) THEN
+END
 
-UIAutomation.IfImageAction.ExistsOnForeground Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
+IF (UIAutomation.IfImage.ExistsOnForeground Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy) THEN
+END
 
-UIAutomation.IfImageAction.ExistsOnSubregionOfForeground Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
+IF (UIAutomation.IfImage.ExistsOnSubregionOfForeground Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy) THEN
+END
 
-UIAutomation.IfImageAction.DoesNotExistOnScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
+IF (UIAutomation.IfImage.DoesNotExistOnScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy) THEN
+END
 
-UIAutomation.IfImageAction.DoesNotExistOnSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
+IF (UIAutomation.IfImage.DoesNotExistOnSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy) THEN
+END
 
-UIAutomation.IfImageAction.DoesNotExistOnForeground Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
+IF (UIAutomation.IfImage.DoesNotExistOnForeground Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy) THEN
+END
 
-UIAutomation.IfImageAction.DoesNotExistOnSubregionOfForeground Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy
+IF (UIAutomation.IfImage.DoesNotExistOnSubregionOfForeground Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy) THEN
+END

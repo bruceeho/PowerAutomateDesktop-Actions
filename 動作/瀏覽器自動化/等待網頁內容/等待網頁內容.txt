@@ -1,9 +1,9 @@
-WebAutomation.WaitForWebPageContentAction.WebPageToContainElement BrowserInstance: `` Control: ``
+WAIT (WebAutomation.WaitForWebPageContent.WebPageToContainElement BrowserInstance: `` Control: ``) FOR 10
 
-WebAutomation.WaitForWebPageContentAction.WebPageToNotContainElement BrowserInstance: `` Control: ``
+WAIT (WebAutomation.WaitForWebPageContent.WebPageToNotContainElement BrowserInstance: `` Control: ``) FOR 10
 
-WebAutomation.WaitForWebPageContentAction.WebPageToContainText BrowserInstance: `` Text: ``
+WAIT (WebAutomation.WaitForWebPageContent.WebPageToContainText BrowserInstance: `` Text: ``) FOR 10
 
-WebAutomation.WaitForWebPageContentAction.WebPageToNotContainText BrowserInstance: `` Text: ``
+WAIT (WebAutomation.WaitForWebPageContent.WebPageToNotContainText BrowserInstance: `` Text: ``) FOR 10
 
-WebAutomation.WaitForWebPageContentAction.WebPageToContainElementInState BrowserInstance: `` Control: `` State: WebAutomation.ElementState.Enabled
+WAIT (WebAutomation.WaitForWebPageContent.WebPageToContainElementInState BrowserInstance: `` Control: `` State: WebAutomation.ElementState.Enabled) FOR 10

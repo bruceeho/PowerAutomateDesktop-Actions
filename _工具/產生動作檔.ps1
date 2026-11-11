@@ -12,7 +12,7 @@ $existing = @{}
 if (Test-Path $actRoot) {
   Get-ChildItem $actRoot -Recurse -File -Filter *.txt | ForEach-Object {
     foreach ($line in [IO.File]::ReadAllLines($_.FullName, [Text.Encoding]::UTF8)) {
-      if ($line -match '^\s*([A-Za-z]+\.[A-Za-z0-9]+)') { $existing[$matches[1]] = $_.FullName }
+      if ($line -match '^\s*(?:IF \(|WAIT \()?([A-Za-z]+\.[A-Za-z0-9]+)') { $existing[$matches[1]] = $_.FullName }
     }
   }
 }
@@ -32,7 +32,17 @@ function ValueFor($p, $robinMod) {
   return '``'
 }
 
-function SkipEmpty($p) { return ($p.HasDefault -and "$($p.Default)" -eq '' -and -not $p.IsEnum -and $p.Type -ne 'Boolean') }
+# 只省略「選填」且預設空白的參數；必填但預設空白的(例如 Text、Title、Message)要寫出來
+function SkipEmpty($p) { return ($p.Optional -and $p.HasDefault -and "$($p.Default)" -eq '' -and -not $p.IsEnum -and $p.Type -ne 'Boolean') }
+
+# 條件動作要包在 IF (...) THEN / END，等待動作要包在 WAIT (...) FOR 秒數，否則貼不上
+function Wrap($line, $a) {
+  switch ($a.Kind) {
+    'ConditionActionAttribute' { return "IF ($line) THEN`r`nEND" }
+    'WaitActionAttribute' { return "WAIT ($line) FOR 10" }
+    default { return $line }
+  }
+}
 
 $csv = New-Object System.Collections.ArrayList
 $written = 0; $skipped = New-Object System.Collections.ArrayList
@@ -67,7 +77,7 @@ foreach ($a in ($j | Sort-Object Module, Order)) {
     $line = $robinBase
     foreach ($p in $ins) { if (-not (SkipEmpty $p)) { $line += " $($p.Name): $(ValueFor $p $a.RobinModule)" } }
     foreach ($p in $outs) { $line += " $($p.Name)=> $($p.Name)" }
-    [void]$sb.AppendLine($line)
+    [void]$sb.AppendLine((Wrap $line $a))
   } else {
     $first = $true
     foreach ($s in $sels) {
@@ -76,7 +86,7 @@ foreach ($a in ($j | Sort-Object Module, Order)) {
       foreach ($p in $ins) { if ($argset.ContainsKey($p.Name) -and -not (SkipEmpty $p)) { $line += " $($p.Name): $(ValueFor $p $a.RobinModule)" } }
       foreach ($p in $outs) { if ($argset.ContainsKey($p.Name)) { $line += " $($p.Name)=> $($p.Name)" } }
       if (-not $first) { [void]$sb.AppendLine() }
-      [void]$sb.AppendLine($line)
+      [void]$sb.AppendLine((Wrap $line $a))
       $first = $false
     }
   }

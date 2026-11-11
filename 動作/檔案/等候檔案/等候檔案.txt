@@ -1,3 +1,3 @@
-File.WaitForFileAction.Created File: ``
+WAIT (File.WaitForFile.Created File: ``) FOR 10
 
-File.WaitForFileAction.Deleted File: ``
+WAIT (File.WaitForFile.Deleted File: ``) FOR 10

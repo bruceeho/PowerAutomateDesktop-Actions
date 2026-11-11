@@ -1,7 +1,7 @@
-System.WaitProcessAction.ProcessToStart ProcessName: ``
+WAIT (System.WaitForProcess.ProcessToStart ProcessName: ``) FOR 10
 
-System.WaitProcessAction.ProcessToStop ProcessName: ``
+WAIT (System.WaitForProcess.ProcessToStop ProcessName: ``) FOR 10
 
-System.WaitProcessAction.ProcessWithNameToStart ProcessUser: `` ProcessName: ``
+WAIT (System.WaitForProcess.ProcessWithNameToStart ProcessUser: `` ProcessName: ``) FOR 10
 
-System.WaitProcessAction.ProcessWithNameToStop ProcessUser: `` ProcessName: ``
+WAIT (System.WaitForProcess.ProcessWithNameToStop ProcessUser: `` ProcessName: ``) FOR 10

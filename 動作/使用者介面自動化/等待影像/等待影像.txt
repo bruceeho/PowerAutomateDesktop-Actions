@@ -1,15 +1,15 @@
-UIAutomation.WaitForImageAction.ToAppearOnScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+WAIT (UIAutomation.WaitForImage.ToAppearOnScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y) FOR 10
 
-UIAutomation.WaitForImageAction.ToAppearOnSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+WAIT (UIAutomation.WaitForImage.ToAppearOnSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y) FOR 10
 
-UIAutomation.WaitForImageAction.ToAppearOnForegroundWindow Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+WAIT (UIAutomation.WaitForImage.ToAppearOnForegroundWindow Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y) FOR 10
 
-UIAutomation.WaitForImageAction.ToAppearOnSubregionOfForegroundWindow Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+WAIT (UIAutomation.WaitForImage.ToAppearOnSubregionOfForegroundWindow Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y) FOR 10
 
-UIAutomation.WaitForImageAction.ToDisappearFromScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+WAIT (UIAutomation.WaitForImage.ToDisappearFromScreen Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y) FOR 10
 
-UIAutomation.WaitForImageAction.ToDisappearFromSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+WAIT (UIAutomation.WaitForImage.ToDisappearFromSubregionOfScreen Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y) FOR 10
 
-UIAutomation.WaitForImageAction.ToDisappearFromForegroundWindow Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+WAIT (UIAutomation.WaitForImage.ToDisappearFromForegroundWindow Images: `` FindAllImages: False Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y) FOR 10
 
-UIAutomation.WaitForImageAction.ToDisappearFromSubregionOfForegroundWindow Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y
+WAIT (UIAutomation.WaitForImage.ToDisappearFromSubregionOfForegroundWindow Images: `` FindAllImages: False X1: `` X2: `` Y1: `` Y2: `` Tolerance: 10 SearchAlgorithm: UIAutomation.ImageFinderAlgorithm.Legacy X=> X Y=> Y) FOR 10

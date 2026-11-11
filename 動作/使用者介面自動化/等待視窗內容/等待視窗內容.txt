@@ -1,9 +1,9 @@
-UIAutomation.WaitForWindowContentAction.WindowToContainElement
+WAIT (UIAutomation.WaitForWindowContent.WindowToContainElement) FOR 10
 
-UIAutomation.WaitForWindowContentAction.WindowToNotContainElement
+WAIT (UIAutomation.WaitForWindowContent.WindowToNotContainElement) FOR 10
 
-UIAutomation.WaitForWindowContentAction.WindowToContainElementInState State: UIAutomation.State.Enabled
+WAIT (UIAutomation.WaitForWindowContent.WindowToContainElementInState State: UIAutomation.State.Enabled) FOR 10
 
-UIAutomation.WaitForWindowContentAction.WindowToContainText Text: `` Window: ``
+WAIT (UIAutomation.WaitForWindowContent.WindowToContainText Text: `` Window: ``) FOR 10
 
-UIAutomation.WaitForWindowContentAction.WindowToNotContainText Text: `` Window: ``
+WAIT (UIAutomation.WaitForWindowContent.WindowToNotContainText Text: `` Window: ``) FOR 10

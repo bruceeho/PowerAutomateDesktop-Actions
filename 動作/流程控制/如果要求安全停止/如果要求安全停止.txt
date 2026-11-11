@@ -1,1 +1,2 @@
-FlowControl.IfSafeStopAction ShouldStop: True
+IF (FlowControl.IfSafeStop ShouldStop: True) THEN
+END

@@ -1,1 +1,1 @@
-Text.Trim TrimOption: Text.TrimOption.Both TrimmedText=> TrimmedText
+Text.Trim Text: `` TrimOption: Text.TrimOption.Both TrimmedText=> TrimmedText
