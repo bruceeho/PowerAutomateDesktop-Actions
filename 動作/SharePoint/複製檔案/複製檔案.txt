@@ -1,0 +1,7 @@
+@@dataset: ''
+@@'parameters/sourceFileId': ''
+@@'parameters/destinationDataset': ''
+@@'parameters/destinationFolderPath': ''
+@@'parameters/nameConflictBehavior': ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'CopyFileAsync' @dataset: `` @'parameters/sourceFileId': `` @'parameters/destinationDataset': `` @'parameters/destinationFolderPath': `` @'parameters/nameConflictBehavior': `` @CopyFileAsyncResponse=> CopyFileAsyncResponse

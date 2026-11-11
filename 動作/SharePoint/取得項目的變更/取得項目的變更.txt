@@ -1,0 +1,5 @@
+@@dataset: ''
+@@table: ''
+@@view: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'GetItemChanges' @dataset: `` @table: `` @id: `` @since: `` @includeDrafts: False @GetItemChangesResponse=> GetItemChangesResponse

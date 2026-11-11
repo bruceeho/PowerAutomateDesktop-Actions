@@ -1,0 +1,6 @@
+@@dataset: ''
+@@table: ''
+@@'permission/type': ''
+@@'permission/scope': ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'CreateSharingLink' @dataset: `` @table: `` @id: `` @'permission/type': `` @'permission/scope': `` @CreateSharingLinkResponse=> CreateSharingLinkResponse

@@ -1,0 +1,4 @@
+@@dataset: ''
+@@table: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'DeleteItem' @dataset: `` @table: `` @id: ``

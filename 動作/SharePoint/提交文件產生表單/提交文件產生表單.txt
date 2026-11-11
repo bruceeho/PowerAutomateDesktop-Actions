@@ -1,0 +1,5 @@
+@@dataset: ''
+@@table: ''
+@@form: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'SubmitDocGenForm' @dataset: `` @table: `` @form: `` @SubmitDocGenFormResponse=> SubmitDocGenFormResponse

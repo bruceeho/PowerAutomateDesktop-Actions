@@ -1,0 +1,7 @@
+@@dataset: ''
+@@'parameters/sourceFolderId': ''
+@@'parameters/destinationDataset': ''
+@@'parameters/destinationFolderPath': ''
+@@'parameters/nameConflictBehavior': ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'MoveFolderAsync' @dataset: `` @'parameters/sourceFolderId': `` @'parameters/destinationDataset': `` @'parameters/destinationFolderPath': `` @'parameters/nameConflictBehavior': `` @MoveFolderAsyncResponse=> MoveFolderAsyncResponse

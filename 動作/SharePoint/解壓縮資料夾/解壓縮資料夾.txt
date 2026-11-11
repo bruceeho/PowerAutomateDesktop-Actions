@@ -1,0 +1,5 @@
+@@dataset: ''
+@@source: ''
+@@destination: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'ExtractFolderV2' @dataset: `` @source: `` @destination: `` @overwrite: False @ExtractFolderV2Response=> ExtractFolderV2Response

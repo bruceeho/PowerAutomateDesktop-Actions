@@ -1,0 +1,7 @@
+@@dataset: ''
+@@table: ''
+@@folderPath: ''
+@@viewScopeOption: ''
+@@view: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'GetItems' @dataset: `` @table: `` @GetItemsResponse=> GetItemsResponse

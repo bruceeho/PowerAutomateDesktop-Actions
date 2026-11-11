@@ -1,0 +1,4 @@
+@@dataset: ''
+@@folderPath: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'CreateFile' @dataset: `` @folderPath: `` @name: `` @body: `` @CreateFileResponse=> CreateFileResponse

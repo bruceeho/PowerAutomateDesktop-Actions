@@ -1,0 +1,5 @@
+@@dataset: ''
+@@table: ''
+@@'parameters/contentTypeId': ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'CreateNewDocumentSet' @dataset: `` @table: `` @'parameters/path': `` @'parameters/contentTypeId': `` @CreateNewDocumentSetResponse=> CreateNewDocumentSetResponse

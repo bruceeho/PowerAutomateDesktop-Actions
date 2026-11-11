@@ -1,0 +1,3 @@
+@@dataset: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'HttpRequest' @dataset: `` @'parameters/method': $'''''' @'parameters/uri': `` @HttpRequestResponse=> HttpRequestResponse

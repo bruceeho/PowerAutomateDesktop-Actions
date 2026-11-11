@@ -1,0 +1,5 @@
+@@dataset: ''
+@@id: ''
+@@size: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'GetFileThumbnail' @dataset: `` @id: `` @size: `` @GetFileThumbnailResponse=> GetFileThumbnailResponse

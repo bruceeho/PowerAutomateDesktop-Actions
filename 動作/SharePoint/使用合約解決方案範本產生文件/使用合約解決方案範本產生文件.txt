@@ -1,0 +1,4 @@
+@@dataset: ''
+@@template: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'CreateAgreementsSolutionDocument' @dataset: `` @template: `` @CreateAgreementsSolutionDocumentResponse=> CreateAgreementsSolutionDocumentResponse

@@ -131,6 +131,11 @@ foreach ($b in $builtin) {
   [void]$csv.Add([pscustomobject]@{ 模組=$b.P; 分類=''; 動作=$b.N; Robin=($b.C -split "`r`n")[0]; 模式數=0; 檔案=$file.Substring($OutRoot.Length + 1); 備註=$(if ($b.V) { '內建語法(已驗證)' } else { '內建語法(未驗證)' }) })
 }
 
-$csv | Export-Csv -Path (Join-Path $OutRoot '動作總表.csv') -NoTypeInformation -Encoding UTF8
+$csvPath = Join-Path $OutRoot '動作總表.csv'
+if (Test-Path $csvPath) {
+  Import-Csv -Path $csvPath -Encoding UTF8 | Where-Object { $_.Robin -like 'External.InvokeCloudConnector*' } | ForEach-Object { [void]$csv.Add($_) }
+}
+
+$csv | Export-Csv -Path $csvPath -NoTypeInformation -Encoding UTF8
 "written=$written skipped=$($skipped.Count)"
 $skipped

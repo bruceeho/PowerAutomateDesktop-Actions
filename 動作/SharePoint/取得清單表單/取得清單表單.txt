@@ -1,0 +1,5 @@
+@@dataset: ''
+@@table: ''
+@@form: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'GetTableForm' @dataset: `` @table: `` @form: `` @GetTableFormResponse=> GetTableFormResponse

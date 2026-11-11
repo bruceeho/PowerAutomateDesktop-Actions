@@ -1,0 +1,5 @@
+@@dataset: ''
+@@table: ''
+@@'parameter/roleValue': ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'GrantAccess' @dataset: `` @table: `` @id: `` @'parameter/recipients': `` @'parameter/roleValue': ``

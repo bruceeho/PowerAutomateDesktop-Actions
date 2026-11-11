@@ -1,0 +1,6 @@
+@@dataset: ''
+@@table: ''
+@@template: ''
+@@folderPath: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'CreateContentAssemblyDocument' @dataset: `` @table: `` @template: `` @CreateContentAssemblyDocumentResponse=> CreateContentAssemblyDocumentResponse

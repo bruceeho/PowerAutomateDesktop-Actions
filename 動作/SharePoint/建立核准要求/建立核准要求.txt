@@ -1,0 +1,5 @@
+@@dataset: ''
+@@table: ''
+@@approvalType: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'CreateApprovalRequest' @dataset: `` @table: `` @id: `` @approvalType: `` @CreateApprovalRequestResponse=> CreateApprovalRequestResponse

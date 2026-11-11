@@ -1,0 +1,5 @@
+@@dataset: ''
+@@table: ''
+@@'parameter/checkinType': ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'CheckInFile' @dataset: `` @table: `` @id: `` @'parameter/comment': `` @'parameter/checkinType': ``

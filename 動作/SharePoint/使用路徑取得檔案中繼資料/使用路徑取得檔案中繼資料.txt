@@ -1,0 +1,4 @@
+@@dataset: ''
+@@path: ''
+@@connectionDisplayName: ''
+External.InvokeCloudConnector Connection: '' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_sharepointonline' OperationId: 'GetFileMetadataByPath' @dataset: `` @path: `` @GetFileMetadataByPathResponse=> GetFileMetadataByPathResponse
