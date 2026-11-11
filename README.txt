@@ -50,5 +50,20 @@
   - 動作名稱以實際能執行的流程為準；參數名稱和選項可以參考動作庫。
   - 有些參數是選填的，動作庫裡不會列出（例如 MatchMode、CommandLineArguments），需要時自行加上。
 
+UI 元素（元素庫）規則（2026-11-11 實測，鴻勁回覆訂單）
+  - 瀏覽器動作範本的 Control: `` 要填元素庫引用，單引號一律寫成 \'：
+      appmask['Web Page \'https://scm.honprec.com/HP/MA04.aspx\'']['Input submit \'回覆訂單\'']
+    少一個反斜線，整段都貼不進去，而且不會顯示錯誤。
+  - 程式碼後面接「# [ControlRepository][PowerAutomateDesktop]」和元素庫 JSON，可以整份一起貼上，
+    元素會自動加進 UI 元素窗格，不用重新錄製。元素名稱要和程式碼引用完全一致。
+  - 選取器要用變數（例如每列不同的 ctl%FillCtl%）時，必須用「自訂選取器」（選取器編輯器的文字編輯器模式）：
+      input[Id="ctl00_ContentPlaceHolder1_gv02_ctl%FillCtl%_txtTD207"]
+    只在屬性值裡寫 %變數% 不會被代換，執行時會出現「找不到具有選取器…」。
+    元素庫 JSON 裡對應的是 "IsCustom": true 和 "CustomSelector": "..."（可參考 流程\鴻勁回覆\回覆詢單.txt）。
+  - 整份檔案的換行要一致（全部 CRLF），混用 LF 會貼不進去。
+  - 程式碼裡 CALL 到的子流程（例如 CALL 'Error'），要先在流程裡建好同名子流程。
+  - 雲端連線參照（ConnectionReferences，例如 SharePoint）不影響貼上。
+  - 元素庫裡的截圖路徑（ScreenshotPath）是否影響貼上尚未單獨驗證；貼不進去時可先把它設成 null 再試。
+
 更新
   PAD 更新後執行 _工具\更新動作清單.ps1，只會新增缺少的動作，不會覆寫既有檔案。
