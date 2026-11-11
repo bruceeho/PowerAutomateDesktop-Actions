@@ -232,7 +232,7 @@ powershell -ExecutionPolicy Bypass -File ".\_工具\更新動作清單.ps1"
 
 | 日期 | 版本 | 變更內容 |
 |---|---|---|
-| 2026-11-12 | （本次） | 新增 `CLAUDE.md` 與 5 個 Claude 引導指令（`.claude/commands/`），README 補上用法 |
+| 2026-11-12 | `b760fc5` | 新增 `CLAUDE.md` 與 5 個 Claude 引導指令（`.claude/commands/`），README 補上用法 |
 | 2026-11-12 | `1126d05` | README 改為 Markdown（README.md），新增工具用途、動作總表連結、工具腳本說明與版本變更紀錄 |
 | 2026-11-12 | `a9bd42e` | 說明「流程」「需求文件」資料夾用途；新增程式碼風格與「用 Claude 處理這些檔案」 |
 | 2026-11-11 | `b51cd42` | 新增 49 個 SharePoint 雲端連接器動作（去識別範本）；產生動作檔.ps1 重建總表時保留雲端連接器列 |
