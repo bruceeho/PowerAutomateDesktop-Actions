@@ -1,9 +1,9 @@
 ﻿# 比對實測動作.ps1
-# 把「流程」資料夾裡實際能執行的流程用到的動作名稱與參數，拿去跟「動作」資料夾的動作庫比對，
+# 把「正式流程」「demo」資料夾裡實際能執行的流程用到的動作名稱與參數，拿去跟「動作」資料夾的動作庫比對，
 # 列出動作庫裡找不到的名稱、或參數名稱不一樣的地方。
-# 用法：在 PowerShell 執行  .\_工具\比對實測動作.ps1  （可加 -流程資料夾 指定其他資料夾）
+# 用法：在 PowerShell 執行  .\_工具\比對實測動作.ps1  （可加 -流程資料夾 指定其他資料夾，用分號隔開）
 param(
-    [string]$流程資料夾 = (Join-Path $PSScriptRoot '..\流程'),
+    [string]$流程資料夾 = ((Join-Path $PSScriptRoot '..\正式流程') + ';' + (Join-Path $PSScriptRoot '..\demo')),
     [string]$動作資料夾 = (Join-Path $PSScriptRoot '..\動作')
 )
 
@@ -30,7 +30,7 @@ Get-ChildItem $動作資料夾 -Recurse -Filter *.txt | ForEach-Object {
 
 # 2. 實測流程：完整名稱 -> 參數集合、出處
 $used = @{}
-Get-ChildItem $流程資料夾 -Recurse -Filter *.txt | ForEach-Object {
+Get-ChildItem ($流程資料夾 -split ';' | Where-Object { Test-Path $_ }) -Recurse -Filter *.txt | ForEach-Object {
     $file = $_.Name
     $text = Get-Content $_.FullName -Raw -Encoding UTF8
     $code = ($text -split '# \[ControlRepository\]')[0]
